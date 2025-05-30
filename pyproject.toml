@@ -16,7 +16,9 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "pandas>=2.2.3",
     "pathlib>=1.0.1",
+    "polars>=1.30.0",
     "pymupdf>=1.25.5",
     "pytesseract>=0.3.13",
+    "selenium>=4.33.0",
     "typing>=3.10.0.0",
 ]

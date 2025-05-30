@@ -1,6 +1,7 @@
 import httpx
-import lxml.html
-from lxml.html import HtmlElement
+from lxml.html import HtmlElement, fromstring
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 def clean_string(text: str):
     """
@@ -18,11 +19,12 @@ def get_url_text(url:str, *args):
         if response.status_code == 200:
                 return response.text
 
-def parse_url(url:str, *args) -> lxml.html.HtmlElement:
+def parse_url(url:str, *args) -> HtmlElement:
     """
     Returns the html of the url parse ready to use
     """
     if args:
-        return lxml.html.fromstring(get_url_text(url, args[0]))
+        return fromstring(get_url_text(url, args[0]))
     else:
-        return lxml.html.fromstring(get_url_text(url))
+        return fromstring(get_url_text(url))
+    

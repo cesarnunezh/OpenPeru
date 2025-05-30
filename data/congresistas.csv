@@ -1,1115 +1,139 @@
-,id,nombre,votos,periodo,partido,bancada,dist_electoral,condicion
-0,1112,María Grimaneza Acuña Peralta,"11,384",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Lambayeque,en Ejercicio
-1,1160,Segundo Héctor Acuña Peralta,"19,729",Parlamentario 2021 - 2026,Alianza para el Progreso,HONOR Y DEMOCRACIA,La libertad,en Ejercicio
-2,1096,María Antonieta Agüero Gutiérrez,"29,293",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Arequipa,en Ejercicio
-3,1037,Alejandro Aurelio Aguinaga Recuenco,"10,715",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Lambayeque,en Ejercicio
-4,1142,Yorel Kira Alcarraz Aguero,"28,404",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,PODEMOS PERÚ,LIMA,en Ejercicio
-5,1079,Arturo Alegría García,"2,443",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,San martin,en Ejercicio
-6,1029,María del Carmen Alva Prieto,"25,219",Parlamentario 2021 - 2026,Acción Popular,NO AGRUPADO,LIMA,en Ejercicio
-7,1054,Carlos Enrique Alva Rojas,"8,061",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,La libertad,en Ejercicio
-8,1143,Yessica Rosselli Amuruz Dulanto,"21,855",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio
-9,1053,Carlos Antonio Anderson Ramírez,"14,052",Parlamentario 2021 - 2026,Podemos Perú,NO AGRUPADO,LIMA,en Ejercicio
-10,1077,Luis Ángel Aragón Carreño,"12,291",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Cusco,en Ejercicio
-11,1041,José Alberto Arriola Tueros,"34,982",Parlamentario 2021 - 2026,Acción Popular,PODEMOS PERÚ,LIMA,en Ejercicio
-12,1045,Alfredo Azurín Loayza,"23,624",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,LIMA,en Ejercicio
-13,1060,José María Balcázar Zelada,"6,641",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Lambayeque,en Ejercicio
-14,1152,Rosangella Andrea Barbarán Reyes,"22,572",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-15,1069,Diego Alonso Fernando Bazán Calderón,"22,200",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,La libertad,en Ejercicio
-16,1158,Sigrid Tesoro Bazán Narro,"44,359",Parlamentario 2021 - 2026,Juntos por el Perú,BLOQUE DEMOCRÁTICO POPULAR,LIMA,en Ejercicio
-17,1101,Guido Bellido Ugarte,"20,164",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PODEMOS PERÚ,Cusco,en Ejercicio
-18,1103,Guillermo Bermejo Rojas,"8,254",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,LIMA,en Ejercicio
-19,1063,Juan Bartolomé Burgos Oliveros,"10,060",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,PODEMOS PERÚ,La libertad,en Ejercicio
-20,1056,Ernesto Bustamante Donayre,"24,075",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-21,1071,Digna Calle Lobatón,"54,282",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,LIMA,en Ejercicio
-22,1030,Lady Mercedes Camones Soriano,"6,203",Parlamentario 2021 - 2026,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Ancash,en Ejercicio
-23,1075,Eduardo Enrique Castillo Rivas,"10,901",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-24,1038,Alejandro Enrique Cavero Alva,"30,242",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio
-25,1148,Waldemar José Cerrón Rojas,"25,281",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Junin,en Ejercicio
-26,1131,Nilza Merly Chacón Trujillo,"3,950",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Ancash,en Ejercicio
-27,1051,Betssy Betzabet Chávez Chino,"8,472",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,NO AGRUPADO,Tacna,Suspendido por Acusación Constitucional
-28,1121,Roberto Enrique Chiabra León,"19,222",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,LIMA,en Ejercicio
-29,1032,Patricia Rosa Chirinos Venegas,"9,033",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,RENOVACIÓN POPULAR,Callao,en Ejercicio
-30,1129,Miguel Angel Ciccia Vásquez,"9,269",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Piura,en Ejercicio
-31,1130,Jorge Samuel Coayla Juárez,"4,846",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Moquegua,en Ejercicio
-32,1082,Luis Gustavo Cordero Jon Tay,"4,531",Parlamentario 2021 - 2026,Fuerza Popular,SOMOS PERÚ,Lima Provincias,en Ejercicio
-33,1102,María del Pilar Cordero Jon Tay,"2,194",Parlamentario 2021 - 2026,Fuerza Popular,NO AGRUPADO,Tumbes,Suspendido por sanción
-34,1116,María Jessica Córdova Lobatón,"12,552",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Lambayeque,en Ejercicio
-35,1115,Isabel Cortez Aguirre,"34,888",Parlamentario 2021 - 2026,Juntos por el Perú,PODEMOS PERÚ,LIMA,en Ejercicio
-36,1091,Flavio Cruz Mamani,"30,025",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Puno,en Ejercicio
-37,1100,José Ernesto Cueto Aservi,"36,769",Parlamentario 2021 - 2026,Renovación Popular,HONOR Y DEMOCRACIA,LIMA,en Ejercicio
-38,1150,Víctor Raúl Cutipa Ccama,"3,821",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Moquegua,en Ejercicio
-39,1136,Pasión Neomias Dávila Atanacio,"3,915",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Pasco,en Ejercicio
-40,1095,Freddy Ronald Díaz Monago,"4,195",Parlamentario 2021 - 2026,Alianza para el Progreso,NO AGRUPADO,Pasco,Destituído
-41,1139,Raúl Felipe Doroteo Carbajo,"8,482",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Ica,en Ejercicio
-42,1073,Gladys Margot Echaíz de Núñez Izaga,"21,627",Parlamentario 2021 - 2026,Alianza para el Progreso,HONOR Y DEMOCRACIA,LIMA,en Ejercicio
-43,1104,Hamlet Echeverría Rodríguez,"3,647",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Cajamarca,en Ejercicio
-44,1146,Wilmar Alberto Elera García,"11,483",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,Piura,Destituído
-45,1057,José Luis Elías Ávalos,"10,708",Parlamentario 2021 - 2026,Podemos Perú,ALIANZA PARA EL PROGRESO,Ica,en Ejercicio
-46,1122,Jhaec Darwin Espinoza Vargas,"6,505",Parlamentario 2021 - 2026,Acción Popular,PODEMOS PERÚ,Ancash,en Ejercicio
-47,1128,Jorge Luis Flores Ancachi,"23,539",Parlamentario 2021 - 2026,Acción Popular,PODEMOS PERÚ,Puno,en Ejercicio
-48,1044,Alex Randu Flores Ramírez,"21,993",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Ayacucho,en Ejercicio
-49,1149,Víctor Seferino Flores Ruíz,"12,256",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,La libertad,en Ejercicio
-50,1113,Idelso Manuel García Correa,"14,205",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Piura,en Ejercicio
-51,1031,Americo Gonza Castillo,"10,394",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Cajamarca,en Ejercicio
-52,1067,Diana Carolina Gonzales Delgado,"24,948",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,Arequipa,en Ejercicio
-53,1108,Hernando Guerra García Campos,"55,987",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,Fallecido
-54,1137,Paul Silvio Gutiérrez Ticona,"11,124",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Apurimac,en Ejercicio
-55,1163,Nelcy Lidia Heidinger Ballesteros,"1,324",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Pasco,en Ejercicio
-56,1089,Fernando Mario Herrera Mamani,"6,105",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Tacna,Fallecido
-57,1133,Noelia Rossvith Herrera Medina,"8,619",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Callao,en Ejercicio
-58,1140,Raúl Huamán Coronado,"9,588",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Ica,en Ejercicio
-59,1052,Mery Eliana Infantes Castañeda,"2,575",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Amazonas,en Ejercicio
-60,1099,María de los Milagros Jackeline Jáuregui Martínez de Aguayo,"68,003",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,LIMA,en Ejercicio
-61,1049,José Enrique Jeri Oré,"11,654",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,LIMA,en Ejercicio
-62,1065,David Julio Jiménez Heredia,"7,278",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Junin,en Ejercicio
-63,1107,Heidy Lisbeth Juárez Calle,"19,153",Parlamentario 2021 - 2026,Alianza para el Progreso del Perú,PODEMOS PERÚ,Piura,en Ejercicio
-64,1059,Carmen Patricia Juárez Gallegos,"40,125",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-65,1083,Elva Edhit Julón Irigoín,"9,080",Parlamentario 2021 - 2026,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Cajamarca,en Ejercicio
-66,1087,Luis Roberto Kamiche Morante,"6,035",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,ALIANZA PARA EL PROGRESO,La libertad,en Ejercicio
-67,1162,Nieves Esmeralda Limachi Quispe,"3,125",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Tacna,en Ejercicio
-68,1066,Juan Carlos Martín Lizarzaburu Lizarzaburu,"1,773",Parlamentario 2021 - 2026,Fuerza Popular,ALIANZA PARA EL PROGRESO,Peruanos Residentes en el Extranjero,en Ejercicio
-69,1120,Jeny Luz López Morales,"4,576",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Ucayali,en Ejercicio
-70,1114,Ilich Fredy López Ureña,"17,727",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Junin,en Ejercicio
-71,1055,José León Luna Gálvez,"91,055",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,LIMA,en Ejercicio
-72,1157,Ruth Luque Ibarra,"12,049",Parlamentario 2021 - 2026,Juntos por el Perú,BLOQUE DEMOCRÁTICO POPULAR,Cusco,en Ejercicio
-73,1097,George Edward Málaga Trillo,"67,044",Parlamentario 2021 - 2026,Partido Morado,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio
-74,1125,Jorge Alfonso Marticorena Mendoza,"6,597",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,ALIANZA PARA EL PROGRESO,Ica,en Ejercicio
-75,1138,Pedro Edwin Martínez Talavera,"16,372",Parlamentario 2021 - 2026,Acción Popular,NO AGRUPADO,Arequipa,en Ejercicio
-76,1081,Elizabeth Sara Medina Hermosilla,"11,300",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Huanuco,en Ejercicio
-77,1088,Esdras Ricardo Medina Minaya,"15,693",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Arequipa,en Ejercicio
-78,1165,Isaac Mita Alanoca,"2,869",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Tacna,en Ejercicio
-79,1159,Segundo Toribio Montalvo Cubas,"5,268",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Amazonas,en Ejercicio
-80,1154,Silvia María Monteza Facho,"7,171",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Cajamarca,en Ejercicio
-81,1127,Jorge Carlos Montoya Manrique,"138,231",Parlamentario 2021 - 2026,Renovación Popular,HONOR Y DEMOCRACIA,LIMA,en Ejercicio
-82,1124,Jorge Alberto Morante Figari,"5,548",Parlamentario 2021 - 2026,Fuerza Popular,SOMOS PERÚ,Loreto,en Ejercicio
-83,1068,Juan Carlos Mori Celis,"8,815",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Loreto,en Ejercicio
-84,1118,Martha Lupe Moyano Delgado,"23,260",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-85,1039,Alejandro Muñante Barrios,"21,014",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,LIMA,en Ejercicio
-86,1048,Auristela Ana Obando Morgan,"8,914",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Callao,en Ejercicio
-87,1074,Vivian Olivos Martínez,"7,785",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Lima Provincias,en Ejercicio
-88,1168,Ariana Maybee Orué Medina,"7,871",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,Callao,en Ejercicio
-89,1092,Flor Aidee Pablo Medina,"53,899",Parlamentario 2021 - 2026,Partido Morado,NO AGRUPADO,LIMA,en Ejercicio
-90,1119,Javier Rommel Padilla Romero,"6,835",Parlamentario 2021 - 2026,Renovación Popular,HONOR Y DEMOCRACIA,Lima Provincias,en Ejercicio
-91,1093,Margot Palacios Huamán,"11,781",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,NO AGRUPADO,Ayacucho,en Ejercicio
-92,1094,Francis Jhasmina Paredes Castro,"3,454",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PODEMOS PERÚ,Ucayali,en Ejercicio
-93,1070,Karol Ivett Paredes Fonseca,"4,995",Parlamentario 2021 - 2026,Acción Popular,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,San martin,en Ejercicio
-94,1042,Alex Antonio Paredes Gonzales,"18,673",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Arequipa,en Ejercicio
-95,1153,Susel Ana María Paredes Piqué,"76,785",Parlamentario 2021 - 2026,Partido Morado,BLOQUE DEMOCRÁTICO POPULAR,LIMA,en Ejercicio
-96,1046,Alfredo Pariona Sinche,"9,849",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Huancavelica,en Ejercicio
-97,1164,José Bernardo Pazo Nunura,0,Parlamentario 2021 - 2026,Somos Perú,SOMOS PERÚ,Piura,en Ejercicio
-98,1085,Luis Raúl Picón Quedo,"10,812",Parlamentario 2021 - 2026,Alianza para el Progreso,PODEMOS PERÚ,Huanuco,en Ejercicio
-99,1072,Kelly Roxana Portalatino Ávalos,"8,286",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Ancash,en Ejercicio
-100,1110,Hilda Marleny Portero López,"8,568",Parlamentario 2021 - 2026,Acción Popular,ACCION POPULAR,Lambayeque,en Ejercicio
-101,1141,Segundo Teodomiro Quiroz Barboza,"16,660",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Cajamarca,en Ejercicio
-102,1145,Wilson Rusbel Quispe Mamani,"28,343",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Puno,en Ejercicio
-103,1050,Bernardo Jaime Quito Sarmiento,"41,430",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Arequipa,en Ejercicio
-104,1151,Tania Estefany Ramírez García,"3,240",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Cajamarca,en Ejercicio
-105,1061,César Manuel Revilla Villanueva,"6,420",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-106,1035,Abel Augusto Reyes Cam,"7,133",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Huanuco,en Ejercicio
-107,1047,Edgard Cornelio Reymundo Mercado,"7,912",Parlamentario 2021 - 2026,Juntos por el Perú,BLOQUE DEMOCRÁTICO POPULAR,Junin,en Ejercicio
-108,1117,Janet Milagros Rivas Chacara,"4,455",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Lima Provincias,en Ejercicio
-109,1156,Silvana Emperatriz Robles Araujo,"11,893",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Junin,en Ejercicio
-110,1166,Fernando Miguel Rospigliosi Capurro,"14,705",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-111,1090,Magaly Rosmery Ruíz Rodríguez,"16,689",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,La libertad,en Ejercicio
-112,1111,Hitler Saavedra Casternoque,"7,654",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,Loreto,Fallecido
-113,1078,Eduardo Salhuana Cavides,"3,013",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Madre de dios,en Ejercicio
-114,1147,Roberto Helbert Sánchez Palomino,"29,825",Parlamentario 2021 - 2026,Juntos por el Perú,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,LIMA,en Ejercicio
-115,1167,Magally Santisteban Suclupe,"1,597",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Tumbes,en Ejercicio
-116,1144,Wilson Soto Palacios,"7,145",Parlamentario 2021 - 2026,Acción Popular,ACCION POPULAR,Huancavelica,en Ejercicio
-117,1040,Alejandro Soto Reyes,"29,073",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Cusco,en Ejercicio
-118,1098,Germán Adolfo Tacuri Valdivia,"11,547",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Ayacucho,en Ejercicio
-119,1109,María Elizabeth Taipe Coronado,"8,643",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Apurimac,en Ejercicio
-120,1132,Nivardo Edgar Tello Montes,"5,133",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PODEMOS PERÚ,LIMA,en Ejercicio
-121,1155,Rosio Torres Salinas,"5,179",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Loreto,en Ejercicio
-122,1062,Cheryl Trigozo Reátegui,"16,574",Parlamentario 2021 - 2026,Alianza para el Progreso,RENOVACIÓN POPULAR,San martin,en Ejercicio
-123,1036,Adriana Josefina Tudela Gutiérrez,"47,139",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio
-124,1123,Jhakeline Katy Ugarte Mamani,"12,700",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Cusco,en Ejercicio
-125,1106,Héctor Valer Pinto,"20,948",Parlamentario 2021 - 2026,Renovación Popular,SOMOS PERÚ,LIMA,en Ejercicio
-126,1080,Elías Marcial Varas Meléndez,"6,328",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Ancash,en Ejercicio
-127,1076,Lucinda Vásquez Vela,"8,778",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,San martin,en Ejercicio
-128,1105,Héctor José Ventura Angel,"3,361",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Tumbes,en Ejercicio
-129,1084,Elvis Hernán Vergara Mendoza,"4,486",Parlamentario 2021 - 2026,Acción Popular,ACCION POPULAR,Ucayali,en Ejercicio
-130,1043,José Daniel Williams Zapata,"44,789",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio
-131,1086,Enrique Wong Pujada,"11,384",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,Callao,Fallecido
-132,1134,Norma Martina Yarrow Lumbreras,"51,103",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,LIMA,en Ejercicio
-133,1135,Oscar Zea Choquechambi,"34,450",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Puno,en Ejercicio
-134,1126,Jorge Arturo Zeballos Aponte,"4,691",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Peruanos Residentes en el Extranjero,en Ejercicio
-135,1058,Carlos Javier Zeballos Madariaga,"23,883",Parlamentario 2021 - 2026,Acción Popular,BLOQUE DEMOCRÁTICO POPULAR,Puno,en Ejercicio
-136,1169,Ana Zadith Zegarra Saboya,"4,917",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,Loreto,en Ejercicio
-137,1064,Cruz María Zeta Chunga,"10,079",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-138,966,Eduardo Geovanni Acate Coronel,"10,101",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Loreto,en Ejercicio
-139,868,Richard Frank Acuña Núñez,"103,864",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,La libertad,Julio 2016 - Marzo 2020
-140,1007,Humberto Acuña Peralta,"24,698",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Lambayeque,en Ejercicio
-141,818,Wilmer Aguilar Montenegro,"7,207",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Cajamarca,Julio 2016 - Setiembre 2019
-142,872,Manuel Aguilar Zamora,"32,614",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,San martin,en Ejercicio
-143,967,Edgar Arnold Alarcón Tejada,"46,673",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Arequipa,Suspendido
-144,816,Víctor Augusto Albrecht Rodríguez,"30,470",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Callao,Julio 2016 - Setiembre 2019
-145,800,Percy Eloy Alcalá Mateo,"29,999",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Provincias,Julio 2016 - Setiembre 2019
-146,774,María Lourdes Pía Luisa Alcorta Suero,"58,460",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Marzo 2020
-147,1008,Hirma Norma Alencastre Miranda,"33,316",Parlamentario 2016 - 2021,Somos Perú,SOMOS PERÚ,Ancash,en Ejercicio
-148,924,Guillermo Alejandro Antonio Aliaga Pajares,"22,824",Parlamentario 2016 - 2021,Somos Perú,SOMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-149,910,Carlos Alberto Almerí Veramendi,"16,224",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima Provincias,en Ejercicio
-150,884,Gilbert Juan Alonzo Fernández,"8,455",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ica,en Ejercicio
-151,702,Betty Gladys Ananculi Gómez,"18,159",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ica,Julio 2016 - Setiembre 2019
-152,1014,José Luis Ancalle Gutierrez,"13,932",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Arequipa,en Ejercicio
-153,735,Gladys Griselda Andrade Salguero de Álvarez,"28,045",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Provincias,Julio 2016 - Marzo 2020
-154,756,Justiniano Rómulo Apaza Ordóñez,"19,569",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Arequipa,Julio 2016 - Marzo 2020
-155,995,Yessica Marisela Apaza Quispe,"29,154",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Puno,en Ejercicio
-156,697,Alejandra Aramayo Gaona,"20,244",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Arequipa,Julio 2016 - Setiembre 2019
-157,770,Marco Antonio Arana Zegarra,"8,576",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Cajamarca,Julio 2016 - Marzo 2020
-158,783,Mercedes Rosalba Aráoz Fernández,"215,233",Parlamentario 2016 - 2021,Peruanos por el Kambio,NO AGRUPADOS,Lima Capital,Julio 2016 - Setiembre 2019
-159,873,"Jesús Orlando Arapa Roque,","24,216",Parlamentario 2016 - 2021,Acción Popular,NUEVA CONSTITUCIÓN,Puno,en Ejercicio
-160,801,Richard Arce Cáceres,"10,076",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Apurimac,Julio 2016 - Setiembre 2019
-161,1028,Héctor Jesús Arias Cáceres,"20,978",Parlamentario 2016 - 2021,Unión por el Perú,NUEVA CONSTITUCIÓN,Arequipa,en Ejercicio
-162,812,Tamar Arimborgo Guerra,"10,499",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Loreto,Julio 2016 - Setiembre 2019
-163,968,Walter Yonni Ascona Calderón,"7,172",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Moquegua,en Ejercicio
-164,764,Lucio Ávila Rojas,"28,685",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Puno,Julio 2016 - Setiembre 2019
-165,886,Rita Elena Ayasta de Díaz,"11,163",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lambayeque,en Ejercicio
-166,940,Julia Benigna Ayquipa Torres,"8,150",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Ica,en Ejercicio
-167,1009,Wilmer Solis Bajonero Olivas,"21,568",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Huanuco,en Ejercicio
-168,969,Betto Barrionuevo Romero,"33,044",Parlamentario 2016 - 2021,Somos Perú,DESCENTRALIZACIÓN DEMOCRÁTICA,Ancash,en Ejercicio
-169,994,María Isabel Bartolo Romero,"19,048",Parlamentario 2016 - 2021,Unión por el Perú,NUEVA CONSTITUCIÓN,Ancash,en Ejercicio
-170,806,Rosa María Bartra Barriga,"19,864",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,La libertad,Julio 2016 - Marzo 2020
-171,929,Lenin Fernando Bazán Villanueva,"20,431",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,La libertad,en Ejercicio
-172,741,Héctor Virgilio Becerril Rodríguez,"44,448",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lambayeque,Julio 2016 - Marzo 2020
-173,970,Walter Benavides Gavidia,"31,758",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Cajamarca,en Ejercicio
-174,941,Alfredo Benites Agurto,"13,696",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Lima Provincias,en Ejercicio
-175,757,Karina Juliza Beteta Rubín,"16,939",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Huanuco,Julio 2016 - Marzo 2020
-176,871,Guillermo Augusto Bocangel Weydert,"20,033",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Huanuco,Suspendido por Acusación Constitucional
-177,707,Carlos Ricardo Bruce Montes de Oca,"112,377",Parlamentario 2016 - 2021,Peruanos por el Kambio,NO AGRUPADOS,Lima Capital,Julio 2016 - Setiembre 2019
-178,876,Ricardo Miguel Burga Chuquipiondo,"20,652",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-179,726,Estelita Sonia Bustos Espinoza ,"18,174",Parlamentario 2016 - 2021,Fuerza Popular,CON FUERZA PERÚ,Callao,Julio 2016 - Setiembre 2019
-180,1027,Benigno Leonel Cabrera Pino,"28,784",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Arequipa,en Ejercicio
-181,911,María Teresa Cabrera Vega,"35,301",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,LIMA,en Ejercicio
-182,862,César Milton Campos Ramírez,"5,356",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Huanuco,Julio 2016 - Setiembre 2019
-183,887,Rolando Campos Villalobos,"25,897",Parlamentario 2016 - 2021,Acción Popular,NO AGRUPADOS,Lambayeque,en Ejercicio
-184,777,Mario José Canzio Álvarez,"14,653",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Junin,Fallecido
-185,971,Irene Carcausto Huanca,"11,681",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Puno,en Ejercicio
-186,912,Luis Felipe Castillo Oliva,"47,153",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,LIMA,en Ejercicio
-187,748,Jorge Andrés Castro Bravo,"23,341",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Tacna,Julio 2016 - Setiembre 2019
-188,787,Miguel Antonio Castro Grández,"12,939",Parlamentario 2016 - 2021,Unidos por la República,ALIANZA PARA EL PROGRESO,Amazonas,Julio 2016 - Setiembre 2019
-189,942,Luz Milagros Cayguaray Gambini,"9,631",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Loreto,en Ejercicio
-190,946,Wilmer Cayllahua Barrientos,"46,910",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Lima + Residentes en el Extranjero,en Ejercicio
-191,949,María Teresa Céspedes Cárdenas,"27,500",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Lima + Residentes en el Extranjero,en Ejercicio
-192,742,Hernando Ismael Cevallos Flores,"15,244",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Piura,Julio 2016 - Setiembre 2019
-193,708,Cecilia Isabel Chacón De Vettori,"186,242",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-194,997,Posemoscrowte Irrhoscopt Chagua Payano,"13,235",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Huancavelica,en Ejercicio
-195,998,Hipólito Chaiña Contreras,"41,152",Parlamentario 2016 - 2021,Unión por el Perú,[168] NUEVA CONSTITUCIÓN,Arequipa,Fallecido
-196,999,Roberto Carlos Chavarría Vilcatoma,"21,838",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Junin,en Ejercicio
-197,888,Martha Gladys Chávez Cossío,"181,640",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-198,930,Lenin Abraham Checco Chauca,"14,000",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Apurimac,en Ejercicio
-199,972,Omar Karim Chehade Moya,"24,610",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Lima + Residentes en el Extranjero,en Ejercicio
-200,760,Leyla Felícita Chihuán Ramos,"29,603",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-201,698,Ana María Choquehuanca de Villanueva,"27,289",Parlamentario 2016 - 2021,Peruanos por el Kambio,NO AGRUPADOS,Arequipa,Julio 2016 - Setiembre 2019
-202,889,Diethell Columbus Murata,"78,912",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-203,974,Cesar Augusto Combina Salvatierra,"26,378",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Junin,en Ejercicio
-204,976,"Julio Fredy Condori Flores,","24,286",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Ica,en Ejercicio
-205,931,Cindy Arlette Contreras Bautista,"57,598",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NO AGRUPADOS,Lima + Residentes en el Extranjero,en Ejercicio
-206,734,Gino Francisco Costa Santolalla,"26,128",Parlamentario 2016 - 2021,No Agrupado,BANCADA LIBERAL,Lima Capital,Julio 2016 - Marzo 2020
-207,901,Gino Francisco Costa Santolalla,"101,819",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Lima + Residentes en el Extranjero,en Ejercicio
-208,865,Luz Rebeca Cruz Tévez,"5,507",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Cusco,Julio 2016 - Setiembre 2019
-209,793,Nelly Lady Cuadros Candia,"14,097",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Cusco,Julio 2016 - Setiembre 2019
-210,718,Edilberto Curro López,"12,628",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Puno,Julio 2016 - Setiembre 2019
-211,769,Manuel Enrique Ernesto Dammert Ego Aguirre,"53,913",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Lima Capital,Julio 2016 - Setiembre 2019
-212,810,Sergio Francisco Félix Dávila Vizcarra,"24,105",Parlamentario 2016 - 2021,Peruanos por el Kambio,PERUANOS POR EL KAMBIO,Arequipa,Julio 2016 - Setiembre 2019
-213,694,Alberto De Belaunde De Cárdenas,"29,271",Parlamentario 2016 - 2021,Peruanos por el Kambio,BANCADA LIBERAL,LIMA,Julio 2016 - Setiembre 2019
-214,902,Alberto De Belaunde De Cárdenas,"266,654",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Lima + Residentes en el Extranjero,en Ejercicio
-215,752,Juan Carlos  Del Águila Cárdenas,"15,784",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Loreto,Julio 2016 - Setiembre 2019
-216,719,Edmundo Del Águila Herrera,"48,769",Parlamentario 2016 - 2021,Acción Popular,ACCION POPULAR,Lima Capital,Julio 2016 - Marzo 2020
-217,747,Jorge Alfonso Alejandro Del Castillo Gálvez,"57,933",Parlamentario 2016 - 2021,Partido Aprista Peruano,CÉLULA PARLAMENTARIA APRISTA,Lima Capital,Julio 2016 - Setiembre 2019
-218,973,Luis Reymundo Dioses Guzmán,"14,235",Parlamentario 2016 - 2021,Somos Perú,SOMOS PERÚ,Piura,en Ejercicio
-219,788,Joaquín Dipas Huamán,"20,089",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ayacucho,Julio 2016 - Setiembre 2019
-220,704,Carlos Alberto Domínguez Herrera,"24,088",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ancash,Julio 2016 - Setiembre 2019
-221,721,Edwin Alberto Donayre Gotzch,"48,602",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Lima Capital,Inactivo
-222,798,Patricia Elizabeth Donayre Pasquel,"26,543",Parlamentario 2016 - 2021,Unidos por la República,BANCADA LIBERAL,Loreto,Julio 2016 - Setiembre 2019
-223,936,Kenyon Eduardo Durand Bustamante,"4,691",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Huancavelica,en Ejercicio
-224,811,Sonia Rosario Echevarría Huamán,"19,291",Parlamentario 2016 - 2021,Fuerza Popular,ACCIÓN REPÚBLICA,Junin,Julio 2016 - Setiembre 2019
-225,785,Miguel Ángel Elías Ávalos,"27,609",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ica,Julio 2016 - Setiembre 2019
-226,779,Marisol Espinoza Cruz,"18,235",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Piura,Julio 2016 - Setiembre 2019
-227,975,Rennán Samuel Espinoza Rosales,"53,644",Parlamentario 2016 - 2021,Somos Perú,NO AGRUPADOS,Lima + Residentes en el Extranjero,en Ejercicio
-228,914,Yeremi Aron Espinoza Velarde,"110,790",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-229,939,Yessy Nélida Fabián Díaz,"13,863",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Huanuco,en Ejercicio
-230,932,Carlos Enrique Fernández Chacón,"123,926",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Lima + Residentes en el Extranjero,en Ejercicio
-231,978,Matilde Fernández Florez,"11,328",Parlamentario 2016 - 2021,Somos Perú,SOMOS PERÚ,Cusco,en Ejercicio
-232,790,Modesto Figueroa Minaya,"2,219",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Madre de dios,Julio 2016 - Setiembre 2019
-233,714,Clemente Flores Vílchez,"15,433",Parlamentario 2016 - 2021,Peruanos por el Kambio,PERUANOS POR EL KAMBIO,Lambayeque,Julio 2016 - Marzo 2020
-234,915,Johan Flores Villegas,"7,505",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Moquegua,en Ejercicio
-235,773,María Elena Foronda Farro,"9,094",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Ancash,Julio 2016 - Setiembre 2019
-236,759,Kenji Gerardo Fujimori Higuchi,"389,383",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Lima Capital,Suspendido por Acusación Constitucional
-237,766,Luis Fernando Galarreta Velarde,"50,211",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Marzo 2020
-238,916,María Martina Gallardo Becerra,"16,935",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lambayeque,en Ejercicio
-239,713,Clayton Flavio Galván Vento,"7,629",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Pasco,Julio 2016 - Setiembre 2019
-240,815,Víctor Andrés García Belaúnde,"58,607",Parlamentario 2016 - 2021,Acción Popular,ACCION POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-241,781,Maritza Matilde García Jiménez,"19,956",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Piura,Julio 2016 - Setiembre 2019
-242,943,Paul Gabriel García Oviedo,"19,007",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Callao,en Ejercicio
-243,917,Cecilia García Rodríguez,"24,646",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-244,869,Katia Lucia Gilvonio Condezo,"4,509",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Junin,Julio 2016 - Setiembre 2019
-245,778,Marisa Glave Remy,"97,529",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Lima Capital,Julio 2016 - Setiembre 2019
-246,753,Juan Carlos Eugenio Gonzales Ardiles,"23,969",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-247,903,Miguel Angel Gonzales Santos,"11,329",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Callao,en Ejercicio
-248,983,César Gonzales Tuanama,"25,862",Parlamentario 2016 - 2021,Somos Perú,DESCENTRALIZACIÓN DEMOCRÁTICA,Ucayali,en Ejercicio
-249,977,Moises Gonzalez Cruz,"21,527",Parlamentario 2016 - 2021,Alianza para el Progreso,NUEVA CONSTITUCIÓN,Cajamarca,en Ejercicio
-250,792,Moisés Bartolome Guía Pianto,"20,578",Parlamentario 2016 - 2021,Peruanos por el Kambio,CONTIGO,Junin,Julio 2016 - Setiembre 2019
-251,944,Otto Napoleón Guibovich Arteaga,"14,902",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Ancash,en Ejercicio
-252,918,Robinson Dociteo Gupioc Rios,"19,032",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-253,950,Robledo Noé Gutarra Ramos,"19,091",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Junin,en Ejercicio
-254,808,Saleh Carlos Salvador Heresi Chicoma,"80,944",Parlamentario 2016 - 2021,Peruanos por el Kambio,CONTIGO,Lima Capital,Julio 2016 - Marzo 2020
-255,780,Marita Herrera Arévalo,"15,312",Parlamentario 2016 - 2021,Fuerza Popular,ACCIÓN REPÚBLICA,Amazonas,Julio 2016 - Marzo 2020
-256,980,Alexander Hidalgo Zamalloa,"17,510",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Cusco,en Ejercicio
-257,951,Juan de Dios Huamán Champi,"10,532",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Cusco,en Ejercicio
-258,952,Nelly Huamani Machaca,"20,922",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Ucayali,en Ejercicio
-259,744,Indira Isabel Huilca Flores,"27,906",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Lima Capital,Julio 2016 - Marzo 2020
-260,870,Luis Carlos Antonio Iberico Núñez,"27,202",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,LIMA,Julio 2016 - Marzo 2020
-261,945,Leonardo Inga Sales,"16,686",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Loreto,en Ejercicio
-262,823,Zacarías Reymundo Lapa Inga,"8,278",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Huancavelica,Julio 2016 - Setiembre 2019
-263,745,Israel Tito Lazo Julca,"16,566",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Junin,Julio 2016 - Setiembre 2019
-264,947,Leslye Carol Lazo Villón,"67,069",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-265,763,Luciana Milagros León Romero,"40,882",Parlamentario 2016 - 2021,Alianza Popular,CÉLULA PARLAMENTARIA APRISTA,Lima Capital,Julio 2016 - Marzo 2020
-266,822,Yonhy Lescano Ancieta,"52,764",Parlamentario 2016 - 2021,Acción Popular,ACCION POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-267,775,María Úrsula Ingrid Letona Pereyra,"23,865",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-268,782,Mártires Lizana Santos,"26,691",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,Julio 2016 - Setiembre 2019
-269,890,Mártires Lizana Santos,"28,228",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-270,904,Carolina Lizárraga Houghton,"49,131",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Lima + Residentes en el Extranjero,en Ejercicio
-271,948,Freddy Llaulli Romero,"14,878",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Junin,en Ejercicio
-272,738,Guido Ricardo Lombardi Elías,"36,661",Parlamentario 2016 - 2021,Peruanos por el Kambio,BANCADA LIBERAL,Lima Capital,Julio 2016 - Setiembre 2019
-273,767,Luis Humberto López Vilela,"35,286",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,Julio 2016 - Setiembre 2019
-274,1000,Alexander Lozano Inostroza,"2,975",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Madre de dios,en Ejercicio
-275,919,José Luis Luna Morales,"105,471",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-276,874,Raúl Machaca Mamani,"9,140",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Tacna,en Ejercicio
-277,1001,Jim Ali Mamani Barriga,"26,788",Parlamentario 2016 - 2021,Unión por el Perú,NUEVA CONSTITUCIÓN,Ayacucho,en Ejercicio
-278,791,Moíses Mamani Colquehuanca,"16,088",Parlamentario 2016 - 2021,Fuerza Popular,,Puno,Suspendido por sanción
-279,776,Mario Fidel Mantilla Medina,"3,778",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Moquegua,Julio 2016 - Marzo 2020
-280,1002,Héctor Simon Maquera Chavez,"16,487",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Tacna,en Ejercicio
-281,740,Guillermo Hernán Martorell Sobero,"11,857",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Tacna,Julio 2016 - Setiembre 2019
-282,984,Fernando Meléndez Celis,"34,038",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Loreto,en Ejercicio
-283,749,Jorge Enrique Meléndez Celis,"18,972",Parlamentario 2016 - 2021,Peruanos por el Kambio,PERUANOS POR EL KAMBIO,Loreto,Julio 2016 - Setiembre 2019
-284,723,Elard Galo Melgar Valdez,"34,022",Parlamentario 2016 - 2021,Fuerza Popular,CON FUERZA PERÚ,Lima Provincias,Julio 2016 - Setiembre 2019
-285,772,María Cristina Melgarejo Páucar,"21,588",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ancash,Julio 2016 - Setiembre 2019
-286,1003,Javier Mendoza Marquina,"22,419",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Ayacucho,en Ejercicio
-287,1022,Manuel Arturo Merino De Lama,"5,271",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Tumbes,en Ejercicio
-288,893,Omar Merino Lopez,"9,826",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Apurimac,en Ejercicio
-289,982,Carlos Fernando Mesía Ramirez,"26,536",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-290,771,Marco Enrique Miyashiro Arashiro,"56,181",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-291,737,Gloria Edelmira Montenegro Figueroa,"25,599",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,La libertad,Julio 2016 - Setiembre 2019
-292,819,Wuilian Alfonso Monterola Abregu,"16,737",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Huancavelica,Julio 2016 - Setiembre 2019
-293,933,Absalón Montoya Guivin,"19,237",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Amazonas,en Ejercicio
-294,722,Edyson Humberto Morales Ramírez,"16,756",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Ayacucho,Julio 2016 - Setiembre 2019
-295,712,Mauricio Mulder Bedoya,"122,778",Parlamentario 2016 - 2021,Alianza Popular,CÉLULA PARLAMENTARIA APRISTA,Lima Capital,Julio 2016 - Setiembre 2019
-296,725,Eloy Ricardo Narváez Soto,"20,941",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Ancash,Julio 2016 - Setiembre 2019
-297,861,Ángel Neyra Olaychea,"11,439",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,LIMA,Julio 2016 - Marzo 2020
-298,802,Paloma Rosa Noceda Chiang,"23,714",Parlamentario 2016 - 2021,Fuerza Popular,ACCION POPULAR,LIMA,Julio 2016 - Setiembre 2019
-299,954,"Anthony Renson Novoa Cruzado,","15,268",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,La libertad,en Ejercicio
-300,1010,Jesús del Carmen Núñez Marreros,"14,283",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,La libertad,en Ejercicio
-301,905,José Antonio Núñez Salas,"26,390",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Arequipa,en Ejercicio
-302,717,Édgar Américo Ochoa Pezo,"19,661",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Cusco,Julio 2016 - Marzo 2020
-303,799,Pedro Carlos Olaechea Álvarez Calderón,"41,669",Parlamentario 2016 - 2021,Peruanos por el Kambio,ACCIÓN REPÚBLICA,Lima Capital,Julio 2016 - Marzo 2020
-304,695,Alberto Eugenio Oliva Corrales,"15,379",Parlamentario 2016 - 2021,Peruanos por el Kambio,PERUANOS POR EL KAMBIO,Ica,Julio 2016 - Setiembre 2019
-305,1019,Daniel Federico Olivares Cortés,"80,649",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Lima + Residentes en el Extranjero,en Ejercicio
-306,906,María Del Carmen Omonte Durand,"18,098",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Lima + Residentes en el Extranjero,en Ejercicio
-307,879,Daniel Oseda Yucra,"14,558",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Arequipa,en Ejercicio
-308,955,Juan Carlos Oyola Rodríguez,"14,123",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Ica,en Ejercicio
-309,795,Oracio Ángel Pacori Mamani,"22,011",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Puno,Julio 2016 - Setiembre 2019
-310,750,José Marvin Palma Mendoza,"48,297",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Lambayeque,Julio 2016 - Marzo 2020
-311,715,Dalmiro Feliciano Palomino Ortiz,"15,465",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Apurimac,Julio 2016 - Setiembre 2019
-312,907,Angélica María Palomino Saavedra,"13,291",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Piura,en Ejercicio
-313,1004,Ruben Pantoja Calvo,"21,665",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Cusco,en Ejercicio
-314,956,"Rosario Paredes Eyzaguirre,","19,787",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Arequipa,en Ejercicio
-315,728,Federico Pariona Galindo,"18,768",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Junin,Julio 2016 - Setiembre 2019
-316,813,Tania Edith Pariona Tarqui,"11,842",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Ayacucho,Julio 2016 - Setiembre 2019
-317,986,Lusmila Pérez Espíritu,"13,494",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Huanuco,en Ejercicio
-318,987,Jorge Luis Pérez Flores,"28,385",Parlamentario 2016 - 2021,Somos Perú,SOMOS PERÚ,Lambayeque,en Ejercicio
-319,988,Jhosept Amado Pérez Mimbela,"12,985",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Ancash,en Ejercicio
-320,1011,Carlos Andrés Pérez Ochoa,"10,454",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Lima Provincias,en Ejercicio
-321,866,Francisco Enrique Hugo Petrozzi Franco,"13,512",Parlamentario 2016 - 2021,Fuerza Popular,BANCADA LIBERAL,Lima Capital,Julio 2016 - Setiembre 2019
-322,892,Marcos Antonio Pichilingue Gomez,"13,506",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Callao,en Ejercicio
-323,878,Isaías Pineda Santos,"33,009",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Lima + Residentes en el Extranjero,en Ejercicio
-324,1012,Liliana Angélica Pinedo Achaca,"9,438",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Provincias,en Ejercicio
-325,821,Yesenia Ponce Villarreal de Vargas,"13,941",Parlamentario 2016 - 2021,Fuerza Popular,PERUANOS POR EL KAMBIO,Ancash,Suspendido por sanción
-326,1021,Napoleón Puño Lecarnaque,"6,350",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Tumbes,en Ejercicio
-327,696,Alberto Eugenio Quintanilla Chacón,"55,218",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Puno,Julio 2016 - Setiembre 2019
-328,1017,Yvan Quispe Apaza,"33,174",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Puno,en Ejercicio
-329,990,Mario Javier Quispe Suárez,"14,479",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Piura,en Ejercicio
-330,796,Osías Ramírez Gamarra,"30,702",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Cajamarca,Julio 2016 - Setiembre 2019
-331,703,Bienvenido Ramírez Tandazo,"17,299",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Tumbes,Suspendido por Acusación Constitucional
-332,863,María Candelaria Ramos Rosales,"2,692",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Tumbes,Julio 2016 - Setiembre 2019
-333,996,Rubén Ramos Zapana,"26,470",Parlamentario 2016 - 2021,Unión por el Perú,NUEVA CONSTITUCIÓN,Puno,en Ejercicio
-334,881,Alcides Rayme Marín,"9,188",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Callao,en Ejercicio
-335,805,Rolando Reátegui Flores,"18,631",Parlamentario 2016 - 2021,Fuerza Popular,UNIDOS POR LA REPÚBLICA,San martin,Julio 2016 - Marzo 2020
-336,882,María Cristina Retamozo Lezama,"34,410",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Lima + Residentes en el Extranjero,en Ejercicio
-337,701,Benicio Ríos Ocsa,"31,599",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Cusco,Inactivo
-338,913,Perci Rivas Ocejo,"8,053",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Ayacucho,en Ejercicio
-339,958,Walter Jesús Rivera Guerra,"36,166",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-340,762,Lizbeth Hilda Robles Uribe,"13,791",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,Lima Provincias,Julio 2016 - Marzo 2020
-341,921,Tania Rosalia Rodas Malca,"24,999",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,La libertad,en Ejercicio
-342,724,Elías Nicolás Rodríguez Zavaleta,"52,103",Parlamentario 2016 - 2021,Alianza Popular,CÉLULA PARLAMENTARIA APRISTA,La libertad,Julio 2016 - Setiembre 2019
-343,959,Luis Andrés Roel Alva,"34,452",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-344,784,Miguel  Román Valdivia,"26,805",Parlamentario 2016 - 2021,Acción Popular,ACCION POPULAR,Arequipa,Julio 2016 - Setiembre 2019
-345,755,Julio Pablo Rosas Huaranga,"27,237",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ACCIÓN REPÚBLICA,Lima Capital,Julio 2016 - Setiembre 2019
-346,817,Wilbert Gabriel Rozas Beltrán,"23,771",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Cusco,Julio 2016 - Setiembre 2019
-347,883,Richard Rubio Gariza,"27,650",Parlamentario 2016 - 2021,Frente Popular Agrícola FIA del Perú,FREPAP,Lima + Residentes en el Extranjero,en Ejercicio
-348,960,Rolando Rubén Ruíz Pinedo,"13,570",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,San martin,en Ejercicio
-349,1023,Mónica Elizabeth Saavedra Ocharán,"91,656",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-350,727,Esther Saavedra Vela,"7,794",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,San martin,Julio 2016 - Setiembre 2019
-351,1018,Francisco Rafael Sagasti Hochhausler,"96,422",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Lima + Residentes en el Extranjero,en Ejercicio
-352,716,Daniel Enrique Salaverry Villa,"57,827",Parlamentario 2016 - 2021,Fuerza Popular,UNIDOS POR LA REPÚBLICA,La libertad,Suspendido por sanción
-353,789,Milagros Emperatriz Salazar De La Torre,"12,326",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Marzo 2020
-354,794,Octavio Edilberto Salazar Miranda,"43,763",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,La libertad,Julio 2016 - Setiembre 2019
-355,768,Luz Filomena Salgado Rubianes,"82,183",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Marzo 2020
-356,962,Franco Salinas López,"14,385",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Piura,en Ejercicio
-357,746,Janet Emilia Sánchez Alva,"17,409",Parlamentario 2016 - 2021,Peruanos por el Kambio,CONTIGO,Callao,Julio 2016 - Setiembre 2019
-358,920,Orestes Pompeyo Sánchez Luis,"13,016",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-359,925,"Robertina Santillana Paredes,","10,735",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,San martin,en Ejercicio
-360,731,Freddy Fernando Sarmiento Betancourt,"20,084",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,Julio 2016 - Setiembre 2019
-361,758,Karla Melissa Schaefer Cuculiza,"39,750",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,Julio 2016 - Setiembre 2019
-362,710,César Antonio Segura Izquierdo,"20,511",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ica,Julio 2016 - Setiembre 2019
-363,754,Juan Sheput Moore,"73,412",Parlamentario 2016 - 2021,Peruanos por el Kambio,CONTIGO,Lima Capital,Julio 2016 - Setiembre 2019
-364,894,María Luisa Silupu Inga,"14,934",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-365,935,Rocío Yolanda Angélica Silva Santisteban Manrique,"50,606",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Lima + Residentes en el Extranjero,en Ejercicio
-366,963,Luis Carlos Simeón Hurtado,"9,748",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Pasco,en Ejercicio
-367,909,Zenaida Solis Gutiérrez,"52,597",Parlamentario 2016 - 2021,Partido Morado,PARTIDO MORADO,Lima + Residentes en el Extranjero,en Ejercicio
-368,761,Milagros Takayama Jiménez,"19,043",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lambayeque,Julio 2016 - Setiembre 2019
-369,809,Segundo Leocadio Tapia Bernal,"6,307",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Cajamarca,Julio 2016 - Setiembre 2019
-370,705,Carlos Humberto Ticlla Rafael,"14,681",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Cajamarca,Julio 2016 - Setiembre 2019
-371,895,Erwin Tito Ortega,"7,971",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Junin,en Ejercicio
-372,991,Felícita Madaleine Tocto Guerrero,"9,996",Parlamentario 2016 - 2021,Somos Perú,DESCENTRALIZACIÓN DEMOCRÁTICA,Cajamarca,en Ejercicio
-373,786,Miguel Ángel Torres Morales,"27,771",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Marzo 2020
-374,964,Hans Troyes Delgado,"16,090",Parlamentario 2016 - 2021,Acción Popular,ACCIÓN POPULAR,Cajamarca,en Ejercicio
-375,733,Gilmer Trujillo Zegarra,"8'571,708",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,San martin,Julio 2016 - Setiembre 2019
-376,1020,Gilmer Trujillo Zegarra,"6,348",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,San martin,en Ejercicio
-377,706,Carlos Mario Del Carmen Tubino Arias Schreiber,"10,972",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Ucayali,Julio 2016 - Setiembre 2019
-378,804,Rogelio Robert Tucto Castillo,"9,331",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",FRENTE AMPLIO,Huanuco,Julio 2016 - Setiembre 2019
-379,922,Daniel Belizario Urresti Elera,"588,763",Parlamentario 2016 - 2021,Podemos Perú,PODEMOS PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-380,736,Glider Agustín Ushñahua Huasanga,"12,234",Parlamentario 2016 - 2021,No Agrupado,UNIDOS POR LA REPÚBLICA,Ucayali,Fallecido
-381,926,Luis Alberto Valdez Farías,"34,331",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,La libertad,en Ejercicio
-382,897,Valeria Carolina Valer Collado,"36,525",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima + Residentes en el Extranjero,en Ejercicio
-383,965,Jorge Vásquez Becerra,"19,600",Parlamentario 2016 - 2021,Acción Popular,NO AGRUPADOS,Cusco,en Ejercicio
-384,937,Mirtha Esther Vásquez Chuquilin,"12,687",Parlamentario 2016 - 2021,Frente Amplio,FRENTE AMPLIO,Cajamarca,en Ejercicio
-385,711,César Henry Vásquez Sánchez,"13,969",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Cajamarca,Julio 2016 - Setiembre 2019
-386,992,Grimaldo Vásquez Tan,"12,096",Parlamentario 2016 - 2021,Somos Perú,DESCENTRALIZACIÓN DEMOCRÁTICA,Amazonas,en Ejercicio
-387,908,José Alejandro Vega Antonio,"33,251",Parlamentario 2016 - 2021,Unión por el Perú,UNIÓN POR EL PERÚ,Lima + Residentes en el Extranjero,en Ejercicio
-388,699,Angel Javier Velásquez Quesquén,"28,243",Parlamentario 2016 - 2021,Alianza Popular,CÉLULA PARLAMENTARIA APRISTA,Lambayeque,Julio 2016 - Setiembre 2019
-389,807,Roy Ernesto Ventura Angel,"5,579",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Pasco,Julio 2016 - Setiembre 2019
-390,927,Marco Antonio Verde Heidinger,"4,483",Parlamentario 2016 - 2021,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Pasco,en Ejercicio
-391,720,Edwin Vergara Pinto,"49,922",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-392,803,Roberto Gamaniel Vieira Portugal,"30,389",Parlamentario 2016 - 2021,Peruanos por el Kambio,NO AGRUPADOS,Lima Capital,Suspendido por sanción
-393,898,Widman Napoleón Vigo Gutiérrez,"8,138",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Cajamarca,en Ejercicio
-394,820,Yeni  Vilcatoma De La Cruz,"139,912",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Lima Capital,Julio 2016 - Setiembre 2019
-395,709,César Villanueva Arévalo,"25,607",Parlamentario 2016 - 2021,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,San martin,Julio 2016 - Setiembre 2019
-396,700,Armando Villanueva Mercado,"22,504",Parlamentario 2016 - 2021,Acción Popular,ACCION POPULAR,Cusco,Julio 2016 - Setiembre 2019
-397,730,Francisco Javier Villavicencio Cárdenas ,"26,169",Parlamentario 2016 - 2021,Fuerza Popular,ALIANZA PARA EL PROGRESO,Callao,Julio 2016 - Setiembre 2019
-398,732,Gilbert Félix Violeta López,"78,615",Parlamentario 2016 - 2021,Peruanos por el Kambio,CONTIGO,Lima Capital,Julio 2016 - Marzo 2020
-399,899,Miguel Angel Vivanco Reyes,"15,720",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,La libertad,en Ejercicio
-400,765,Luis Alberto Yika García,"15,490",Parlamentario 2016 - 2021,Fuerza Popular,CAMBIO21,La libertad,Julio 2016 - Setiembre 2019
-401,993,Mariano Andrés Yupanqui Miñano,"13,432",Parlamentario 2016 - 2021,Somos Perú,DESCENTRALIZACIÓN DEMOCRÁTICA,La libertad,en Ejercicio
-402,751,Juan Carlo Yuyes Meza,"13,831",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Tumbes,Julio 2016 - Setiembre 2019
-403,900,Edward Alexander Zarate Anton,"19,708",Parlamentario 2016 - 2021,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-404,743,Horacio Zeballos Patrón,"24,380",Parlamentario 2016 - 2021,"Frente Amplio por Justicia, Vida y Libertad",NUEVO PERÚ,Arequipa,Julio 2016 - Setiembre 2019
-405,814,Vicente Antonio Zeballos Salinas,"11,652",Parlamentario 2016 - 2021,No Agrupado,BANCADA LIBERAL,Moquegua,Julio 2016 - Setiembre 2019
-406,853,Daniel Fernando Abugattás Majluf,"119,742",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,LIMA,en Ejercicio
-407,2,Walter Acha Romaní,"15,087",Parlamentario 2011 - 2016,Gana Perú,NO AGRUPADOS,Ayacucho,en Ejercicio
-408,3,Richard Frank Acuña Núñez,"74,789",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,PPC - APP,La libertad,en Ejercicio
-409,4,Virgilio Acuña Peralta,"26,058",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,SOLIDARIDAD NACIONAL,Lambayeque,en Ejercicio
-410,5,Alejandro Aurelio Aguinaga Recuenco,"37,344",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Lambayeque,en Ejercicio
-411,6,María Lourdes Pía Luisa Alcorta Suero,"93,251",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-412,7,Fernando Juan Andrade Carmona,"40,772",Parlamentario 2011 - 2016,Somos Perú,PERÚ POSIBLE,LIMA,en Ejercicio
-413,8,Roberto Edmundo Angulo Álvarez,"24,512",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,La libertad,en Ejercicio
-414,9,Elsa Celia Anicama Ñáñez,"15,326",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,Ica,en Ejercicio
-415,10,Emiliano Apaza Condori,"31,916",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Puno,en Ejercicio
-416,11,Justiniano Rómulo Apaza Ordóñez,"51,332",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,Arequipa,en Ejercicio
-417,12,Aldo Maximiliano Bardález Cochagne,"9,875",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,San martin,en Ejercicio
-418,13,Héctor Virgilio Becerril Rodríguez,"14,946",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Amazonas,en Ejercicio
-419,14,Javier Bedoya De Vivanco,"51,051",Parlamentario 2011 - 2016,Partido Popular Cristiano,PPC - APP,LIMA,en Ejercicio
-420,15,Alberto Ismael Beingolea Delgado,"159,397",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,PPC - APP,LIMA,en Ejercicio
-421,16,Martin Belaunde Moreyra,"33,015",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,SOLIDARIDAD NACIONAL,LIMA,en Ejercicio
-422,17,Heriberto Manuel Benítez Rivas,"34,027",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,NO AGRUPADOS,Ancash,en Ejercicio
-423,630,Karina Juliza Beteta Rubín,0,Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Huanuco,en Ejercicio
-424,18,Carlos Ricardo Bruce Montes de Oca,"130,620",Parlamentario 2011 - 2016,Perú Posible,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-425,19,Eduardo Felipe Cabrera Ganoza,"55,310",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Ica,en Ejercicio
-426,20,Rogelio Antenor Canches Guzmán,"28,460",Parlamentario 2011 - 2016,Gana Perú,UNIÓN REGIONAL,Callao,en Ejercicio
-427,21,Esther Yovana Capuñay Quispe,"35,688",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,SOLIDARIDAD NACIONAL,LIMA,en Ejercicio
-428,22,Johnny Cárdenas Cerrón,"34,017",Parlamentario 2011 - 2016,Gana Perú,NO AGRUPADOS,Junin,en Ejercicio
-429,23,Hugo Carrillo Cavero,"15,533",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Huancavelica,en Ejercicio
-430,24,Juan Cesar Castagnino Lema,"22,828",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,Piura,en Ejercicio
-431,25,Francisco Ccama Layme,"15,045",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Puno,en Ejercicio
-432,26,Cecilia Isabel Chacón De Vettori,"15,762",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Cajamarca,en Ejercicio
-433,27,Martha Gladys Chávez Cossío,"34,753",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-434,28,Omar Karim Chehade Moya,"31,320",Parlamentario 2011 - 2016,Gana Perú,NO AGRUPADOS,LIMA,en Ejercicio
-435,29,Leyla Felícita Chihuán Ramos,"64,389",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-436,30,Rubén Rolando Coa Aguilar,"43,720",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Cusco,en Ejercicio
-437,31,Claudia Faustina Coari Mamani,"19,445",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,Puno,en Ejercicio
-438,32,Rubén Condori Cusi,"31,002",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Puno,en Ejercicio
-439,33,Gladys Natalie Condori Jahuira,"27,654",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,Tacna,en Ejercicio
-440,34,María del Pilar Cordero Jon Tay,"6,073",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Tumbes,en Ejercicio
-441,35,Víctor Walberto Crisólogo Espejo,"12,352",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,Ancash,en Ejercicio
-442,36,Luisa María Cuculiza Torre,"77,292",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-443,37,Manuel Enrique Ernesto Dammert Ego Aguirre,"20,636",Parlamentario 2011 - 2016,Gana Perú,ACCIÓN POPULAR - FRENTE AMPLIO,LIMA,en Ejercicio
-444,38,Hernán De La Torre Dueñas,"46,403",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Cusco,en Ejercicio
-445,39,Jaime Ricardo Delgado Zegarra,"119,561",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,LIMA,en Ejercicio
-446,40,Juan José Díaz Dios,"27,444",Parlamentario 2011 - 2016,Fuerza Popular,NO AGRUPADOS,Piura,en Ejercicio
-447,824,Javier Diez Canseco Cisneros,"109,702",Parlamentario 2011 - 2016,Gana Perú,ACCIÓN POPULAR - FRENTE AMPLIO,LIMA,Fallecido
-448,42,Juan Carlos Eguren Neuenschwander,"49,017",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,PPC - APP,Arequipa,en Ejercicio
-449,43,José Luis Elías Ávalos,"44,210",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Ica,en Ejercicio
-450,44,Marisol Espinoza Cruz,"34,138",Parlamentario 2011 - 2016,Gana Perú,,Piura,en Ejercicio
-451,45,Rennán Samuel Espinoza Rosales,"60,791",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-452,46,Marco Tulio Falconí Picardo,"31,149",Parlamentario 2011 - 2016,Perú Posible,UNIÓN REGIONAL,Arequipa,en Ejercicio
-453,47,Kenji Gerardo Fujimori Higuchi,"381,049",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-454,48,Julio César Gagó Pérez,"49,272",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-455,49,Luis Fernando Galarreta Velarde,"56,463",Parlamentario 2011 - 2016,Independiente,PPC - APP,LIMA,en Ejercicio
-456,50,Teófilo Gamarra Saldívar,"15,126",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Ucayali,en Ejercicio
-457,51,Víctor Andrés García Belaúnde,"53,769",Parlamentario 2011 - 2016,Perú Posible,ACCIÓN POPULAR - FRENTE AMPLIO,LIMA,en Ejercicio
-458,52,Santiago Gastañadui Ramírez,"16,208",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Piura,en Ejercicio
-459,53,Víctor Raul Grández Saldaña,"10,531",Parlamentario 2011 - 2016,Fuerza Popular,,Loreto,en Ejercicio
-460,54,Mesias Antonio Guevara Amasifuén,"18,041",Parlamentario 2011 - 2016,Acción Popular,ACCIÓN POPULAR - FRENTE AMPLIO,Cajamarca,en Ejercicio
-461,55,Josue Manuel Gutiérrez Cóndor,"29,655",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Huanuco,en Ejercicio
-462,56,Casio Faustino Huaire Chuquichaico,"22,699",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,Junin,en Ejercicio
-463,57,Leonidas Huayama Neira,"31,745",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Piura,en Ejercicio
-464,58,Jesús Panfilo Hurtado Zamudio,"14,632",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Junin,en Ejercicio
-465,59,Luis Carlos Antonio Iberico Nuñez,"53,494",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,PPC - APP,LIMA,en Ejercicio
-466,60,Leonardo Agustín Inga Vásquez,"25,937",Parlamentario 2011 - 2016,Acción Popular,ACCIÓN POPULAR - FRENTE AMPLIO,Loreto,en Ejercicio
-467,61,Víctor Isla Rojas,"18,131",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Loreto,en Ejercicio
-468,62,Ana Ethel Del Rosario Jara Velásquez,"48,877",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Ica,en Ejercicio
-469,63,Dalmacio Modesto Julca Jara,"29,660",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,Ancash,en Ejercicio
-470,64,Ramón Kobashigawa Kobashigawa,"22,482",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,La libertad,en Ejercicio
-471,65,Humberto Lay Sun,"215,066",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,UNIÓN REGIONAL,LIMA,en Ejercicio
-472,66,José Raguberto León Rivera,"29,017",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,La libertad,en Ejercicio
-473,67,Luciana Milagros León Romero,"78,376",Parlamentario 2011 - 2016,Partido Aprista Peruano,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-474,68,Yonhy Lescano Ancieta,"44,604",Parlamentario 2011 - 2016,Perú Posible,ACCIÓN POPULAR - FRENTE AMPLIO,LIMA,en Ejercicio
-475,69,Norman David Lewis Del Alcázar,"29,930",Parlamentario 2011 - 2016,Perú Posible,UNIÓN REGIONAL,Loreto,en Ejercicio
-476,70,Cristóbal Luis Llatas Altamirano,"17,731",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Cajamarca,en Ejercicio
-477,71,María Magdalena López Córdova,"28,948",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Ancash,en Ejercicio
-478,72,José León Luna Gálvez,"69,996",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,SOLIDARIDAD NACIONAL,LIMA,en Ejercicio
-479,73,Rosa Delsa Mavila León,"21,559",Parlamentario 2011 - 2016,Gana Perú,ACCIÓN POPULAR - FRENTE AMPLIO,LIMA,en Ejercicio
-480,74,Antonio Medina Ortiz,"6,972",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Apurimac,en Ejercicio
-481,75,Elard Galo Melgar Valdez,"28,367",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-482,76,Verónika Fanny Mendoza Frisch,"47,088",Parlamentario 2011 - 2016,Gana Perú,ACCIÓN POPULAR - FRENTE AMPLIO,Cusco,en Ejercicio
-483,77,Manuel Arturo Merino De Lama,"9,474",Parlamentario 2011 - 2016,Perú Posible,ACCIÓN POPULAR - FRENTE AMPLIO,Tumbes,en Ejercicio
-484,78,Agustín F. Molina Martínez,"17,108",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Cusco,en Ejercicio
-485,79,Wuilian Alfonso Monterola Abregu,"24,706",Parlamentario 2011 - 2016,Perú Posible,UNIÓN REGIONAL,Huancavelica,en Ejercicio
-486,80,Daniel Emiliano Mora Zevallos,"15,180",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,Callao,en Ejercicio
-487,81,Mauricio Mulder Bedoya,"52,798",Parlamentario 2011 - 2016,Partido Aprista Peruano,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-488,82,Eduardo Nayap Kinin,"17,556",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Amazonas,en Ejercicio
-489,83,Rofilio T. Neyra Huamaní,"33,914",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Ayacucho,en Ejercicio
-490,84,Ángel Neyra Olaychea,"31,976",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-491,85,Carmen Rosa Núñez Campos,0,Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,CONCERTACIÓN PARLAMENTARIA,La libertad,en Ejercicio
-492,86,María Del Carmen Omonte Durand,"19,054",Parlamentario 2011 - 2016,Perú Posible,PERÚ POSIBLE,Huanuco,en Ejercicio
-493,87,Doris Gladys Oseda Soto,"32,146",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Junin,en Ejercicio
-494,88,Fredy Rolando Otárola Peñaranda,"24,828",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Ancash,en Ejercicio
-495,89,Juan Donato Pari Choquecota,"23,960",Parlamentario 2011 - 2016,,DIGNIDAD Y DEMOCRACIA ,Tacna,en Ejercicio
-496,90,Federico Pariona Galindo,"25,370",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Junin,en Ejercicio
-497,91,Gabriela Lourdes Pérez Del Solar Cuculiza,"60,530",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-498,92,María Soledad Pérez Tello De Rodríguez,"50,721",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,PPC - APP,LIMA,en Ejercicio
-499,93,Mariano Eutropio Portugal Catacora,"27,868",Parlamentario 2011 - 2016,Perú Posible,UNIÓN REGIONAL,Puno,en Ejercicio
-500,94,Reber Joaquín Ramírez Gamarra,"83,179",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Cajamarca,en Ejercicio
-501,95,Rolando Reátegui Flores,"20,670",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,San martin,en Ejercicio
-502,96,Renzo Andrés Reggiardo Barreto,"43,541",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-503,97,Jhon Arquimides Reynaga Soto,"12,921",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Apurimac,en Ejercicio
-504,98,Jorge Antonio Rimarachín Cabrera,"25,158",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,Cajamarca,en Ejercicio
-505,99,Martín Rivas Texeira,"32,070",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Lambayeque,en Ejercicio
-506,100,Elías Nicolás Rodríguez Zavaleta,"39,690",Parlamentario 2011 - 2016,Partido Aprista Peruano,CONCERTACIÓN PARLAMENTARIA,La libertad,en Ejercicio
-507,101,Eulogio Amado Romero Rodríguez,"5,915",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,Madre de dios,en Ejercicio
-508,102,Gustavo Bernardo Rondón Fudinaga,"58,984",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,SOLIDARIDAD NACIONAL,Arequipa,en Ejercicio
-509,103,Julio Pablo Rosas Huaranga,"75,322",Parlamentario 2011 - 2016,Fuerza Popular,,LIMA,en Ejercicio
-510,104,Wilder Ruiz Loayza,"10,789",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,LIMA,en Ejercicio
-511,105,Esther Saavedra Vela,"7,961",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,San martin,en Ejercicio
-512,106,Octavio Edilberto Salazar Miranda,"86,109",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,La libertad,en Ejercicio
-513,107,Luz Filomena Salgado Rubianes,"37,835",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-514,108,Freddy Fernando Sarmiento Betancourt,"20,947",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-515,109,Karla Melissa Schaefer Cuculiza,"23,086",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio
-516,110,Yehude Simon Munaro,"49,742",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,PERÚ POSIBLE,Lambayeque,en Ejercicio
-517,111,Ana Maria Solórzano Flores,"59,471",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Arequipa,en Ejercicio
-518,112,Pedro Carmelo Spadaro Philipps,"26,356",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Callao,en Ejercicio
-519,113,Cecilia Tait Villacorta,"78,829",Parlamentario 2011 - 2016,Perú Posible,,LIMA,en Ejercicio
-520,114,Aurelia Tan De Inafuko,"28,650",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-521,115,Segundo Leocadio Tapia Bernal,"10,545",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Cajamarca,en Ejercicio
-522,116,Sergio Fernando Tejada Galindo,"27,456",Parlamentario 2011 - 2016,Gana Perú,DIGNIDAD Y DEMOCRACIA ,LIMA,en Ejercicio
-523,117,Julia Teves Quispe,"30,971",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Cusco,en Ejercicio
-524,118,Carlos Mario Del Carmen Tubino Arias Schreiber,"18,474",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Ucayali,en Ejercicio
-525,119,Cenaida Cebastiana Uribe Medina,"30,839",Parlamentario 2011 - 2016,Gana Perú,NO AGRUPADOS,LIMA,en Ejercicio
-526,120,José Antonio Urquizo Maggia,"19,812",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Ayacucho,en Ejercicio
-527,1025,Michael Urtecho Medina,0,Parlamentario 2011 - 2016,Solidaridad Nacional,SOLIDARIDAD NACIONAL,LIMA,Suspendido
-528,122,Gian Carlo Vacchelli Corbetto,"43,234",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio
-529,123,Jaime Rubén Valencia Quiroz,"8,025",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Moquegua,en Ejercicio
-530,124,Willyam Tito Valle Ramírez,"13,095",Parlamentario 2011 - 2016,Somos Perú,PERÚ POSIBLE,Pasco,en Ejercicio
-531,125,Néstor Antonio Valqui Matos,"11,579",Parlamentario 2011 - 2016,Fuerza Popular,FUERZA POPULAR,Pasco,en Ejercicio
-532,126,Angel Javier Velásquez Quesquén,"43,876",Parlamentario 2011 - 2016,Partido Aprista Peruano,CONCERTACIÓN PARLAMENTARIA,Lambayeque,en Ejercicio
-533,127,Enrique Wong Pujada,"17,574",Parlamentario 2011 - 2016,Alianza por el Gran Cambio,SOLIDARIDAD NACIONAL,Callao,en Ejercicio
-534,1024,Alejandro Yovera Flores,"19,816",Parlamentario 2011 - 2016,Fuerza 2011,ACCIÓN POPULAR - FRENTE AMPLIO,Huanuco,Inhabilitada
-535,129,César Elmer Yrupailla Montes,"16,842",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,San martin,en Ejercicio
-536,130,Tomás Martín Zamudio Briceño,"28,733",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,Arequipa,en Ejercicio
-537,131,Vicente Antonio Zeballos Salinas,"15,393",Parlamentario 2011 - 2016,Alianza Solidaridad Nacional,SOLIDARIDAD NACIONAL,Moquegua,en Ejercicio
-538,132,Manuel Salvador Zerillo Bazalar,"27,427",Parlamentario 2011 - 2016,Gana Perú,NACIONALISTA GANA PERÚ,LIMA,en Ejercicio
-539,133,Daniel Fernando Abugattás Majluf,"33,236",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,LIMA,en Ejercicio
-540,134,Martha Carolina Acosta Zárate,"24,362",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Junin,en Ejercicio
-541,135,Alejandro Aurelio Aguinaga Recuenco,"24,275",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,Lambayeque,en Ejercicio
-542,136,María Lourdes Pía Luisa Alcorta Suero,"47,688",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,LIMA,en Ejercicio
-543,137,Mario Arturo Alegría Pastor,"22,499",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-544,138,Luis Juan Alva Castro,"57,409",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-545,139,José Oriol Anaya Oropeza,"12,383",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,Ancash,Suspendido
-546,140,Alberto Manuel Andrade Carmona,"131,178",Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,LIMA,Fallecido
-547,141,María Helvezia Balta Salazar,"18,670",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ancash,en Ejercicio
-548,142,Javier Bedoya De Vivanco,"59,557",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,LIMA,en Ejercicio
-549,143,Ricardo Pablo Belmont Cassinelli,"29,157",Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,LIMA,en Ejercicio
-550,144,Tula Luz Benites Vásquez,"35,140",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,Inactivo
-551,145,Karina Juliza Beteta Rubín,"17,798",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,Huanuco,en Ejercicio
-552,146,Carlos Ricardo Bruce Montes de Oca,"193,374",Parlamentario 2006 - 2011,Perú Posible,ALIANZA PARLAMENTARIA,LIMA,en Ejercicio
-553,147,Mercedes Cabanillas Bustamante De Llanos,"182,567",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-554,148,Werner Cabrera Campos,"13,627",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Cajamarca,en Ejercicio
-555,149,Yaneth Cajahuanca Rosales,"23,163",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Huanuco,en Ejercicio
-556,150,Wilder Félix Calderón Castro,"20,829",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ancash,en Ejercicio
-557,151,Elsa Victoria Canchaya Sánchez,"20,775",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,Junin,Inactivo
-558,152,Carlos Alberto Cánepa La Cotera,"8,124",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,Tumbes,en Ejercicio
-559,153,Franco Carpio Guerrero,"16,140",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,Lambayeque,en Ejercicio
-560,154,José Carlos Carrasco Távara,"20,241",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Piura,en Ejercicio
-561,155,Raúl Eduardo Castro Stagnaro,"27,982",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,LIMA,en Ejercicio
-562,156,Alfredo Tomás Cenzano Sierralta,"17,426",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Puno,en Ejercicio
-563,157,Cecilia Isabel Chacón De Vettori,"17,515",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,Cajamarca,en Ejercicio
-564,158,Olga Amelia Cribilleros Shigihara,"21,668",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-565,159,Luisa María Cuculiza Torre,"110,963",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-566,160,Oswaldo De La Cruz Vásquez,"9,408",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,Pasco,en Ejercicio
-567,161,Jorge Alfonso Alejandro Del Castillo Gálvez,"81,196",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-568,162,Juan Carlos Eguren Neuenschwander,"26,266",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,Arequipa,en Ejercicio
-569,163,Dacia Nena Escalante León,0,Parlamentario 2006 - 2011,Partido Nacionalista Peruano,NACIONALISTA,Ancash,en Ejercicio
-570,164,Francisco Escudero Casquino,"24,841",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,La libertad,en Ejercicio
-571,165,Marisol Espinoza Cruz,"14,101",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Piura,en Ejercicio
-572,166,Eduardo Espinoza Ramos,"16,837",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,Cajamarca,en Ejercicio
-573,167,Gustavo Dacio Espinoza Soto,"26,507",Parlamentario 2006 - 2011,,SIN GRUPO,Lambayeque,en Ejercicio
-574,168,Aldo Vladimiro Estrada Choque,"26,621",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,Puno,en Ejercicio
-575,169,Luis Humberto Falla Lamadrid,"44,333",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Lambayeque,en Ejercicio
-576,170,Jorge León Flores Torres,"9,006",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Tacna,en Ejercicio
-577,171,Rosa Madeleine Florián Cedrón,"12,072",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,Cajamarca,en Ejercicio
-578,172,Jorge Rafael Foinquinos Mera,0,Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,Loreto,en Ejercicio
-579,173,Santiago Fujimori Fujimori,"22,992",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-580,174,Keiko Sofía Fujimori Higuchi,"602,869",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-581,175,Luis Fernando Galarreta Velarde,"42,128",Parlamentario 2006 - 2011,Renovación Nacional,UNIDAD NACIONAL,LIMA,en Ejercicio
-582,176,Cayo César Galindo Sandoval,"11,438",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Apurimac,en Ejercicio
-583,177,Víctor Andrés García Belaúnde,"34,632",Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,LIMA,en Ejercicio
-584,178,Luis Alejandro Giampietri Rojas,"21,391",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Callao,en Ejercicio
-585,179,Luis Gonzales Posada Eyzaguirre,"24,515",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ica,en Ejercicio
-586,180,Rocío De María González Zúñiga,"32,970",Parlamentario 2006 - 2011,,SIN GRUPO,Arequipa,Inactivo
-587,181,Hilda Elizabeth Guevara Gómez,"5,060",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Moquegua,en Ejercicio
-588,182,Miguel Luis Guevara Trelles,"27,169",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Piura,en Ejercicio
-589,183,Alvaro Gonzalo Gutiérrez Cueva,"48,417",Parlamentario 2006 - 2011,Unión por el Perú,ALIANZA NACIONAL,Arequipa,en Ejercicio
-590,184,Julio Roberto Herrera Pumayauli,"31,742",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-591,185,Martha Hildebrandt Pérez Treviño,"56,121",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-592,186,Juana Aidé Huancahuari Páucar,"40,600",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Ayacucho,en Ejercicio
-593,187,Aníbal Ovidio Huerta Díaz,"8,864",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Huanuco,en Ejercicio
-594,188,Víctor Isla Rojas,"16,838",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Loreto,en Ejercicio
-595,189,Alda Mirta Lazo Ríos De Hornung,"29,154",Parlamentario 2006 - 2011,Restauración nacional,ALIANZA NACIONAL,LIMA,en Ejercicio
-596,190,Elizabeth León Minaya,"17,684",Parlamentario 2006 - 2011,Unión por el Perú,BLOQUE POPULAR COMPROMISO DEMOCRÁTICO,Ayacucho,en Ejercicio
-597,191,Luciana Milagros León Romero,"65,339",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-598,192,Antonio León Zapata,"5,848",Parlamentario 2006 - 2011,Unión por el Perú,ALIANZA NACIONAL,Apurimac,en Ejercicio
-599,193,Yonhy Lescano Ancieta,"26,629",Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,Puno,en Ejercicio
-600,194,Guido Ricardo Lombardi Elías,"66,597",Parlamentario 2006 - 2011,Unidad Nacional,UNIDAD NACIONAL,LIMA,en Ejercicio
-601,195,Oswaldo Luizar Obregón,"36,030",Parlamentario 2006 - 2011,Unión por el Perú,BLOQUE POPULAR COMPROMISO DEMOCRÁTICO,Cusco,en Ejercicio
-602,196,José León Luna Gálvez,"27,392",Parlamentario 2006 - 2011,Unidad Nacional,ALIANZA NACIONAL,LIMA,en Ejercicio
-603,197,José Macedo Sánchez,"12,719",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ucayali,en Ejercicio
-604,198,José Eucebio Mallqui Beas,"16,994",Parlamentario 2006 - 2011,Unidad Nacional,UNIDAD NACIONAL,Ancash,en Ejercicio
-605,199,José Alfonso Maslucán Culqui,"9,804",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Amazonas,en Ejercicio
-606,200,Víctor Ricardo Mayorga Miranda,"17,776",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Cusco,en Ejercicio
-607,201,Isaac Mekler Neiman,"12,503",Parlamentario 2006 - 2011,Unión por el Perú,ALIANZA NACIONAL,Callao,en Ejercicio
-608,202,Walter Ricardo Menchola Vásquez,"92,653",Parlamentario 2006 - 2011,Solidaridad Nacional,ALIANZA NACIONAL,LIMA,en Ejercicio
-609,203,Lourdes Mendoza Del Solar,"20,019",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Arequipa,en Ejercicio
-610,204,Fabiola María Morales Castillo,"13,597",Parlamentario 2006 - 2011,Unidad Nacional,ALIANZA NACIONAL,Piura,en Ejercicio
-611,205,Martha Lupe Moyano Delgado,"9,938",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-612,206,Mauricio Mulder Bedoya,"38,670",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-613,207,Róger Nájar Kokally,"8,739",Parlamentario 2006 - 2011,Unión por el Perú,BLOQUE POPULAR COMPROMISO DEMOCRÁTICO,Ucayali,en Ejercicio
-614,208,Luis Alberto Negreiros Criado,"23,985",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Callao,en Ejercicio
-615,209,Edgar Núñez Román,"27,879",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ica,en Ejercicio
-616,210,Nancy Rufina Obregón Peralta,"23,975",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,San martin,en Ejercicio
-617,211,Juvenal Ubaldo Ordóñez Salazar,"14,876",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Tacna,Fallecido
-618,212,Fredy Rolando Otárola Peñaranda,"13,884",Parlamentario 2006 - 2011,Partido Nacionalista Peruano,NACIONALISTA,Ancash,en Ejercicio
-619,213,Ricardo Pando Córdova,"21,802",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,Junin,en Ejercicio
-620,214,Juan Donato Pari Choquecota,"8,660",Parlamentario 2006 - 2011,No ha acreditado,NACIONALISTA,Tacna,en Ejercicio
-621,215,Aurelio Pastor Valdivieso,"17,166",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,San martin,en Ejercicio
-622,216,Eduardo Peláez Bardales,0,Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Amazonas,en Ejercicio
-623,217,Mario Fernando Peña Angulo,"17,885",Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,Loreto,Fallecido
-624,218,Jhony Alexander Peralta Cruz,"39,757",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Piura,en Ejercicio
-625,219,Gabriela Lourdes Pérez Del Solar Cuculiza,"131,060",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,LIMA,en Ejercicio
-626,220,Martín Pérez Monteverde,"28,859",Parlamentario 2006 - 2011,Unidad Nacional,UNIDAD NACIONAL,Callao,en Ejercicio
-627,221,Juan David Perry Cruz,"4,917",Parlamentario 2006 - 2011,Restauración nacional,ALIANZA NACIONAL,Madre de dios,en Ejercicio
-628,222,Carlos Fernando Raffo Arce,"19,303",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-629,223,Gloria Deniz Ramos Prudencio,"4,656",Parlamentario 2006 - 2011,Unión por el Perú,BLOQUE POPULAR COMPROMISO DEMOCRÁTICO,Pasco,en Ejercicio
-630,224,Rolando Reátegui Flores,"18,501",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,San martin,en Ejercicio
-631,225,Alejandro Arturo Rebaza Martell,"21,112",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Cajamarca,en Ejercicio
-632,226,Renzo Andrés Reggiardo Barreto,"29,178",Parlamentario 2006 - 2011,Alianza por el Futuro,SIN GRUPO,LIMA,en Ejercicio
-633,227,Edgard Cornelio Reymundo Mercado,"31,567",Parlamentario 2006 - 2011,Unión por el Perú,BLOQUE POPULAR COMPROMISO DEMOCRÁTICO,Junin,en Ejercicio
-634,228,Martin Amado Rivas Teixeira,"10,945",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Lambayeque,en Ejercicio
-635,229,Daniel Robles López,"42,308",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-636,230,Elías Nicolás Rodríguez Zavaleta,"71,758",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-637,231,Miró Ruiz Delgado,"16,012",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Huancavelica,en Ejercicio
-638,232,Wilder Augusto Ruiz Silva,0,Parlamentario 2006 - 2011,Renovación Nacional,ALIANZA NACIONAL,LIMA,Inactivo
-639,233,Fabiola Salazar Leguía,"7,951",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Amazonas,Fallecido
-640,234,José Saldaña Tovar,"9,978",Parlamentario 2006 - 2011,Unión por el Perú,ALIANZA NACIONAL,Huancavelica,en Ejercicio
-641,235,Franklin Humberto Sánchez Ortiz,"7,941",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Tumbes,en Ejercicio
-642,236,Pedro Julián Santos Carpio,"24,411",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Arequipa,en Ejercicio
-643,237,Rosario Sasieta Morales,"45,030",Parlamentario 2006 - 2011,Frente de Centro,ALIANZA PARLAMENTARIA,LIMA,en Ejercicio
-644,238,Isaac Fredy Serna Guzmán,"30,148",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,Ica,en Ejercicio
-645,239,Juvenal Sabino Silva Díaz,"27,905",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,LIMA,en Ejercicio
-646,240,Víctor Rolando Sousa Huanambal,"38,578",Parlamentario 2006 - 2011,Alianza por el Futuro,FUJIMORISTA,LIMA,en Ejercicio
-647,241,Margarita Teodora Sucari Cari,"35,157",Parlamentario 2006 - 2011,Unión por el Perú,SIN GRUPO,Puno,en Ejercicio
-648,242,María Cleofé Sumire De Conde,"23,269",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Cusco,en Ejercicio
-649,243,Hilaria Supa Huamán,"13,725",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Cusco,en Ejercicio
-650,244,Hildebrando Tapia Samaniego,0,Parlamentario 2006 - 2011,Unidad Nacional,UNIDAD NACIONAL,Junin,en Ejercicio
-651,245,Carlos Alberto Torres Caro,"88,420",Parlamentario 2006 - 2011,,SIN GRUPO,LIMA,en Ejercicio
-652,246,Cenaida Cebastiana Uribe Medina,"26,372",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,LIMA,en Ejercicio
-653,247,José Antonio Urquizo Maggia,"12,794",Parlamentario 2006 - 2011,Partido Nacionalista Peruano,NACIONALISTA,Ayacucho,en Ejercicio
-654,248,Wilson Michael Urtecho Medina,"26,712",Parlamentario 2006 - 2011,Unidad Nacional,ALIANZA NACIONAL,La libertad,en Ejercicio
-655,249,Javier Maximiliano Alfredo Valle Riestra González Olaechea,"32,699",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-656,250,José Augusto Vargas Fernández,"12,029",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Loreto,en Ejercicio
-657,251,Rafael Vásquez Rodríguez,"23,624",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,LIMA,en Ejercicio
-658,252,José Alejandro Vega Antonio,"47,247",Parlamentario 2006 - 2011,Unión por el Perú,UNIÓN POR EL PERÚ,LIMA,en Ejercicio
-659,253,Angel Javier Velásquez Quesquén,"45,448",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Lambayeque,en Ejercicio
-660,254,Rosa María Venegas Mello,"13,942",Parlamentario 2006 - 2011,Unión por el Perú,SIN GRUPO,Piura,en Ejercicio
-661,255,Susana Gladis Vilca Achata,"22,746",Parlamentario 2006 - 2011,Unión por el Perú,NACIONALISTA,Puno,en Ejercicio
-662,256,Nidia Ruth Vílchez Yucra,"31,759",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Junin,en Ejercicio
-663,257,David Waisman Rjavinsthi,"75,213",Parlamentario 2006 - 2011,,ALIANZA NACIONAL,LIMA,en Ejercicio
-664,258,Luis Daniel Wilson Ugarte,"37,866",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Cusco,en Ejercicio
-665,259,Rafael Gustavo Yamashiro Oré,"28,204",Parlamentario 2006 - 2011,Partido Popular Cristiano,UNIDAD NACIONAL,Ica,en Ejercicio
-666,260,Tomas Martín Zamudio Briceño,0,Parlamentario 2006 - 2011,Partido Nacionalista Peruano,NACIONALISTA,Arequipa,en Ejercicio
-667,261,Washington Zeballos Gámez,"9,927",Parlamentario 2006 - 2011,,BLOQUE POPULAR COMPROMISO DEMOCRÁTICO,Moquegua,en Ejercicio
-668,262,César Alejandro Zumaeta Flores,"27,568",Parlamentario 2006 - 2011,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-669,263,César Acuña Peralta,"38,287",Parlamentario 2001 - 2006,No Agrupado,ALIANZA NACIONAL,La libertad,en Ejercicio
-670,264,Rafael Antonio Aita Campodónico,"20,648",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,Lambayeque,en Ejercicio
-671,265,Walter Alejos Calderón,"18,163",Parlamentario 2001 - 2006,Independiente,CONCERTACIÓN PARLAMENTARIA,Ayacucho,en Ejercicio
-672,266,Maruja Hermelinda Alfaro Huerta,"23,732",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Ancash,en Ejercicio
-673,267,Carlos Alberto Almerí Veramendi,"29,343",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Loreto,en Ejercicio
-674,268,Luis Juan Alva Castro,"96,050",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-675,269,Fausto Humberto Alvarado Dodero,"39,341",Parlamentario 2001 - 2006,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,LIMA,en Ejercicio
-676,270,Jesús Amado Alvarado Hidalgo,"30,510",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-677,271,Natale Juan Amprimo Plá,"30,100",Parlamentario 2001 - 2006,SP- AP- UPP- IND,ALIANZA NACIONAL,LIMA,en Ejercicio
-678,272,Ernesto Anibal Aranda Dextre,"17,466",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Huanuco,en Ejercicio
-679,273,Carlos Manuel Armas Vela,"21,787",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Callao,en Ejercicio
-680,274,Paulina Arpasi Velásquez,"28,825",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Puno,en Ejercicio
-681,275,Marcial Ayaipoma Alvarado,"28,801",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-682,276,José Barba Caballero,"29,915",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,LIMA,en Ejercicio
-683,277,Xavier Rodolfo Barrón Cebreros,"48,312",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,LIMA,en Ejercicio
-684,278,Heriberto Manuel Benítez Rivas,"33,338",Parlamentario 2001 - 2006,No Agrupado,NO AGRUPADO,LIMA,en Ejercicio
-685,279,Manuel Jesús Bustamante Coronado,"18,715",Parlamentario 2001 - 2006,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Cajamarca,en Ejercicio
-686,280,Mercedes Cabanillas Bustamante,"217,301",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-687,281,Iván Oswaldo Calderón Castillo,"31,451",Parlamentario 2001 - 2006,SP- AP- UPP- IND,ALIANZA NACIONAL,Piura,en Ejercicio
-688,282,Eduardo Rubén Carhuaricra Meza,"10,732",Parlamentario 2001 - 2006,Unión Parlamentaria Descentralista,UNIÓN PARLAMENTARIA DESCENTRALISTA,Pasco,en Ejercicio
-689,283,José Carlos Carrasco Távara,"20,863",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Piura,en Ejercicio
-690,284,Alcides Glorioso Chamorro Balvín,"47,346",Parlamentario 2001 - 2006,No Agrupado,ALIANZA NACIONAL,Junin,en Ejercicio
-691,285,Héctor Hugo Chávez Chuchón,"8,297",Parlamentario 2001 - 2006,Independiente,CONCERTACIÓN PARLAMENTARIA,Ayacucho,en Ejercicio
-692,286,Martha Gladys Chávez Cossío De Ocampo,"142,133",Parlamentario 2001 - 2006,Cambio 90-Nueva Mayoría,NO AGRUPADO,LIMA,en Ejercicio
-693,287,Jorge Samuel Chávez Sibina,"53,921",Parlamentario 2001 - 2006,Independiente,PERÚ AHORA - INDEPENDIENTES,Loreto,en Ejercicio
-694,288,Carlos Magno Chávez Trujillo,"7,740",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Amazonas,en Ejercicio
-695,289,Tito Guillermo Chocano Olivera,"16,650",Parlamentario 2001 - 2006,Independiente,CONCERTACIÓN PARLAMENTARIA,Tacna,en Ejercicio
-696,290,Enith Sadith Chuquival Saavedra,"20,976",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Callao,en Ejercicio
-697,291,Alberto Atenagros Cruz Loyola,"34,599",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Ancash,en Ejercicio
-698,292,Judith De La Mata Fernández,"31,739",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-699,293,Elvira Carmela De La Puente Haya,"52,824",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-700,864,Jorge Alfonso Alejandro Del Castillo Gálvez,"152,491",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-701,295,José Luis Manuel Delgado Núñez Del Arco,"27,852",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-702,296,José Miguel Gerardo Devescovi Dzierson,"16,286",Parlamentario 2001 - 2006,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Ica,en Ejercicio
-703,297,Gilberto Lorenzo Díaz Peralta,"35,054",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Arequipa,en Ejercicio
-704,298,Javier Diez Canseco Cisneros,"57,932",Parlamentario 2001 - 2006,SP- AP- UPP- IND,UNIÓN PARLAMENTARIA DESCENTRALISTA,LIMA,Fallecido
-705,299,Daniel Federico Estrada Pérez,"20,037",Parlamentario 2001 - 2006,Unión por el Perú - Social Democracia,UNIÓN PARLAMENTARIA DESCENTRALISTA UPP-SP-AP,Cusco,Fallecido
-706,300,Carlos E Ferrero Costa,"317,535",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-707,301,Juan Manuel Figueroa Quintana,"12,116",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Cusco,en Ejercicio
-708,302,Luis Humberto Flores Vásquez,"17,784",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Cajamarca,en Ejercicio
-709,303,Antero Flores-Aráoz Esparza,"126,489",Parlamentario 2001 - 2006,Partido Popular Cristiano,ALIANZA ELECTORAL UNIDAD NACIONAL,LIMA,en Ejercicio
-710,304,Rosa Madeleine Florián Cedrón,"24,263",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,Cajamarca,en Ejercicio
-711,305,Kuennen Sydney Franceza Marabotto,"23,347",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,Huanuco,en Ejercicio
-712,306,Luis Antonio Gasco Bravo,"49,588",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Lambayeque,en Ejercicio
-713,307,Luis Javier Gonzales Posada Eyzaguirre,"35,578",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ica,en Ejercicio
-714,308,Luis Gonzales Reinoso,"11,962",Parlamentario 2001 - 2006,No Agrupado,ALIANZA NACIONAL,Moquegua,en Ejercicio
-715,309,Alfredo Guillermo Gonzalez Salazar,"32,444",Parlamentario 2001 - 2006,No Agrupado,NO AGRUPADO,LIMA,en Ejercicio
-716,310,Luis Bernardo Guerrero Figueroa,"42,929",Parlamentario 2001 - 2006,Independiente,PERÚ AHORA - INDEPENDIENTES,Cajamarca,en Ejercicio
-717,311,Gloria Gilda Helfer Palacios,"54,927",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-718,312,Ernesto Américo Herrera Becerra,"5,427",Parlamentario 2001 - 2006,Perú Posible,NO AGRUPADO,Moquegua,en Ejercicio
-719,313,Luis Gabriel Heysen Zegarra,"26,446",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ancash,Fallecido
-720,314,Susana Higuchi Miyagawa,"80,461",Parlamentario 2001 - 2006,Independiente,PERÚ AHORA - INDEPENDIENTES,LIMA,en Ejercicio
-721,315,Martha Luz Hildebrandt Pérez Treviño,"94,663",Parlamentario 2001 - 2006,No Agrupado,NO AGRUPADO,LIMA,en Ejercicio
-722,316,Carmen Rosa Hoyos Vargas,"17,738",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ancash,en Ejercicio
-723,317,Luis Carlos Antonio Iberico Núñez,"144,671",Parlamentario 2001 - 2006,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,LIMA,en Ejercicio
-724,318,Carlos Armando Infantas Fernández,"15,138",Parlamentario 2001 - 2006,Frente Independiente Moralizador,NO AGRUPADO,Junin,en Ejercicio
-725,319,Santos Juan Jaimes Serkovic,"16,878",Parlamentario 2001 - 2006,No Agrupado,PERÚ AHORA - INDEPENDIENTES,Huanuco,en Ejercicio
-726,320,Gonzalo Arnulfo Jiménez Dioses,"9,492",Parlamentario 2001 - 2006,Unión por el Perú - Social Democracia,UNIÓN PARLAMENTARIA DESCENTRALISTA,Tumbes,en Ejercicio
-727,321,Ronnie Edgard Jurado Adriazola,"15,703",Parlamentario 2001 - 2006,Independiente,PERÚ AHORA - INDEPENDIENTES,Tacna,en Ejercicio
-728,322,Adolfo Latorre López,"34,487",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Cusco,en Ejercicio
-729,323,Rosa Marina León Flores,"38,286",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-730,324,Yonhy Lescano Ancieta,"24,073",Parlamentario 2001 - 2006,Acción Popular,UNIÓN PARLAMENTARIA DESCENTRALISTA,Puno,en Ejercicio
-731,325,Alcides Llique Ventura,"8,862",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Amazonas,en Ejercicio
-732,326,Carmen Lozada Rendón De Gamboa,"99,906",Parlamentario 2001 - 2006,Cambio 90-Nueva Mayoría,SIN GRUPO ,LIMA,Inhabilitada
-733,327,José León Luna Gálvez,"44,398",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,LIMA,Suspendido por Acusación Constitucional
-734,328,Arturo Maldonado Reátegui,"8,744",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,San martin,en Ejercicio
-735,329,Michael Martínez Gonzales,"10,346",Parlamentario 2001 - 2006,No Agrupado,UNIÓN PARLAMENTARIA DESCENTRALISTA,Apurimac,en Ejercicio
-736,330,Máximo Mena Melgarejo,"25,859",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Ancash,en Ejercicio
-737,331,Jorge Luis Mera Ramírez,"17,147",Parlamentario 2001 - 2006,No Agrupado,ALIANZA NACIONAL,Loreto,en Ejercicio
-738,332,Manuel Arturo Merino De Lama,"9,730",Parlamentario 2001 - 2006,Acción Popular,UNIÓN PARLAMENTARIA DESCENTRALISTA,Tumbes,en Ejercicio
-739,333,Mario Molina Almanza,"27,700",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Cusco,en Ejercicio
-740,334,Fabiola María Morales Castillo,"13,030",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,Piura,en Ejercicio
-741,335,Pedro Antonio Morales Mansilla,"31,943",Parlamentario 2001 - 2006,Acción Popular,UNIÓN PARLAMENTARIA DESCENTRALISTA,Junin,en Ejercicio
-742,336,Martha Lupe Moyano Delgado,"9,467",Parlamentario 2001 - 2006,Si Cumple ,NO AGRUPADO,LIMA,en Ejercicio
-743,337,Jorge Yamil Mufarech Nemy,"141,536",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-744,338,Mauricio Mulder Bedoya,"24,571",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-745,339,Luis Alberto Negreiros Criado,"33,781",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Callao,en Ejercicio
-746,340,Víctor Manuel Noriega Toledo,"13,219",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Cajamarca,en Ejercicio
-747,341,Dora Isidora Núñez Dávila,"26,638",Parlamentario 2001 - 2006,Somos Perú,UNIÓN PARLAMENTARIA DESCENTRALISTA,Arequipa,en Ejercicio
-748,342,Mario Ochoa Vargas,0,Parlamentario 2001 - 2006,Unión por el Perú - Social Democracia,UNIÓN PARLAMENTARIA DESCENTRALISTA,Cusco,en Ejercicio
-749,343,Manuel Jesús Olaechea García,"55,406",Parlamentario 2001 - 2006,Independiente,PERÚ AHORA - INDEPENDIENTES,Arequipa,en Ejercicio
-750,344,Alejandro Oré Mora,"8,100",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Huancavelica,en Ejercicio
-751,345,Gustavo Adolfo Pacheco Villar,"15,217",Parlamentario 2001 - 2006,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Puno,en Ejercicio
-752,346,Celina Palomino Sulca,"17,968",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Ayacucho,en Ejercicio
-753,347,Aurelio Pastor Valdivieso,"20,117",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,San martin,en Ejercicio
-754,348,Henry Gustavo Pease García,"46,367",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-755,349,Jhony Alexander Peralta Cruz,"27,918",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Piura,en Ejercicio
-756,350,Juan De Dios Ramírez Canchari,"26,938",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Ica,en Ejercicio
-757,351,Eittel Ramos Cuya,"29,989",Parlamentario 2001 - 2006,Perú Posible,CONCERTACIÓN PARLAMENTARIA,Callao,en Ejercicio
-758,352,Pedro Carlos Ramos Loayza,"24,181",Parlamentario 2001 - 2006,No Agrupado,UNIÓN PARLAMENTARIA DESCENTRALISTA,Ica,en Ejercicio
-759,353,Segundo Rodolfo Raza Urbina,"48,423",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-760,354,Marciano Segundo Rengifo Ruiz,"13,098",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,San martin,en Ejercicio
-761,355,Wilmer Edilberto Rengifo Ruiz,"48,790",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Lambayeque,en Ejercicio
-762,356,Juan Humberto Requena Oliva,"21,840",Parlamentario 2001 - 2006,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Piura,en Ejercicio
-763,357,Rafael Rey Rey,"52,961",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,LIMA,en Ejercicio
-764,358,José Luis Risco Montalván,"43,184",Parlamentario 2001 - 2006,No Agrupado,UNIÓN PARLAMENTARIA DESCENTRALISTA,LIMA,en Ejercicio
-765,359,Daniel Robles López,"39,589",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-766,360,Jacques Salomón Rodrich Ackerman,"37,184",Parlamentario 2001 - 2006,Independiente,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-767,361,Cruz Gerardo Saavedra Mesones,"33,231",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Lambayeque,en Ejercicio
-768,362,Luz Filomena Salgado Rubianes,"169,344",Parlamentario 2001 - 2006,Cambio 90-Nueva Mayoría,SIN GRUPO ,LIMA,Inhabilitada
-769,363,Eduardo Salhuana Cavides,"7,910",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Madre de dios,en Ejercicio
-770,364,Glodomiro Sánchez Mejía,"5,337",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Pasco,en Ejercicio
-771,365,Luz Doris Sánchez Pinedo De Romero,"26,155",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,La libertad,en Ejercicio
-772,366,Luis Santa María Calderón,"80,331",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,La libertad,en Ejercicio
-773,367,Roger Santa María Del Águila,"7,895",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ucayali,en Ejercicio
-774,368,Luis María Santiago Eduardo Solari De La Fuente,"81,795",Parlamentario 2001 - 2006,Independiente,CONCERTACIÓN PARLAMENTARIA,LIMA,en Ejercicio
-775,369,José Taco Llave,"30,490",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Cusco,en Ejercicio
-776,370,Cecilia Roxana Tait Villacorta,"47,793",Parlamentario 2001 - 2006,No Agrupado,ALIANZA NACIONAL,LIMA,en Ejercicio
-777,371,Hildebrando Tapia Samaniego,"18,341",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,Junin,en Ejercicio
-778,372,Leoncio Zacarías Torres Ccalla,"28,193",Parlamentario 2001 - 2006,No Agrupado,NO AGRUPADO,Puno,Suspendido por sanción
-779,373,Ana Elena Luisa Cristina Townsend Diez-Canseco,"329,970",Parlamentario 2001 - 2006,No Agrupado,NO AGRUPADO,LIMA,en Ejercicio
-780,374,Hipólito Arturo Valderrama Chávez,"49,805",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Arequipa,en Ejercicio
-781,375,Víctor Edinson Valdéz Meléndez,"20,815",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Ucayali,en Ejercicio
-782,376,Juan Gualberto Valdivia Romero,"28,167",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Ancash,en Ejercicio
-783,377,Rafael Eduardo Valencia-Dongo Cárdenas,"18,917",Parlamentario 2001 - 2006,Independiente,CONCERTACIÓN PARLAMENTARIA,Arequipa,en Ejercicio
-784,378,Julia Valenzuela Cuéllar,"38,110",Parlamentario 2001 - 2006,No Agrupado,ALIANZA NACIONAL,LIMA,en Ejercicio
-785,379,Emma Paulina Vargas De Benavides,"7,617",Parlamentario 2001 - 2006,Unidad Nacional,ALIANZA ELECTORAL UNIDAD NACIONAL,Huancavelica,en Ejercicio
-786,380,Víctor Eduardo Velarde Arrunátegui,"37,422",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Piura,en Ejercicio
-787,381,Angel Javier Velásquez Quesquén,"39,978",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,Lambayeque,en Ejercicio
-788,382,Jaime Velásquez Rodríguez,"24,235",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Junin,en Ejercicio
-789,383,Edgar Villanueva Núñez,"12,432",Parlamentario 2001 - 2006,Independiente,NO AGRUPADO,Apurimac,en Ejercicio
-790,384,David Waisman Rjavinsthi,"120,636",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,LIMA,en Ejercicio
-791,385,Rosa Graciela Yanarico Huanca,"21,754",Parlamentario 2001 - 2006,Perú Posible,PERÚ POSIBLE,Puno,en Ejercicio
-792,386,César Alejandro Zumaeta Flores,"59,830",Parlamentario 2001 - 2006,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,LIMA,en Ejercicio
-793,387,César Acuña Peralta,"23,852",Parlamentario 2000 - 2001,,GRUPO PARLAMENTARIO DEMOCRÁTICO,Perú,en Ejercicio
-794,388,Guzmán Aguirre Altamirano,"58,859",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-795,389,Fernán Romano Altuve-Febres Lores,"21,973",Parlamentario 2000 - 2001,No Agrupado,NO AGRUPADOS,Perú,en Ejercicio
-796,390,Luis Juan Alva Castro,"35,336",Parlamentario 2000 - 2001,Partido Aprista Peruano,NO AGRUPADOS,Perú,en Ejercicio
-797,391,Beatriz Regina Alva Hart,"36,036",Parlamentario 2000 - 2001,Independiente,-- INDEPENDIENTE,Perú,en Ejercicio
-798,392,Adolfo Luis Amorín Bueno,"24,472",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-799,393,Francisco Javier Arroyo Cobián,"28,101",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-800,394,Marcial Ayaipoma Alvarado,"29,009",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-801,395,Xavier Rodolfo Barrón Cebreros,"40,409",Parlamentario 2000 - 2001,Partido Popular Cristiano,GRUPO PARLAMENTARIO DEMOCRÁTICO,Perú,en Ejercicio
-802,396,Angel Miguel Bartra Gonzales,"22,831",Parlamentario 2000 - 2001,No Agrupado,NO AGRUPADOS,Perú,en Ejercicio
-803,397,Víctor Antonio Becerril Rodríguez,"21,900",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-804,398,Carlos Miguel Blanco Oropeza,"20,676",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-805,399,Luis Fernando Bueno Quino,"30,563",Parlamentario 2000 - 2001,Acción Popular,ACCIÓN POPULAR - UNIÓN POR EL PERÚ,Perú,en Ejercicio
-806,400,Carlos Manuel Burgos Montenegro,"33,727",Parlamentario 2000 - 2001,No registrado,NO AGRUPADOS,Perú,en Ejercicio
-807,401,Mercedes Cabanillas Bustamante,"127,825",Parlamentario 2000 - 2001,Partido Aprista Peruano,NO AGRUPADOS,Perú,en Ejercicio
-808,402,Róger Luis Cáceres Pérez,"39,428",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-809,403,Luis Cáceres Velásquez,0,Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-810,404,Edilberto Canales Pillaca,"20,344",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-811,405,Rafael Serafín Castañeda Castañeda,"19,495",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-812,406,Luis Eduardo Chang Ching,"31,168",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-813,408,Martha Gladys Chávez Cossío,"106,015",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-814,409,Jorge Samuel Chávez Sibina,"20,619",Parlamentario 2000 - 2001,No registrado,GRUPO PARLAMENTARIO DEMOCRÁTICO,Perú,en Ejercicio
-815,410,Exequiel Chiroque Paico,"48,096",Parlamentario 2000 - 2001,Independiente,-- INDEPENDIENTE,Perú,en Ejercicio
-816,411,Tito Guillermo Chocano Olivera,"39,801",Parlamentario 2000 - 2001,Independiente,-- INDEPENDIENTE,Perú,en Ejercicio
-817,412,Miguel Segundo Ciccia Vásquez,"21,723",Parlamentario 2000 - 2001,Independiente,-- INDEPENDIENTE,Perú,en Ejercicio
-818,413,Alberto A. Cruz Loyola,"20,064",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-819,414,Carlos Ricardo Cuaresma Sánchez,"13,798",Parlamentario 2000 - 2001,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Perú,en Ejercicio
-820,415,Jorge Dacunha Cuervas,"26,927",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-821,416,Elvira Carmela De La Puente Haya,"40,759",Parlamentario 2000 - 2001,Partido Aprista Peruano,NO AGRUPADOS,Perú,en Ejercicio
-822,417,Anibal Antero Del Carpio Farfán,"25,922",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-823,418,Jorge Alfonso Alejandro Del Castillo Gálvez,"41,834",Parlamentario 2000 - 2001,Partido Aprista Peruano,NO AGRUPADOS,Perú,en Ejercicio
-824,419,Luis Humberto Delgado Aparicio,"30,385",Parlamentario 2000 - 2001,Independiente,-- INDEPENDIENTE,Perú,en Ejercicio
-825,420,Patricia Elizabeth Donayre Pasquel,"15,106",Parlamentario 2000 - 2001,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Perú,en Ejercicio
-826,421,José Luis Elías Ávalos,"16,943",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-827,422,María Jesús Espinoza Matos,"96,897",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-828,423,Daniel Federico Estrada Pérez,"21,502",Parlamentario 2000 - 2001,Unión por el Perú,ACCIÓN POPULAR - UNIÓN POR EL PERÚ,Perú,en Ejercicio
-829,424,Eduardo Farah Hayn,"19,193",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO DEMOCRÁTICO INDEPENDIENTE,Perú,en Ejercicio
-830,425,Carlos E Ferrero Costa,"263,182",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-831,426,Antero Flores-Aráoz Esparza,"174,939",Parlamentario 2000 - 2001,Partido Popular Cristiano,PAÍS POSIBLE (INVITADO),Perú,en Ejercicio
-832,427,Mario Gonzáles Inga,"21,439",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-833,428,Luis Bernardo Guerrero Figueroa,"36,318",Parlamentario 2000 - 2001,Somos Perú,GRUPO PARLAMENTARIO DEMOCRÁTICO,Perú,en Ejercicio
-834,429,Gloria Gilda Helfer Palacios,"24,684",Parlamentario 2000 - 2001,Unión por el Perú,ACCIÓN POPULAR - UNIÓN POR EL PERÚ,Perú,en Ejercicio
-835,430,Susana Higuchi Miyagawa,"126,451",Parlamentario 2000 - 2001,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Perú,en Ejercicio
-836,431,Martha Hildebrandt Pérez Treviño,"57,344",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-837,432,María Del Milagro Huamán Lu,"21,985",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-838,433,Gregorio Gustavo Ibarra Imata,"24,135",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-839,434,Luis Iberico Núñez,"97,415",Parlamentario 2000 - 2001,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Perú,en Ejercicio
-840,435,Víctor Dionicio Joy Way Rojas,"103,449",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,PERÚ 2000,Perú,en Ejercicio
-841,436,Ronnie Edgard Jurado Adriazola,"27,492",Parlamentario 2000 - 2001,No registrado,GRUPO PARLAMENTARIO DEMOCRÁTICO,Perú,en Ejercicio
-842,437,Juan Carlos Lam Álvarez,"20,461",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-843,438,Carlos Enrique Lau Chufón,"22,097",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-844,439,Carlos Hernán León Trelles,"24,188",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-845,440,Carmen Lozada Rendón De Gamboa,"36,431",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-846,441,José León Luna Gálvez,"20,001",Parlamentario 2000 - 2001,Independiente,-- INDEPENDIENTE,Perú,en Ejercicio
-847,442,Pablo Andrés Macera Dallorso,"26,932",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-848,443,Walter Manrique Pacheco,"18,760",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-849,444,Ricardo Arturo Marcenaro Frers,"22,999",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-850,445,Italo Juan Marsano Chumbez,"21,643",Parlamentario 2000 - 2001,No registrado,NO AGRUPADOS,Perú,en Ejercicio
-851,446,María Cecilia Laura Martínez Del Solar Salgado De Franco,"48,426",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-852,447,Humberto Augusto Martínez Morosini,"23,674",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-853,448,Manuel Alejandro Masías Oyanguren,"22,106",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-854,449,Miguel Mendoza Del Solar,"19,519",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-855,450,Marianella Jesús Monsalve Aita,"23,501",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-856,451,Ana Dolores Monteverde Temple,"21,172",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-857,452,Pedro Antonio Morales Mansilla,"29,355",Parlamentario 2000 - 2001,Acción Popular,ACCIÓN POPULAR - UNIÓN POR EL PERÚ,Perú,en Ejercicio
-858,453,Martha Lupe Moyano Delgado,"25,802",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-859,454,Rómulo Mucho Mamani,"26,213",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-860,455,Daniel Ernesto Nuñez Castillo,"25,454",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-861,456,Fernando Olivera Vega,"348,853",Parlamentario 2000 - 2001,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Perú,en Ejercicio
-862,457,Luis Joaquín Ormeño Malone,"30,435",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-863,458,Antonio Palomo Orefice,"49,653",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-864,459,Valentín Paniagua Corazao,"14,335",Parlamentario 2000 - 2001,Acción Popular,ACCIÓN POPULAR - UNIÓN POR EL PERÚ,Perú,con Licencia
-865,460,Henry Gustavo Pease García,"20,220",Parlamentario 2000 - 2001,Unión por el Perú,ACCIÓN POPULAR - UNIÓN POR EL PERÚ,Perú,en Ejercicio
-866,461,Luis Leopoldo Pella Granda,"18,583",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-867,462,Guido Carlos Pennano Allison,"27,998",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-868,463,Jorge Víctor Polack Merel,"19,910",Parlamentario 2000 - 2001,No registrado,NO AGRUPADOS,Perú,en Ejercicio
-869,464,Juan De Dios Ramírez Canchari,"21,601",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-870,465,Héctor Hildebrando Ramos López,"21,254",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-871,466,Francisco Ramos Santillán,"19,353",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-872,467,Rolando Reátegui Flores,"63,681",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-873,468,Andrés Reggiardo Sayán,"22,555",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-874,469,Marciano Segundo Rengifo Ruiz,"19,036",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-875,470,Anselmo Vidal Revilla Jurado,"20,285",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-876,471,Rafael Rey Rey,"55,189",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-877,472,Waldo Enrique Ríos Salcedo,"23,501",Parlamentario 2000 - 2001,No registrado,NO AGRUPADOS,Perú,en Ejercicio
-878,473,Robinson Rivadeneyra Reátegui,"48,128",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-879,474,Erland Wilmer Rodas Diaz,"31,608",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-880,475,Ruby Consuelo Rodríguez De Aguilar,"17,349",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-881,476,Cruz Gerardo Saavedra Mesones,"19,875",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-882,477,Luz Filomena Salgado Rubianes,"156,176",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-883,478,Neri Felipa Salinas De Torres,"25,831",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-884,479,Helbert Gaspar Samalvides Dongo,"23,794",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-885,480,Luz Doris Sánchez Pinedo De Romero,"30,095",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-886,481,Isaac Publio Sarmiento Martínez,"19,585",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,PERÚ POSIBLE,Perú,en Ejercicio
-887,482,Miriam Esperanza Schenone Ordinola,"29,420",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-888,483,Guiomar Seijas Dávila,"19,288",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-889,484,Willy Serrato Puse,"21,753",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-890,485,Luis María Santiago Eduardo Solari De La Fuente,"135,359",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-891,486,Janina Janeth Soria Monge,"30,779",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-892,487,Juan Héctor Alejandro Taco Tamo,"40,754",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-893,488,Cecilia Roxana Tait Villacorta,"55,050",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-894,489,Rubén Terán Adriazola,"41,516",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-895,490,Gregorio Ticona Gómez,"20,162",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-896,491,Leoncio Zacarías Torres Ccalla,"31,203",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-897,492,Víctor Torres Estevez,"27,985",Parlamentario 2000 - 2001,No registrado,CON FUERZA PERÚ,Perú,en Ejercicio
-898,493,Ana Elena Luisa Cristina Townsend Diez Canseco,"85,104",Parlamentario 2000 - 2001,Somos Perú,GRUPO PARLAMENTARIO DEMOCRÁTICO,Perú,en Ejercicio
-899,494,Francisco Antonio Gregorio Tudela Van Breugel-Douglas,"840,943",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-900,495,Julia Valenzuela Cuellar,"24,261",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-901,496,Manuel Máximo Vara Ochoa,"71,887",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-902,497,Manuel Alejandro Vásquez Valera,"18,526",Parlamentario 2000 - 2001,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,Perú,en Ejercicio
-903,498,Absalón Vásquez Villanueva,"735,978",Parlamentario 2000 - 2001,Vamos Vecino,VAMOS VECINO,Perú,en Ejercicio
-904,499,Elsa Carmen Vega Fernández,"22,169",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-905,500,Juan Antonio Velit Granda,"34,706",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-906,501,Miguel Velit Núñez,"24,178",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-907,502,Pedro David Vilchez Malpica,"23,825",Parlamentario 2000 - 2001,Cambio 90-Nueva Mayoría,CAMBIO 90 - NUEVA MAYORÍA,Perú,en Ejercicio
-908,503,José Eduardo Villena Vela,"44,924",Parlamentario 2000 - 2001,Independiente,SIN GRUPO (INDEPENDIENTE),Perú,en Ejercicio
-909,504,David Waisman Rjavinsthi,"41,125",Parlamentario 2000 - 2001,País Posible,PERÚ POSIBLE,Perú,en Ejercicio
-910,505,Moisés Wolfenson Woloch,"38,911",Parlamentario 2000 - 2001,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,Perú,en Ejercicio
-911,506,César Alejandro Zumaeta Flores,"34,510",Parlamentario 2000 - 2001,Partido Aprista Peruano,NO AGRUPADOS,Perú,en Ejercicio
-912,507,Alejandro Ruperto Abanto Pongo,"7,698",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,Suspendido
-913,508,Segundo Vito Aliaga Araujo,"10,377",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-914,509,Javier Alva Orlandini,"7,778",Parlamentario 1995 - 2000,Acción Popular,ACCIÓN POPULAR-COORDINADORA DEMOCRÁTICA-INDEPEND.,,en Ejercicio
-915,510,Adolfo Luis Amorín Bueno,"35,944",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-916,511,Roger Amuruz Gallegos,"7,349",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-917,512,Jorge Avendaño Valdez,"15,656",Parlamentario 1995 - 2000,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,,en Ejercicio
-918,513,Alfonso Baella Tuesta,"12,701",Parlamentario 1995 - 2000,Independiente,-- INDEPENDIENTE,,en Ejercicio
-919,514,José Barba Caballero,"16,216",Parlamentario 1995 - 2000,Convergencia Democrática,ACCIÓN POPULAR-COORDINADORA DEMOCRÁTICA-INDEPEND.,,en Ejercicio
-920,515,Carlos Barbarán Rengifo,"8,034",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-921,516,Xavier Rodolfo Barrón Cebreros,"12,566",Parlamentario 1995 - 2000,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-922,517,Angel Miguel Bartra Gonzales,"5,991",Parlamentario 1995 - 2000,Independiente,-- INDEPENDIENTE,,en Ejercicio
-923,518,Carlos Miguel Blanco Oropeza,"11,261",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-924,519,Rolando Breña Pantoja,"5,861",Parlamentario 1995 - 2000,Izquierda Unida,DEMOCRACIA EN ACCIÓN,,en Ejercicio
-925,520,Roger Cáceres Velásquez,"7,577",Parlamentario 1995 - 2000,Perú al 2000-Frente Nacional de Trabajadores y Cam,DEMOCRACIA EN ACCIÓN,,en Ejercicio
-926,521,Luis Ezequiel Campos Baca,"8,435",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-927,522,Juan Francisco Cardoso Romero,"13,861",Parlamentario 1995 - 2000,Independiente,-- INDEPENDIENTE,,en Ejercicio
-928,524,Arturo Castillo Chirinos,"28,111",Parlamentario 1995 - 2000,Acción Popular,ACCIÓN POPULAR-COORDINADORA DEMOCRÁTICA-INDEPEND.,,en Ejercicio
-929,525,María Ofelia Cerro Moral,"9,488",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-930,526,Luis Eduardo Chang Ching,"12,001",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-931,527,Martha Gladys Chávez Cossío,"488,606",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-932,528,Jubert Chávez Serrano,"14,859",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-933,529,Carlos Julio Chipoco Cáceda,"6,473",Parlamentario 1995 - 2000,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-934,530,Enrique Chirinos Soto,"12,149",Parlamentario 1995 - 2000,Renovación,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-935,531,Gamaniel Chiroque Ramírez,"10,614",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-936,532,Luis Alberto Chú Rubio,"6,866",Parlamentario 1995 - 2000,Frente Independiente Moralizador,-- INDEPENDIENTE,,en Ejercicio
-937,533,Miguel Segundo Ciccia Vásquez,"10,188",Parlamentario 1995 - 2000,Independiente,-- INDEPENDIENTE,,en Ejercicio
-938,534,Genaro Colchado Arellano,"7,335",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-939,535,Víctor Coral Pérez,"11,543",Parlamentario 1995 - 2000,Acción Popular,ACCIÓN POPULAR-COORDINADORA DEMOCRÁTICA-INDEPEND.,,en Ejercicio
-940,536,Jorge Alfonso Alejandro Del Castillo Gálvez,"35,944",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-941,537,Luis Humberto Delgado Aparicio,"28,192",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-942,538,Edilberto Díaz Bringas,"8,841",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-943,539,Ivonne Susana Díaz Díaz,"10,280",Parlamentario 1995 - 2000,Movimiento Independiente Agrario,ACCIÓN POPULAR-COORDINADORA DEMOCRÁTICA-INDEPEND.,,en Ejercicio
-944,540,Javier Diez Canseco Cisneros,"17,967",Parlamentario 1995 - 2000,Izquierda Unida,DEMOCRACIA EN ACCIÓN,,en Ejercicio
-945,541,Jorge Luis Donayre Lozano,"7,209",Parlamentario 1995 - 2000,Independiente,DEMOCRACIA EN ACCIÓN,,en Ejercicio
-946,542,Daniel Humberto Espichán Tumay,"21,770",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-947,543,María Jesús Espinoza Matos,"12,866",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-948,544,Aldo Vladimiro Estrada Choque,"14,870",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-949,545,Daniel Federico Estrada Pérez,"141,120",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-950,546,Rigoberto Ezquerra Cáceres,"8,677",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-951,548,Graciela Fernández Baca Calderón De Valdez,"32,499",Parlamentario 1995 - 2000,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,,en Ejercicio
-952,547,Víctor Raúl Fernández Bustinza,"15,353",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-953,549,Carlos E Ferrero Costa,"19,189",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-954,550,Jorge Figueroa Vizcarra,"11,788",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-955,551,Gustavo Carlos Flores Flores,"8,333",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-956,552,Lourdes Flores Nano,"67,170",Parlamentario 1995 - 2000,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-957,553,Antero Flores-Aráoz Esparza,"20,305",Parlamentario 1995 - 2000,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-958,554,Harold Forsyth Mejía,"8,983",Parlamentario 1995 - 2000,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,,en Ejercicio
-959,555,Ernesto Ramón Gamarra Olivares,"6,319",Parlamentario 1995 - 2000,Frente Independiente Moralizador,-- INDEPENDIENTE,,en Ejercicio
-960,556,Diego García-Sayán Larrabure,"5,966",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-961,557,Freddy Ghilardi Alvarez,"10,807",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-962,558,Alfonso Grados Bertorini,"21,242",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-963,559,Roger Guerra-García Cueva,"8,290",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-964,560,Virgilio Gutiérrez Mercedes,"9,304",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-965,561,Moisés Heresi Abdelnour,"6,047",Parlamentario 1995 - 2000,Convergencia Democrática,ACCIÓN POPULAR-COORDINADORA DEMOCRÁTICA-INDEPEND.,,en Ejercicio
-966,562,Juan Bosco Hermoza Ríos,"13,850",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-967,563,Martha Hildebrandt Pérez Treviño,"44,226",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-968,564,Juan Huamanchumo Romero,"7,375",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-969,565,Juan José Jhong Junchaya,"7,971",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-970,566,Víctor Dionicio Joy Way Rojas,"201,839",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-971,629,Manuel Lajo Lazo,"6,204",Parlamentario 1995 - 2000,Movimiento Independiente Obras,MOVIMIENTO CÍVICO NACIONAL OBRAS,,en Ejercicio
-972,567,Juan Carlos Lam Álvarez,"11,611",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-973,568,César Larrabure Gálvez,"18,586",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-974,569,Carlos Hernán León Trelles,"16,813",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-975,570,Antonio Llerena Marotti,"5,006",Parlamentario 1995 - 2000,Frente Independiente Moralizador,-- INDEPENDIENTE,,en Ejercicio
-976,571,Carmen Lozada Rendón De Gamboa,"7,692",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-977,572,Máximo Agustín Mantilla Campos,"37,287",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-978,573,Ricardo Arturo Marcenaro Frers,"10,224",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-979,574,Oscar Martorell Flores,"18,375",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-980,575,Samuel Matsuda Nishimura,"12,791",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-981,576,Oscar Medelius Rodríguez,"11,504",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-982,577,Edith A. Mellado Céspedes,"16,485",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-983,578,Beatriz Merino Lucero,"8,961",Parlamentario 1995 - 2000,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,,en Ejercicio
-984,628,Gustavo Mohme Llona,0,Parlamentario 1995 - 2000,Somos Perú,INDEPENDIENTE,,en Ejercicio
-985,579,Luis Lastenio Morales Costa,"7,046",Parlamentario 1995 - 2000,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,,en Ejercicio
-986,580,Jorge Muñiz Ziches,"10,077",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-987,581,Javier Noriega Febres,"7,473",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-988,582,Edgar Núñez Román,"5,376",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-989,583,Fernando Olivera Vega,"100,237",Parlamentario 1995 - 2000,Frente Independiente Moralizador,-- INDEPENDIENTE,,en Ejercicio
-990,584,Eduardo B. Pando Pacheco,"18,433",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-991,585,Francisco Pardo Mesones,"13,235",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-992,586,Demetrio Patsías Mella,"9,104",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-993,587,Henry Gustavo Pease García,"23,207",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,LIMA,en Ejercicio
-994,588,Enrique Pulgar Lucas,"4,145",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-995,589,Miguel A. Quicaña Avilés,"42,725",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-996,590,Francisco Ramos Santillán,"15,262",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-997,591,Carlos E. Reátegui Trigoso,"9,537",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-998,592,Andrés Reggiardo Sayán,"19,591",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-999,593,Santos Reto Neyra,"8,258",Parlamentario 1995 - 2000,Unión por el Perú,UNIÓN POR EL PERÚ,,en Ejercicio
-1000,594,Anselmo Vidal Revilla Jurado,"7,408",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1001,595,Rafael Rey Rey,"78,943",Parlamentario 1995 - 2000,Renovación,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-1002,596,Samuel Reynafarje Abensur,"11,654",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1003,597,Erland Wilmer Rodas Diaz,"12,625",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1004,598,Jorge Ruiz Dávila,"10,357",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1005,599,Víctor Manuel Ruiz-Caro Alvarez,"18,762",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1006,600,A. Arturo Salazar Larraín,"2,648",Parlamentario 1995 - 2000,Renovación,PARTIDO POPULAR CRISTIANO-RENOVACIÓN,,en Ejercicio
-1007,601,Jorge Salazar Vargas,"7,102",Parlamentario 1995 - 2000,Frente Independiente Moralizador,-- INDEPENDIENTE,,en Ejercicio
-1008,602,Luz Filomena Salgado Rubianes,"54,021",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1009,603,Helbert Gaspar Samalvides Dongo,"21,710",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1010,604,Máximo San Román Cáceres,"21,536",Parlamentario 1995 - 2000,Independiente,-- INDEPENDIENTE,,en Ejercicio
-1011,605,José Gabriel Sánchez Vega,"10,784",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1012,606,Oswaldo Sandoval Aguirre,"8,154",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1013,607,Alejandro Santa María Silva,"22,501",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-1014,608,Alberto Sato Abe,"10,425",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1015,609,Gilberto Siura Céspedes,"9,880",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1016,610,Ketty Solier Gonzales,"6,422",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1017,611,Aurora Torrejón Riva De Chincha,"34,769",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1018,627,Carlos Torres y Torres Lara,"27,371",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,LIMA,Fallecido
-1019,612,Ana Elena Luisa Cristina Townsend Diez Canseco,"8,463",Parlamentario 1995 - 2000,Independiente,GRUPO PARLAMENTARIO INDEPENDIENTE,,en Ejercicio
-1020,613,Jorge Alfredo Trelles Montero,"7,538",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1021,614,Luis Heiichi Umezawa Yokoyama,"6,740",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1022,615,Rafael Urrelo Guerra,"14,590",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1023,616,Dennis Vargas Marín,"49,572",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1024,617,Anastacio Vega Ascencio,"9,577",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1025,618,Angel Javier Velásquez Quesquén,"5,434",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-1026,619,Jorge Alfonso Velásquez Ureta,"6,975",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1027,620,Miguel Velit Núñez,"41,452",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1028,621,Eusebio Vicuña Vásquez,"8,425",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1029,622,Elferes Vidarte Correa,"4,897",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1030,623,Pedro David Vilchez Malpica,"9,340",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1031,624,Cristóbal Villasante Chambi,"10,512",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1032,625,Daniel Oscar Zevallos Ríos,"6,544",Parlamentario 1995 - 2000,Cambio 90-Nueva Mayoría,ALIANZA  CAMBIO 90 - NUEVA MAYORÍA,,en Ejercicio
-1033,626,César Alejandro Zumaeta Flores,"6,843",Parlamentario 1995 - 2000,Partido Aprista Peruano,PARTIDO APRISTA PERUANO,,en Ejercicio
-1034,648,Roger Amuruz Gallegos,"11,762",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1035,643,José Barba Caballero,"169,601",CCD 1992 -1995,Convergencia Democrática,COORDINADORA DEMOCRÁTICA,,en Ejercicio
-1036,644,Gamaliel Barreto Estrada,"15,293",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1037,645,Xavier Rodolfo Barrón Cebreros,"24,923",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1038,646,Luis Bedoya De Vivanco,"33,108",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1039,642,Carlos Miguel Blanco Oropeza,"41,311",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1040,649,Pedro Cáceres Velásquez,"20,770",CCD 1992 -1995,FRENATRACA,FRENTE NACIONAL DE TRABAJADORES Y CAMPESINOS,,en Ejercicio
-1041,650,Roger Cáceres Velásquez,"74,794",CCD 1992 -1995,FRENATRACA,FRENTE NACIONAL DE TRABAJADORES Y CAMPESINOS,,en Ejercicio
-1042,651,Juan Guillermo Carpio Muñoz,"11,015",CCD 1992 -1995,Renovación,RENOVACIÓN,,en Ejercicio
-1043,652,Juan Carrión Ruiz,"9,214",CCD 1992 -1995,Renovación,RENOVACIÓN,,en Ejercicio
-1044,653,Julio Castro Gómez,"18,885",CCD 1992 -1995,Movimiento Democrático de Izquierda,MOVIMIENTO DEMOCRÁTICO DE IZQUIERDA,,en Ejercicio
-1045,654,Martha Gladys Chávez Cossío,"26,541",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1046,655,Tito Chávez Romero,"17,009",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1047,656,Enrique Chirinos Soto,"24,511",CCD 1992 -1995,Renovación,RENOVACIÓN,,en Ejercicio
-1048,657,Julio Chú Mériz,"10,099",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,en Ejercicio
-1049,658,Genaro Colchado Arellano,"15,881",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1050,659,Pablo Cruz Arrunátegui,"17,673",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1051,660,Juan Cruzado Mantilla,"17,214",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,
-1052,661,Carlos Ricardo Cuaresma Sánchez,"22,342",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,
-1053,662,Julio Ernesto Díaz Palacios,"10,486",CCD 1992 -1995,Movimiento Democrático de Izquierda,MOVIMIENTO DEMOCRÁTICO DE IZQUIERDA,,en Ejercicio
-1054,663,Jorge Luis Donayre Lozano,"22,169",CCD 1992 -1995,Convergencia Democrática,COORDINADORA DEMOCRÁTICA,,en Ejercicio
-1055,664,César Fernández Arce,"23,724",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1056,665,Carlos E Ferrero Costa,"23,106",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1057,666,Jorge Figueroa Vizcarra,"15,966",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1058,667,Lourdes Flores Nano,"264,846",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1059,668,Antero Flores-Aráoz Esparza,"64,889",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1060,669,Jaime Freundt-Thurne Oyanguren,"333,376",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1061,670,Ernesto Ramón Gamarra Olivares,"38,985",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,en Ejercicio
-1062,671,José Humberto Gamonal Cruz,"34,889",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1063,672,Gustavo García Mundaca,"30,004",CCD 1992 -1995,Movimiento Independiente Agrario,MOVIMIENTO INDEPENDIENTE AGRARIO,,en Ejercicio
-1064,858,Pedro García Saavedra,"15,081",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1065,674,Rómulo Guerra Ayala,"21,383",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1066,675,Gloria Gilda Helfer Palacios,"164,740",CCD 1992 -1995,Movimiento Democrático de Izquierda,MOVIMIENTO DEMOCRÁTICO DE IZQUIERDA,,en Ejercicio
-1067,676,Juan Bosco Hermoza Ríos,"28,958",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1068,677,Juan Huamanchumo Romero,0,CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1069,678,Víctor Dionicio Joy Way Rojas,"64,637",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1070,679,Alexander Martín Kouri Bumachar,"35,918",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1071,680,Manuel Antonio La Torre Bardales,"29,557",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1072,681,César Larrabure Gálvez,"14,866",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,en Ejercicio
-1073,682,Carlos Hernán León Trelles,"16,899",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1074,856,Maria Del Carmen Lozada Rendón De Gamboa,"21,708",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1075,684,Ricardo Arturo Marcenaro Frers,"11,650",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1076,685,Samuel Matsuda Nishimura,"17,138",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1077,693,Víctor Meléndez Campos,"12,515",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1078,855,Manuel Moreyra Loredo,"43,551",CCD 1992 -1995,Solidaridad y Democracia,SOLIDARIDAD Y DEMOCRACIA,,en Ejercicio
-1079,859,Jorge Nakamura Hinostroza,"24,004",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1080,687,Mario Ocharan Zegarra,"11,729",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1081,686,Fernando Olivera Vega,"250,919",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,en Ejercicio
-1082,691,Gonzalo Ortiz De Zevallos Roédel,"44,429",CCD 1992 -1995,Renovación,RENOVACIÓN,,en Ejercicio
-1083,688,Miguel Angel Pajares Ruíz,"20,979",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1084,689,Mario Paredes Cueva,"22,326",CCD 1992 -1995,Frente Popular Agrícola del Perú,FREPAP,,en Ejercicio
-1085,690,Demetrio Patsías Mella,"23,907",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1086,860,Henry Gustavo Pease García,"76,557",CCD 1992 -1995,Movimiento Democrático de Izquierda,MOVIMIENTO DEMOCRÁTICO DE IZQUIERDA,,en Ejercicio
-1087,826,Carlos E. Reátegui Trigoso,"12,376",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1088,827,Andrés Reggiardo Sayán,"62,274",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1089,673,Rafael Rey Rey,"264,869",CCD 1992 -1995,Renovación,RENOVACIÓN,,en Ejercicio
-1090,829,Reynaldo Roberts Billing,"30,538",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1091,830,Luz Filomena Salgado Rubianes,"582,879",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1092,854,Humberto Sambucetti Pedraglio,"8,711",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,en Ejercicio
-1093,831,Oswaldo Sandoval Aguirre,"19,016",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1094,832,Willy Serrato Puse,"8,607",CCD 1992 -1995,Frente Independiente Moralizador,FRENTE INDEPENDIENTE MORALIZADOR,,en Ejercicio
-1095,833,Gilberto Siura Céspedes,"33,393",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1096,834,Celso Sotomarino Chávez,"17,683",CCD 1992 -1995,Partido Popular Cristiano,PARTIDO POPULAR CRISTIANO,,en Ejercicio
-1097,837,Pablo Ernesto Tello Tello,"18,853",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1098,835,Luis Enrique Tord Romero,"21,013",CCD 1992 -1995,Convergencia Democrática,COORDINADORA DEMOCRÁTICA,,en Ejercicio
-1099,838,Jorge Torres Vallejo,"20,417",CCD 1992 -1995,Convergencia Democrática,COORDINADORA DEMOCRÁTICA,,en Ejercicio
-1100,839,Carlos Torres y Torres Lara,"96,526",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1101,840,Francisco Antonio Gregorio Tudela Van Breugel-Douglas,"10,392",CCD 1992 -1995,Renovación,RENOVACIÓN,,en Ejercicio
-1102,841,Anastacio Vega Ascencio,"31,035",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1103,842,Jorge Benito Velásquez Gonzales,"9,417",CCD 1992 -1995,FRENATRACA,FRENTE NACIONAL DE TRABAJADORES Y CAMPESINOS,,en Ejercicio
-1104,843,Jorge Alfonso Velásquez Ureta,"21,003",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1105,844,Miguel Velit Núñez,"44,334",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1106,845,Eusebio Vicuña Vásquez,"18,142",CCD 1992 -1995,Frente Popular Agrícola del Perú,FREPAP,,en Ejercicio
-1107,846,Pedro David Vilchez Malpica,"17,041",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1108,847,Nicolasa Villar De Posadas,"15,948",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1109,848,María Teresa Vitor Alfaro,"16,586",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1110,849,Jaime Yoshiyama Tanaka,"1'631,075",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1111,850,Guillermo Ysisola Farfán,"11,613",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1112,851,Juan Hugo Zamata Aguirre,"19,268",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
-1113,852,Daniel Oscar Zevallos Ríos,"21,002",CCD 1992 -1995,Cambio 90-Nueva Mayoría,CAMBIO 90-NUEVA MAYORÍA,,en Ejercicio
+,id,nombre,votos,periodo,partido,bancada,dist_electoral,condicion,website
+0,1112,María Grimaneza Acuña Peralta,"11,384",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Lambayeque,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/GrimanezaAcuna/
+1,1160,Segundo Héctor Acuña Peralta,"19,729",Parlamentario 2021 - 2026,Alianza para el Progreso,HONOR Y DEMOCRACIA,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SegundoAcuna/
+2,1096,María Antonieta Agüero Gutiérrez,"29,293",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Arequipa,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MariaAguero/
+3,1037,Alejandro Aurelio Aguinaga Recuenco,"10,715",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Lambayeque,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlejandroAguinaga/
+4,1142,Yorel Kira Alcarraz Aguero,"28,404",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,PODEMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/YorelAlcarraz/
+5,1079,Arturo Alegría García,"2,443",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,San martin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LuisAlegria/
+6,1029,María del Carmen Alva Prieto,"25,219",Parlamentario 2021 - 2026,Acción Popular,NO AGRUPADO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MariaAlva/
+7,1054,Carlos Enrique Alva Rojas,"8,061",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CarlosAlva/
+8,1143,Yessica Rosselli Amuruz Dulanto,"21,855",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/YessicaAmuruz/
+9,1053,Carlos Antonio Anderson Ramírez,"14,052",Parlamentario 2021 - 2026,Podemos Perú,NO AGRUPADO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CarlosAnderson/
+10,1077,Luis Ángel Aragón Carreño,"12,291",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Cusco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LuisAragon/
+11,1041,José Alberto Arriola Tueros,"34,982",Parlamentario 2021 - 2026,Acción Popular,PODEMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseArriola/
+12,1045,Alfredo Azurín Loayza,"23,624",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlfredoAzurin/
+13,1060,José María Balcázar Zelada,"6,641",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Lambayeque,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseBalcazar/
+14,1152,Rosangella Andrea Barbarán Reyes,"22,572",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RosangellaBarbaran/
+15,1069,Diego Alonso Fernando Bazán Calderón,"22,200",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/DiegoBazan/
+16,1158,Sigrid Tesoro Bazán Narro,"44,359",Parlamentario 2021 - 2026,Juntos por el Perú,BLOQUE DEMOCRÁTICO POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SigridBazan/
+17,1101,Guido Bellido Ugarte,"20,164",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PODEMOS PERÚ,Cusco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/GuidoBellido/
+18,1103,Guillermo Bermejo Rojas,"8,254",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/GuillermoBermejo/
+19,1063,Juan Bartolomé Burgos Oliveros,"10,060",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,PODEMOS PERÚ,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JuanBurgos/
+20,1056,Ernesto Bustamante Donayre,"24,075",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/ErnestoBustamante/
+21,1071,Digna Calle Lobatón,"54,282",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/DignaCalle/
+22,1030,Lady Mercedes Camones Soriano,"6,203",Parlamentario 2021 - 2026,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Ancash,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LadyCamones/
+23,1075,Eduardo Enrique Castillo Rivas,"10,901",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/EduardoCastillo/
+24,1038,Alejandro Enrique Cavero Alva,"30,242",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlejandroCavero/
+25,1148,Waldemar José Cerrón Rojas,"25,281",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Junin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/WaldemarCerron/
+26,1131,Nilza Merly Chacón Trujillo,"3,950",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Ancash,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/NilzaChacon/
+27,1051,Betssy Betzabet Chávez Chino,"8,472",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,NO AGRUPADO,Tacna,Suspendido por Acusación Constitucional,https://www.congreso.gob.pe/congresistas2021/BetssyChavez/
+28,1121,Roberto Enrique Chiabra León,"19,222",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RobertoChiabra/
+29,1032,Patricia Rosa Chirinos Venegas,"9,033",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,RENOVACIÓN POPULAR,Callao,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/PatriciaChirinos/
+30,1129,Miguel Angel Ciccia Vásquez,"9,269",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MiguelCiccia/
+31,1130,Jorge Samuel Coayla Juárez,"4,846",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Moquegua,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JorgeCoayla/
+32,1082,Luis Gustavo Cordero Jon Tay,"4,531",Parlamentario 2021 - 2026,Fuerza Popular,SOMOS PERÚ,Lima Provincias,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LuisCordero/
+33,1102,María del Pilar Cordero Jon Tay,"2,194",Parlamentario 2021 - 2026,Fuerza Popular,NO AGRUPADO,Tumbes,Suspendido por sanción,https://www.congreso.gob.pe/congresistas2021/MariaCordero/
+34,1116,María Jessica Córdova Lobatón,"12,552",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Lambayeque,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MariaCordova/
+35,1115,Isabel Cortez Aguirre,"34,888",Parlamentario 2021 - 2026,Juntos por el Perú,PODEMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/IsabelCortez/
+36,1091,Flavio Cruz Mamani,"30,025",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Puno,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/FlavioCruz/
+37,1100,José Ernesto Cueto Aservi,"36,769",Parlamentario 2021 - 2026,Renovación Popular,HONOR Y DEMOCRACIA,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseCueto/
+38,1150,Víctor Raúl Cutipa Ccama,"3,821",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Moquegua,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/VictorCutipa/
+39,1136,Pasión Neomias Dávila Atanacio,"3,915",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Pasco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/PasionDavila/
+40,1095,Freddy Ronald Díaz Monago,"4,195",Parlamentario 2021 - 2026,Alianza para el Progreso,NO AGRUPADO,Pasco,Destituído,https://www.congreso.gob.pe/congresistas2021/FreddyDiaz/
+41,1139,Raúl Felipe Doroteo Carbajo,"8,482",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Ica,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RaulDoroteo/
+42,1073,Gladys Margot Echaíz Ramos vda de Núñez,"21,627",Parlamentario 2021 - 2026,Alianza para el Progreso,HONOR Y DEMOCRACIA,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/GladysEchaiz/
+43,1104,Hamlet Echeverría Rodríguez,"3,647",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Cajamarca,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/HamletEcheverria/
+44,1146,Wilmar Alberto Elera García,"11,483",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,Piura,Destituído,https://www.congreso.gob.pe/congresistas2021/WilmarElera/
+45,1057,José Luis Elías Ávalos,"10,708",Parlamentario 2021 - 2026,Podemos Perú,ALIANZA PARA EL PROGRESO,Ica,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseElias/
+46,1122,Jhaec Darwin Espinoza Vargas,"6,505",Parlamentario 2021 - 2026,Acción Popular,PODEMOS PERÚ,Ancash,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/DarwinEspinoza/
+47,1128,Jorge Luis Flores Ancachi,"23,539",Parlamentario 2021 - 2026,Acción Popular,PODEMOS PERÚ,Puno,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JorgeFlores/
+48,1044,Alex Randu Flores Ramírez,"21,993",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Ayacucho,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlexFlores/
+49,1149,Víctor Seferino Flores Ruíz,"12,256",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/VictorFlores/
+50,1113,Idelso Manuel García Correa,"14,205",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/IdelsoGarcia/
+51,1031,Americo Gonza Castillo,"10,394",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Cajamarca,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AmericoGonza/
+52,1067,Diana Carolina Gonzales Delgado,"24,948",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,Arequipa,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/DianaGonzales/
+53,1108,Hernando Guerra García Campos,"55,987",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,Fallecido,https://www.congreso.gob.pe/congresistas2021/HernandoGuerraGarcia/
+54,1137,Paul Silvio Gutiérrez Ticona,"11,124",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Apurimac,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/PaulGutierrez/
+55,1163,Nelcy Lidia Heidinger Ballesteros,"1,324",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Pasco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/NelcyHeindinger/
+56,1089,Fernando Mario Herrera Mamani,"6,105",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Tacna,Fallecido,https://www.congreso.gob.pe/congresistas2021/FernandoHerrera/
+57,1133,Noelia Rossvith Herrera Medina,"8,619",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Callao,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/NoeliaHerrera/
+58,1140,Raúl Huamán Coronado,"9,588",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Ica,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RaulHuaman/
+59,1052,Mery Eliana Infantes Castañeda,"2,575",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Amazonas,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MeryInfantes/
+60,1099,María de los Milagros Jackeline Jáuregui Martínez de Aguayo,"68,003",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MariaJauregui/
+61,1049,José Enrique Jeri Oré,"11,654",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseJeri/
+62,1065,David Julio Jiménez Heredia,"7,278",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Junin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/DavidJimenez/
+63,1107,Heidy Lisbeth Juárez Calle,"19,153",Parlamentario 2021 - 2026,Alianza para el Progreso del Perú,PODEMOS PERÚ,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/HeydiJuarez/
+64,1059,Carmen Patricia Juárez Gallegos,"40,125",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CarmenJuarez/
+65,1083,Elva Edhit Julón Irigoín,"9,080",Parlamentario 2021 - 2026,Alianza para el Progreso del Perú,ALIANZA PARA EL PROGRESO,Cajamarca,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/ElvaJulon/
+66,1087,Luis Roberto Kamiche Morante,"6,035",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,ALIANZA PARA EL PROGRESO,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LuisKamiche/
+67,1162,Nieves Esmeralda Limachi Quispe,"3,125",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Tacna,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/NievesLimachi/
+68,1066,Juan Carlos Martín Lizarzaburu Lizarzaburu,"1,773",Parlamentario 2021 - 2026,Fuerza Popular,ALIANZA PARA EL PROGRESO,Peruanos Residentes en el Extranjero,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JuanLizarzaburu/
+69,1120,Jeny Luz López Morales,"4,576",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Ucayali,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JenyLopez/
+70,1114,Ilich Fredy López Ureña,"17,727",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Junin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/IlichLopez/
+71,1055,José León Luna Gálvez,"91,055",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseLuna/
+72,1157,Ruth Luque Ibarra,"12,049",Parlamentario 2021 - 2026,Juntos por el Perú,BLOQUE DEMOCRÁTICO POPULAR,Cusco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RuthLuque/
+73,1097,George Edward Málaga Trillo,"67,044",Parlamentario 2021 - 2026,Partido Morado,NO AGRUPADO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/GeorgeMalaga/
+74,1125,Jorge Alfonso Marticorena Mendoza,"6,597",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,ALIANZA PARA EL PROGRESO,Ica,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JorgeMarticorena/
+75,1138,Pedro Edwin Martínez Talavera,"16,372",Parlamentario 2021 - 2026,Acción Popular,NO AGRUPADO,Arequipa,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/PedroMartinez/
+76,1081,Elizabeth Sara Medina Hermosilla,"11,300",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Huanuco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/ElizabethMedina/
+77,1088,Esdras Ricardo Medina Minaya,"15,693",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Arequipa,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/EsdrasMedina/
+78,1165,Isaac Mita Alanoca,"2,869",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Tacna,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/IsaacMita/
+79,1159,Segundo Toribio Montalvo Cubas,"5,268",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Amazonas,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SegundoMontalvo/
+80,1154,Silvia María Monteza Facho,"7,171",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Cajamarca,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SilviaMonteza/
+81,1127,Jorge Carlos Montoya Manrique,"138,231",Parlamentario 2021 - 2026,Renovación Popular,HONOR Y DEMOCRACIA,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JorgeMontoya/
+82,1124,Jorge Alberto Morante Figari,"5,548",Parlamentario 2021 - 2026,Fuerza Popular,SOMOS PERÚ,Loreto,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JorgeMorante/
+83,1068,Juan Carlos Mori Celis,"8,815",Parlamentario 2021 - 2026,Acción Popular,ACCIÓN POPULAR,Loreto,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JuanMori/
+84,1118,Martha Lupe Moyano Delgado,"23,260",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MarthaMoyano/
+85,1039,Alejandro Muñante Barrios,"21,014",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlejandroMunante/
+86,1048,Auristela Ana Obando Morgan,"8,914",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Callao,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AuristelaObando/
+87,1074,Vivian Olivos Martínez,"7,785",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Lima Provincias,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LeslieOlivos/
+88,1168,Ariana Maybee Orué Medina,"7,871",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,Callao,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/ArianaOrue/
+89,1092,Flor Aidee Pablo Medina,"53,899",Parlamentario 2021 - 2026,Partido Morado,NO AGRUPADO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/FlorPablo/
+90,1119,Javier Rommel Padilla Romero,"6,835",Parlamentario 2021 - 2026,Renovación Popular,HONOR Y DEMOCRACIA,Lima Provincias,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JavierPadilla/
+91,1093,Margot Palacios Huamán,"11,781",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,NO AGRUPADO,Ayacucho,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MargotPalacios/
+92,1094,Francis Jhasmina Paredes Castro,"3,454",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PODEMOS PERÚ,Ucayali,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/FrancisParedes/
+93,1070,Karol Ivett Paredes Fonseca,"4,995",Parlamentario 2021 - 2026,Acción Popular,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,San martin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/KarolParedes/
+94,1042,Alex Antonio Paredes Gonzales,"18,673",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Arequipa,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlexParedes/
+95,1153,Susel Ana María Paredes Piqué,"76,785",Parlamentario 2021 - 2026,Partido Morado,BLOQUE DEMOCRÁTICO POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SuselParedes/
+96,1046,Alfredo Pariona Sinche,"9,849",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Huancavelica,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlfredoPariona/
+97,1164,José Bernardo Pazo Nunura,0,Parlamentario 2021 - 2026,Somos Perú,SOMOS PERÚ,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/josepazo/
+98,1085,Luis Raúl Picón Quedo,"10,812",Parlamentario 2021 - 2026,Alianza para el Progreso,PODEMOS PERÚ,Huanuco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LuisPicon/
+99,1072,Kelly Roxana Portalatino Ávalos,"8,286",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Ancash,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/KellyPortalatino/
+100,1110,Hilda Marleny Portero López,"8,568",Parlamentario 2021 - 2026,Acción Popular,ACCION POPULAR,Lambayeque,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/HildaPortero/
+101,1141,Segundo Teodomiro Quiroz Barboza,"16,660",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Cajamarca,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SegundoQuiroz/
+102,1145,Wilson Rusbel Quispe Mamani,"28,343",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Puno,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/WilsonQuispe/
+103,1050,Bernardo Jaime Quito Sarmiento,"41,430",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Arequipa,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/BernardoQuito/
+104,1151,Tania Estefany Ramírez García,"3,240",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Cajamarca,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/TaniaRamirez/
+105,1061,César Manuel Revilla Villanueva,"6,420",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CesarRevilla/
+106,1035,Abel Augusto Reyes Cam,"7,133",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Huanuco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AbelReyes/
+107,1047,Edgard Cornelio Reymundo Mercado,"7,912",Parlamentario 2021 - 2026,Juntos por el Perú,BLOQUE DEMOCRÁTICO POPULAR,Junin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/EdgardReymundo/
+108,1117,Janet Milagros Rivas Chacara,"4,455",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Lima Provincias,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JanetRivas/
+109,1156,Silvana Emperatriz Robles Araujo,"11,893",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BANCADA SOCIALISTA,Junin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/SilvanaRobles/
+110,1166,Fernando Miguel Rospigliosi Capurro,"14,705",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/FernandoRospigliosi
+111,1090,Magaly Rosmery Ruíz Rodríguez,"16,689",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,La libertad,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MagalyRuiz/
+112,1111,Hitler Saavedra Casternoque,"7,654",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,Loreto,Fallecido,https://www.congreso.gob.pe/congresistas2021/HitlerSaavedra/
+113,1078,Eduardo Salhuana Cavides,"3,013",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Madre de dios,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/EduardoSalhuana/
+114,1147,Roberto Helbert Sánchez Palomino,"29,825",Parlamentario 2021 - 2026,Juntos por el Perú,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RobertoSanchez/
+115,1167,Magally Santisteban Suclupe,"1,597",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Tumbes,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MagallySantisteban/
+116,1144,Wilson Soto Palacios,"7,145",Parlamentario 2021 - 2026,Acción Popular,ACCION POPULAR,Huancavelica,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/WilsonSoto/
+117,1040,Alejandro Soto Reyes,"29,073",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Cusco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AlejandroSotoReyes/
+118,1098,Germán Adolfo Tacuri Valdivia,"11,547",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Ayacucho,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/GermanTacuri/
+119,1109,María Elizabeth Taipe Coronado,"8,643",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PERÚ LIBRE,Apurimac,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/MariaTaipe/
+120,1132,Nivardo Edgar Tello Montes,"5,133",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,PODEMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/NivardoTello/
+121,1155,Rosio Torres Salinas,"5,179",Parlamentario 2021 - 2026,Alianza para el Progreso,ALIANZA PARA EL PROGRESO,Loreto,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/RosioTorres/
+122,1062,Cheryl Trigozo Reátegui,"16,574",Parlamentario 2021 - 2026,Alianza para el Progreso,RENOVACIÓN POPULAR,San martin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CherylTrigozo/
+123,1036,Adriana Josefina Tudela Gutiérrez,"47,139",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AdrianaTudela/
+124,1123,Jhakeline Katy Ugarte Mamani,"12,700",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Cusco,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JhakelineUgarte/
+125,1106,Héctor Valer Pinto,"20,948",Parlamentario 2021 - 2026,Renovación Popular,SOMOS PERÚ,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/HectorValer/
+126,1080,Elías Marcial Varas Meléndez,"6,328",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,JUNTOS POR EL PERÚ - VOCES DEL PUEBLO,Ancash,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/EliasVaras/
+127,1076,Lucinda Vásquez Vela,"8,778",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,San martin,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/LucindaVasquez/
+128,1105,Héctor José Ventura Angel,"3,361",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Tumbes,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/HectorVentura/
+129,1084,Elvis Hernán Vergara Mendoza,"4,486",Parlamentario 2021 - 2026,Acción Popular,ACCION POPULAR,Ucayali,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/ElvisVergara/
+130,1043,José Daniel Williams Zapata,"44,789",Parlamentario 2021 - 2026,Avanza País - Partido de Integración Social,AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JoseWilliams/
+131,1086,Enrique Wong Pujada,"11,384",Parlamentario 2021 - 2026,Podemos Perú,PODEMOS PERÚ,Callao,Fallecido,https://www.congreso.gob.pe/congresistas2021/EnriqueWong/
+132,1134,Norma Martina Yarrow Lumbreras,"51,103",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,LIMA,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/NormaYarrow/
+133,1135,Oscar Zea Choquechambi,"34,450",Parlamentario 2021 - 2026,Partido Politico Nacional Perú Libre,BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL,Puno,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/OscarZea/
+134,1126,Jorge Arturo Zeballos Aponte,"4,691",Parlamentario 2021 - 2026,Renovación Popular,RENOVACIÓN POPULAR,Peruanos Residentes en el Extranjero,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/JorgeZeballos/
+135,1058,Carlos Javier Zeballos Madariaga,"23,883",Parlamentario 2021 - 2026,Acción Popular,BLOQUE DEMOCRÁTICO POPULAR,Puno,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CarlosZeballos/
+136,1169,Ana Zadith Zegarra Saboya,"4,917",Parlamentario 2021 - 2026,Partido Democrático Somos Perú,SOMOS PERÚ,Loreto,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/AnaZegarra/
+137,1064,Cruz María Zeta Chunga,"10,079",Parlamentario 2021 - 2026,Fuerza Popular,FUERZA POPULAR,Piura,en Ejercicio,https://www.congreso.gob.pe/congresistas2021/CruzZeta/
