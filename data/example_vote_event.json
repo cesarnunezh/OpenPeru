@@ -1,0 +1,808 @@
+{
+  "identifier": "17",
+  "motion": {
+    "text": "The parliment took an example vote"
+  },
+  "start_date": "2005-02-22",
+  "counts": [
+    {
+      "option": "yes",
+      "value": 40
+    },
+    {
+      "option": "no",
+      "value": 85
+    },
+    {
+      "option": "abstain",
+      "value": 5
+    }
+  ],
+  "votes": [
+    {
+      "voter": {
+        "name": "Voter 1"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 2"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 3"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 4"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 5"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 6"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 7"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 8"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 9"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 10"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 11"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 12"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 13"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 14"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 15"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 16"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 17"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 18"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 19"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 20"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 21"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 22"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 23"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 24"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 25"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 26"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 27"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 28"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 29"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 30"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 31"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 32"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 33"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 34"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 35"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 36"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 37"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 38"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 39"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 40"
+      },
+      "option": "yes"
+    },
+    {
+      "voter": {
+        "name": "Voter 41"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 42"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 43"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 44"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 45"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 46"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 47"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 48"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 49"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 50"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 51"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 52"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 53"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 54"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 55"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 56"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 57"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 58"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 59"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 60"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 61"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 62"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 63"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 64"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 65"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 66"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 67"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 68"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 69"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 70"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 71"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 72"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 73"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 74"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 75"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 76"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 77"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 78"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 79"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 80"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 81"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 82"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 83"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 84"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 85"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 86"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 87"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 88"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 89"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 90"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 91"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 92"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 93"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 94"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 95"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 96"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 97"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 98"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 99"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 100"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 101"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 102"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 103"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 104"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 105"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 106"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 107"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 108"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 109"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 110"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 111"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 112"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 113"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 114"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 115"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 116"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 117"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 118"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 119"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 120"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 121"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 122"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 123"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 124"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 125"
+      },
+      "option": "no"
+    },
+    {
+      "voter": {
+        "name": "Voter 126"
+      },
+      "option": "abstain"
+    },
+    {
+      "voter": {
+        "name": "Voter 127"
+      },
+      "option": "abstain"
+    },
+    {
+      "voter": {
+        "name": "Voter 128"
+      },
+      "option": "abstain"
+    },
+    {
+      "voter": {
+        "name": "Voter 129"
+      },
+      "option": "abstain"
+    },
+    {
+      "voter": {
+        "name": "Voter 130"
+      },
+      "option": "abstain"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://fakeurl.url/session/bill"
+    }
+  ]
+}
