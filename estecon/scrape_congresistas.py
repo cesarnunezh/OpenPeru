@@ -17,32 +17,6 @@ class Congresista(NamedTuple):
     dist_electoral: str
     condicion: str
 
-def clean_string(text: str):
-    """
-    Cleans duplicated white spaces and new lines"""
-    return " ".join(text.strip().split())
-
-def get_url_text(url:str, *args):
-    if args:
-        with httpx.Client(verify=False) as client:
-            response = client.post(url, data = args[0])
-            if response.status_code == 200:
-                return response.text
-    else:
-        response = httpx.get(url,verify=False)
-        if response.status_code == 200:
-                return response.text
-
-def parse_url(url:str, *args) -> lxml.html.HtmlElement:
-    """
-    Returns the html of the url parse ready to use
-    """
-    if args:
-        return lxml.html.fromstring(get_url_text(url, args[0]))
-    else:
-        return lxml.html.fromstring(get_url_text(url))
-
-
 def get_dict_periodos(url: str) -> list:
     parse = parse_url(url)
     periodos = parse.xpath('//*[@name="idRegistroPadre"]/option')
