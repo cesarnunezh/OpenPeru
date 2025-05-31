@@ -1,0 +1,86 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1109,
+    "dni": "41005490",
+    "name": "Taipe Coronado, María Elizabeth",
+    "sex": "F"
+  },
+  "summary": "PROPONE DECLARAR DE NECESIDAD PÚBLICA E INTERÉS NACIONAL LA CREACIÓN DE LA UNIVERSIDAD NACIONAL SOBERANA Y ETNOLINGÜÍSTICA DEL BAJO URUBAMBA -  UNSELBU, CON SEDE CENTRAL EN EL DISTRITO DE SEPAHUA, DE LA PROVINCIA DE ATALAYA, DEL DEPARTAMENTO DE UCAYALI; CON LA FINALIDAD DE IMPULSAR EL ACCESO A LA EDUCACIÓN SUPERIOR UNIVERSITARIA, LA PROMOCIÓN DE LA INVESTIGACIÓN CIENTÍFICA TECNOLÓGICA, ASÍ COMO GARANTIZAR EN LA GENERACIÓN DE CONOCIMIENTOS Y DESARROLLO INTEGRAL EN LOS DIVERSOS CAMPOS CIENTÍFICOS Y HUMANIDADES, DE LA POBLACIÓN DE LA PROVINCIA DE ATALAYA Y PROVINCIAS ALEDAÑAS.",
+  "id": "2021_10307",
+  "presentation_date": "2025-02-21",
+  "status": "DICTAMEN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE DECLARA DE NECESIDAD PÚBLICA E INTERÉS NACIONAL LA CREACIÓN DE LA UNIVERSIDAD NACIONAL SOBERANA Y ETNOLINGÜÍSTICA DEL BAJO URUBAMBA - UNSELBU",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1072,
+      "dni": "42699423",
+      "name": "Portalatino Ávalos, Kelly Roxana",
+      "sex": "F"
+    },
+    {
+      "id": 1165,
+      "dni": "00434972",
+      "name": "Mita Alanoca, Isaac",
+      "sex": "M"
+    },
+    {
+      "id": 1031,
+      "dni": "41187802",
+      "name": "Gonza Castillo, Américo",
+      "sex": "M"
+    },
+    {
+      "id": 1091,
+      "dni": "01311614",
+      "name": "Cruz Mamani, Flavio",
+      "sex": "M"
+    },
+    {
+      "id": 1096,
+      "dni": "06354697",
+      "name": "Agüero Gutiérrez, María Antonieta",
+      "sex": "F"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Perú Libre",
+  "committees": [
+    {
+      "name": "Presupuesto y Cuenta General de la República",
+      "id": 17
+    },
+    {
+      "name": "Educación, Juventud y Deporte",
+      "id": 10
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE DECLARA DE NECESIDAD PÚBLICA E INTERÉS NACIONAL LA CREACIÓN DE LA UNIVERSIDAD NACIONAL SOBERANA Y ETNOLINGÜÍSTICA DEL BAJO URUBAMBA - UNSELBU",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5NzY2/pdf"
+    },
+    {
+      "date": "2025-02-24T12:53:42.000-0500",
+      "details": "",
+      "committee": "Presupuesto y Cuenta General de la República; Educación, Juventud y Deporte",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTc4/pdf"
+    },
+    {
+      "date": "2025-05-08T10:24:32.000-0500",
+      "details": "POR UNANIMIDAD - FÓRMULA SUSTITUTORIA - LEY QUE DECLARA DE INTERÉS NACIONAL LA CREACIÓN DE UNIVERSIDADES PÚBLICAS EN LOS DEPARTAMENTOS DE AMAZONAS, ÁNCASH, APURÍMAC, AREQUIPA, AYACUCHO, CAJAMARCA, CUSCO, HUANCAVELICA, HUÁNUCO, ICA, JUNÍN, LA LIBERTAD, LIMA, LORETO, MADRE DE DIOS, PASCO, PIURA, PUNO, SAN MARTÍN Y UCAYALI",
+      "committee": "Educación, Juventud y Deporte",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/Mjg1NzMy/pdf"
+    }
+  ]
+}

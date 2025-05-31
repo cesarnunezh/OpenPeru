@@ -1,0 +1,57 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1047,
+    "dni": "19877916",
+    "name": "Reymundo Mercado, Edgard Cornelio",
+    "sex": "M"
+  },
+  "summary": "PROPONE CREAR EL PROGRAMA NACIONAL DE PREVENCIÓN Y CONCIENTIZACIÓN DEL CIBERBULLYNG O CIBERACOSO CONTRA NIÑAS, NIÑOS Y ADOLESCENTES A FIN DE PREVENIR, SENSIBILIZAR Y GENERAR CONCIENCIA EN LA POBLACIÓN SOBRE LA PROBLEMÁTICA DE LA VIOLENCIA DIGITAL COMO EL CIBERBULLYING, GROOMING O CIBERACOSO QUE SE EJERCE MEDIANTE LAS REDES SOCIALES, PLATAFORMAS DE INTERNET, TELÉFONOS MÓVILES, MAILS, MENSAJES DE TEXTO, FOTOGRAFÍAS, VIDEOS, CHATS, PÁGINAS WEB, VIDEOJUEGOS, ENTRE OTROS, CONTRA NIÑAS, NIÑOS Y ADOLESCENTES",
+  "id": "2021_10308",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE FORTALECE LA PREVENCIÓN DE LA VIOLENCIA DIGITAL CONTRA MENORES DE EDAD\n",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1115,
+      "dni": "10129700",
+      "name": "Cortez Aguirre, Isabel",
+      "sex": "F"
+    },
+    {
+      "id": 1158,
+      "dni": "72200895",
+      "name": "Bazán Narro, Sigrid Tesoro",
+      "sex": "F"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Bloque Democrático Popular",
+  "committees": [
+    {
+      "name": "Educación, Juventud y Deporte",
+      "id": 10
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE FORTALECE LA PREVENCIÓN DE LA VIOLENCIA DIGITAL CONTRA MENORES DE EDAD\n",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5Nzgy/pdf"
+    },
+    {
+      "date": "2025-02-24T12:55:12.000-0500",
+      "details": "",
+      "committee": "Educación, Juventud y Deporte",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTc5/pdf"
+    }
+  ]
+}

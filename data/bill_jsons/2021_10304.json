@@ -1,0 +1,100 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1032,
+    "dni": "10280036",
+    "name": "Chirinos Venegas, Patricia Rosa",
+    "sex": "F"
+  },
+  "summary": "PROPONE FORTALECER LA AUTONOMÍA DE LA GESTIÓN TRIBUTARIA MUNICIPAL Y OPTIMIZAR EL SISTEMA DE RECAUDACIÓN TRIBUTARIA MUNICIPAL ADMINISTRADO POR EL MINISTERIO DE ECONOMÍA Y FINANZAS\n",
+  "id": "2021_10304",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE FORTALECE LA AUTONOMÍA Y OPTIMIZA LA GESTIÓN TRIBUTARIA MUNICIPAL.\n",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1039,
+      "dni": "45209282",
+      "name": "Muñante Barrios, Alejandro",
+      "sex": "M"
+    },
+    {
+      "id": 1099,
+      "dni": "07852432",
+      "name": "Jáuregui Martínez de Aguayo, María de los Milagros Jackeline",
+      "sex": "F"
+    },
+    {
+      "id": 1129,
+      "dni": "06049853",
+      "name": "Ciccia Vásquez, Miguel Ángel",
+      "sex": "M"
+    },
+    {
+      "id": 1116,
+      "dni": "16719182",
+      "name": "Córdova Lobatón, María Jessica",
+      "sex": "F"
+    },
+    {
+      "id": 1062,
+      "dni": "44886100",
+      "name": "Trigozo Reátegui, Cheryl",
+      "sex": "M"
+    },
+    {
+      "id": 1088,
+      "dni": "29423212",
+      "name": "Medina Minaya, Esdras Ricardo",
+      "sex": "M"
+    },
+    {
+      "id": 1126,
+      "dni": "07026029",
+      "name": "Zeballos Aponte, Jorge Arturo",
+      "sex": "M"
+    },
+    {
+      "id": 1069,
+      "dni": "46847115",
+      "name": "Bazán Calderón, Diego Alonso Fernando",
+      "sex": "M"
+    }
+  ],
+  "adherents": [
+    {
+      "id": 1134,
+      "dni": "10806296",
+      "name": "Yarrow Lumbreras, Norma Martina",
+      "sex": "F"
+    }
+  ],
+  "parliamentary_group": "Renovación Popular",
+  "committees": [
+    {
+      "name": "Presupuesto y Cuenta General de la República",
+      "id": 17
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE FORTALECE LA AUTONOMÍA Y OPTIMIZA LA GESTIÓN TRIBUTARIA MUNICIPAL.\n",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5NzM3/pdf"
+    },
+    {
+      "date": "2025-02-24T12:48:43.000-0500",
+      "details": "",
+      "committee": "Presupuesto y Cuenta General de la República",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTc1/pdf"
+    }
+  ]
+}

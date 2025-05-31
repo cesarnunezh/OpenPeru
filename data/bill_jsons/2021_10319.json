@@ -1,0 +1,39 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": null,
+  "summary": "LA PRESENTE LEY TIENE POR OBJETO MODIFICAR LOA ARTÍCULO 30, 303-A, 303-B, 303-C, ASÍ COMO DEROGAR EL ARTÍCULO 30-A DEL CÓDIGO PENAL, APROBADO POR EL DECRETO LEGISLATIVO 635, CON LA FINALIDAD DE IMPONER PENA PRIVATIVA DE LA LIBERTAD EFECTIVA AL EXTRANJERO EXPULSADO QUE REINGRESE IRREGULARMENTE AL TERRITORIO PERUANO",
+  "id": "2021_10319",
+  "presentation_date": "2025-02-24",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Poder Ejecutivo",
+  "title": "LEY QUE MODIFICA LOS ARTÍCULOS 30, 303-A, 303-B Y 303-C, Y DEROGA EL ARTÍCULO 30-A DEL CÓDIGO PENAL, APROBADO POR EL DECRETO LEGISLATIVO 635",
+  "observations": "",
+  "coauthors": [],
+  "adherents": [],
+  "parliamentary_group": "",
+  "committees": [
+    {
+      "name": "Justicia y Derechos Humanos",
+      "id": 15
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY QUE MODIFICA LOS ARTÍCULOS 30, 303-A, 303-B Y 303-C, Y DEROGA EL ARTÍCULO 30-A DEL CÓDIGO PENAL, APROBADO POR EL DECRETO LEGISLATIVO 635",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDQy/pdf"
+    },
+    {
+      "date": "2025-02-25T13:26:08.000-0500",
+      "details": "",
+      "committee": "Justicia y Derechos Humanos",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjMw/pdf"
+    }
+  ]
+}

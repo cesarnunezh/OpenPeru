@@ -1,0 +1,82 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1084,
+    "dni": "42843414",
+    "name": "Vergara Mendoza, Elvis Hernán",
+    "sex": "M"
+  },
+  "summary": "PROPONE ESTABLECER RESTRICCIONES AL USO DE PASAMONTAÑAS Y DERIVADOS POR PARTE DE LOS CONDUCTORES O PASAJEROS DE VEHÍCULOS MENORES\n",
+  "id": "2021_10315",
+  "presentation_date": "2025-02-24",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY CONTRA EL USO DE PASAMONTAÑAS Y DERIVADOS EN EL TRANSPORTE DE VEHÍCULOS MENORES",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1068,
+      "dni": "05374449",
+      "name": "Mori Celis, Juan Carlos",
+      "sex": "M"
+    },
+    {
+      "id": 1077,
+      "dni": "23977149",
+      "name": "Aragón Carreño, Luis Ángel",
+      "sex": "M"
+    },
+    {
+      "id": 1139,
+      "dni": "22290935",
+      "name": "Doroteo Carbajo, Raúl Felipe",
+      "sex": "M"
+    },
+    {
+      "id": 1054,
+      "dni": "18099931",
+      "name": "Alva Rojas, Carlos Enrique",
+      "sex": "M"
+    },
+    {
+      "id": 1114,
+      "dni": "42834886",
+      "name": "López Ureña, Ilich Fredy",
+      "sex": "M"
+    }
+  ],
+  "adherents": [
+    {
+      "id": 1144,
+      "dni": "43313696",
+      "name": "Soto Palacios, Wilson",
+      "sex": "M"
+    }
+  ],
+  "parliamentary_group": "Acción Popular",
+  "committees": [
+    {
+      "name": "Transportes y Comunicaciones",
+      "id": 23
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY CONTRA EL USO DE PASAMONTAÑAS Y DERIVADOS EN EL TRANSPORTE DE VEHÍCULOS MENORES",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTg4/pdf"
+    },
+    {
+      "date": "2025-02-24T17:44:39.000-0500",
+      "details": "",
+      "committee": "Transportes y Comunicaciones",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDc3/pdf"
+    }
+  ]
+}

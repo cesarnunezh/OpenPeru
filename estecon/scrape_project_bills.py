@@ -1,0 +1,169 @@
+import httpx
+import polars as pl 
+import time
+import json
+import base64
+CONGRESS = pl.read_csv("data/congresistas.csv")
+BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/"
+
+class Bill:
+    def __init__(self, year, bill_number, legislative_session, legislature, presentation_date, 
+               proponent, title, summary, observations, lead_author, coauthors, 
+               adherents, parliamentary_group, committees, status, bill_complete, steps):
+    
+        
+        # Attributes that fit in in Popolo structure
+        self.organization = "Peruvian Parliament"
+        self.legislative_session = legislative_session
+        self.lead_author = lead_author 
+        self.summary = summary
+        self.id = f"{year}_{bill_number}"    
+        self.presentation_date = presentation_date
+        self.status = status
+        
+        
+        # Additional attributes from bill page
+        self.legislature = legislature
+        self.proponent = proponent
+        self.title = title
+        self.observations = observations
+        self.coauthors = coauthors
+        self.adherents = adherents
+        self.parliamentary_group = parliamentary_group
+        self.committees = committees 
+        self.bill_complete = bill_complete
+        self.steps = steps
+    
+    def __str__(self):
+        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+    
+    def save_to_json(self):
+        with open(f"data/bill_jsons/{self.id}.json", "w", encoding="utf-8") as f:
+            json.dump(self.__dict__, f, ensure_ascii=False, indent=2)
+
+        
+
+def scrape_bill(year: str, bill_number: str):
+    resp = httpx.get(f"{BASE_URL}/expediente/{year}/{bill_number}", verify=False)
+    if resp.status_code == 200:
+        data = resp.json()["data"]
+        general = data["general"]
+
+        # General information                
+        legislative_session = general.get("desPerParAbrev")
+        legislature = general.get("desLegis")
+        presentation_date = general.get("fecPresentacion")
+        proponent = general.get("desProponente")
+        title = general.get("titulo")
+        summary = general.get("sumilla")
+        observations = general.get("observaciones")
+        parliamentary_group = general.get("desGpar")
+        status = general.get("desEstado")
+        bill_complete = (status == "Publicada en el Diario Oficial El Peruano")
+        
+        # Get authors (lead author, coauthors, adherents)
+        lead_author = None
+        coauthors = []
+        adherents = []
+        for i, author_raw in enumerate(data.get("firmantes", [])):
+            
+            # Grab author ID 
+            url = author_raw.get("pagWeb", "N/A")
+            match = CONGRESS.filter(pl.col("website") == url)
+            if match.is_empty():
+                author_id = None
+            else:
+                author_id = match.select("id").item()
+            
+            # Grab rest of author info
+            name = author_raw.get("nombre")
+            dni = author_raw.get("dni")
+            sex = author_raw.get("sexo")
+            
+            # Create cleaned dictionary to save 
+            author = {
+                "id": author_id,
+                "dni": dni,
+                "name": name,
+                "sex": sex
+            }
+            
+            if i == 0:
+                # Lead author 
+                lead_author = author
+            elif author_raw["tipoFirmanteId"] == 2:
+                # Coauthor 
+                coauthors.append(author)
+            else:
+                # Adherent
+                adherents.append(author)
+                
+        # Get committees 
+        committees = []
+        for committee in data.get("comisiones", []):
+            committees.append({
+                'name': committee["nombre"],
+                'id': committee["comisionId"]
+            })
+        
+        # Get each step in the bill 
+        steps = [] 
+        vote_step_counter = 0 # Track number of steps that have a vote 
+        for step in reversed(data.get("seguimientos", [])):
+            date = step.get("fecha")
+            details = step.get("detalle")
+            has_vote = ("votación" in details.lower() or 
+                        "votacion" in details.lower())
+            committee = step.get("desComisiones")
+            
+            files = step.get("archivos")
+            if files :
+                file_id = files[0]["proyectoArchivoId"]
+                b64_id = base64.b64encode(str(file_id).encode()).decode()
+                url = f"{BASE_URL}/archivo/{b64_id}/pdf"
+            else:
+                url = None
+                
+            if has_vote:
+                vote_step_counter += 1
+                vote_id = f"{year}_{bill_number}_{vote_step_counter}"
+                # tally_votes(vote_id, details, url) <- Call Ganon's function
+            else:
+                vote_id = None
+                
+            steps.append({
+                "date": date,
+                "details": details,
+                "committee": committee,
+                "vote_id": vote_id,
+                "url": url
+            })
+        
+        return Bill(
+            year, 
+            bill_number, 
+            legislative_session, 
+            legislature, 
+            presentation_date,
+            proponent, 
+            title, 
+            summary, 
+            observations, 
+            lead_author, 
+            coauthors, 
+            adherents, 
+            parliamentary_group, 
+            committees, 
+            status, 
+            bill_complete,
+            steps
+        )
+        
+
+if __name__ == '__main__':
+    for i in range(10300, 10323):
+        bill = scrape_bill(2021, i)
+        bill.save_to_json()
+        print(i, "saved to JSON")
+        time.sleep(5)
+        

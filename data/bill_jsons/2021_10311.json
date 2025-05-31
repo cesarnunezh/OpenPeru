@@ -1,0 +1,75 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1128,
+    "dni": "01888173",
+    "name": "Flores Ancachi, Jorge Luis",
+    "sex": "M"
+  },
+  "summary": "PROPONE DECLÁRAR DE NECESIDAD PÚBLICA Y DE INTERÉS NACIONAL LA CONSTRUCCIÓN DE LA NUEVA INFRAESTRUCTURA DEL INSTITUTO SUPERIOR TECNOLÓGICO DE LLAVE, CON EL FIN DE GARANTIZAR UNA FORMACIÓN TÉCNICA DE CALIDAD, PROMOVER LA COMPETITIVIDAD EDUCATIVA Y CONTRIBUIR AL DESARROLLO LOCAL Y NACIONAL.",
+  "id": "2021_10311",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE DECLARA DE NECESIDAD PÚBLICA Y DE INTERÉS NACIONAL LA CONSTRUCCIÓN DE LA NUEVA INFRAESTRUCTURA DEL INSTITUTO SUPERIOR TECNOLÓGICO DE ILAVE",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1041,
+      "dni": "25542661",
+      "name": "Arriola Tueros, José Alberto",
+      "sex": "M"
+    },
+    {
+      "id": 1101,
+      "dni": "44649199",
+      "name": "Bellido Ugarte, Guido",
+      "sex": "M"
+    },
+    {
+      "id": 1055,
+      "dni": "07246887",
+      "name": "Luna Gálvez, José León",
+      "sex": "M"
+    },
+    {
+      "id": 1107,
+      "dni": "42335591",
+      "name": "Juárez Calle, Heidy Lisbeth",
+      "sex": "F"
+    },
+    {
+      "id": 1085,
+      "dni": "23017616",
+      "name": "Picón Quedo, Luis Raúl",
+      "sex": "M"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Podemos Perú",
+  "committees": [
+    {
+      "name": "Educación, Juventud y Deporte",
+      "id": 10
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE DECLARA DE NECESIDAD PÚBLICA Y DE INTERÉS NACIONAL LA CONSTRUCCIÓN DE LA NUEVA INFRAESTRUCTURA DEL INSTITUTO SUPERIOR TECNOLÓGICO DE ILAVE",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5ODg0/pdf"
+    },
+    {
+      "date": "2025-02-24T17:53:21.000-0500",
+      "details": "",
+      "committee": "Educación, Juventud y Deporte",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDgy/pdf"
+    }
+  ]
+}

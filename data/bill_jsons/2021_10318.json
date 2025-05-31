@@ -1,0 +1,46 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": null,
+  "summary": "LA PRESENTE LEY TIENE POR OBJETO SANEAR LOS SIGUIENTES LÍMITES Y TRAMOS DE LOS DISTRITOS DE LA PROVINCIA DE PACHITEA, DEL DEPARTAMENTO DE HUÁNUCO",
+  "id": "2021_10318",
+  "presentation_date": "2025-02-24",
+  "status": "DICTAMEN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Poder Ejecutivo",
+  "title": "LEY DE SANEAMIENTO DE LÍMITES Y TRAMOS DE LOS DISTRITOS DE LA PROVINCIA DE PACHITEA, DEL DEPARTAMENTO DE HUÁNUCO",
+  "observations": "",
+  "coauthors": [],
+  "adherents": [],
+  "parliamentary_group": "",
+  "committees": [
+    {
+      "name": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "id": 8
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY DE SANEAMIENTO DE LÍMITES Y TRAMOS DE LOS DISTRITOS DE LA PROVINCIA DE PACHITEA, DEL DEPARTAMENTO DE HUÁNUCO",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDQx/pdf"
+    },
+    {
+      "date": "2025-02-25T13:24:26.000-0500",
+      "details": "",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjI5/pdf"
+    },
+    {
+      "date": "2025-05-09T14:08:32.000-0500",
+      "details": "POR UNANIMIDAD - APROBACIÓN EN SUS TÉRMINOS - LEY DE SANEAMIENTO DE LÍMITES Y TRAMOS DE LOS DISTRITOS DE LA PROVINCIA DE PACHITEA, DEL DEPARTAMENTO DE HUÁNUCO (EN RELATORÍA 12/5/2025)",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/Mjg2NTA5/pdf"
+    }
+  ]
+}

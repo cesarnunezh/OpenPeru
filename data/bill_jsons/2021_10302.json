@@ -1,0 +1,75 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1162,
+    "dni": "41258762",
+    "name": "Limachi Quispe, Nieves Esmeralda",
+    "sex": "F"
+  },
+  "summary": "PROPONE ESTABLECER LAS DISPOSICIONES DESTINADAS A PROMOVER LA SEGURIDAD EN LAS INSTITUCIONES EDUCATIVAS Y A FACULTAR A ESTAS A REALIZAR LA REVISIÓN DE MOCHILAS DE LOS ESTUDIANTES",
+  "id": "2021_10302",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE FACULTA LA REVISIÓN DE MOCHILAS Y PROMUEVE LA SEGURIDAD EN LAS INSTITUCIONES EDUCATIVAS PARA GARANTIZAR LA INTEGRIDAD DE LOS MIEMBROS DE LA COMUNIDAD EDUCATIVA\n\n",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1150,
+      "dni": "04647085",
+      "name": "Cutipa Ccama, Víctor Raúl",
+      "sex": "M"
+    },
+    {
+      "id": 1104,
+      "dni": "27080597",
+      "name": "Echeverría Rodríguez, Hamlet",
+      "sex": "M"
+    },
+    {
+      "id": 1103,
+      "dni": "07638265",
+      "name": "Bermejo Rojas, Guillermo",
+      "sex": "M"
+    },
+    {
+      "id": 1145,
+      "dni": "42611628",
+      "name": "Quispe Mamani, Wilson Rusbel",
+      "sex": "M"
+    },
+    {
+      "id": 1130,
+      "dni": "04413969",
+      "name": "Coayla Juárez, Jorge Samuel",
+      "sex": "M"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Juntos por el Perú - Voces del Pueblo",
+  "committees": [
+    {
+      "name": "Educación, Juventud y Deporte",
+      "id": 10
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE FACULTA LA REVISIÓN DE MOCHILAS Y PROMUEVE LA SEGURIDAD EN LAS INSTITUCIONES EDUCATIVAS PARA GARANTIZAR LA INTEGRIDAD DE LOS MIEMBROS DE LA COMUNIDAD EDUCATIVA\n\n",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5Njcx/pdf"
+    },
+    {
+      "date": "2025-02-24T12:45:09.000-0500",
+      "details": "",
+      "committee": "Educación, Juventud y Deporte",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTcz/pdf"
+    }
+  ]
+}
