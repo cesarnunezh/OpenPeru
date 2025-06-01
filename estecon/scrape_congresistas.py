@@ -1,21 +1,9 @@
 import pandas as pd
 from pathlib import Path
 from config import URL
-from typing import NamedTuple
+from data_model import Congresista
 from scrape_utils import parse_url
 import re
-import time
-
-class Congresista(NamedTuple):
-    id: str
-    nombre:str
-    votos: int
-    periodo: str
-    partido: str
-    bancada: str
-    dist_electoral: str
-    condicion: str
-    website: str 
 
 def get_dict_periodos(url: str) -> list:
     parse = parse_url(url)

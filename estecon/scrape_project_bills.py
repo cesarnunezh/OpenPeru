@@ -1,47 +1,11 @@
 import httpx
 import polars as pl 
 import time
-import json
 import base64
+from data_model import Bill
+
 CONGRESS = pl.read_csv("data/congresistas.csv")
-BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/"
-
-class Bill:
-    def __init__(self, year, bill_number, legislative_session, legislature, presentation_date, 
-               proponent, title, summary, observations, lead_author, coauthors, 
-               adherents, parliamentary_group, committees, status, bill_complete, steps):
-    
-        
-        # Attributes that fit in in Popolo structure
-        self.organization = "Peruvian Parliament"
-        self.legislative_session = legislative_session
-        self.lead_author = lead_author 
-        self.summary = summary
-        self.id = f"{year}_{bill_number}"    
-        self.presentation_date = presentation_date
-        self.status = status
-        
-        
-        # Additional attributes from bill page
-        self.legislature = legislature
-        self.proponent = proponent
-        self.title = title
-        self.observations = observations
-        self.coauthors = coauthors
-        self.adherents = adherents
-        self.parliamentary_group = parliamentary_group
-        self.committees = committees 
-        self.bill_complete = bill_complete
-        self.steps = steps
-    
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
-    
-    def save_to_json(self):
-        with open(f"data/bill_jsons/{self.id}.json", "w", encoding="utf-8") as f:
-            json.dump(self.__dict__, f, ensure_ascii=False, indent=2)
-
-        
+BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/"        
 
 def scrape_bill(year: str, bill_number: str):
     resp = httpx.get(f"{BASE_URL}/expediente/{year}/{bill_number}", verify=False)
@@ -166,4 +130,3 @@ if __name__ == '__main__':
         bill.save_to_json()
         print(i, "saved to JSON")
         time.sleep(5)
-        
