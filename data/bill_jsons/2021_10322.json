@@ -1,0 +1,97 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1069,
+    "dni": "46847115",
+    "name": "Bazán Calderón, Diego Alonso Fernando",
+    "sex": "M"
+  },
+  "summary": "PROPONE ESTABLECER LOS MECANISMOS LEGALES NECESARIOS PARA LOGRAR LA INTERRUPCTÓN TOTAL DE LOS SERVICIOS DE TELECOMUNICACIONES EN LOS ESTABLECIMIENTOS PENITENCIARIOS Y CENTROS JUVENILES.",
+  "id": "2021_10322",
+  "presentation_date": "2025-02-24",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE ESTABLECE LA INTERRUPCIÓN DE SERVICIOS DE TELECOMUNICACIONES EN CENTROS PENITENCIARIOS PARA GARANTIZAR LA SEGURIDAD DE LA CIUDADANÍA",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1133,
+      "dni": "42846124",
+      "name": "Herrera Medina, Noelia Rossvith",
+      "sex": "F"
+    },
+    {
+      "id": 1134,
+      "dni": "10806296",
+      "name": "Yarrow Lumbreras, Norma Martina",
+      "sex": "F"
+    },
+    {
+      "id": 1116,
+      "dni": "16719182",
+      "name": "Córdova Lobatón, María Jessica",
+      "sex": "F"
+    },
+    {
+      "id": 1129,
+      "dni": "06049853",
+      "name": "Ciccia Vásquez, Miguel Ángel",
+      "sex": "M"
+    },
+    {
+      "id": 1126,
+      "dni": "07026029",
+      "name": "Zeballos Aponte, Jorge Arturo",
+      "sex": "M"
+    },
+    {
+      "id": 1039,
+      "dni": "45209282",
+      "name": "Muñante Barrios, Alejandro",
+      "sex": "M"
+    },
+    {
+      "id": 1032,
+      "dni": "10280036",
+      "name": "Chirinos Venegas, Patricia Rosa",
+      "sex": "F"
+    },
+    {
+      "id": 1099,
+      "dni": "07852432",
+      "name": "Jáuregui Martínez de Aguayo, María de los Milagros Jackeline",
+      "sex": "F"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Renovación Popular",
+  "committees": [
+    {
+      "name": "Transportes y Comunicaciones",
+      "id": 23
+    },
+    {
+      "name": "Justicia y Derechos Humanos",
+      "id": 15
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY QUE ESTABLECE LA INTERRUPCIÓN DE SERVICIOS DE TELECOMUNICACIONES EN CENTROS PENITENCIARIOS PARA GARANTIZAR LA SEGURIDAD DE LA CIUDADANÍA",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDgw/pdf"
+    },
+    {
+      "date": "2025-02-25T13:31:41.000-0500",
+      "details": "",
+      "committee": "Transportes y Comunicaciones; Justicia y Derechos Humanos",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjMz/pdf"
+    }
+  ]
+}

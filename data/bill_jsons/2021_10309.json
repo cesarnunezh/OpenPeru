@@ -1,0 +1,97 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1084,
+    "dni": "42843414",
+    "name": "Vergara Mendoza, Elvis Hernán",
+    "sex": "M"
+  },
+  "summary": "PROPONE REIVINDICAR LOS DERECHOS AL PERSONAL MILITAR, POLICIAL Y CIVIL QUE PARTICIPÓ EN EL CONFLICTO ARMADO CON EL ECUADOR EN LAS OPERACIONES MILITARES DE 1995 ALTO CENEPA, OTORGANDO UN NUEVO PLAZO PARA LA EVALUACIÓN, CALIFICACIÓN, FORMULACIÓN DE ACTAS Y EXPEDICIÓN DE RESOLUCIONES DE RECONOCIMIENTO\n",
+  "id": "2021_10309",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE REIVINDICA LOS DERECHOS DE LOS DEFENSORES DE LA PATRIA DEL CONFLICTO DEL ALTO CENEPA DE 1995\n",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1054,
+      "dni": "18099931",
+      "name": "Alva Rojas, Carlos Enrique",
+      "sex": "M"
+    },
+    {
+      "id": 1154,
+      "dni": "16667146",
+      "name": "Monteza Facho, Silvia María",
+      "sex": "F"
+    },
+    {
+      "id": 1139,
+      "dni": "22290935",
+      "name": "Doroteo Carbajo, Raúl Felipe",
+      "sex": "M"
+    },
+    {
+      "id": 1077,
+      "dni": "23977149",
+      "name": "Aragón Carreño, Luis Ángel",
+      "sex": "M"
+    },
+    {
+      "id": 1068,
+      "dni": "05374449",
+      "name": "Mori Celis, Juan Carlos",
+      "sex": "M"
+    },
+    {
+      "id": 1144,
+      "dni": "43313696",
+      "name": "Soto Palacios, Wilson",
+      "sex": "M"
+    },
+    {
+      "id": 1110,
+      "dni": "17549232",
+      "name": "Portero López, Hilda Marleny",
+      "sex": "F"
+    },
+    {
+      "id": 1114,
+      "dni": "42834886",
+      "name": "López Ureña, Ilich Fredy",
+      "sex": "M"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Acción Popular",
+  "committees": [
+    {
+      "name": "Defensa Nacional, Orden Interno, Desarrollo Alternativo y Lucha Contra las Drogas",
+      "id": 7
+    },
+    {
+      "name": "Presupuesto y Cuenta General de la República",
+      "id": 17
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE REIVINDICA LOS DERECHOS DE LOS DEFENSORES DE LA PATRIA DEL CONFLICTO DEL ALTO CENEPA DE 1995\n",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5ODE4/pdf"
+    },
+    {
+      "date": "2025-02-24T17:55:31.000-0500",
+      "details": "",
+      "committee": "Defensa Nacional, Orden Interno, Desarrollo Alternativo y Lucha Contra las Drogas; Presupuesto y Cuenta General de la República",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDg0/pdf"
+    }
+  ]
+}

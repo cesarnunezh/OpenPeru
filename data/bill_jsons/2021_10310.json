@@ -1,0 +1,75 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1128,
+    "dni": "01888173",
+    "name": "Flores Ancachi, Jorge Luis",
+    "sex": "M"
+  },
+  "summary": "PROPONE ESTABLECER EL MARCO NORMATIVO PARA LA FORMALIZACIÓN DEL TRABAJO DE LOS TAXISTAS Y REGULAR EL FUNCIONAMIENTO DE LOS APLICATIVOS DIGITALES VINCULADOS A LAS EMPRESAS DE TRANSPORTE, PROMOVIENDO CONDICIONES LABORALES JUSTAS, SEGURIDAD VIAL Y UNA ADECUADA, PRESTACIÓN DEL SERVICIO DE TRANSPORTE PÚBLICO.",
+  "id": "2021_10310",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY GENERAL PARA LA FORMALIZÁCIÓN DEL TRABAJO DE TAXISTAS Y LA REGULACIÓN DE APLICATIVOS DIGITALES VINCULADOS A EMPRESAS DE TRANSPORTE",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1101,
+      "dni": "44649199",
+      "name": "Bellido Ugarte, Guido",
+      "sex": "M"
+    },
+    {
+      "id": 1055,
+      "dni": "07246887",
+      "name": "Luna Gálvez, José León",
+      "sex": "M"
+    },
+    {
+      "id": 1085,
+      "dni": "23017616",
+      "name": "Picón Quedo, Luis Raúl",
+      "sex": "M"
+    },
+    {
+      "id": 1122,
+      "dni": "42572649",
+      "name": "Espinoza Vargas, Jhaec Darwin",
+      "sex": "M"
+    },
+    {
+      "id": 1107,
+      "dni": "42335591",
+      "name": "Juárez Calle, Heidy Lisbeth",
+      "sex": "F"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Podemos Perú",
+  "committees": [
+    {
+      "name": "Transportes y Comunicaciones",
+      "id": 23
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY GENERAL PARA LA FORMALIZÁCIÓN DEL TRABAJO DE TAXISTAS Y LA REGULACIÓN DE APLICATIVOS DIGITALES VINCULADOS A EMPRESAS DE TRANSPORTE",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5ODgy/pdf"
+    },
+    {
+      "date": "2025-02-24T17:54:53.000-0500",
+      "details": "",
+      "committee": "Transportes y Comunicaciones",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDgz/pdf"
+    }
+  ]
+}

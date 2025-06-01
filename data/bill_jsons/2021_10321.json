@@ -1,0 +1,76 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1156,
+    "dni": "42750152",
+    "name": "Robles Araujo, Silvana Emperatriz",
+    "sex": "F"
+  },
+  "summary": "PROPONE DECLARAR DE INTERÉS NACIONAL Y NECESIDAD PÚBLICA LA FISCALIZACIÓN DE TODOS LOS CENTROS COMERCIALES A NIVEL NACIONAL POR PARTE DE LAS MUNICIPALIDADES,\nA FIN DE VERIFICAR EL CUMPLIMIENTO DE LAS OBLIGACIONES DE LOS TITULARES DE LAS LICENCIAS DE FUNCIONAMIENTO CONFORME A LEY, INCLUYENDO LAS OBLIGACIONES\nDERIVADAS DE LAS INSPECCIONES TÉCNICAS DE SEGURIDAD EN EDIFÍCACIONES, DE CONFORMIDAD CON LO DISPUESTO EN LA LEY 28976, LEY MARCO DE LICENCIA DE FUNCIONAMIENTO.\n",
+  "id": "2021_10321",
+  "presentation_date": "2025-02-24",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE DECLARA DE INTERÉS NACIONAL Y NECESIDAD PÚBLICA LA FISCALIZACIÓN DE TODOS LOS CENTROS COMERCIALES A NIVEL NACIONAL Y DEROGA LA LEY 31914",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1050,
+      "dni": "29632775",
+      "name": "Quito Sarmiento, Bernardo Jaime",
+      "sex": "M"
+    },
+    {
+      "id": 1046,
+      "dni": "20051359",
+      "name": "Pariona Sinche, Alfredo",
+      "sex": "M"
+    },
+    {
+      "id": 1044,
+      "dni": "46517805",
+      "name": "Flores Ramírez, Alex Randu",
+      "sex": "M"
+    },
+    {
+      "id": 1136,
+      "dni": "25700579",
+      "name": "Dávila Atanacio, Pasión Neomías",
+      "sex": "M"
+    }
+  ],
+  "adherents": [
+    {
+      "id": 1092,
+      "dni": "10213424",
+      "name": "Pablo Medina, Flor Aidee",
+      "sex": "F"
+    }
+  ],
+  "parliamentary_group": "Bancada Socialista",
+  "committees": [
+    {
+      "name": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "id": 8
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY QUE DECLARA DE INTERÉS NACIONAL Y NECESIDAD PÚBLICA LA FISCALIZACIÓN DE TODOS LOS CENTROS COMERCIALES A NIVEL NACIONAL Y DEROGA LA LEY 31914",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDc2/pdf"
+    },
+    {
+      "date": "2025-02-25T13:29:44.000-0500",
+      "details": "",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjMy/pdf"
+    }
+  ]
+}

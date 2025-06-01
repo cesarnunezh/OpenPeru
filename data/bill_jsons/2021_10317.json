@@ -1,0 +1,46 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": null,
+  "summary": "LA PRESENTE LEY TIENE POR OBJETO SANEAR LOS LÍMITES Y TRAMOS DE LA PROVINCIA DE TAYACAJA Y DE ALGUNOS DE SUS DISTRITOS, DEL DEPARTAMENTO DE HUANCAVELICA",
+  "id": "2021_10317",
+  "presentation_date": "2025-02-24",
+  "status": "DICTAMEN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Poder Ejecutivo",
+  "title": "LEY DE SANEAMIENTO DE LÍMITES Y TRAMOS DE LA PROVINCIA DE TAYACAJA Y DE ALGUNOS DE SUS DISTRITOS, DEL DEPARTAMENTO DE HUANCAVELICA",
+  "observations": "",
+  "coauthors": [],
+  "adherents": [],
+  "parliamentary_group": "",
+  "committees": [
+    {
+      "name": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "id": 8
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY DE SANEAMIENTO DE LÍMITES Y TRAMOS DE LA PROVINCIA DE TAYACAJA Y DE ALGUNOS DE SUS DISTRITOS, DEL DEPARTAMENTO DE HUANCAVELICA",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDQw/pdf"
+    },
+    {
+      "date": "2025-02-25T13:22:23.000-0500",
+      "details": "",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjI4/pdf"
+    },
+    {
+      "date": "2025-05-09T10:22:45.000-0500",
+      "details": "EN MAYORÍA - APROBACIÓN EN SUS TÉRMINOS - LEY DE SANEAMIENTO DE LÍMITES Y TRAMOS DE LA PROVINCIA DE TAYACAJA Y DE ALGUNOS DE SUS DISTRITOS, DEL DEPARTAMENTO DE HUANCAVELICA (EN RELATORÍA 9/5/2025)\n",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/Mjg2MzU4/pdf"
+    }
+  ]
+}

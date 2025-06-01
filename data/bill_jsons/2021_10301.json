@@ -1,0 +1,57 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1047,
+    "dni": "19877916",
+    "name": "Reymundo Mercado, Edgard Cornelio",
+    "sex": "M"
+  },
+  "summary": "PROPONE FORTALECER LA CAPACIDAD DE ACCIÓN DE LAS RONDAS CAMPESINAS A TRAVÉS DEL OTORGAMIENTO DE BENEFICIOS EN FAVOR DE SUS INTEGRANTES, EN EL MARCO DE LA LEY N°27908, LEY DE RONDAS CAMPESINAS",
+  "id": "2021_10301",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE FORTALECE Y OTORGA BENEFICIOS A LAS RONDAS CAMPESINAS\n",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1115,
+      "dni": "10129700",
+      "name": "Cortez Aguirre, Isabel",
+      "sex": "F"
+    },
+    {
+      "id": 1158,
+      "dni": "72200895",
+      "name": "Bazán Narro, Sigrid Tesoro",
+      "sex": "F"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Bloque Democrático Popular",
+  "committees": [
+    {
+      "name": "Defensa Nacional, Orden Interno, Desarrollo Alternativo y Lucha Contra las Drogas",
+      "id": 7
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE FORTALECE Y OTORGA BENEFICIOS A LAS RONDAS CAMPESINAS\n",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5NjY4/pdf"
+    },
+    {
+      "date": "2025-02-24T12:42:36.000-0500",
+      "details": "",
+      "committee": "Defensa Nacional, Orden Interno, Desarrollo Alternativo y Lucha Contra las Drogas",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTcy/pdf"
+    }
+  ]
+}

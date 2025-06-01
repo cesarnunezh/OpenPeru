@@ -1,0 +1,75 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1099,
+    "dni": "07852432",
+    "name": "Jáuregui Martínez de Aguayo, María de los Milagros Jackeline",
+    "sex": "F"
+  },
+  "summary": "PROPONE GARANTIZAR LA ATENCIÓN PRIORITARIA DEL ESTADO Y PROMOVER EL COMPROMISO DE LA SOCIEDAD EN GENERAL CON LA INFANCIA EN SITUACIÓN DE ORFANDAD, ASÍ COMO FOMENTAR LA ADOPCIÓN",
+  "id": "2021_10300",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY DE COMPROMISO ESTATAL Y SOCIAL CON LA NIÑEZ EN ORFANDAD Y LA ADOPCIÓN",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1039,
+      "dni": "45209282",
+      "name": "Muñante Barrios, Alejandro",
+      "sex": "M"
+    },
+    {
+      "id": 1062,
+      "dni": "44886100",
+      "name": "Trigozo Reátegui, Cheryl",
+      "sex": "M"
+    },
+    {
+      "id": 1129,
+      "dni": "06049853",
+      "name": "Ciccia Vásquez, Miguel Ángel",
+      "sex": "M"
+    },
+    {
+      "id": 1126,
+      "dni": "07026029",
+      "name": "Zeballos Aponte, Jorge Arturo",
+      "sex": "M"
+    },
+    {
+      "id": 1032,
+      "dni": "10280036",
+      "name": "Chirinos Venegas, Patricia Rosa",
+      "sex": "F"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Renovación Popular",
+  "committees": [
+    {
+      "name": "Mujer y Familia",
+      "id": 16
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY DE COMPROMISO ESTATAL Y SOCIAL CON LA NIÑEZ EN ORFANDAD Y LA ADOPCIÓN",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5NjYy/pdf"
+    },
+    {
+      "date": "2025-02-24T12:38:13.000-0500",
+      "details": "",
+      "committee": "Mujer y Familia",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTcx/pdf"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": null,
+  "summary": "LA PRESENTE LEY TIENE COMO OBJETO MODIFICAR EL ARTÍCULO 2 DE LA LEY 27482, LEY QUE REGULA LA PUBLICACIÓN DE LA DECLARACIÓN JURADADE INGRESOS Y DE BIENES Y RENTAS DE LOS FUNCIONARIOS Y SERVIDORES PÚBLICOS DEL ESTADO, Y EL ARTÍCULO 32 DE LA LEY 29709, LEY DE LA CARRERA ESPECIAL PÚBLICA PENITENCIARIA",
+  "id": "2021_10320",
+  "presentation_date": "2025-02-24",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Poder Ejecutivo",
+  "title": "LEY QUE MODIFICA LA LEY 27482, LEY QUE REGULA LA PUBLICACIÓN DE LA DECLARACIÓN JURADA DE INGRESOS Y DE BIENES Y RENTAS DE LOS FUNCIONARIOS Y SERVIDORES PÚBLICOS DEL ESTADO, Y LA LEY 29709, LEY DE LA CARRERA ESPECIAL PÚBLICA PENITENCIARIA; CON LA FINALIDAD DE FORTALECER LA TRANSPARENCIA, LA INTEGRIDAD EN EL SECTOR PÚBLICO Y PREVENIR LOS ACTOS DE CORRUPCIÓN",
+  "observations": "",
+  "coauthors": [],
+  "adherents": [],
+  "parliamentary_group": "",
+  "committees": [
+    {
+      "name": "Fiscalización y Contraloría",
+      "id": 12
+    },
+    {
+      "name": "Justicia y Derechos Humanos",
+      "id": 15
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY QUE MODIFICA LA LEY 27482, LEY QUE REGULA LA PUBLICACIÓN DE LA DECLARACIÓN JURADA DE INGRESOS Y DE BIENES Y RENTAS DE LOS FUNCIONARIOS Y SERVIDORES PÚBLICOS DEL ESTADO, Y LA LEY 29709, LEY DE LA CARRERA ESPECIAL PÚBLICA PENITENCIARIA; CON LA FINALIDAD DE FORTALECER LA TRANSPARENCIA, LA INTEGRIDAD EN EL SECTOR PÚBLICO Y PREVENIR LOS ACTOS DE CORRUPCIÓN",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDQ3/pdf"
+    },
+    {
+      "date": "2025-02-25T13:27:56.000-0500",
+      "details": "",
+      "committee": "Fiscalización y Contraloría; Justicia y Derechos Humanos",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjMx/pdf"
+    }
+  ]
+}

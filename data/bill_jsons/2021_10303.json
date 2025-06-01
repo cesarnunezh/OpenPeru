@@ -1,0 +1,79 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1145,
+    "dni": "42611628",
+    "name": "Quispe Mamani, Wilson Rusbel",
+    "sex": "M"
+  },
+  "summary": "PROPONE LA CREACIÓN DE LA UNIVERSIDAD NACIONAL DE MAZUKO – UNMA, CON SEDE PRINCIPAL EN EL DISTRITO DE INAMBARI, PROVINCIA DE TAMBOPATA EN EL DEPARTAMENTO DE MADRE DE DIOS, COMO PERSONA JURÍDICA DE DERECHO PÚBLICO INTERNO PARA EL DESARROLLO EN SECTOR EDUCATIVO UNIVERSITARIO\n",
+  "id": "2021_10303",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": " LEY QUE CREA LA UNIVERSIDAD NACIONAL DE MAZUKO (UNMA), EN EL DEPARTAMENTO DE MADRE DE DIOS\n",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1150,
+      "dni": "04647085",
+      "name": "Cutipa Ccama, Víctor Raúl",
+      "sex": "M"
+    },
+    {
+      "id": 1130,
+      "dni": "04413969",
+      "name": "Coayla Juárez, Jorge Samuel",
+      "sex": "M"
+    },
+    {
+      "id": 1104,
+      "dni": "27080597",
+      "name": "Echeverría Rodríguez, Hamlet",
+      "sex": "M"
+    },
+    {
+      "id": 1080,
+      "dni": "32923902",
+      "name": "Varas Meléndez, Elías Marcial",
+      "sex": "M"
+    },
+    {
+      "id": 1103,
+      "dni": "07638265",
+      "name": "Bermejo Rojas, Guillermo",
+      "sex": "M"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Juntos por el Perú - Voces del Pueblo",
+  "committees": [
+    {
+      "name": "Presupuesto y Cuenta General de la República",
+      "id": 17
+    },
+    {
+      "name": "Educación, Juventud y Deporte",
+      "id": 10
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": " LEY QUE CREA LA UNIVERSIDAD NACIONAL DE MAZUKO (UNMA), EN EL DEPARTAMENTO DE MADRE DE DIOS\n",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5NzM1/pdf"
+    },
+    {
+      "date": "2025-02-24T12:47:15.000-0500",
+      "details": "",
+      "committee": "Presupuesto y Cuenta General de la República; Educación, Juventud y Deporte",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTc0/pdf"
+    }
+  ]
+}

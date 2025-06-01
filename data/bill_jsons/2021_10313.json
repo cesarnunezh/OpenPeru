@@ -1,0 +1,79 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": {
+    "id": 1128,
+    "dni": "01888173",
+    "name": "Flores Ancachi, Jorge Luis",
+    "sex": "M"
+  },
+  "summary": "PROPONE DISPONER EL INCREMENTO DEL PERSONAL MÉDICO Y DE RECURSOS HUMANOS EN LOS HOSPITALES Y ESTABLECIMIENTOS DE SALUD A NIVEL NACIONAL, CON EL FIN DE GARANTIZAR UNA ATENCIÓN MÉDICA ADECUADA Y OPORTUNA FRENTE AL CRECIMIENTO DEMOGRÁFICO DEL PAÍS.",
+  "id": "2021_10313",
+  "presentation_date": "2025-02-21",
+  "status": "EN COMISIÓN",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Congreso",
+  "title": "LEY QUE DISPONE EL INCREMENTO DEL PERSONAL MÉDICO Y RECURSOS HUMANOS EN LOS HOSPITALES A NIVEL NACÍONAL ANTE EL CRECIMIENTO DEMOGRÁFICO",
+  "observations": "",
+  "coauthors": [
+    {
+      "id": 1101,
+      "dni": "44649199",
+      "name": "Bellido Ugarte, Guido",
+      "sex": "M"
+    },
+    {
+      "id": 1055,
+      "dni": "07246887",
+      "name": "Luna Gálvez, José León",
+      "sex": "M"
+    },
+    {
+      "id": 1041,
+      "dni": "25542661",
+      "name": "Arriola Tueros, José Alberto",
+      "sex": "M"
+    },
+    {
+      "id": 1107,
+      "dni": "42335591",
+      "name": "Juárez Calle, Heidy Lisbeth",
+      "sex": "F"
+    },
+    {
+      "id": 1085,
+      "dni": "23017616",
+      "name": "Picón Quedo, Luis Raúl",
+      "sex": "M"
+    }
+  ],
+  "adherents": [],
+  "parliamentary_group": "Podemos Perú",
+  "committees": [
+    {
+      "name": "Presupuesto y Cuenta General de la República",
+      "id": 17
+    },
+    {
+      "name": "Salud y Población",
+      "id": 21
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-21T00:00:00.000-0500",
+      "details": "LEY QUE DISPONE EL INCREMENTO DEL PERSONAL MÉDICO Y RECURSOS HUMANOS EN LOS HOSPITALES A NIVEL NACÍONAL ANTE EL CRECIMIENTO DEMOGRÁFICO",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5ODk2/pdf"
+    },
+    {
+      "date": "2025-02-24T17:49:57.000-0500",
+      "details": "",
+      "committee": "Presupuesto y Cuenta General de la República; Salud y Población",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDc5/pdf"
+    }
+  ]
+}

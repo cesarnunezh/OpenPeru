@@ -1,0 +1,53 @@
+{
+  "organization": "Peruvian Parliament",
+  "legislative_session": "2021-2026",
+  "lead_author": null,
+  "summary": "LA PRESENTE LEY TIENE POR OBJETO SANEAR EL LÍMITE ENTRE LA PROVINCIA DE LIMA Y LA PROVINCIA CONSTITUCIONAL DEL CALLAO",
+  "id": "2021_10316",
+  "presentation_date": "2025-02-24",
+  "status": "Orden del Día",
+  "legislature": "Primera Legislatura Ordinaria 2024",
+  "proponent": "Poder Ejecutivo",
+  "title": "LEY DE SANEAMIENTO DE CUATRO TRAMOS DEL LÍMITE ENTRE LA PROVINCIA DE LIMA Y LA PROVINCIA CONSTITUCIONAL DEL CALLAO",
+  "observations": "",
+  "coauthors": [],
+  "adherents": [],
+  "parliamentary_group": "",
+  "committees": [
+    {
+      "name": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "id": 8
+    }
+  ],
+  "bill_complete": false,
+  "steps": [
+    {
+      "date": "2025-02-24T00:00:00.000-0500",
+      "details": "LEY DE SANEAMIENTO DE CUATRO TRAMOS DEL LÍMITE ENTRE LA PROVINCIA DE LIMA Y LA PROVINCIA CONSTITUCIONAL DEL CALLAO",
+      "committee": null,
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDE1/pdf"
+    },
+    {
+      "date": "2025-02-25T13:20:13.000-0500",
+      "details": "",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjI3/pdf"
+    },
+    {
+      "date": "2025-04-28T14:02:19.000-0500",
+      "details": "POR UNANIMIDAD - APROBACIÓN EN SUS TÉRMINOS - LEY DE SANEAMIENTO DE CUATRO TRAMOS DEL LÍMITE ENTRE LA PROVINCIA DE LIMA Y LA PROVINCIA CONSTITUCIONAL DEL CALLAO (EN RELATORÍA 28/4/2025)",
+      "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+      "vote_id": null,
+      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjgyNDcy/pdf"
+    },
+    {
+      "date": "2025-05-19T17:31:58.000-0500",
+      "details": "EL CONSEJO DIRECTIVO, EN SESIÓN DEL 19 DE MAYO DE 2025, TOMÓ CONOCIMIENTO DEL DICTAMEN Y LO INCLUYÓ EN EL ORDEN DEL DÍA",
+      "committee": null,
+      "vote_id": null,
+      "url": null
+    }
+  ]
+}
