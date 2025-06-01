@@ -26,7 +26,6 @@ class VoteEvent(NamedTuple):
         date (str): The date of the vote event.
         result (str): The result of the vote, e.g., 'approved', 'rejected'.
         counts (dict): A dictionary containing counts of votes, e.g., {'yes': 100, 'no': 50, 'abstain': 10}.
-        votes (list[Vote]): A list of Vote objects representing individual votes.
     '''
     organization: str
     legislative_period: str
@@ -35,5 +34,5 @@ class VoteEvent(NamedTuple):
     date: str
     result: str
     counts: dict
-    votes: list[Vote]
+
 
