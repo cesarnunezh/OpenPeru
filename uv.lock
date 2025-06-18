@@ -1,15 +1,10 @@
 version = 1
 requires-python = ">=3.13"
 resolution-markers = [
-    "platform_system == 'Darwin' and sys_platform == 'darwin'",
-    "platform_machine == 'aarch64' and platform_system == 'Linux' and sys_platform == 'darwin'",
-    "(platform_machine != 'aarch64' and platform_system != 'Darwin' and sys_platform == 'darwin') or (platform_system != 'Darwin' and platform_system != 'Linux' and sys_platform == 'darwin')",
-    "platform_machine == 'aarch64' and platform_system == 'Darwin' and sys_platform == 'linux'",
-    "platform_machine == 'aarch64' and platform_system == 'Linux' and sys_platform == 'linux'",
-    "platform_machine == 'aarch64' and platform_system != 'Darwin' and platform_system != 'Linux' and sys_platform == 'linux'",
-    "(platform_machine != 'aarch64' and platform_system == 'Darwin' and sys_platform != 'darwin') or (platform_system == 'Darwin' and sys_platform != 'darwin' and sys_platform != 'linux')",
-    "platform_machine == 'aarch64' and platform_system == 'Linux' and sys_platform != 'darwin' and sys_platform != 'linux'",
-    "(platform_machine != 'aarch64' and platform_system != 'Darwin' and sys_platform != 'darwin') or (platform_system != 'Darwin' and platform_system != 'Linux' and sys_platform != 'darwin' and sys_platform != 'linux')",
+    "sys_platform == 'darwin'",
+    "python_version < '0'",
+    "platform_machine == 'aarch64' and sys_platform == 'linux'",
+    "(platform_machine != 'aarch64' and sys_platform == 'linux') or (sys_platform != 'darwin' and sys_platform != 'linux')",
 ]
 
 [[package]]
@@ -153,7 +148,7 @@ name = "click"
 version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593 }
 wheels = [
@@ -252,6 +247,7 @@ dependencies = [
     { name = "httpx" },
     { name = "ipykernel" },
     { name = "ipython" },
+    { name = "jellyfish" },
     { name = "lxml" },
     { name = "opencv-python" },
     { name = "pandas" },
@@ -273,6 +269,7 @@ requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "ipython", specifier = ">=9.0.2" },
+    { name = "jellyfish", specifier = ">=1.2.0" },
     { name = "lxml", specifier = ">=5.3.1" },
     { name = "opencv-python", specifier = ">=4.11.0.86" },
     { name = "pandas", specifier = ">=2.2.3" },
@@ -412,7 +409,7 @@ name = "ipykernel"
 version = "6.29.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "appnope", marker = "platform_system == 'Darwin'" },
+    { name = "appnope", marker = "sys_platform == 'darwin'" },
     { name = "comm" },
     { name = "debugpy" },
     { name = "ipython" },
@@ -495,6 +492,24 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/72/3a/79a912fbd4d8dd6fbb02bf69afd3bb72cf0c729bb3063c6f4498603db17a/jedi-0.19.2.tar.gz", hash = "sha256:4770dc3de41bde3966b02eb84fbcf557fb33cce26ad23da12c742fb50ecb11f0", size = 1231287 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c0/5a/9cac0c82afec3d09ccd97c8b6502d48f165f9124db81b4bcb90b4af974ee/jedi-0.19.2-py2.py3-none-any.whl", hash = "sha256:a8ef22bde8490f57fe5c7681a3c83cb58874daf72b4784de3cce5b6ef6edb5b9", size = 1572278 },
+]
+
+[[package]]
+name = "jellyfish"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7c/29/c0d39be806b5d5c201e9bf5265e43cf0e88bd63fb4e38edfc7a212ca38a7/jellyfish-1.2.0.tar.gz", hash = "sha256:5c7d73db4045dcc53b6efbfea21f3d3da432d3e052dc51827574d1a447fc23b4", size = 364693 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f0/4e/2f10011b5a80c56bb0f2775ee7283a3290fb9ec4e67c48c0342671a6d6e0/jellyfish-1.2.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:8b995bdf97d43cdca1e6bd5375f351bcb85c7f5e8760fe4a28c63eb0e6104075", size = 325372 },
+    { url = "https://files.pythonhosted.org/packages/f8/7e/e15034422abf21e28b43155d21f4e34ae7349fad6c682be12c739d79119b/jellyfish-1.2.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:559c1d6f17ba51639843b958a0d57ece5c4155e6b820c4acb3f3437437625ef3", size = 322333 },
+    { url = "https://files.pythonhosted.org/packages/0b/62/cdb56ed6641c5a23bb00c775ea54108423b40d2376bed186455cc39f4a0b/jellyfish-1.2.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e4439f4066ccc5dd6a7a15cb06941f5150bab646201e9e014a7d34d65cbe89fe", size = 354567 },
+    { url = "https://files.pythonhosted.org/packages/e0/97/47830ff857307936313e345010cf7626e7b3a233549cfc258c7342553de4/jellyfish-1.2.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:dbf866d2b967fd2d5380134fdcb47d4f113e24d659b46c38e55da80c215d2042", size = 363379 },
+    { url = "https://files.pythonhosted.org/packages/8e/95/4e3d5bac918aa7b0e1cebff39822add0844dbfc433870949dccc3df8aae3/jellyfish-1.2.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d9290b82276bba1941ad0f98226f51b43aeef7bdedb927b9266516b4519b9012", size = 355215 },
+    { url = "https://files.pythonhosted.org/packages/6e/2f/1d7aa3b7dc3d7e6a7f9e832a98440d14641670394c11718f7584dab434b2/jellyfish-1.2.0-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:052345ded2b00104a50acbab35c671efe06f40790202f6a2fc279ad645f31ab2", size = 532669 },
+    { url = "https://files.pythonhosted.org/packages/f6/0e/d527f9425e9462463e3b0ae748ec39ec5a2ebaa829725ca8c09f8753e364/jellyfish-1.2.0-cp313-cp313-musllinux_1_1_i686.whl", hash = "sha256:465dcf8b17162e3dae2cae0072b22ea9637e6ce8ddd8294181758437cd9c0673", size = 554223 },
+    { url = "https://files.pythonhosted.org/packages/04/71/533b48054f1ddab7d9b7ad3833a87963200c7aef7ce81e082379da6d1264/jellyfish-1.2.0-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:ae5f2e3c5ef14cb5b86afe7ed4078e504f75dd61ca9d9560bef597f9d2237c63", size = 526103 },
+    { url = "https://files.pythonhosted.org/packages/f4/d7/6c5ce80088495b7bb002931d7d0a313143b45fa10e826f11aadd4a97ccdb/jellyfish-1.2.0-cp313-cp313-win32.whl", hash = "sha256:13ee212b6fa294a1b6306693a1553b760d876780e757b9f016010748fe811b4d", size = 212179 },
+    { url = "https://files.pythonhosted.org/packages/40/aa/332fd282668a353570bdad56d65f526bc28ab73da1a3dd99e670af687186/jellyfish-1.2.0-cp313-cp313-win_amd64.whl", hash = "sha256:c8089e918ddb1abae946e92d053f646a7f686d0d051ef69cdfaa28b37352bbdf", size = 216066 },
 ]
 
 [[package]]
@@ -1350,7 +1365,7 @@ version = "0.30.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
-    { name = "cffi", marker = "implementation_name != 'pypy' and os_name == 'nt'" },
+    { name = "cffi", marker = "(implementation_name != 'pypy' and os_name == 'nt' and platform_machine != 'aarch64' and sys_platform == 'linux') or (implementation_name != 'pypy' and os_name == 'nt' and sys_platform != 'darwin' and sys_platform != 'linux')" },
     { name = "idna" },
     { name = "outcome" },
     { name = "sniffio" },

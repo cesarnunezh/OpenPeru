@@ -1,4 +1,4 @@
-import pandas as pd
+import polars as pl
 from pathlib import Path
 from config import URL
 from data_model import Congresista
@@ -50,5 +50,5 @@ def get_cong_list(base_url: str) -> list[Congresista]:
 if __name__ == '__main__':
     path = Path('./data/congresistas.csv')
     if not path.exists():
-        congresistas_df = pd.DataFrame(get_cong_list(URL['congresistas']))
+        congresistas_df = pl.DataFrame(get_cong_list(URL['congresistas']))
         congresistas_df.to_csv(path)
