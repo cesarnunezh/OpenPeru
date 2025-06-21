@@ -116,20 +116,24 @@ def scrape_bill(year: str, bill_number: str):
                         "votacion" in details.lower())
             committee = step.get("desComisiones")
             
-            files = step.get("archivos")
-            if files :
-                file_id = files[0]["proyectoArchivoId"]
-                b64_id = base64.b64encode(str(file_id).encode()).decode()
-                url = f"{BASE_URL}/archivo/{b64_id}/pdf"
-            else:
-                url = None
-                
             if has_vote:
+                # Determine vote ID for voting step
                 vote_step_counter += 1
                 vote_id = f"{year}_{bill_number}_{vote_step_counter}"
-                # tally_votes(vote_id, details, url) <- Call Ganon's function
             else:
                 vote_id = None
+            
+            # Loop through each file, check for vote count
+            files = step.get("archivos")
+            if files:
+                urls = []
+                for file in files:
+                    file_id = files[0]["proyectoArchivoId"]
+                    b64_id = base64.b64encode(str(file_id).encode()).decode()
+                    urls.append(f"{BASE_URL}/archivo/{b64_id}/pdf")
+                    # if tally_votes(vote_id, details, urls) <- Call Ganon's function
+            else:
+                url = None
                 
             steps.append({
                 "date": date,
@@ -161,8 +165,18 @@ def scrape_bill(year: str, bill_number: str):
         
 
 if __name__ == '__main__':
+    pdf_urls = []
     for i in range(10300, 10323):
         bill = scrape_bill(2021, i)
+        if bill.get("is_complete"):
+            for step in bill["steps"]:
+                if step["vote_id"]:
+                    pdf_urls.append({
+                        "vote_id": step["vote_id"],
+                        "details": bill["observations"]     
+                    })
+
+        
         bill.save_to_json()
         print(i, "saved to JSON")
         time.sleep(5)
