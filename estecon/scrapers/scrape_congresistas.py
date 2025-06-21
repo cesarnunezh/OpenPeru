@@ -1,21 +1,9 @@
-import pandas as pd
+import polars as pl
 from pathlib import Path
-from config import URL
-from typing import NamedTuple
-from scrape_utils import parse_url
+from estecon import URL
+from estecon.schema.schema import Congresista
+from estecon.scrapers.scrape_utils import parse_url
 import re
-import time
-
-class Congresista(NamedTuple):
-    id: str
-    nombre:str
-    votos: int
-    periodo: str
-    partido: str
-    bancada: str
-    dist_electoral: str
-    condicion: str
-    website: str 
 
 def get_dict_periodos(url: str) -> list:
     parse = parse_url(url)
@@ -62,5 +50,5 @@ def get_cong_list(base_url: str) -> list[Congresista]:
 if __name__ == '__main__':
     path = Path('./data/congresistas.csv')
     if not path.exists():
-        congresistas_df = pd.DataFrame(get_cong_list(URL['congresistas']))
+        congresistas_df = pl.DataFrame(get_cong_list(URL['congresistas']))
         congresistas_df.to_csv(path)
