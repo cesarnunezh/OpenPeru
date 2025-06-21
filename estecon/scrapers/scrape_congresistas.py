@@ -1,8 +1,8 @@
 import polars as pl
 from pathlib import Path
-from config import URL
-from data_model import Congresista
-from scrape_utils import parse_url
+from estecon import URL
+from estecon.schema.schema import Congresista
+from estecon.scrapers.scrape_utils import parse_url
 import re
 
 def get_dict_periodos(url: str) -> list:

@@ -2,7 +2,7 @@ import httpx
 import polars as pl 
 import time
 import base64
-from data_model import Bill
+from estecon.schema.schema import Bill
 
 CONGRESS = pl.read_csv("data/congresistas.csv")
 BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/"        
