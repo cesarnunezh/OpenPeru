@@ -21,7 +21,7 @@ def scrape_bill(year: str, bill_number: str):
         title = general.get("titulo")
         summary = general.get("sumilla")
         observations = general.get("observaciones")
-        parliamentary_group = general.get("desGpar")
+        bancada = general.get("desGpar")
         status = general.get("desEstado")
         bill_complete = (status == "Publicada en el Diario Oficial El Peruano")
         
@@ -116,7 +116,7 @@ def scrape_bill(year: str, bill_number: str):
             lead_author, 
             coauthors, 
             adherents, 
-            parliamentary_group, 
+            bancada, 
             committees, 
             status, 
             bill_complete,

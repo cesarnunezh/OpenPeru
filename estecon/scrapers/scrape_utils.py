@@ -1,12 +1,16 @@
 import httpx
+import asyncio
+from typing import List, Union, Tuple
 from lxml.html import HtmlElement, fromstring
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 def clean_string(text: str):
     """
     Cleans duplicated white spaces and new lines"""
     return " ".join(text.strip().split())
+
+def xpath2(xpath_query, parse):
+    result = parse.xpath(xpath_query)
+    return result[0].text if result else None
 
 def get_url_text(url:str, *args):
     if args:
@@ -28,3 +32,38 @@ def parse_url(url:str, *args) -> HtmlElement:
     else:
         return fromstring(get_url_text(url))
     
+async def get_url_text_async(client: httpx.AsyncClient, url: str, data: dict = None):
+    """
+    Async GET or POST using a shared client
+    """
+    try:
+        if data:
+            response = await client.post(url, data=data)
+        else:
+            response = await client.get(url)
+
+        if response.status_code == 200:
+            return response.text
+    except httpx.HTTPError as e:
+        print(f"Error fetching {url}: {e}")
+        return None
+
+
+async def fetch_multiple_urls_async(urls: List[Union[str, Tuple[str, dict]]]) -> List[HtmlElement]:
+    """
+    Fetch multiple URLs concurrently.
+    urls: list of either string (GET) or (url, data_dict) tuples (POST)
+    Returns list of HtmlElement objects
+    """
+    async with httpx.AsyncClient(verify=False, timeout=10.0) as client:
+        tasks = []
+
+        for item in urls:
+            if isinstance(item, tuple):  # POST request
+                url, data = item
+                tasks.append(get_url_text_async(client, url, data))
+            else:  # GET request
+                tasks.append(get_url_text_async(client, item))
+
+        html_responses = await asyncio.gather(*tasks)
+        return [fromstring(html) for html in html_responses if html]

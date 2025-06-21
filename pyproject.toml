@@ -16,6 +16,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "ipython>=9.0.2",
     "jellyfish>=1.2.0",
+    "loguru>=0.7.3",
     "lxml>=5.3.1",
     "opencv-python>=4.11.0.86",
     "pandas>=2.2.3",
