@@ -1,4 +1,5 @@
 import json
+import pathlib
 
 class Vote:
     '''
@@ -75,8 +76,8 @@ class Bill:
     def __str__(self):
         return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
     
-    def save_to_json(self):
-        with open(f"data/bill_jsons/{self.id}.json", "w", encoding="utf-8") as f:
+    def save_to_json(self, path: pathlib.Path):
+        with open(path, "w", encoding="utf-8") as f:
             json.dump(self.__dict__, f, ensure_ascii=False, indent=2)
 
 class Congresista:

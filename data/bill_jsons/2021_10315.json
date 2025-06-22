@@ -69,14 +69,16 @@
       "details": "LEY CONTRA EL USO DE PASAMONTAÑAS Y DERIVADOS EN EL TRANSPORTE DE VEHÍCULOS MENORES",
       "committee": null,
       "vote_id": null,
-      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjU5OTg4/pdf"
+      "vote_url": null,
+      "nonvote_url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwNTU0/pdf"
     },
     {
       "date": "2025-02-24T17:44:39.000-0500",
       "details": "",
       "committee": "Transportes y Comunicaciones",
       "vote_id": null,
-      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDc3/pdf"
+      "vote_url": null,
+      "nonvote_url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDc3/pdf"
     }
   ]
 }

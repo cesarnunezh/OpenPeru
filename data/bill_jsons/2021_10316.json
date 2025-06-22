@@ -26,28 +26,32 @@
       "details": "LEY DE SANEAMIENTO DE CUATRO TRAMOS DEL LÍMITE ENTRE LA PROVINCIA DE LIMA Y LA PROVINCIA CONSTITUCIONAL DEL CALLAO",
       "committee": null,
       "vote_id": null,
-      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDE1/pdf"
+      "vote_url": null,
+      "nonvote_url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMDE1/pdf"
     },
     {
       "date": "2025-02-25T13:20:13.000-0500",
       "details": "",
       "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
       "vote_id": null,
-      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjI3/pdf"
+      "vote_url": null,
+      "nonvote_url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjYwMjI3/pdf"
     },
     {
       "date": "2025-04-28T14:02:19.000-0500",
       "details": "POR UNANIMIDAD - APROBACIÓN EN SUS TÉRMINOS - LEY DE SANEAMIENTO DE CUATRO TRAMOS DEL LÍMITE ENTRE LA PROVINCIA DE LIMA Y LA PROVINCIA CONSTITUCIONAL DEL CALLAO (EN RELATORÍA 28/4/2025)",
       "committee": "Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
       "vote_id": null,
-      "url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjgyNDcy/pdf"
+      "vote_url": null,
+      "nonvote_url": "https://wb2server.congreso.gob.pe/spley-portal-service//archivo/MjgyNDcy/pdf"
     },
     {
       "date": "2025-05-19T17:31:58.000-0500",
       "details": "EL CONSEJO DIRECTIVO, EN SESIÓN DEL 19 DE MAYO DE 2025, TOMÓ CONOCIMIENTO DEL DICTAMEN Y LO INCLUYÓ EN EL ORDEN DEL DÍA",
       "committee": null,
       "vote_id": null,
-      "url": null
+      "vote_url": null,
+      "nonvote_url": null
     }
   ]
 }

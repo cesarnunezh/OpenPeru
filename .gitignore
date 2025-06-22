@@ -175,3 +175,10 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Data
+data/bill_jsons/*.json
+data/ocr_cache/*.txt
+
+# DS_Store
+.DS_Store
