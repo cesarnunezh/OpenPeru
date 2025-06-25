@@ -2,9 +2,6 @@ import httpx
 import asyncio
 from typing import List, Union, Tuple
 from lxml.html import HtmlElement, fromstring
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import os 
 from pathlib import Path
 import re
 

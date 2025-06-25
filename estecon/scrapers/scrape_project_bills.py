@@ -215,7 +215,7 @@ def cached_get_file_text(url: str) -> str:
         print("      Not found in cache, extracting from file now")
         file_text = render_pdf(url)
         save_ocr_txt_to_cache(file_text, cached_url_file)
-        print(f"      Saved cache file")
+        print("      Saved cache file")
         return file_text
 
 

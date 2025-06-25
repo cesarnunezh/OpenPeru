@@ -1,4 +1,4 @@
-from estecon.schema.schema import Vote, VoteEvent
+from estecon.schema.schema import Vote
 import pytesseract
 import os
 import fitz
