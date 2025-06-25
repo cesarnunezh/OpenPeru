@@ -16,3 +16,5 @@ VOTE_RESULTS = ["SI", "NO", "Abst.", "SinRes", "aus", "LO",
                 "LE", "LP", "Com", "CEI", "JP", "Ban", "Sus", "F"]
 
 ATTENDANCE_RESULTS = [" pre ", " le ", " aus ", " lp "]
+
+TYPE_STEPS = ['Vote', 'Assigned to Committee', 'Presented', 'Published']
