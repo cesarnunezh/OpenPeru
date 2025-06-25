@@ -3,15 +3,7 @@ import pathlib
 from datetime import datetime
 
 class Vote:
-    '''
-    Represents a vote in a parliament session.
-    
-    Attributes:
-        vote_event_id (str): Unique identifier for the vote event.
-        voter_id (str): Unique identifier for the voter.
-        option (str): The voter's choice, e.g., 'yes', 'no', 'abstain'.
-        bancada_id (str): The political group of the voter.
-    '''
+
     def __init__(self, vote_event_id: str, voter_id: str, option: str, bancada_id: str):
         
         # Attributes that fit in in Popolo structure
@@ -22,6 +14,20 @@ class Vote:
 
     def __str__(self):
         return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+
+class Attendance:
+    '''
+    Represents attendance of a congressperson at an event.
+
+    Attributes:
+        event_id (str): Unique identifier for the event.
+        attendee_id (str): Unique identifier for the congressperson.
+        status (str): Attendance status, e.g., 'present', 'absent'.
+    '''
+    def __init__(self, event_id: str, attendee_id: str, status: str):
+        self.event_id = event_id
+        self.attendee_id = attendee_id
+        self.status = status
 
 class VoteEvent:
     '''
@@ -57,6 +63,17 @@ class VoteEvent:
                 self.counts_by_bancada[vote.bancada_id][vote.option] = 0
             self.counts_by_bancada[vote.bancada_id][vote.option] += 1
         return self.counts_by_bancada
+
+    def add_attendance(self, attendance: list[Attendance]):
+        '''
+        Adds attendance records to the event.
+        
+        Args:
+            attendance (list[Attendance]): List of Attendance objects.
+        '''
+        self.attendance = {}
+        for att in attendance:
+            self.attendance[att.status] = self.attendance.get(att.status, 0) + 1
 
     def __str__(self):
         return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
@@ -222,24 +239,3 @@ class Organization:
         self.leg_year = leg_year
         self.name = name
         # self.classification = classification
-
-class Event:
-    '''
-    Represents an event in a legislative organization, such as a session or meeting.
-
-    Attributes:
-        event_id (str): Unique identifier for the event.
-        event_name (str): Name of the event.
-        description (str): Description of the event.
-        start_time (datetime): Start time of the event.
-        end_time (datetime): End time of the event.
-        org_id (str): Unique identifier for the organization where the event takes place.
-    '''
-    def __init__(self, event_id: str, event_name: str, description: str, start_time: datetime,
-                 end_time: datetime, org_id: str):
-        self.event_id = event_id
-        self.event_name = event_name
-        self.description = description
-        self.start_time = start_time
-        self.end_time = end_time
-        self.org_id = org_id
