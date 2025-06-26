@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String, Enum, Boolean, DateTime, ForeignKey, UniqueConstraint, PrimaryKeyConstraint
-from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-from estecon import VOTE_RESULTS, ATTENDANCE_RESULTS, TYPE_STEPS
+from backend import VoteOption, AttendanceStatus, BillStepType, RoleTypeBill, LegPeriod, Legislature, LegislativeYear, Proponents
 
 Base = declarative_base()
 
@@ -19,12 +18,8 @@ class Vote(Base):
 
     vote_event_id = Column(String, ForeignKey('vote_events.id'), primary_key=True)
     voter_id = Column(Integer, ForeignKey('congresistas.id'), nullable=False)
-    option = Column(String, nullable=False)
+    option = Column(Enum(VoteOption, name = "option"), nullable=False)
     bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=False)
-
-    vote_event = relationship("VoteEvent", backref="votes")
-    voter = relationship("Congresista", backref="votes")
-    bancada = relationship("Bancada", backref="votes")
 
     __table_args__ = (UniqueConstraint('vote_event_id', 'voter_id', name='uq_vote_event_voter'),)
 
@@ -42,7 +37,7 @@ class VoteEvent(Base):
 
     id = Column(String, primary_key=True)
     org_id = Column(Integer, ForeignKey('organizations.id'), nullable=False)
-    leg_period = Column(String, nullable=False)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
     bill_id = Column(String, ForeignKey('bills.id'), nullable=False)
     date = Column(DateTime, nullable=False)
 
@@ -63,12 +58,9 @@ class VoteCounts(Base):
 
     org_id = Column(Integer, ForeignKey('organizations.id'), nullable=False)
     vote_event_id = Column(String, ForeignKey('vote_events.id'), nullable=False)
-    option = Column(Enum(*VOTE_RESULTS, name='options'), nullable=False)
+    option = Column(Enum(VoteOption, name = "option"), nullable=False)
     bancada_id =  Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=False)
     count = Column(Integer, nullable=False)
-
-    vote_event = relationship("VoteEvent", backref="vote_counts")
-    bancada = relationship("Bancada", backref="vote_counts")
 
     __table_args__ = (UniqueConstraint('org_id', 'vote_event_id', 'option', 'bancada', name='uq_vote_counts'),)
 
@@ -87,11 +79,8 @@ class Attendance(Base):
     org_id = Column(Integer, ForeignKey('organizations.id'), nullable=False)
     event_id = Column(String, ForeignKey('vote_events.id'), primary_key=True)
     attendee_id = Column(Integer, ForeignKey('congresistas.id'), nullable=False)
-    status = Column(Enum(*ATTENDANCE_RESULTS, name='attendance_status'), nullable=False)
+    status = Column(Enum(AttendanceStatus, name='attendance_status'), nullable=False)
 
-    attendee = relationship("Congresista", backref="attendance_records")
-    event = relationship("VoteEvent", backref="attendance")
-    
     __table_args__ = (UniqueConstraint('org_id', 'event_id', 'attendee_id', name='uq_attendance'),)
 
 class Bill(Base):
@@ -109,10 +98,8 @@ class Bill(Base):
         observations (str): Observations on the bill.
         complete_text (str): Complete text of the bill.
         status (str): Current status of the bill.
-        proponent_id (str): Unique identifier for the proponent of the bill.
+        proponent (str): Type of proponent of the bill
         author_id (str): Unique identifier for the author of the bill.
-        coauthors (list[str]): List of coauthors of the bill.
-        adherents (list[str]): List of adherents to the bill.
         bancada_id (str): Unique identifier for the political group associated with the bill.
         bill_approved (bool): Boolean indicating if the bill has been published        
     '''
@@ -120,26 +107,38 @@ class Bill(Base):
 
     id = Column(String, primary_key=True)
     org_id = Column(Integer, ForeignKey('organizations.id'), nullable = False)
-    leg_period = Column(String, nullable=False)
-    legislature = Column(String, nullable=False)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
+    legislature = Column(Enum(Legislature, name ="legislature"), nullable=False)
     presentation_date = Column(DateTime, nullable=False)
     title = Column(String, nullable=False)
     summary = Column(String, nullable=False)
     observations = Column(String, nullable=False)
     complete_text = Column(String, nullable=False)
     status = Column(String, nullable=False)
-    proponent_id = Column(String, nullable=False)
+    proponent = Column(Enum(Proponents, name = "proponent"), nullable=False)
     author_id = Column(Integer, ForeignKey('congresistas.id'), nullable=True)
-    # coauthors = Column(MutableList.as_mutable(PickleType), nullable=True, default = [])
-    # adherents = Column(MutableList.as_mutable(PickleType), nullable=True, default = [])
-    bancada_id = Column(String, ForeignKey('bancadas.bancada_id'), nullable=True)
+    bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=True)
     bill_approved = Column(Boolean, nullable=False)
 
-    author = relationship("Congresista", backref="authored_bills")
-    org = relationship("Organization", backref="bills")
-    committees = relationship("Committee", secondary="bill_committees", backref="bills")
-
     __table_args__ = (UniqueConstraint('id', 'org_id', name='bill_unique'))
+
+class BillCongresistas(Base):
+    '''
+    Represents a relation between a bill and parliament members based on their 
+    role during the presentation of the bill.
+    
+    Attributes:
+        bill_id (str): A unique identifier for the bill.
+        person_id (str): A unique identifier for the person.
+        role_type (str): The type of role that the person has in the bill (e.g. author, coauthor, adherente, etc) 
+    '''
+    __tablename__ = "bills_congresistas"
+    
+    bill_id = Column(String, ForeignKey('bills.id'), nullable = False)
+    person_id = Column(Integer, ForeignKey('congresistas.id'), nullable = False)
+    role_type = Column(Enum(RoleTypeBill, name="role_type"), nullable = False)
+
+    __table_args__ = (PrimaryKeyConstraint('bill_id', 'person_id'))
 
 class BillStep(Base):
     '''
@@ -157,12 +156,10 @@ class BillStep(Base):
 
     id = Column(Integer, primary_key=True)
     bill_id = Column(String, ForeignKey('bills.id'), nullable=True)
-    step_type = Column(Enum(*TYPE_STEPS, name='type_step'), nullable=False)
+    step_type = Column(Enum(BillStepType, name='type_step'), nullable=False)
     step_date = Column(DateTime, nullable=False)
     step_detail = Column(String, nullable=False)
     step_url = Column(String, nullable=False)
-
-    bill = relationship("Bill", backref="steps")
 
 class BillCommittees(Base):
     '''
@@ -186,20 +183,18 @@ class Committee(Base):
 
     Attributes:
         leg_period (str): Legislative period of the committee.
-        leg_year (inte): Year period of the committee
+        leg_year (str): Year period of the committee
         org_id (int): The org_id or parliament where the committee belongs.
         id (int): A unique identifier for the committee.
         name (str): Name of the committee
     '''
     __tablename__ = 'committees'
 
-    leg_period = Column(String, primary_key=True, nullable=False)
-    leg_year = Column(Integer, primary_key=True, nullable=False)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), primary_key=True, nullable=False)
+    leg_year = Column(Enum(LegislativeYear, name = "leg_period"), primary_key=True, nullable=False)
     org_id = Column(Integer, ForeignKey('organizations.id'), nullable=False)
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String, nullable=False)
-
-    org = relationship("Organization", backref="committees")
 
     __table_args__ = (UniqueConstraint('leg_period', 'leg_year', 'org_id', 'id', name='committee_uniq'))
 
@@ -222,16 +217,13 @@ class Congresista(Base):
 
     id = Column(Integer, primary_key=True, nullable=False)
     nombre = Column(String, nullable=False)
-    leg_period = Column(String, primary_key=True, nullable=False)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), primary_key=True, nullable=False)
     party_id = Column(Integer, ForeignKey('partidos.party_id'), nullable=False)
     bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=False)
     votes_in_election = Column(Integer, nullable=False)
     dist_electoral = Column(String, nullable=False)
     condicion = Column(String, nullable=False)
     website = Column(String, nullable=False)
-
-    party = relationship("Party", backref="congresistas")
-    bancada = relationship("Bancada", backref="congresistas")
 
     __table_args__ = (UniqueConstraint('id', 'leg_period', name='congresista_uniq'),
                       PrimaryKeyConstraint('id', 'leg_period'))
@@ -248,7 +240,7 @@ class Party(Base):
 
     __tablename__ = 'partidos'
 
-    leg_period = Column(Integer, primary_key=True)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), primary_key=True)
     party_id = Column(Integer, primary_key=True)
     party_name = Column(String, nullable=False)
 
@@ -266,7 +258,7 @@ class Bancada(Base):
 
     __tablename__ = 'bancadas'
 
-    leg_period = Column(String, primary_key=True)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), primary_key=True)
     bancada_id = Column(Integer, primary_key=True)
     bancada_name = Column(String, nullable=False)
 
@@ -278,12 +270,12 @@ class Organization(Base):
 
     Attributes:
         id (int): Unique identifier for the organization.
-        leg_year (int): Legislative year.
+        leg_period (int): Legislative year.
         name (str): Name of the organization.
     '''
 
     __tablename__ = "organizations"
 
     id = Column(Integer, primary_key=True)
-    leg_year = Column(String, nullable=False)
+    leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
     name = Column(String, nullable=False)

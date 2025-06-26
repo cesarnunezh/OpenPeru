@@ -179,6 +179,8 @@ cython_debug/
 # Data
 data/bill_jsons/*.json
 data/ocr_cache/*.txt
+*.db
+*.csv
 
 # DS_Store
 .DS_Store

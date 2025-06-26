@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 from estecon import URL
 from loguru import logger
-from estecon.schema.schema import Congresista
-from estecon.scrapers.scrape_utils import parse_url, xpath2
+from .schema import Congresista
+from .scrape_utils import parse_url, xpath2
 import re
 import httpx
 from lxml.html import fromstring

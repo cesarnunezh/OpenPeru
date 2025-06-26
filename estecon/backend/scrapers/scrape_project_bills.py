@@ -2,8 +2,8 @@ import httpx
 import polars as pl 
 import time
 import base64
-from estecon.schema.schema import Bill
-from estecon.scrapers.scrape_utils import url_to_cache_file, save_ocr_txt_to_cache
+from .schema import Bill
+from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache
 import pytesseract
 import fitz
 from io import BytesIO

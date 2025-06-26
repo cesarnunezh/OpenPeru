@@ -1,4 +1,4 @@
-from estecon.schema.schema import Vote
+from .schema import Vote
 import pytesseract
 import os
 import fitz
@@ -8,7 +8,7 @@ from PIL import Image
 import numpy as np
 import cv2
 from jellyfish import jaro_winkler_similarity as jws
-from estecon import PARTIES, VOTE_RESULTS
+from backend import PARTIES, VOTE_RESULTS
 import re
 
 TESSERACT_PATH = os.environ.get('TESSERACT_PATH')
