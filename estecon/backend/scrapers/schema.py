@@ -1,9 +1,6 @@
-from pydantic import BaseModel, field_validator, Field
+from pydantic import BaseModel
 from backend import VoteOption, AttendanceStatus, BillStepType, RoleTypeBill, LegPeriod, Legislature, LegislativeYear, Proponents
-from typing import List, Optional
-from loguru import logger
 from datetime import datetime
-from difflib import get_close_matches
 import json
 from pathlib import Path
 
