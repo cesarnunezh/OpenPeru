@@ -96,3 +96,27 @@ class LegislativeYear(str, Enum):
     YEAR_2019 = "2018-2019"
     YEAR_2018 = "2017-2018"
     YEAR_2017 = "2016-2017"
+
+class RoleOrganization(str, Enum):
+    # For Bancadas | Partidos
+    VOCERO = "vocero"
+    MIEMBRO = "miembro"
+    
+    # For Comisiones, Mesa Directiva, Junta de Portavoces
+    PRESIDENTE = "presidente"
+    PRESIDENTA = "presidenta"
+    VICEPRESIDENTE = "vicepresidente"
+    VICEPRESIDENTA = "vicepresidenta"
+    SECRETARIO = "secretario"
+    SECRETARIA = "secretaria"
+    TITULAR = "titular"
+    SUPLENTE = "suplente"
+    ACCESITARIO = "accesitario"
+    
+
+class TypeOrganization(str, Enum):
+    BANCADA = "bancada"
+    COMMITTEE = "committee"
+    JUNTA_DE_PORTAVOCES = "junta de portavoces"
+    MESA_DIRECTIVA = "mesa directiva"
+    COMISION_PERMANENTE = "comision permanente"

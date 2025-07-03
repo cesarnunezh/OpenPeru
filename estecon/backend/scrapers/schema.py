@@ -1,13 +1,17 @@
-from pydantic import BaseModel, field_validator, Field
-from backend import VoteOption, AttendanceStatus, BillStepType, RoleTypeBill, LegPeriod, Legislature, LegislativeYear, Proponents
-from typing import List, Optional
-from loguru import logger
+from pydantic import BaseModel, field_validator, ConfigDict
+from estecon.backend import (VoteOption, AttendanceStatus, BillStepType, RoleTypeBill,
+                     LegPeriod, Legislature, LegislativeYear, Proponents,
+                     TypeOrganization, RoleOrganization)
+from typing import List, Optional, Dict
 from datetime import datetime
-from difflib import get_close_matches
-import json
 from pathlib import Path
 
-class Vote(BaseModel):
+
+class PrintableModel(BaseModel):
+    def __str__(self):
+        return '\n'.join(f"{key}: {value}" for key, value in self.model_dump().items())
+
+class Vote(PrintableModel):
     """
     Pydantic model representing a vote.
 
@@ -24,10 +28,26 @@ class Vote(BaseModel):
     option: VoteOption
     bancada_id: int
 
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+    model_config = ConfigDict(use_enum_values=False)
 
-class VoteEvent(BaseModel):
+class Attendance(PrintableModel):
+    '''
+    Represents attendance of a congressperson at an event.
+
+    Attributes:
+        event_id (str): Unique identifier for the event.
+        attendee_id (str): Unique identifier for the congressperson.
+        status (str): Attendance status, e.g., 'present', 'absent'.
+    '''
+    org_id: int
+    event_id: str
+    attendee_id: int
+    status: AttendanceStatus
+    
+    model_config = ConfigDict(use_enum_values=False)
+
+
+class VoteEvent(PrintableModel):
     '''
     Represents a vote event in a parliament session.
     Attributes:
@@ -43,55 +63,49 @@ class VoteEvent(BaseModel):
     leg_period: LegPeriod
     bill_id: str
     date: datetime
+    votes: Optional[List[Vote]] = None
+    attendance: Optional[List[Attendance]] = None
 
-    def add_votes(self, votes: list[Vote]):
-        self.votes = votes
-        self.results = [v.option for v in votes]
-
-    def get_counts(self):
-        self.counts = {option: self.results.count(option) for option in set(self.results)}
-        return self.counts
+    model_config = ConfigDict(use_enum_values=False)
     
-    def get_counts_by_bancada(self):
-        self.counts_by_bancada = {}
-        for vote in self.votes:
-            if vote.bancada_id not in self.counts_by_bancada:
-                self.counts_by_bancada[vote.bancada_id] = {}
-            if vote.option not in self.counts_by_bancada[vote.bancada_id]:
-                self.counts_by_bancada[vote.bancada_id][vote.option] = 0
-            self.counts_by_bancada[vote.bancada_id][vote.option] += 1
-        return self.counts_by_bancada
-
-    def add_attendance(self, attendance: list['Attendance']):
-        '''
-        Adds attendance records to the event.
+    def get_counts(self) -> Dict[VoteOption, int]:
+        """
+        Counts the number of votes per option.
+        """
+        if not self.votes:
+            return {}
+        return {
+            option: sum(1 for vote in self.votes if vote.option == option)
+            for option in set(vote.option for vote in self.votes)
+        }
+    
+    def get_counts_by_bancada(self) -> Dict[int, Dict[VoteOption, int]]:
+        """
+        Returns vote counts grouped by bancada and option.
+        """        
+        if not self.votes:
+            return {}
         
-        Args:
-            attendance (list[Attendance]): List of Attendance objects.
-        '''
-        self.attendance = {}
-        for att in attendance:
-            self.attendance[att.status] = self.attendance.get(att.status, 0) + 1
+        counts: Dict[int, Dict[VoteOption, int]] = {}
+        for vote in self.votes:
+            counts.setdefault(vote.bancada_id, {}).setdefault(vote.option, 0)
+            counts[vote.bancada_id][vote.option] += 1
+        return counts
 
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+    def get_attendance_summary(self) -> Dict[str, int]:
+        """
+        Returns a summary count of attendance statuses.
+        """
+        if not self.attendance:
+            return {}
+        
+        summary: Dict[str, int] = {}
+        for att in self.attendance:
+            summary[att.status] = summary.get(att.status, 0) + 1
+        return summary
 
 
-class Attendance(BaseModel):
-    '''
-    Represents attendance of a congressperson at an event.
-
-    Attributes:
-        event_id (str): Unique identifier for the event.
-        attendee_id (str): Unique identifier for the congressperson.
-        status (str): Attendance status, e.g., 'present', 'absent'.
-    '''
-    org_id: int
-    event_id: str
-    attendee_id: int
-    status: AttendanceStatus
-
-class VoteCount(BaseModel):
+class VoteCount(PrintableModel):
     '''
     Represents the counts of votes in a vote event.
 
@@ -108,7 +122,9 @@ class VoteCount(BaseModel):
     bancada_id: int
     count: int
 
-class BillStep(BaseModel):
+    model_config = ConfigDict(use_enum_values=False)
+
+class BillStep(PrintableModel):
     '''
     Represents a bill step record with details about the actions taken on a bill.
 
@@ -126,8 +142,11 @@ class BillStep(BaseModel):
     step_date: datetime
     step_detail: str
     step_url: str
-    
-class Committee(BaseModel):
+
+    model_config = ConfigDict(use_enum_values=False)
+
+
+class Committee(PrintableModel):
     '''
     Represents a committee in the peruvian parliament.
 
@@ -144,10 +163,9 @@ class Committee(BaseModel):
     id: str
     name: str
     
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+    model_config = ConfigDict(use_enum_values=False)
 
-class Bill(BaseModel):
+class Bill(PrintableModel):
     '''
     Represents a bill in the peruvian parliament.
 
@@ -169,7 +187,7 @@ class Bill(BaseModel):
     '''
     # Attributes that fit in in Popolo structure
     id: str
-    org_id: str
+    org_id: int
     leg_period: LegPeriod
     legislature: Legislature
     presentation_date: datetime
@@ -183,14 +201,14 @@ class Bill(BaseModel):
     bancada_id: int
     bill_approved: bool
 
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+    model_config = ConfigDict(use_enum_values=False)
+
     
     def save_to_json(self, path: Path):
         with open(path, "w", encoding="utf-8") as f:
-            json.dump(self.__dict__, f, ensure_ascii=False, indent=2)
+            f.write(self.model_dump_json(indent=2))
 
-class BillCongresistas(BaseModel):
+class BillCongresistas(PrintableModel):
     '''
     Represents a relation between a bill and parliament members based on their 
     role during the presentation of the bill.
@@ -204,7 +222,9 @@ class BillCongresistas(BaseModel):
     person_id: str
     role_type: RoleTypeBill
 
-class BillCommittees(BaseModel):
+    model_config = ConfigDict(use_enum_values=False)
+
+class BillCommittees(PrintableModel):
     '''
     Represents the relation between bills and a committee
 
@@ -215,7 +235,7 @@ class BillCommittees(BaseModel):
     bill_id: str
     committee_id: int
 
-class Congresista(BaseModel):
+class Congresista(PrintableModel):
     '''
     Represents a member of the peruvian parliament
 
@@ -224,73 +244,85 @@ class Congresista(BaseModel):
         nombre (str): Name of the person.
         leg_period (str): Legislative period.
         party_id (str): Unique identifier for the party.
-        bancada_id (str): Unique identifier for the bancada (parliamentary group).
         votes_in_election (int): Number of votes obtain in elections
         dist_electoral (str): Electoral district.
         condicion (str): Condition of the congressperson, e.g., 'active', 'inactive'.
         website (str): Official website of the congressperson.
     '''
-    # Attributes that fit in in Popolo structure
-    id: str
+    # Attributes that fit in Popolo structure
+    id: int
     leg_period: LegPeriod
     nombre: str
     party_id: int
-    bancada_id: int
     votes_in_election: int
     dist_electoral: str
     condicion: str
     website: str
 
+    model_config = ConfigDict(use_enum_values=False)
+
     def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items()) 
+        return '\n'.join(f"{key}: {value}" for key, value in self.model_dump().items()) 
 
-
-class Party(BaseModel):
+class Party(PrintableModel):
     '''
-    Represents a political party.
+    Represent a Political Party in the peruvian government
 
     Attributes:
-        period (str): Legislative period.
-        party_id (int): Unique identifier for the party.
-        party_name (str): Name of the party.
+        leg_period (str): Legislative period.
+        party_id (int): Unique identifier for the party
+        party_name (str): Name of the party
     '''
     leg_period: LegPeriod
     party_id: int
     party_name: str
 
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
-
-
-class Bancada(BaseModel):
-    '''
-    Represents a political bancada (parliamentary group).
-
-    Attributes:
-        period (str): Legislative period.
-        bancada_id (int): Unique identifier for the bancada.
-        bancada_name (str): Name of the bancada.
-    '''
-    leg_period: LegPeriod
-    bancada_id: int
-    bancada_name: str
-
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
-    
-class Organization(BaseModel):
+class Organization(PrintableModel):
     '''
     Represents a legislative organization, such as a parliament or congress.
     
     Attributes:
-        org_id (str): Unique identifier for the organization.
-        leg_period (int): Legislative year.
-        name (str): Name of the organization.
+        leg_period (str): Legislative period.
+        leg_year (str): Legislative year.
+        org_id (int): Unique identifier for the organization.
+        org_name (str): Name of the organization.
+        org_type (str): Type of organization (e.g. bancada, committee, etc)
     '''
-    id: int
     leg_period: LegPeriod
-    name: str
-    # classification: str
+    leg_year: LegislativeYear
+    
+    # Attributes that fit in Popolo structure
+    org_id: int
+    org_name: str
+    org_type: TypeOrganization
 
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
+    model_config = ConfigDict(use_enum_values=False)
+
+class Membership(PrintableModel):
+    '''
+    Represents a person's role in an organization during a specific time period.
+    
+    Attributes:
+        id (int): Unique identifier for the membership relationship.
+        role (str): Role of the person in the organization (e.g. vocero, miembro, presidente, etc)
+        person_id (int): Identifier for the person
+        org_id (int): Identifier for the organization
+        start_date (datetime): Date of the beginning of the membership
+        end_date (datetime): Date of the end of the membership
+    '''
+    # Attributes that fit in Popolo structure
+    id: int
+    role: RoleOrganization
+    person_id: int
+    org_id: int
+    start_date: datetime
+    end_date: datetime
+
+    model_config = ConfigDict(use_enum_values=False)
+    
+    @field_validator('end_date')
+    def check_end_after_start(cls, end, info):
+        start = info.data.get('start_date')
+        if start and end and end < start:
+            raise ValueError('end_date must be after start_date')
+        return end
