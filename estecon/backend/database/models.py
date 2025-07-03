@@ -1,6 +1,6 @@
 from sqlalchemy import (Column, Integer, String, Enum, Boolean, DateTime, 
                         ForeignKey, UniqueConstraint, PrimaryKeyConstraint,
-                        ForeignKeyConstraint, Index)
+                        Index)
 from estecon.backend import (VoteOption, AttendanceStatus, BillStepType, RoleTypeBill, 
                      LegPeriod, Legislature, LegislativeYear, Proponents,
                      RoleOrganization, TypeOrganization)
