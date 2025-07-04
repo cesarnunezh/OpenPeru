@@ -261,8 +261,6 @@ class Congresista(PrintableModel):
 
     model_config = ConfigDict(use_enum_values=False)
 
-    def __str__(self):
-        return '\n'.join(f"{key}: {value}" for key, value in self.model_dump().items()) 
 
 class Party(PrintableModel):
     '''
