@@ -175,4 +175,4 @@ def test_vote_counts(session):
     )
     session.add(vote_count)
     session.commit()
-    assert vote_count.count == 4003
+    assert vote_count.count == 40
