@@ -1,7 +1,6 @@
 import pytest
 import respx
 import httpx
-from lxml.html import fromstring
 from estecon.backend.scrapers import scrape_congresistas as sc
 from estecon.backend import LegPeriod, PARTY_ALIASES
 
