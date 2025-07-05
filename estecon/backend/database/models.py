@@ -237,7 +237,7 @@ class Congresista(Base):
     leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
     party_id = Column(Integer, ForeignKey('partidos.party_id'), nullable=False)
     votes_in_election = Column(Integer, nullable=False)
-    dist_electoral = Column(String, nullable=False)
+    dist_electoral = Column(String, nullable=True)
     condicion = Column(String, nullable=False)
     website = Column(String, nullable=False)
 
