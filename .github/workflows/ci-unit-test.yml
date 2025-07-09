@@ -1,0 +1,29 @@
+name: CI Unit Tests
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python  # Faster than uv python install
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version" # From uv set-up
+
+      - name: Install uv and activate a virtual environment
+        uses: astral-sh/setup-uv@v6
+        with:
+          # uv docs says to manually specify version: https://docs.astral.sh/uv/guides/integration/github/
+          version: "0.7.19"
+          enable-cache: true
+
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev
+
+      - name: Run tests
+        run: uv run pytest

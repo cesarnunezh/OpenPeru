@@ -96,7 +96,6 @@ async def get_cong_party_list(base_url: str = URL['congresistas']) -> Tuple[List
 
     async with httpx.AsyncClient(verify=False) as client:
         periodos = get_dict_periodos(base_url)
-
         for periodo, valor in periodos.items():
             links = get_links_congres(base_url, {'idRegistroPadre': valor})
             logger.info(f"Scraping {len(links)} congresistas for the period: {periodo}")
