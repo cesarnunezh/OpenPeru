@@ -5,7 +5,7 @@ from estecon.backend import LegPeriod, PARTY_ALIASES
 from estecon.backend.scrapers import scrape_congresistas as sc
 from estecon.backend.scrapers.scrape_congresistas import (
     get_cong_party_info, normalize_party_name, get_or_create_party,
-    get_dict_periodos, get_links_congres, get_cong_party_list
+    get_dict_periodos, get_links_congres
 )
 from estecon.backend.scrapers.schema import Congresista, Party
 
