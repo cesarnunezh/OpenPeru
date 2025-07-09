@@ -2,6 +2,7 @@ import httpx
 import asyncio
 from typing import List, Union, Tuple
 from lxml.html import HtmlElement, fromstring
+from loguru import logger
 from pathlib import Path
 import re
 
@@ -63,7 +64,7 @@ async def get_url_text_async(client: httpx.AsyncClient, url: str, data: dict = N
         if response.status_code == 200:
             return response.text
     except httpx.HTTPError as e:
-        print(f"Error fetching {url}: {e}")
+        logger.info(f"Error fetching {url}: {e}")
         return None
 
 

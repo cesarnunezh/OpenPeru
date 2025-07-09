@@ -255,7 +255,7 @@ class Congresista(PrintableModel):
     nombre: str
     party_id: int
     votes_in_election: int
-    dist_electoral: str
+    dist_electoral: Optional[str]
     condicion: str
     website: str
 
