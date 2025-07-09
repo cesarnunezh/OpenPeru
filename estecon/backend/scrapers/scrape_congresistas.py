@@ -91,7 +91,7 @@ async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_lin
             break
     return None, None
 
-async def get_cong_party_list(base_url: str = URL['congresistas']) -> Tuple[List[Congresista], List[Congresista]]:
+async def get_cong_party_list(base_url: str = URL['congresistas']) -> Tuple[List[Congresista], List[Party]]:
     congresistas = []
     partidos = []
 
