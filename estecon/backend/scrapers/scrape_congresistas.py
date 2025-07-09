@@ -10,6 +10,8 @@ from estecon.backend.scrapers.schema import Congresista, Party
 
 PARTY_ID_MAP = {period: {} for period in LegPeriod._member_names_}
 PARTY_COUNTER = 1
+semaphore = asyncio.Semaphore(10)
+timeout = httpx.Timeout(20.0, connect=10.0)
 
 def normalize_party_name(name: str) -> str:
     if name in PARTY_ALIASES.keys():
@@ -50,9 +52,6 @@ def get_links_congres(url: str, params:dict) -> List[str]:
     parse = parse_url(url, params)
     links = parse.xpath('//*[@class="congresistas"]//tr//td//*[@class="conginfo"]/@href')
     return [elem for elem in links]
-
-semaphore = asyncio.Semaphore(10)
-timeout = httpx.Timeout(20.0, connect=10.0)
 
 # Async version can be implemented later if needed
 async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_link: str, leg_period: LegPeriod, retries: int = 3) -> Tuple[Congresista, Party]:
