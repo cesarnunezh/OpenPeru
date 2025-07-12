@@ -1,14 +1,11 @@
-import re
 import httpx
 import asyncio
 import json
 from loguru import logger
 from datetime import datetime
-from lxml.html import fromstring
-from typing import List, Dict, Tuple, Optional
-from estecon.backend import URL, RoleOrganization, LegPeriod, TypeOrganization
-from estecon.backend.scrapers.schema import Congresista, Membership, Organization
-from estecon.backend.scrapers.scrape_utils import parse_url, xpath2
+from typing import Dict, Optional
+from estecon.backend.scrapers.schema import Membership
+from estecon.backend.scrapers.scrape_utils import parse_url
 
 semaphore = asyncio.Semaphore(10)
 timeout = httpx.Timeout(20)
