@@ -195,27 +195,6 @@ class BillCommittees(Base):
                       UniqueConstraint('bill_id', 'committee_id', name='bill_committee_uniq'),
                       Index('ix_billcommittees_committee_id', "committee_id"))
     
-class Committee(Base):
-    '''
-    Represents a committee in the peruvian parliament.
-
-    Attributes:
-        leg_period (str): Legislative period of the committee.
-        leg_year (str): Year period of the committee
-        org_id (int): The org_id or parliament where the committee belongs.
-        id (int): A unique identifier for the committee.
-        name (str): Name of the committee
-    '''
-    __tablename__ = 'committees'
-
-    leg_period = Column(Enum(LegPeriod, name = "leg_period"), primary_key=True, nullable=False)
-    leg_year = Column(Enum(LegislativeYear, name = "leg_period"), primary_key=True, nullable=False)
-    org_id = Column(Integer, ForeignKey('organizations.org_id'), nullable=False)
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String, nullable=False)
-
-    __table_args__ = (UniqueConstraint('leg_period', 'leg_year', 'org_id', 'id', name='committee_uniq'),)
-
 class Congresista(Base):
     '''
     Represents a member of the peruvian parliament
@@ -274,7 +253,7 @@ class Organization(Base):
     __tablename__ = "organizations"
 
     leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
-    leg_year = Column(Enum(LegislativeYear, name = "leg_year"), primary_key=True, nullable=False)
+    leg_year = Column(Enum(LegislativeYear, name = "leg_year"), nullable=False)
     org_id = Column(Integer, primary_key=True)
     org_name = Column(String, nullable=False)
     org_type = Column(Enum(TypeOrganization, name = "type_organization"), nullable = False)

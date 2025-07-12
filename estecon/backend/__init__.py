@@ -87,10 +87,10 @@ class Legislature(str, Enum):
     LEGISLATURA_2016_2 = "2016-II"
 
 class LegislativeYear(str, Enum):
-    #YEAR_202Y : 202X-202Y
+    #YEAR_202X : 202X-202Y
     pass
 
-years = {f'YEAR_{year+1}':f'{year}-{year+1}' for year in range(1990,datetime.now().year + 1)}
+years = {f'YEAR_{year}':f'{year}-{year+1}' for year in range(1990,datetime.now().year + 1)}
 LegislativeYear = Enum("LegislativeYear", years, type=str)
 
 class RoleOrganization(str, Enum):
