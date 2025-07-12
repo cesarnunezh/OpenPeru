@@ -85,7 +85,7 @@ def get_or_create_org(org_name: str, legperiod: LegPeriod, legyear: LegislativeY
 
 def get_committees(html: HtmlElement, legperiod: LegPeriod, legyear: LegislativeYear) -> List[Organization]:
     """"""
-    lst_objects = html.xpath(f'//*[@class="congresistas"]/tbody/tr/td/a')
+    lst_objects = html.xpath('//*[@class="congresistas"]/tbody/tr/td/a')
     lst_committees = []
     for obj in lst_objects:
         committee = get_or_create_org(
