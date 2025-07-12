@@ -44,7 +44,7 @@ def get_html_with_selections(url: str, year_value: str, committee_value: str) ->
     
 def get_committees(html: HtmlElement, legperiod: LegPeriod, legyear: LegislativeYear) -> List[Organization]:
     """"""
-    lst_objects = html.xpath(f'//*[@class="congresistas"]/tbody/tr/td/a')
+    lst_objects = html.xpath('//*[@class="congresistas"]/tbody/tr/td/a')
     lst_committees = []
     for obj in lst_objects:
         committee = Organization(
