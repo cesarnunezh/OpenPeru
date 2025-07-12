@@ -1,4 +1,5 @@
 from enum import Enum
+from datetime import datetime
 
 URL = {'congresistas' : 'https://www.congreso.gob.pe/pleno/congresistas/',
        'proyectos_ley': 'https://wb2server.congreso.gob.pe/spley-portal/#/expediente/search',
@@ -86,16 +87,11 @@ class Legislature(str, Enum):
     LEGISLATURA_2016_2 = "2016-II"
 
 class LegislativeYear(str, Enum):
-    YEAR_2026 = "2025-2026"
-    YEAR_2025 = "2024-2025"
-    YEAR_2024 = "2023-2024"
-    YEAR_2023 = "2022-2023"
-    YEAR_2022 = "2021-2022"
-    YEAR_2021 = "2020-2021"
-    YEAR_2020 = "2019-2020"
-    YEAR_2019 = "2018-2019"
-    YEAR_2018 = "2017-2018"
-    YEAR_2017 = "2016-2017"
+    #YEAR_202Y : 202X-202Y
+    pass
+
+years = {f'YEAR_{year+1}':f'{year}-{year+1}' for year in range(1990,datetime.now().year + 1)}
+LegislativeYear = Enum("LegislativeYear", years, type=str)
 
 class RoleOrganization(str, Enum):
     # For Bancadas | Partidos
