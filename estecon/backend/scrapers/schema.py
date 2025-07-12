@@ -303,7 +303,6 @@ class Membership(PrintableModel):
     Represents a person's role in an organization during a specific time period.
     
     Attributes:
-        id (int): Unique identifier for the membership relationship.
         role (str): Role of the person in the organization (e.g. vocero, miembro, presidente, etc)
         person_id (int): Identifier for the person
         org_id (int): Identifier for the organization
@@ -311,7 +310,6 @@ class Membership(PrintableModel):
         end_date (datetime): Date of the end of the membership
     '''
     # Attributes that fit in Popolo structure
-    id: int
     role: RoleOrganization
     person_id: int
     org_id: int
