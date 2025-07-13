@@ -33,8 +33,6 @@ def get_html_with_selections(url: str, year_value: str, committee_value: str) ->
     driver = webdriver.Chrome(service = service, options = options)
     driver.get(url)
 
-    
-
     try:
         select_year = Select(driver.find_element(By.NAME, "idRegistroPadre"))
         select_year.select_by_value(year_value)
@@ -122,4 +120,3 @@ if __name__ == '__main__':
             final_lst.extend(lst_committees)
 
     logger.info(f'Total committees created: {len(final_lst)}')
-        
