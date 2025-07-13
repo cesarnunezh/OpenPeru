@@ -1,14 +1,13 @@
 import pytest
 from lxml.html import fromstring, HtmlElement
 from unittest.mock import patch, MagicMock
-from estecon.backend import LegislativeYear, LegPeriod, TypeOrganization
+from estecon.backend import LegPeriod
 from estecon.backend.scrapers.scrape_committees import (
     get_options,
     get_html_with_selections,
     get_or_create_org,
     get_committees,
-    ORG_ID_MAP,
-    ORG_COUNTER
+    ORG_ID_MAP
 )
 
 # Sample HTML for select inputs
