@@ -8,16 +8,16 @@ This document tracks the status, update frequency, and source details for each e
 |-------------------------|------------|--------------|
 | Congresistas            | ✅ Finished | Official web page |
 | Parties                 | ✅ Finished | Official web page |
-| Bancadas                | 🔴 Not implemented   | Web |
-| Organization (Committee)| 🟡 Pending review   | Web |
-| Bill / Motion           | ⏳ In Progress | Web scrape |
-| BillCongresista         | 🔴 Not implemented  | -- |
-| BillCommittee           | 🔴 Not implemented  | In bill description |
-| BillSteps               | 🔴 Not implemented  | -- |
-| VoteEvent               | 🔴 Not implemented  | Define source |
-| Vote                    | ⏳ In Progress  | Link to Vote_event |
+| Bancadas                | 🔴 Not implemented   | Official web page |
+| Organization (Committee)| 🟡 Pending review   | Official web page |
+| Bill / Motion           | ⏳ In Progress | Official web page |
+| BillCongresista         | 🔴 Not implemented  | Official web page |
+| BillCommittee           | 🔴 Not implemented  | Official web page |
+| BillSteps               | 🔴 Not implemented  | Official web page |
+| VoteEvent               | 🔴 Not implemented  | PDF |
+| Vote                    | ⏳ In Progress  | PDF |
 | Vote_counts             | 🔴 Not implemented | PDF |
-| Membership              | ⏳ In Progress | PDF |
+| Membership              | ⏳ In Progress | Congressmen web page |
 | Event                   | 🔴 Not implemented | PDF |
 | Attendance              | 🔴 Not implemented | PDF |
 _Last updated: 16th July 2025_
