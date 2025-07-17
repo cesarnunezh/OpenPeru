@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 
@@ -7,11 +7,19 @@ app = FastAPI()
 # API endpoint
 #######################################
 @app.get("/v1/bills")
-async def bills():
+async def bills(
+    status: str | None = None,
+    proposed_by: int | None = None,
+    last_action_date: str | None = None,
+    step_types: str | None = None,
+    leg_period: str | None = None,
+):
     """
     Retrieves a list of bills from the bills table with ids and summary
     information sorted by most recent actions. Paginated.
     """
+    # TODO: Add API validation
+
     data = [
         {
             "bill_id": "2021_10300",
@@ -44,4 +52,35 @@ async def bills():
             "last_action_date": "2024-09-24T12:42:36.000-0500",
         },
     ]
+    return {"data": data}
+
+
+@app.get("v1/bills/{bill_id}")
+async def bills_detail(bill_id: str):
+    """
+    Returns detailed information on each bill.
+
+    Requires bill_id parameter.
+    """
+    # TODO: Data Validation
+
+    if bill_id != "2021-13000":
+        raise HTTPException(
+            status_code=404, detail="Test API requires bill_id == '2021-13000'"
+        )
+    data = {
+        "bill_id": "2021_10300",
+        "status": "EN COMISIÓN",
+        "title": "LEY DE COMPROMISO ESTATAL Y SOCIAL CON LA NIÑEZ EN ORFANDAD Y LA ADOPCIÓN",
+        "summary": "PROPONE GARANTIZAR LA ATENCIÓN PRIORITARIA DEL ESTADO Y PROMOVER EL COMPROMISO DE LA SOCIEDAD EN GENERAL CON LA INFANCIA EN SITUACIÓN DE ORFANDAD, ASÍ COMO FOMENTAR LA ADOPCIÓN",
+        "author_id": 1099,
+        "coauthors": [1039, 1062, 1129, 1126, 1032],
+        "leg_period": "2021-2026",
+        "last_action_date": "2025-02-21T00:00:00.000-0500",
+        "presentation_date": "2025-02-21",
+        "complete_text": "Lorem ipsum",
+        "bancada_id": 1,
+        "bancada_name": "ALIANZA PARA EL PROGRESO",
+        "bill_approved": False,
+    }
     return {"data": data}
