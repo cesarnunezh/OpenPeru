@@ -146,25 +146,6 @@ class BillStep(PrintableModel):
     model_config = ConfigDict(use_enum_values=False)
 
 
-class Committee(PrintableModel):
-    '''
-    Represents a committee in the peruvian parliament.
-
-    Attributes:
-        leg_period (str): Legislative period of the committee.
-        leg_year (str): Year period of the committee
-        org_id (int): The org_id or parliament where the committee belongs.
-        id (int): A unique identifier for the committee.
-        name (str): Name of the committee
-    '''
-    leg_period: LegPeriod
-    leg_year: LegislativeYear
-    org_id: int
-    id: str
-    name: str
-    
-    model_config = ConfigDict(use_enum_values=False)
-
 class Bill(PrintableModel):
     '''
     Represents a bill in the peruvian parliament.
@@ -295,6 +276,7 @@ class Organization(PrintableModel):
     org_id: int
     org_name: str
     org_type: TypeOrganization
+    org_url: Optional[str]
 
     model_config = ConfigDict(use_enum_values=False)
 
