@@ -50,7 +50,6 @@ def test_create_congresista(session):
 def test_create_bill(session):
     bill = Bill(
         id="B001",
-        org_id=1,
         leg_period=LegPeriod.PERIODO_2021_2026,
         legislature=Legislature.LEGISLATURA_2021_1,
         presentation_date=datetime.now(),

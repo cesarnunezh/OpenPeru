@@ -1,4 +1,5 @@
 from enum import Enum
+from datetime import datetime
 
 URL = {'congresistas' : 'https://www.congreso.gob.pe/pleno/congresistas/',
        'proyectos_ley': 'https://wb2server.congreso.gob.pe/spley-portal/#/expediente/search',
@@ -76,27 +77,19 @@ class LegPeriod(str, Enum):
     PERIODO_1995_2000 = 'Parlamentario 1995 - 2000'
     PERIODO_1992_1995 = 'CCD 1992 -1995'
 
-class Legislature(str, Enum):
-    LEGISLATURA_2026_1 = "2026-I"
-    LEGISLATURA_2025_2 = "2025-II"
-    LEGISLATURA_2025_1 = "2025-I"
-    LEGISLATURA_2024_2 = "2024-II"
-    LEGISLATURA_2024_1 = "2024-I"
-    LEGISLATURA_2023_2 = "2023-II"
-    LEGISLATURA_2023_1 = "2023-I"
-    LEGISLATURA_2022_2 = "2022-II"
-    LEGISLATURA_2022_1 = "2022-I"
-    LEGISLATURA_2021_2 = "2021-II"
-    LEGISLATURA_2021_1 = "2021-I"
-    LEGISLATURA_2020_2 = "2020-II"
-    LEGISLATURA_2020_1 = "2020-I"
-    LEGISLATURA_2019_2 = "2019-II"
-    LEGISLATURA_2019_1 = "2019-I"
-    LEGISLATURA_2018_2 = "2018-II"
-    LEGISLATURA_2018_1 = "2018-I"
-    LEGISLATURA_2017_2 = "2017-II"
-    LEGISLATURA_2017_1 = "2017-I"
-    LEGISLATURA_2016_2 = "2016-II"
+def make_legislature_enum():
+    def label(period, year):
+        return f"{'Primera' if period == 'I' else 'Segunda'} Legislatura Ordinaria {year}"
+
+    legs_dict = {
+        f"LEG_ORD_{year}_{per}": label(per, year)
+        for year in range(1990, datetime.now().year + 1)
+        for per in ["I", "II"]
+    }
+
+    return Enum("Legislature", legs_dict, type=str)
+
+Legislature = make_legislature_enum()
 
 class LegislativeYear(str, Enum):
     YEAR_2026 = "2025-2026"

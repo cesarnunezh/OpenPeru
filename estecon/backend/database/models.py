@@ -101,7 +101,6 @@ class Bill(Base):
 
     Attributes:
         id (str): Unique identifier for the bill.
-        org_id (int): The org_id or parliament where the bill was presented.
         leg_period (str): Legislative period of the bill.
         legislature (str): Legislature where the bill was presented.
         presentation_date (datetime): Date when the bill was presented.
@@ -118,7 +117,6 @@ class Bill(Base):
     __tablename__ = 'bills'
 
     id = Column(String, primary_key=True)
-    org_id = Column(Integer, ForeignKey('organizations.org_id'), nullable = False)
     leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
     legislature = Column(Enum(Legislature, name ="legislature"), nullable=False)
     presentation_date = Column(DateTime, nullable=False)

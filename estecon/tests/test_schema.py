@@ -68,7 +68,6 @@ def test_attendance_summary(sample_attendance):
 def test_bill_creation_and_json(tmp_path):
     bill = Bill(
         id="b001",
-        org_id=1,
         leg_period=LegPeriod.PERIODO_2021_2026,
         legislature=Legislature.LEGISLATURA_2026_1,
         presentation_date=datetime.now(),

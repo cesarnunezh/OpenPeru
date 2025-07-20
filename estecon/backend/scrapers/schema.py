@@ -171,7 +171,6 @@ class Bill(PrintableModel):
 
     Attributes:
         id (str): Unique identifier for the bill.
-        org_id (int): The org_id or parliament where the bill was presented.
         leg_period (str): Legislative period of the bill.
         legislature (str): Legislature where the bill was presented.
         presentation_date (datetime): Date when the bill was presented.
@@ -187,7 +186,6 @@ class Bill(PrintableModel):
     '''
     # Attributes that fit in in Popolo structure
     id: str
-    org_id: int
     leg_period: LegPeriod
     legislature: Legislature
     presentation_date: datetime
@@ -197,8 +195,8 @@ class Bill(PrintableModel):
     complete_text: str
     status: str
     proponent: Proponents
-    author_id: int
-    bancada_id: int
+    author_id: Optional[int]
+    bancada_id: Optional[int]
     bill_approved: bool
 
     model_config = ConfigDict(use_enum_values=False)
