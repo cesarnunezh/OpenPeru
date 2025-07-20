@@ -130,7 +130,7 @@ class Bill(Base):
     bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=True)
     bill_approved = Column(Boolean, nullable=False)
 
-    __table_args__ = (UniqueConstraint('id', 'org_id', name='bill_unique'),
+    __table_args__ = (UniqueConstraint('id', name='bill_unique'),
                       Index('ix_bill_author_id', 'author_id'),
                       Index('ix_bill_bancada_id', 'bancada_id'))
 
