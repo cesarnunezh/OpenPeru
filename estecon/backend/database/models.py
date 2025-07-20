@@ -23,7 +23,7 @@ class Vote(Base):
     vote_event_id = Column(String, ForeignKey('vote_events.id'), primary_key=True)
     voter_id = Column(Integer, ForeignKey('congresistas.id'), nullable=False)
     option = Column(Enum(VoteOption, name = "option"), nullable=False)
-    bancada_id = Column(Integer, ForeignKey('organizations.org_id'), nullable=False)
+    bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=False)
 
     __table_args__ = (UniqueConstraint('vote_event_id', 'voter_id', name='uq_vote_event_voter'),
                       Index('ix_vote_vote_event_id', 'vote_event_id'),
@@ -66,11 +66,11 @@ class VoteCounts(Base):
     org_id = Column(Integer, ForeignKey('organizations.org_id'), nullable=False)
     vote_event_id = Column(String, ForeignKey('vote_events.id'), nullable=False)
     option = Column(Enum(VoteOption, name = "option"), nullable=False)
-    bancada_id =  Column(Integer, ForeignKey('organizations.org_id'), nullable=False)
+    bancada_id =  Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=False)
     count = Column(Integer, nullable=False)
 
     __table_args__ = (
-        PrimaryKeyConstraint('org_id', 'vote_event_id', 'option', 'bancada_id', name='pk_vote_counts'),
+        PrimaryKeyConstraint('vote_event_id', 'option', 'bancada_id', name='pk_vote_counts'),
         Index('ix_votecounts_vote_event_id', 'vote_event_id'),
         Index('ix_votecounts_bancada_id', 'bancada_id'))
 
@@ -101,7 +101,6 @@ class Bill(Base):
 
     Attributes:
         id (str): Unique identifier for the bill.
-        org_id (int): The org_id or parliament where the bill was presented.
         leg_period (str): Legislative period of the bill.
         legislature (str): Legislature where the bill was presented.
         presentation_date (datetime): Date when the bill was presented.
@@ -118,7 +117,6 @@ class Bill(Base):
     __tablename__ = 'bills'
 
     id = Column(String, primary_key=True)
-    org_id = Column(Integer, ForeignKey('organizations.org_id'), nullable = False)
     leg_period = Column(Enum(LegPeriod, name = "leg_period"), nullable=False)
     legislature = Column(Enum(Legislature, name ="legislature"), nullable=False)
     presentation_date = Column(DateTime, nullable=False)
@@ -129,7 +127,7 @@ class Bill(Base):
     status = Column(String, nullable=False)
     proponent = Column(Enum(Proponents, name = "proponent"), nullable=False)
     author_id = Column(Integer, ForeignKey('congresistas.id'), nullable=True)
-    bancada_id = Column(Integer, ForeignKey('organizations.org_id'), nullable=True)
+    bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable=True)
     bill_approved = Column(Boolean, nullable=False)
 
     __table_args__ = (UniqueConstraint('id', 'org_id', name='bill_unique'),
@@ -259,6 +257,21 @@ class Party(Base):
     party_id = Column(Integer, primary_key = True)
     party_name= Column(String, nullable = False)
 
+class Bancada(Base):
+    '''
+    Represent a Bancada in the peruvian government
+
+    Attributes:
+        leg_year (str): Year period of the bancada
+        bancada_id (int): Unique identifier for the bancada
+        bancada_name (str): Name of the bancada
+    '''
+    __tablename__ = "bancadas"
+
+    leg_year = Column(Enum(LegislativeYear, name = "leg_period"), nullable=False)
+    bancada_id = Column(Integer, primary_key = True)
+    bancada_name= Column(String, nullable = False)
+
 class Organization(Base):
     '''
     Represents a legislative organization, such as a parliament or congress.
@@ -304,3 +317,20 @@ class Membership(Base):
     end_date = Column(DateTime, nullable = True)
 
     __table_args__ = (UniqueConstraint("id", name = "membership"),)
+
+class BancadaMembership(Base):
+    '''
+    Represents a person's membership in a bancada during a specific time period.
+    
+    Attributes:
+        id (int): Unique identifier for the membership relationship.
+        leg_year (str): Year period of the membership
+        person_id (int): Identifier for the person
+        bancada_id (int): Identifier for the bancada
+    '''
+    __tablename__ = "bancada_memberships"
+
+    id = Column(Integer, primary_key = True)
+    leg_year = Column(Enum(LegislativeYear, name = 'leg_year'), nullable = False)
+    person_id = Column(Integer, ForeignKey('congresistas.id'), nullable = False)
+    bancada_id = Column(Integer, ForeignKey('bancadas.bancada_id'), nullable = False)
