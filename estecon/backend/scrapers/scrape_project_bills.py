@@ -3,9 +3,8 @@ import polars as pl
 import time
 import base64
 from datetime import datetime
-from ...backend import LegPeriod, Legislature, Proponents
-from .schema import Bill, BillCommittees, BillCongresistas, BillStep
-from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache, extract_text_from_page, render_pdf
+from .schema import Bill
+from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache, render_pdf
 import pandas as pd
 import re
 from loguru import logger
