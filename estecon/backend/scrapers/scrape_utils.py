@@ -111,7 +111,7 @@ def render_pdf(pdf_url: str) -> str:
     """
     Extract text from a PDF file using PyMuPDF and Tesseract OCR.
     """
-    response = httpx.get(pdf_url)
+    response = httpx.get(pdf_url, timeout=httpx.Timeout(30))
     response.raise_for_status()  # Ensure we raise an error for bad responses
     pdf_file = BytesIO(response.content)
     pdf_text = ""

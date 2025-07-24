@@ -41,10 +41,22 @@ class AttendanceStatus(str, Enum):
     SUSPENDIDO = "suspendido"
 
 class BillStepType(str, Enum):
-    VOTE = "vote event"
-    ASSIGNED = "assigned to committee"
-    PRESENTED = "presented"
-    PUBLISHED = "published"
+    VOTE = "presentado"
+    ASSIGNED = "en comisión"
+    DICTAMEN = "dictamen"
+    ORDEN_DIA = "orden del día"
+    EN_AGENDA = "en agenda del pleno"
+    EN_DEBATE = "en debate - pleno"
+    EN_CUARTO_INTERMEDIO = "en cuarto intermedio"
+    APROBADO_VOT_1 = "aprobado 1era. votación"
+    APROBADO_VOT_2 = "aprobado"
+    AUTOGRAFA = "autógrafa"
+    AUTOGRAFA_OBS = "autógrafa observada"
+    EN_RECONSIDERACION = "en reconsideración"
+    RETIRO_FIRMA = "retiro de firma"
+    PROMULGADO_PDTE_CONG = "promulgado/presidente del congreso"
+    PROMULGADO_PDTE_REP = "promulgado/presidente de la república"
+    PUBLISHED = "publicada en el diario oficial el peruano"
 
 class RoleTypeBill(str, Enum):
     AUTHOR = "author"

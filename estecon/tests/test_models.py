@@ -51,7 +51,7 @@ def test_create_bill(session):
     bill = Bill(
         id="B001",
         leg_period=LegPeriod.PERIODO_2021_2026,
-        legislature=Legislature.LEGISLATURA_2021_1,
+        legislature="Primera Legislatura Ordinaria 2025",
         presentation_date=datetime.now(),
         title="Ley de Transparencia",
         summary="Resumen de ley",

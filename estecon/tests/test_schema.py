@@ -69,7 +69,7 @@ def test_bill_creation_and_json(tmp_path):
     bill = Bill(
         id="b001",
         leg_period=LegPeriod.PERIODO_2021_2026,
-        legislature=Legislature.LEGISLATURA_2026_1,
+        legislature="Primera Legislatura Ordinaria 2025",
         presentation_date=datetime.now(),
         title="Ley de Prueba",
         summary="Resumen",
@@ -146,11 +146,12 @@ def test_bill_committees_creation():
 
 def test_bill_step_creation():
     step = BillStep(
-        id=1,
         bill_id="b001",
         step_type=BillStepType.ASSIGNED,
+        vote_step=True,
         step_date=datetime.now(),
         step_detail="Se presentó el proyecto",
-        step_url="http://congreso.gob.pe/proyecto/b001"
+        vote_url="http://congreso.gob.pe/proyecto/b001",
+        nonvote_url=None
     )
     assert step.step_type == BillStepType.ASSIGNED

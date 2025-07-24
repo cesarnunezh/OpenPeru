@@ -129,19 +129,21 @@ class BillStep(PrintableModel):
     Represents a bill step record with details about the actions taken on a bill.
 
     Attributes:
-        id (int): A unique identifier for each step record.
         bill_id (str): The identifier of the bill associated with this step.
         step_type (str): The type of step record (e.g. "Vote", "Assigned to Committee", "Presented", etc.)
+        vote_step (bool): Indicates if it's a vote step or not
         step_date (datetime): The date and time when the step occured.
         step_detail (str): The details on the step
-        step_url (str): The url associated to the step
+        vote_url (str): The vote url associated to the step
+        nonvote_url (str): The non vote url associated to the step
     '''
-    id: int
     bill_id: str
     step_type: BillStepType
+    vote_step: bool
     step_date: datetime
     step_detail: str
-    step_url: str
+    vote_url: Optional[str]
+    nonvote_url: Optional[str]
 
     model_config = ConfigDict(use_enum_values=False)
 
