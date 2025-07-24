@@ -5,10 +5,9 @@ import base64
 from datetime import datetime
 from pydantic import ValidationError
 from typing import List, Tuple, Optional, Dict
-from ...backend import LegPeriod, Legislature, Proponents
-from .schema import Bill, BillCommittees, BillCongresistas, BillStep
-from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache, extract_text_from_page, render_pdf
-import pandas as pd
+from ...backend import Legislature
+from .schema import Bill, BillStep
+from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache, render_pdf
 import re
 from loguru import logger
 import random

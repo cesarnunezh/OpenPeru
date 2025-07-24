@@ -7,7 +7,7 @@ from estecon.backend.database.models import (
     Base, Vote, VoteEvent, VoteCounts, Attendance, Bill, BillCongresistas,
     BillCommittees, BillStep, Committee, Congresista, Organization, Membership,
     VoteOption, AttendanceStatus, BillStepType, RoleTypeBill, Proponents,
-    LegPeriod, Legislature, LegislativeYear, TypeOrganization, RoleOrganization
+    LegPeriod, LegislativeYear, TypeOrganization, RoleOrganization
 )
 
 @pytest.fixture(scope="module")

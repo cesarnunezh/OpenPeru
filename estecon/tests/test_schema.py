@@ -5,7 +5,7 @@ from estecon.backend.scrapers.schema import (
     Bill, BillStep, BillCongresistas, BillCommittees, Committee,
     Congresista, Organization, Membership) 
 from estecon.backend import (
-    RoleTypeBill, Proponents, Legislature, LegislativeYear, 
+    RoleTypeBill, Proponents, LegislativeYear, 
     LegPeriod, TypeOrganization, RoleOrganization, BillStepType
     )
 
