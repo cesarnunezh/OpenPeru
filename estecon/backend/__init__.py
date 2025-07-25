@@ -128,7 +128,6 @@ class RoleOrganization(str, Enum):
     
 
 class TypeOrganization(str, Enum):
-    BANCADA = "bancada"
     COMMITTEE = "committee"
     JUNTA_DE_PORTAVOCES = "junta de portavoces"
     MESA_DIRECTIVA = "mesa directiva"

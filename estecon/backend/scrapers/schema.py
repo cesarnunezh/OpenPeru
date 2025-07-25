@@ -277,16 +277,29 @@ class Party(PrintableModel):
     party_id: int
     party_name: str
 
+class Bancada(PrintableModel):
+    '''
+    Represent a Bancada in the peruvian government
+
+    Attributes:
+        leg_year (str): Year period of the bancada
+        bancada_id (int): Unique identifier for the bancada
+        bancada_name (str): Name of the bancada
+    '''
+    leg_year: LegislativeYear
+    bancada_id: int
+    bancada_name: str
+
 class Organization(PrintableModel):
     '''
-    Represents a legislative organization, such as a parliament or congress.
+    Represents a legislative organization inside the parliament, such as a committee.
     
     Attributes:
         leg_period (str): Legislative period.
         leg_year (str): Legislative year.
         org_id (int): Unique identifier for the organization.
         org_name (str): Name of the organization.
-        org_type (str): Type of organization (e.g. bancada, committee, etc)
+        org_type (str): Type of organization (e.g. committee, etc)
     '''
     leg_period: LegPeriod
     leg_year: LegislativeYear
@@ -326,3 +339,18 @@ class Membership(PrintableModel):
         if start and end and end < start:
             raise ValueError('end_date must be after start_date')
         return end
+    
+class BancadaMembership(PrintableModel):
+    '''
+    Represents a person's membership in a bancada during a specific time period.
+    
+    Attributes:
+        id (int): Unique identifier for the membership relationship.
+        leg_year (str): Year period of the membership
+        person_id (int): Identifier for the person
+        bancada_id (int): Identifier for the bancada
+    '''
+    id: int
+    leg_year: LegislativeYear
+    person_id: int
+    bancada_id: int
