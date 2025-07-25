@@ -12,7 +12,6 @@ from estecon.backend.scrapers.scrape_project_bills import (
     scrape_bill
 )
 from estecon.backend.scrapers.schema import BillStep, Bill
-from estecon.backend import Legislature
 
 # --- Sample Fixtures ---
 
