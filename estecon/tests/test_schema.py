@@ -2,7 +2,7 @@ import pytest
 from datetime import datetime, timedelta
 from estecon.backend.scrapers.schema import (
     Vote, VoteEvent, Attendance, VoteOption, AttendanceStatus,
-    Bill, BillStep, BillCongresistas, BillCommittees, Committee,
+    Bill, BillStep, BillCongresistas, BillCommittees,
     Congresista, Organization, Membership) 
 from estecon.backend import (
     RoleTypeBill, Proponents, Legislature, LegislativeYear, 
@@ -116,19 +116,10 @@ def test_organization_creation():
         leg_year=LegislativeYear.YEAR_2025,
         org_id=1,
         org_name="Comisión de Justicia",
-        org_type=TypeOrganization.COMMITTEE
+        org_type=TypeOrganization.COMMITTEE,
+        org_url = "www.organization.example"
     )
     assert org.org_name == "Comisión de Justicia"
-
-def test_committee_creation():
-    committee = Committee(
-        leg_period=LegPeriod.PERIODO_2021_2026,
-        leg_year=LegislativeYear.YEAR_2025,
-        org_id=1,
-        id="cj01",
-        name="Comisión de Justicia"
-    )
-    assert committee.name == "Comisión de Justicia"
 
 def test_bill_congresistas_creation():
     relation = BillCongresistas(
