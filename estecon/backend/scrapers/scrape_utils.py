@@ -1,10 +1,16 @@
+import re
+import cv2
+import fitz
 import httpx
 import asyncio
+import pytesseract
+import numpy as np
+from io import BytesIO
+from PIL import Image
+from pathlib import Path
+from loguru import logger
 from typing import List, Union, Tuple
 from lxml.html import HtmlElement, fromstring
-from loguru import logger
-from pathlib import Path
-import re
 
 def clean_string(text: str):
     """
@@ -86,3 +92,30 @@ async def fetch_multiple_urls_async(urls: List[Union[str, Tuple[str, dict]]]) ->
 
         html_responses = await asyncio.gather(*tasks)
         return [fromstring(html) for html in html_responses if html]
+    
+def extract_text_from_page(page):
+    '''
+    Extract text from a single PDF page using Tesseract OCR.
+    Args:
+        page: A PyMuPDF page object.
+    '''
+    pix = page.get_pixmap(dpi = 300)
+    img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    _, thresh = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY)
+    pil_img = Image.fromarray(thresh)
+    text = pytesseract.image_to_string(pil_img, lang = 'spa', config='--psm 6')
+    return text
+
+def render_pdf(pdf_url: str) -> str:
+    """
+    Extract text from a PDF file using PyMuPDF and Tesseract OCR.
+    """
+    response = httpx.get(pdf_url, timeout=httpx.Timeout(30))
+    response.raise_for_status()  # Ensure we raise an error for bad responses
+    pdf_file = BytesIO(response.content)
+    pdf_text = ""
+    with fitz.open(stream=pdf_file, filetype="pdf") as pdf:
+        for page in pdf:
+             pdf_text += " " + extract_text_from_page(page)
+    return pdf_text

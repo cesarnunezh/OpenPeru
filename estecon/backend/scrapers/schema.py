@@ -129,19 +129,21 @@ class BillStep(PrintableModel):
     Represents a bill step record with details about the actions taken on a bill.
 
     Attributes:
-        id (int): A unique identifier for each step record.
         bill_id (str): The identifier of the bill associated with this step.
         step_type (str): The type of step record (e.g. "Vote", "Assigned to Committee", "Presented", etc.)
+        vote_step (bool): Indicates if it's a vote step or not
         step_date (datetime): The date and time when the step occured.
         step_detail (str): The details on the step
-        step_url (str): The url associated to the step
+        vote_url (str): The vote url associated to the step
+        nonvote_url (str): The non vote url associated to the step
     '''
-    id: int
     bill_id: str
     step_type: BillStepType
+    vote_step: bool
     step_date: datetime
     step_detail: str
-    step_url: str
+    vote_url: Optional[str]
+    nonvote_url: Optional[str]
 
     model_config = ConfigDict(use_enum_values=False)
 
@@ -171,7 +173,6 @@ class Bill(PrintableModel):
 
     Attributes:
         id (str): Unique identifier for the bill.
-        org_id (int): The org_id or parliament where the bill was presented.
         leg_period (str): Legislative period of the bill.
         legislature (str): Legislature where the bill was presented.
         presentation_date (datetime): Date when the bill was presented.
@@ -187,7 +188,6 @@ class Bill(PrintableModel):
     '''
     # Attributes that fit in in Popolo structure
     id: str
-    org_id: int
     leg_period: LegPeriod
     legislature: Legislature
     presentation_date: datetime
@@ -197,8 +197,8 @@ class Bill(PrintableModel):
     complete_text: str
     status: str
     proponent: Proponents
-    author_id: int
-    bancada_id: int
+    author_id: Optional[int]
+    bancada_id: Optional[int]
     bill_approved: bool
 
     model_config = ConfigDict(use_enum_values=False)
