@@ -1,20 +1,18 @@
+import re
 import httpx
-import polars as pl 
 import time
 import base64
+import random
+from loguru import logger
 from datetime import datetime
 from pydantic import ValidationError
 from typing import List, Tuple, Optional, Dict
-from ...backend import LegPeriod, Legislature, Proponents
-from .schema import Bill, BillCommittees, BillCongresistas, BillStep
-from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache, extract_text_from_page, render_pdf
-import pandas as pd
-import re
-from loguru import logger
-import random
 from ..config import directories
+from ...backend import Legislature
+from .schema import Bill, BillStep
+from .scrape_utils import url_to_cache_file, save_ocr_txt_to_cache, render_pdf
 
-CONGRESS = pl.read_csv("data/congresistas.csv")
+
 BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/" 
 BASE_DIR = directories.ROOT_DIR
 OCR_CACHE_DIR = BASE_DIR / "data" / "ocr_cache"
@@ -42,13 +40,8 @@ def get_authors_and_adherents(data: dict) -> Tuple[Optional[str], Optional[List[
     adherents = []
     for i, author_raw in enumerate(data.get("firmantes", [])):
         
-        # Grab author ID 
+        # Grab author url
         url = author_raw.get("pagWeb", "N/A")
-        match = CONGRESS.filter(pl.col("website") == url)
-        if match.is_empty():
-            author_id = None
-        else:
-            author_id = match.select("id").item()
         
         # Grab rest of author info
         name = author_raw.get("nombre")
@@ -57,7 +50,7 @@ def get_authors_and_adherents(data: dict) -> Tuple[Optional[str], Optional[List[
         
         # Create cleaned dictionary to save 
         author = {
-            "id": author_id,
+            "url": url,
             "dni": dni,
             "name": name,
             "sex": sex
@@ -207,7 +200,7 @@ def scrape_bill(year: str, bill_number: str) -> Tuple[Bill, Tuple[Optional[Dict]
         status = general.get("desEstado")
         bill_complete = (status == "Publicada en el Diario Oficial El Peruano")
         
-        lead_author, coauthors, adherents = get_authors_and_adherents(data)
+        congresistas = get_authors_and_adherents(data)
         committees = get_committees(data, legislature)
         steps = get_steps(data, year, bill_number)
         
@@ -226,12 +219,13 @@ def scrape_bill(year: str, bill_number: str) -> Tuple[Bill, Tuple[Optional[Dict]
             bancada_id = None, # TODO: Extract the id of the bancada
             bill_approved = bill_complete,
         )
-        return (bill, (lead_author, coauthors, adherents), committees, steps)
+        return (bill, congresistas, committees, steps)
 
 if __name__ == '__main__':
     vote_urls = []
-    for i in range(1, 10):        
+    for i in range(10305, 10306):        
         # Get bill and save 
         bill, congresistas, committees, bill_steps = scrape_bill(2021, f'{i}')
-        bill.save_to_json(f"{BILL_JSONS}/{bill.id}.json")
+        print(congresistas)
+        # bill.save_to_json(f"{BILL_JSONS}/{bill.id}.json")
         time.sleep(random.uniform(5, 10))

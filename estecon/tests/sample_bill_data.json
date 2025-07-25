@@ -1,0 +1,3358 @@
+{
+  "code": 200,
+  "status": "success",
+  "data": {
+    "general": {
+      "pleyId": 15248,
+      "perParId": 2021,
+      "proyectoLey": "10305/2024-CR",
+      "desPerParAbrev": "2021-2026",
+      "desLegis": "Primera Legislatura Ordinaria 2024",
+      "fecPresentacion": "2025-02-21",
+      "desProponente": "Congreso",
+      "titulo": "LEY QUE ESTABLECE EL SISTEMA NACIONAL PARA LA PERSECUCIÓN DE DELITOS EN FLAGRANCIA",
+      "sumilla": "PROPONE  CREAR EL SISTEMA NACIONAL ESPECIALIZADO EN FLAGRANCIA DELICTIVA, CON LA FINALIDAD DE OPTIMIZAR LA RESPUESTA DEL SISTEMA DE JUSTICIA PENAL FRENTE A DELITOS  FLAGRANTES, GARANTIZANDO LA INMEDIATEZ EN LA ACTUACIÓN DE LAS AUTORIDADES COMPETENTES Y LA EFICACIA EN LA PERSECUCIÓN PENAL.",
+      "desGpar": "Bloque Magisterial de Concertación Nacional ",
+      "estadoId": 29,
+      "desEstado": "Publicada en el Diario Oficial El Peruano",
+      "publico": true,
+      "proyectoArchivoId": null,
+      "nombreArchivo": null,
+      "observaciones": "LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL"
+    },
+    "comisiones": [
+      {
+        "comisionId": 15,
+        "nombre": "Justicia y Derechos Humanos",
+        "pagWeb": null
+      }
+    ],
+    "seguimientos": [
+      {
+        "fecha": "2025-05-23T18:20:11.000-0500",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "desComisiones": null,
+        "detalle": "LEY N° 32348 - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "observacion": "",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 292997,
+            "seguimientoPleyId": 76821,
+            "seccionId": 245,
+            "pleyId": 15248,
+            "uuid": "6d5c7776-da9f-47ce-90e4-7d5bcc0baf1d",
+            "fecha": "2025-05-23",
+            "nombreArchivo": "32348-LEY.pdf",
+            "descripcion": "32348-LEY",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 76821
+      },
+      {
+        "fecha": "2025-04-30T12:51:16.000-0500",
+        "desEstado": "AUTÓGRAFA",
+        "desComisiones": null,
+        "detalle": "SOBRE N° 271 - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "observacion": "LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 283657,
+            "seguimientoPleyId": 74000,
+            "seccionId": 244,
+            "pleyId": 15248,
+            "uuid": "05a46c0c-0ea1-4c94-a2ef-f9c6f0f9a949",
+            "fecha": "2025-04-30",
+            "nombreArchivo": "AU6093.pdf",
+            "descripcion": "AU6093",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 74000
+      },
+      {
+        "fecha": "2025-04-16T16:42:00.000-0500",
+        "desEstado": "APROBADO",
+        "desComisiones": null,
+        "detalle": "ASISTENCIA Y VOTACIÓN - EXONERACIÓN DE LA SEGUNDA VOTACIÓN\n",
+        "observacion": "ASISTENCIA Y VOTACIÓN - EXONERACIÓN DE LA SEGUNDA VOTACIÓN\n",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 285850,
+            "seguimientoPleyId": 73350,
+            "seccionId": 238,
+            "pleyId": 15248,
+            "uuid": "921e6db8-285b-457c-b0c9-5b15be70a5e4",
+            "fecha": "2025-04-16",
+            "nombreArchivo": "PL 6093 EXO.pdf",
+            "descripcion": "PL 6093 EXO",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 73350
+      },
+      {
+        "fecha": "2025-04-16T16:40:00.000-0500",
+        "desEstado": "APROBADO 1ERA. VOTACIÓN",
+        "desComisiones": null,
+        "detalle": "ASISTENCIA Y VOTACIÓN - TEXTO SUSTITUTORIO",
+        "observacion": "ASISTENCIA Y VOTACIÓN - TEXTO SUSTITUTORIO",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 285838,
+            "seguimientoPleyId": 73338,
+            "seccionId": 238,
+            "pleyId": 15248,
+            "uuid": "4175dd25-73c5-4e42-9431-ae5e74aa3b82",
+            "fecha": "2025-04-16",
+            "nombreArchivo": "PL 6093 TS.pdf",
+            "descripcion": "PL 6093 TS",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 73338
+      },
+      {
+        "fecha": "2025-04-15T17:56:41.000-0500",
+        "desEstado": "EN AGENDA DEL PLENO",
+        "desComisiones": null,
+        "detalle": "TEXTO SUSTITUTORIO DE LA COMISIÓN DE JUSTICIA - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE  FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "observacion": "TEXTO SUSTITUTORIO DE LA COMISIÓN DE JUSTICIA - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE  FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 279004,
+            "seguimientoPleyId": 72956,
+            "seccionId": 233,
+            "pleyId": 15248,
+            "uuid": "ec129a90-016a-4887-8574-bf49a16f2fc6",
+            "fecha": "2025-04-15",
+            "nombreArchivo": "PL 6093 Y OTROS (15.04.25).pdf",
+            "descripcion": "PL 6093 Y OTROS (15.04.25)",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 72956
+      },
+      {
+        "fecha": "2025-04-10T19:40:10.000-0500",
+        "desEstado": "EN CUARTO INTERMEDIO",
+        "desComisiones": null,
+        "detalle": "SE INICIÓ EL DEBATE Y PASÓ A UN CUARTO INTERMEDIO",
+        "observacion": "SE INICIÓ EL DEBATE Y PASÓ A UN CUARTO INTERMEDIO",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": null,
+        "seguimientoPleyId": 72391
+      },
+      {
+        "fecha": "2025-04-09T19:59:23.000-0500",
+        "desEstado": "EN AGENDA DEL PLENO",
+        "desComisiones": null,
+        "detalle": "TEXTO SUSTITUTORIO DE LA COMISIÓN DE JUSTICIA - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "observacion": "TEXTO SUSTITUTORIO DE LA COMISIÓN DE JUSTICIA - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 276923,
+            "seguimientoPleyId": 72093,
+            "seccionId": 233,
+            "pleyId": 15248,
+            "uuid": "c9b34f63-0e3b-4810-972c-9804dc4db7ba",
+            "fecha": "2025-04-09",
+            "nombreArchivo": "PL 6093 Y OTROS.pdf",
+            "descripcion": "PL 6093 Y OTROS",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 72093
+      },
+      {
+        "fecha": "2025-04-07T12:01:41.000-0500",
+        "desEstado": "EN AGENDA DEL PLENO",
+        "desComisiones": null,
+        "detalle": "LA JUNTA DE PORTAVOCES, EN SESIÓN DEL 7 DE ABRIL DE 2025, ACORDÓ LA AMPLIACIÓN DE AGENDA",
+        "observacion": "LA JUNTA DE PORTAVOCES, EN SESIÓN DEL 7 DE ABRIL DE 2025, ACORDÓ LA AMPLIACIÓN DE AGENDA",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": null,
+        "seguimientoPleyId": 71810
+      },
+      {
+        "fecha": "2025-04-07T11:36:25.000-0500",
+        "desEstado": "Orden del Día",
+        "desComisiones": null,
+        "detalle": "EL CONSEJO DIRECTIVO, EN SESIÓN DEL 7 DE ABRIL DE 2025, TOMO CONOCIMIENTO DE LOS DICTÁMENES Y LOS INCLUYÓ EN EL ORDEN DEL DÍA",
+        "observacion": "EL CONSEJO DIRECTIVO, EN SESIÓN DEL 7 DE ABRIL DE 2025, TOMO CONOCIMIENTO DE LOS DICTÁMENES Y LOS INCLUYÓ EN EL ORDEN DEL DÍA",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": null,
+        "seguimientoPleyId": 72711
+      },
+      {
+        "fecha": "2025-03-18T17:27:33.000-0500",
+        "desEstado": "DICTAMEN",
+        "desComisiones": "Justicia y Derechos Humanos",
+        "detalle": "EN MAYORÍA - NUEVO TEXTO - LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL (EN RELATORÍA 18/3/2025)",
+        "observacion": "LEY QUE CREA EL SISTEMA NACIONAL DE JUSTICIA ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL (EN RELATORÍA 18/3/2025)",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 282521,
+            "seguimientoPleyId": 69933,
+            "seccionId": 238,
+            "pleyId": 15248,
+            "uuid": "8ff42734-46c2-4948-872e-37f1c2c2af4a",
+            "fecha": "2025-03-18",
+            "nombreArchivo": "PL-6093 Y OTROS (MAY)-NUEVO TEXTO.pdf",
+            "descripcion": "PL-6093 Y OTROS (MAY)-NUEVO TEXTO",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 69933
+      },
+      {
+        "fecha": "2025-02-24T12:50:19.000-0500",
+        "desEstado": "EN COMISIÓN",
+        "desComisiones": "Justicia y Derechos Humanos",
+        "detalle": "",
+        "observacion": "",
+        "flagInicial": false,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 259976,
+            "seguimientoPleyId": 68431,
+            "seccionId": 10,
+            "pleyId": 15248,
+            "uuid": "0749c057-e6fa-487f-b41d-457371f3b966",
+            "fecha": "2025-02-24",
+            "nombreArchivo": "PL_10305.pdf",
+            "descripcion": "PL_10305",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 68431
+      },
+      {
+        "fecha": "2025-02-21T00:00:00.000-0500",
+        "desEstado": "PRESENTADO",
+        "desComisiones": null,
+        "detalle": "LEY QUE ESTABLECE EL SISTEMA NACIONAL PARA LA PERSECUCIÓN DE DELITOS EN FLAGRANCIA",
+        "observacion": "LEY QUE ESTABLECE EL SISTEMA NACIONAL PARA LA PERSECUCIÓN DE DELITOS EN FLAGRANCIA",
+        "flagInicial": true,
+        "pleyId": 15248,
+        "archivos": [
+          {
+            "proyectoArchivoId": 259741,
+            "seguimientoPleyId": 68376,
+            "seccionId": 8,
+            "pleyId": 15248,
+            "uuid": "faf8c337-4c13-40ad-aed5-f8ed092c074f",
+            "fecha": "2025-02-21",
+            "nombreArchivo": "PL 10305- 24.pdf",
+            "descripcion": "PL 10305- 24",
+            "enlace": null,
+            "publico": true,
+            "activo": true
+          }
+        ],
+        "seguimientoPleyId": 68376
+      }
+    ],
+    "acumulados": [
+      {
+        "proyectoLey": "06093/2023-GL",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "PROYECTO DE LEY QUE MODIFICA EL CÓDIGO PENAL Y EL NUEVO CÓDIGO PROCESAL PENAL PARA JUZGAMIENTO DE EXTRANJEROS DETENIDOS EN FLAGRANCIA DELICTIVA",
+        "fecPresentacion": "2023-10-06",
+        "perParId": 2021,
+        "pleyNum": 6093
+      },
+      {
+        "proyectoLey": "06257/2023-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY PARA EL FORTALECIMIENTO DE LA LUCHA CONTRA LA INSEGURIDAD CIUDADANA — LEY DE FLAGRANCIA",
+        "fecPresentacion": "2023-10-30",
+        "perParId": 2021,
+        "pleyNum": 6257
+      },
+      {
+        "proyectoLey": "06305/2023-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE CREA EL SISTEMA NACIONAL ESPECIALIZADO EN FLAGRANCIA DELICTIVA E IMPLEMENTA LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "fecPresentacion": "2023-11-03",
+        "perParId": 2021,
+        "pleyNum": 6305
+      },
+      {
+        "proyectoLey": "06549/2023-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE DECLARA DE NECESIDAD PÚBLICA E INTERÉS NACIONAL LA CREACIÓN DE LA UNIDAD DE FLAGRANCIA EN EL DEPARTAMENTO DE CAJAMARCA",
+        "fecPresentacion": "2023-11-29",
+        "perParId": 2021,
+        "pleyNum": 6549
+      },
+      {
+        "proyectoLey": "07011/2023-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE FORTALECE EL SISTEMA DE JUSTICIA EN CASOS DE FLAGRANCIA DELICTIVA",
+        "fecPresentacion": "2024-02-08",
+        "perParId": 2021,
+        "pleyNum": 7011
+      },
+      {
+        "proyectoLey": "07873/2023-PE",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE CREA EL SISTEMA NACIONAL ESPECIALIZADO EN FLAGRANCIA DELICTIVA Y COADYUVA A LA IMPLEMENTACIÓN DE LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL",
+        "fecPresentacion": "2024-05-16",
+        "perParId": 2021,
+        "pleyNum": 7873
+      },
+      {
+        "proyectoLey": "08553/2024-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE FORTALECE LAS UNIDADES DE FLAGRANCIA A FIN DE COMBATIR EFICAZMENTE LA CRIMINALIDAD Y GARANTIZAR LA SEGURIDAD CIUDADANA DE TODOS LOS PERUANOS",
+        "fecPresentacion": "2024-08-07",
+        "perParId": 2021,
+        "pleyNum": 8553
+      },
+      {
+        "proyectoLey": "08828/2024-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE ESTABLECE MEDIDAS PARA FORTALECER LA ACTUACIÓN DE LAS UNIDADES DE FLAGRANCIA EN SU LUCHA CONTRA LA CRIMINALIDAD.",
+        "fecPresentacion": "2024-09-06",
+        "perParId": 2021,
+        "pleyNum": 8828
+      },
+      {
+        "proyectoLey": "08961/2024-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE EXTIENDE EL PLAZO DE CONFIGURACIÓN DE LA FLAGRANCIA Y CREA EL REGISTRO DE AUTORES DE DELITOS GRAVES Y ALTA PELIGROSIDAD CON LA FINALIDAD DE FORTALECER LA LUCHA CONTRA LA CRIMINALIDAD. ",
+        "fecPresentacion": "2024-09-19",
+        "perParId": 2021,
+        "pleyNum": 8961
+      },
+      {
+        "proyectoLey": "09425/2024-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE CREA EL SISTEMA NACIONAL DE FLAGRANCIA DELICTIVA PARA PROMOVER UNA JUSTICIA CÉLERE, OPORTUNA Y EFICAZ",
+        "fecPresentacion": "2024-11-05",
+        "perParId": 2021,
+        "pleyNum": 9425
+      },
+      {
+        "proyectoLey": "10109/2024-CR",
+        "desEstado": "Publicada en el Diario Oficial El Peruano",
+        "titulo": "LEY QUE CREA EL SISTEMA NACIONAL ESPECIALIZADO EN FLAGRANCIA DELICTIVA CON EL FIN DE COADYUVAR A LA IMPLEMENTACIÓN DE LAS UNIDADES DE FLAGRANCIA DELICTIVA A NIVEL NACIONAL\n",
+        "fecPresentacion": "2025-02-03",
+        "perParId": 2021,
+        "pleyNum": 10109
+      }
+    ],
+    "documentosAnexos": [],
+    "fases": [
+      {
+        "faseId": 1,
+        "fase": "Presentado",
+        "orden": 1,
+        "tipo": 1
+      },
+      {
+        "faseId": 2,
+        "fase": "Enviado a Comisiones",
+        "orden": 2,
+        "tipo": 0
+      },
+      {
+        "faseId": 3,
+        "fase": "En Comisiones",
+        "orden": 3,
+        "tipo": 1
+      },
+      {
+        "faseId": 4,
+        "fase": "Debate en Pleno",
+        "orden": 4,
+        "tipo": 1
+      },
+      {
+        "faseId": 5,
+        "fase": "Enviado al Ejecutivo",
+        "orden": 5,
+        "tipo": 1
+      },
+      {
+        "faseId": 6,
+        "fase": "Ley Publicada",
+        "orden": 6,
+        "tipo": 2
+      },
+      {
+        "faseId": 8,
+        "fase": "EN DEBATE DE LA COMISIÓN PERMANENTE",
+        "orden": 8,
+        "tipo": 0
+      },
+      {
+        "faseId": 9,
+        "fase": "EN AGENDA DE LA COMISIÓN PERMANENTE",
+        "orden": 9,
+        "tipo": 0
+      }
+    ],
+    "firmantes": [
+      {
+        "firmanteId": 65009,
+        "tipoFirmanteId": 1,
+        "congresistaId": 55,
+        "nombre": "Gutiérrez Ticona, Paul Silvio",
+        "dni": "31027035",
+        "sexo": "M",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/PaulGutierrez/"
+      },
+      {
+        "firmanteId": 65010,
+        "tipoFirmanteId": 2,
+        "congresistaId": 97,
+        "nombre": "Quiroz Barboza, Segundo Teodomiro",
+        "dni": "27361499",
+        "sexo": "M",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/SegundoQuiroz/"
+      },
+      {
+        "firmanteId": 65011,
+        "tipoFirmanteId": 2,
+        "congresistaId": 112,
+        "nombre": "Tacuri Valdivia, Germán Adolfo",
+        "dni": "31031443",
+        "sexo": "M",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/GermanTacuri/"
+      },
+      {
+        "firmanteId": 65012,
+        "tipoFirmanteId": 2,
+        "congresistaId": 75,
+        "nombre": "Medina Hermosilla, Elizabeth Sara",
+        "dni": "22510256",
+        "sexo": "F",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/ElizabethMedina/"
+      },
+      {
+        "firmanteId": 65013,
+        "tipoFirmanteId": 2,
+        "congresistaId": 127,
+        "nombre": "Zea Choquechambi, Oscar",
+        "dni": "01327194",
+        "sexo": "M",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/OscarZea/"
+      },
+      {
+        "firmanteId": 65014,
+        "tipoFirmanteId": 2,
+        "congresistaId": 121,
+        "nombre": "Vásquez Vela, Lucinda",
+        "dni": "01088231",
+        "sexo": "M",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/LucindaVasquez/"
+      },
+      {
+        "firmanteId": 65015,
+        "tipoFirmanteId": 2,
+        "congresistaId": 118,
+        "nombre": "Ugarte Mamani, Jhakeline Katy",
+        "dni": "24711696",
+        "sexo": "F",
+        "pagWeb": "https://www.congreso.gob.pe/congresistas2021/JhakelineUgarte/"
+      }
+    ],
+    "secciones": [
+      {
+        "seccionId": 1,
+        "parentSeccionId": 1,
+        "desSeccion": "Presentación del proyecto de ley (Art. 74 RCR)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 1,
+        "activo": true
+      },
+      {
+        "seccionId": 2,
+        "parentSeccionId": 2,
+        "desSeccion": "Envío a comisiones (Art. 77 RCR)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 2,
+        "activo": true
+      },
+      {
+        "seccionId": 3,
+        "parentSeccionId": 3,
+        "desSeccion": "Estudio en comisiones (Art. 77 RCR)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 3,
+        "activo": true
+      },
+      {
+        "seccionId": 4,
+        "parentSeccionId": 4,
+        "desSeccion": "Debate y aprobación en el Pleno (Art. 78 RCR)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 4,
+        "activo": true
+      },
+      {
+        "seccionId": 5,
+        "parentSeccionId": 5,
+        "desSeccion": "Envío al presidente de la República (Art. 79 RCR)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 5,
+        "activo": true
+      },
+      {
+        "seccionId": 6,
+        "parentSeccionId": 6,
+        "desSeccion": "Promulgación y publicación (Art. 80 RCR)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 6,
+        "activo": true
+      },
+      {
+        "seccionId": 7,
+        "parentSeccionId": 7,
+        "desSeccion": "Documentación anexa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 7,
+        "activo": true
+      },
+      {
+        "seccionId": 8,
+        "parentSeccionId": 1,
+        "desSeccion": "Archivo de Proyecto de Ley",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 8,
+        "activo": true
+      },
+      {
+        "seccionId": 9,
+        "parentSeccionId": 2,
+        "desSeccion": "Decretado a la comisión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 9,
+        "activo": true
+      },
+      {
+        "seccionId": 256,
+        "parentSeccionId": 1,
+        "desSeccion": "Retiro de Firma",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 9,
+        "activo": true
+      },
+      {
+        "seccionId": 257,
+        "parentSeccionId": 1,
+        "desSeccion": "Retiro de Proyecto de Ley",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 10,
+        "activo": true
+      },
+      {
+        "seccionId": 10,
+        "parentSeccionId": 2,
+        "desSeccion": "En comisión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 10,
+        "activo": true
+      },
+      {
+        "seccionId": 11,
+        "parentSeccionId": 2,
+        "desSeccion": "Dispensa de trámite en comisión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 11,
+        "activo": true
+      },
+      {
+        "seccionId": 12,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Agraria",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 1,
+        "orden": 12,
+        "activo": true
+      },
+      {
+        "seccionId": 13,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Ciencia, Innovación y Tecnología",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 2,
+        "orden": 13,
+        "activo": true
+      },
+      {
+        "seccionId": 14,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Comercio Exterior y Turismo",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 3,
+        "orden": 14,
+        "activo": true
+      },
+      {
+        "seccionId": 15,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Constitución y Reglamento",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 4,
+        "orden": 15,
+        "activo": true
+      },
+      {
+        "seccionId": 16,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Cultura y Patrimonio Cultural",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 5,
+        "orden": 16,
+        "activo": true
+      },
+      {
+        "seccionId": 17,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Defensa del Consumidor y Organismos Reguladores de los Servicios Públicos",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 6,
+        "orden": 17,
+        "activo": true
+      },
+      {
+        "seccionId": 18,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Defensa Nacional, Orden Interno, Desarrollo Alternativo y Lucha Contra las Drogas",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 7,
+        "orden": 18,
+        "activo": true
+      },
+      {
+        "seccionId": 19,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Descentralización, Regionalización, Gobiernos Locales y Modernización de la Gestión del Estado",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 8,
+        "orden": 19,
+        "activo": true
+      },
+      {
+        "seccionId": 20,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Economía, Banca, Finanzas e Inteligencia Financiera",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 9,
+        "orden": 20,
+        "activo": true
+      },
+      {
+        "seccionId": 21,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Educación, Juventud y Deporte",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 10,
+        "orden": 21,
+        "activo": true
+      },
+      {
+        "seccionId": 22,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Energía y Minas",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 11,
+        "orden": 22,
+        "activo": true
+      },
+      {
+        "seccionId": 23,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Fiscalización y Contraloría",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 12,
+        "orden": 23,
+        "activo": true
+      },
+      {
+        "seccionId": 24,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Inclusión Social y Personas con Discapacidad",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 13,
+        "orden": 24,
+        "activo": true
+      },
+      {
+        "seccionId": 25,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Inteligencia",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 14,
+        "orden": 25,
+        "activo": true
+      },
+      {
+        "seccionId": 26,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Justicia y Derechos Humanos",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 15,
+        "orden": 26,
+        "activo": true
+      },
+      {
+        "seccionId": 27,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Mujer y Familia",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 16,
+        "orden": 27,
+        "activo": true
+      },
+      {
+        "seccionId": 28,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Presupuesto y Cuenta General de la República",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 17,
+        "orden": 28,
+        "activo": true
+      },
+      {
+        "seccionId": 29,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Producción, Micro y Pequeña Empresa y Cooperativas",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 18,
+        "orden": 29,
+        "activo": true
+      },
+      {
+        "seccionId": 30,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Pueblos Andinos, Amazónicos y Afroperuanos, Ambiente y Ecología",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 19,
+        "orden": 30,
+        "activo": true
+      },
+      {
+        "seccionId": 31,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Relaciones Exteriores",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 20,
+        "orden": 31,
+        "activo": true
+      },
+      {
+        "seccionId": 32,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Salud y Población",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 21,
+        "orden": 32,
+        "activo": true
+      },
+      {
+        "seccionId": 33,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Trabajo y Seguridad Social",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 22,
+        "orden": 33,
+        "activo": true
+      },
+      {
+        "seccionId": 34,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Transportes y Comunicaciones",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 23,
+        "orden": 34,
+        "activo": true
+      },
+      {
+        "seccionId": 35,
+        "parentSeccionId": 3,
+        "desSeccion": "Comisión Vivienda y Construcción",
+        "flagComision": true,
+        "flagEstado": false,
+        "comisionId": 24,
+        "orden": 35,
+        "activo": true
+      },
+      {
+        "seccionId": 36,
+        "parentSeccionId": 12,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 36,
+        "activo": true
+      },
+      {
+        "seccionId": 37,
+        "parentSeccionId": 12,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 37,
+        "activo": true
+      },
+      {
+        "seccionId": 38,
+        "parentSeccionId": 12,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 38,
+        "activo": true
+      },
+      {
+        "seccionId": 39,
+        "parentSeccionId": 12,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 39,
+        "activo": true
+      },
+      {
+        "seccionId": 40,
+        "parentSeccionId": 12,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 40,
+        "activo": true
+      },
+      {
+        "seccionId": 41,
+        "parentSeccionId": 12,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 41,
+        "activo": true
+      },
+      {
+        "seccionId": 42,
+        "parentSeccionId": 12,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 42,
+        "activo": true
+      },
+      {
+        "seccionId": 43,
+        "parentSeccionId": 12,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 43,
+        "activo": true
+      },
+      {
+        "seccionId": 44,
+        "parentSeccionId": 13,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 44,
+        "activo": true
+      },
+      {
+        "seccionId": 45,
+        "parentSeccionId": 13,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 45,
+        "activo": true
+      },
+      {
+        "seccionId": 46,
+        "parentSeccionId": 13,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 46,
+        "activo": true
+      },
+      {
+        "seccionId": 47,
+        "parentSeccionId": 13,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 47,
+        "activo": true
+      },
+      {
+        "seccionId": 48,
+        "parentSeccionId": 13,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 48,
+        "activo": true
+      },
+      {
+        "seccionId": 49,
+        "parentSeccionId": 13,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 49,
+        "activo": true
+      },
+      {
+        "seccionId": 50,
+        "parentSeccionId": 13,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 50,
+        "activo": true
+      },
+      {
+        "seccionId": 51,
+        "parentSeccionId": 13,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 51,
+        "activo": true
+      },
+      {
+        "seccionId": 52,
+        "parentSeccionId": 14,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 52,
+        "activo": true
+      },
+      {
+        "seccionId": 53,
+        "parentSeccionId": 14,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 53,
+        "activo": true
+      },
+      {
+        "seccionId": 54,
+        "parentSeccionId": 14,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 54,
+        "activo": true
+      },
+      {
+        "seccionId": 55,
+        "parentSeccionId": 14,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 55,
+        "activo": true
+      },
+      {
+        "seccionId": 56,
+        "parentSeccionId": 14,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 56,
+        "activo": true
+      },
+      {
+        "seccionId": 57,
+        "parentSeccionId": 14,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 57,
+        "activo": true
+      },
+      {
+        "seccionId": 58,
+        "parentSeccionId": 14,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 58,
+        "activo": true
+      },
+      {
+        "seccionId": 59,
+        "parentSeccionId": 14,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 59,
+        "activo": true
+      },
+      {
+        "seccionId": 60,
+        "parentSeccionId": 15,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 60,
+        "activo": true
+      },
+      {
+        "seccionId": 61,
+        "parentSeccionId": 15,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 61,
+        "activo": true
+      },
+      {
+        "seccionId": 62,
+        "parentSeccionId": 15,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 62,
+        "activo": true
+      },
+      {
+        "seccionId": 63,
+        "parentSeccionId": 15,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 63,
+        "activo": true
+      },
+      {
+        "seccionId": 64,
+        "parentSeccionId": 15,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 64,
+        "activo": true
+      },
+      {
+        "seccionId": 65,
+        "parentSeccionId": 15,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 65,
+        "activo": true
+      },
+      {
+        "seccionId": 66,
+        "parentSeccionId": 15,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 66,
+        "activo": true
+      },
+      {
+        "seccionId": 67,
+        "parentSeccionId": 15,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 67,
+        "activo": true
+      },
+      {
+        "seccionId": 68,
+        "parentSeccionId": 16,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 68,
+        "activo": true
+      },
+      {
+        "seccionId": 69,
+        "parentSeccionId": 16,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 69,
+        "activo": true
+      },
+      {
+        "seccionId": 70,
+        "parentSeccionId": 16,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 70,
+        "activo": true
+      },
+      {
+        "seccionId": 71,
+        "parentSeccionId": 16,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 71,
+        "activo": true
+      },
+      {
+        "seccionId": 72,
+        "parentSeccionId": 16,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 72,
+        "activo": true
+      },
+      {
+        "seccionId": 73,
+        "parentSeccionId": 16,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 73,
+        "activo": true
+      },
+      {
+        "seccionId": 74,
+        "parentSeccionId": 16,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 74,
+        "activo": true
+      },
+      {
+        "seccionId": 75,
+        "parentSeccionId": 16,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 75,
+        "activo": true
+      },
+      {
+        "seccionId": 76,
+        "parentSeccionId": 17,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 76,
+        "activo": true
+      },
+      {
+        "seccionId": 77,
+        "parentSeccionId": 17,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 77,
+        "activo": true
+      },
+      {
+        "seccionId": 78,
+        "parentSeccionId": 17,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 78,
+        "activo": true
+      },
+      {
+        "seccionId": 79,
+        "parentSeccionId": 17,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 79,
+        "activo": true
+      },
+      {
+        "seccionId": 80,
+        "parentSeccionId": 17,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 80,
+        "activo": true
+      },
+      {
+        "seccionId": 81,
+        "parentSeccionId": 17,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 81,
+        "activo": true
+      },
+      {
+        "seccionId": 82,
+        "parentSeccionId": 17,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 82,
+        "activo": true
+      },
+      {
+        "seccionId": 83,
+        "parentSeccionId": 17,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 83,
+        "activo": true
+      },
+      {
+        "seccionId": 84,
+        "parentSeccionId": 18,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 84,
+        "activo": true
+      },
+      {
+        "seccionId": 85,
+        "parentSeccionId": 18,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 85,
+        "activo": true
+      },
+      {
+        "seccionId": 86,
+        "parentSeccionId": 18,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 86,
+        "activo": true
+      },
+      {
+        "seccionId": 87,
+        "parentSeccionId": 18,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 87,
+        "activo": true
+      },
+      {
+        "seccionId": 88,
+        "parentSeccionId": 18,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 88,
+        "activo": true
+      },
+      {
+        "seccionId": 89,
+        "parentSeccionId": 18,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 89,
+        "activo": true
+      },
+      {
+        "seccionId": 90,
+        "parentSeccionId": 18,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 90,
+        "activo": true
+      },
+      {
+        "seccionId": 91,
+        "parentSeccionId": 18,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 91,
+        "activo": true
+      },
+      {
+        "seccionId": 92,
+        "parentSeccionId": 19,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 92,
+        "activo": true
+      },
+      {
+        "seccionId": 93,
+        "parentSeccionId": 19,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 93,
+        "activo": true
+      },
+      {
+        "seccionId": 94,
+        "parentSeccionId": 19,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 94,
+        "activo": true
+      },
+      {
+        "seccionId": 95,
+        "parentSeccionId": 19,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 95,
+        "activo": true
+      },
+      {
+        "seccionId": 96,
+        "parentSeccionId": 19,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 96,
+        "activo": true
+      },
+      {
+        "seccionId": 97,
+        "parentSeccionId": 19,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 97,
+        "activo": true
+      },
+      {
+        "seccionId": 98,
+        "parentSeccionId": 19,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 98,
+        "activo": true
+      },
+      {
+        "seccionId": 99,
+        "parentSeccionId": 19,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 99,
+        "activo": true
+      },
+      {
+        "seccionId": 100,
+        "parentSeccionId": 20,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 100,
+        "activo": true
+      },
+      {
+        "seccionId": 101,
+        "parentSeccionId": 20,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 101,
+        "activo": true
+      },
+      {
+        "seccionId": 102,
+        "parentSeccionId": 20,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 102,
+        "activo": true
+      },
+      {
+        "seccionId": 103,
+        "parentSeccionId": 20,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 103,
+        "activo": true
+      },
+      {
+        "seccionId": 104,
+        "parentSeccionId": 20,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 104,
+        "activo": true
+      },
+      {
+        "seccionId": 105,
+        "parentSeccionId": 20,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 105,
+        "activo": true
+      },
+      {
+        "seccionId": 106,
+        "parentSeccionId": 20,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 106,
+        "activo": true
+      },
+      {
+        "seccionId": 107,
+        "parentSeccionId": 20,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 107,
+        "activo": true
+      },
+      {
+        "seccionId": 108,
+        "parentSeccionId": 21,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 108,
+        "activo": true
+      },
+      {
+        "seccionId": 109,
+        "parentSeccionId": 21,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 109,
+        "activo": true
+      },
+      {
+        "seccionId": 110,
+        "parentSeccionId": 21,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 110,
+        "activo": true
+      },
+      {
+        "seccionId": 111,
+        "parentSeccionId": 21,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 111,
+        "activo": true
+      },
+      {
+        "seccionId": 112,
+        "parentSeccionId": 21,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 112,
+        "activo": true
+      },
+      {
+        "seccionId": 113,
+        "parentSeccionId": 21,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 113,
+        "activo": true
+      },
+      {
+        "seccionId": 114,
+        "parentSeccionId": 21,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 114,
+        "activo": true
+      },
+      {
+        "seccionId": 115,
+        "parentSeccionId": 21,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 115,
+        "activo": true
+      },
+      {
+        "seccionId": 116,
+        "parentSeccionId": 22,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 116,
+        "activo": true
+      },
+      {
+        "seccionId": 117,
+        "parentSeccionId": 22,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 117,
+        "activo": true
+      },
+      {
+        "seccionId": 118,
+        "parentSeccionId": 22,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 118,
+        "activo": true
+      },
+      {
+        "seccionId": 119,
+        "parentSeccionId": 22,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 119,
+        "activo": true
+      },
+      {
+        "seccionId": 120,
+        "parentSeccionId": 22,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 120,
+        "activo": true
+      },
+      {
+        "seccionId": 121,
+        "parentSeccionId": 22,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 121,
+        "activo": true
+      },
+      {
+        "seccionId": 122,
+        "parentSeccionId": 22,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 122,
+        "activo": true
+      },
+      {
+        "seccionId": 123,
+        "parentSeccionId": 22,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 123,
+        "activo": true
+      },
+      {
+        "seccionId": 124,
+        "parentSeccionId": 23,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 124,
+        "activo": true
+      },
+      {
+        "seccionId": 125,
+        "parentSeccionId": 23,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 125,
+        "activo": true
+      },
+      {
+        "seccionId": 126,
+        "parentSeccionId": 23,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 126,
+        "activo": true
+      },
+      {
+        "seccionId": 127,
+        "parentSeccionId": 23,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 127,
+        "activo": true
+      },
+      {
+        "seccionId": 128,
+        "parentSeccionId": 23,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 128,
+        "activo": true
+      },
+      {
+        "seccionId": 129,
+        "parentSeccionId": 23,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 129,
+        "activo": true
+      },
+      {
+        "seccionId": 130,
+        "parentSeccionId": 23,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 130,
+        "activo": true
+      },
+      {
+        "seccionId": 131,
+        "parentSeccionId": 23,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 131,
+        "activo": true
+      },
+      {
+        "seccionId": 132,
+        "parentSeccionId": 24,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 132,
+        "activo": true
+      },
+      {
+        "seccionId": 133,
+        "parentSeccionId": 24,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 133,
+        "activo": true
+      },
+      {
+        "seccionId": 134,
+        "parentSeccionId": 24,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 134,
+        "activo": true
+      },
+      {
+        "seccionId": 135,
+        "parentSeccionId": 24,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 135,
+        "activo": true
+      },
+      {
+        "seccionId": 136,
+        "parentSeccionId": 24,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 136,
+        "activo": true
+      },
+      {
+        "seccionId": 137,
+        "parentSeccionId": 24,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 137,
+        "activo": true
+      },
+      {
+        "seccionId": 138,
+        "parentSeccionId": 24,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 138,
+        "activo": true
+      },
+      {
+        "seccionId": 139,
+        "parentSeccionId": 24,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 139,
+        "activo": true
+      },
+      {
+        "seccionId": 140,
+        "parentSeccionId": 25,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 140,
+        "activo": true
+      },
+      {
+        "seccionId": 141,
+        "parentSeccionId": 25,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 141,
+        "activo": true
+      },
+      {
+        "seccionId": 142,
+        "parentSeccionId": 25,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 142,
+        "activo": true
+      },
+      {
+        "seccionId": 143,
+        "parentSeccionId": 25,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 143,
+        "activo": true
+      },
+      {
+        "seccionId": 144,
+        "parentSeccionId": 25,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 144,
+        "activo": true
+      },
+      {
+        "seccionId": 145,
+        "parentSeccionId": 25,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 145,
+        "activo": true
+      },
+      {
+        "seccionId": 146,
+        "parentSeccionId": 25,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 146,
+        "activo": true
+      },
+      {
+        "seccionId": 147,
+        "parentSeccionId": 25,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 147,
+        "activo": true
+      },
+      {
+        "seccionId": 148,
+        "parentSeccionId": 26,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 148,
+        "activo": true
+      },
+      {
+        "seccionId": 149,
+        "parentSeccionId": 26,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 149,
+        "activo": true
+      },
+      {
+        "seccionId": 150,
+        "parentSeccionId": 26,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 150,
+        "activo": true
+      },
+      {
+        "seccionId": 151,
+        "parentSeccionId": 26,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 151,
+        "activo": true
+      },
+      {
+        "seccionId": 152,
+        "parentSeccionId": 26,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 152,
+        "activo": true
+      },
+      {
+        "seccionId": 153,
+        "parentSeccionId": 26,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 153,
+        "activo": true
+      },
+      {
+        "seccionId": 154,
+        "parentSeccionId": 26,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 154,
+        "activo": true
+      },
+      {
+        "seccionId": 155,
+        "parentSeccionId": 26,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 155,
+        "activo": true
+      },
+      {
+        "seccionId": 156,
+        "parentSeccionId": 27,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 156,
+        "activo": true
+      },
+      {
+        "seccionId": 157,
+        "parentSeccionId": 27,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 157,
+        "activo": true
+      },
+      {
+        "seccionId": 158,
+        "parentSeccionId": 27,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 158,
+        "activo": true
+      },
+      {
+        "seccionId": 159,
+        "parentSeccionId": 27,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 159,
+        "activo": true
+      },
+      {
+        "seccionId": 160,
+        "parentSeccionId": 27,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 160,
+        "activo": true
+      },
+      {
+        "seccionId": 161,
+        "parentSeccionId": 27,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 161,
+        "activo": true
+      },
+      {
+        "seccionId": 162,
+        "parentSeccionId": 27,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 162,
+        "activo": true
+      },
+      {
+        "seccionId": 163,
+        "parentSeccionId": 27,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 163,
+        "activo": true
+      },
+      {
+        "seccionId": 164,
+        "parentSeccionId": 28,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 164,
+        "activo": true
+      },
+      {
+        "seccionId": 165,
+        "parentSeccionId": 28,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 165,
+        "activo": true
+      },
+      {
+        "seccionId": 166,
+        "parentSeccionId": 28,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 166,
+        "activo": true
+      },
+      {
+        "seccionId": 167,
+        "parentSeccionId": 28,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 167,
+        "activo": true
+      },
+      {
+        "seccionId": 168,
+        "parentSeccionId": 28,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 168,
+        "activo": true
+      },
+      {
+        "seccionId": 169,
+        "parentSeccionId": 28,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 169,
+        "activo": true
+      },
+      {
+        "seccionId": 170,
+        "parentSeccionId": 28,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 170,
+        "activo": true
+      },
+      {
+        "seccionId": 171,
+        "parentSeccionId": 28,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 171,
+        "activo": true
+      },
+      {
+        "seccionId": 172,
+        "parentSeccionId": 29,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 172,
+        "activo": true
+      },
+      {
+        "seccionId": 173,
+        "parentSeccionId": 29,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 173,
+        "activo": true
+      },
+      {
+        "seccionId": 174,
+        "parentSeccionId": 29,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 174,
+        "activo": true
+      },
+      {
+        "seccionId": 175,
+        "parentSeccionId": 29,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 175,
+        "activo": true
+      },
+      {
+        "seccionId": 176,
+        "parentSeccionId": 29,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 176,
+        "activo": true
+      },
+      {
+        "seccionId": 177,
+        "parentSeccionId": 29,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 177,
+        "activo": true
+      },
+      {
+        "seccionId": 178,
+        "parentSeccionId": 29,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 178,
+        "activo": true
+      },
+      {
+        "seccionId": 179,
+        "parentSeccionId": 29,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 179,
+        "activo": true
+      },
+      {
+        "seccionId": 180,
+        "parentSeccionId": 30,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 180,
+        "activo": true
+      },
+      {
+        "seccionId": 181,
+        "parentSeccionId": 30,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 181,
+        "activo": true
+      },
+      {
+        "seccionId": 182,
+        "parentSeccionId": 30,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 182,
+        "activo": true
+      },
+      {
+        "seccionId": 183,
+        "parentSeccionId": 30,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 183,
+        "activo": true
+      },
+      {
+        "seccionId": 184,
+        "parentSeccionId": 30,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 184,
+        "activo": true
+      },
+      {
+        "seccionId": 185,
+        "parentSeccionId": 30,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 185,
+        "activo": true
+      },
+      {
+        "seccionId": 186,
+        "parentSeccionId": 30,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 186,
+        "activo": true
+      },
+      {
+        "seccionId": 187,
+        "parentSeccionId": 30,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 187,
+        "activo": true
+      },
+      {
+        "seccionId": 188,
+        "parentSeccionId": 31,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 188,
+        "activo": true
+      },
+      {
+        "seccionId": 189,
+        "parentSeccionId": 31,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 189,
+        "activo": true
+      },
+      {
+        "seccionId": 190,
+        "parentSeccionId": 31,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 190,
+        "activo": true
+      },
+      {
+        "seccionId": 191,
+        "parentSeccionId": 31,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 191,
+        "activo": true
+      },
+      {
+        "seccionId": 192,
+        "parentSeccionId": 31,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 192,
+        "activo": true
+      },
+      {
+        "seccionId": 193,
+        "parentSeccionId": 31,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 193,
+        "activo": true
+      },
+      {
+        "seccionId": 194,
+        "parentSeccionId": 31,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 194,
+        "activo": true
+      },
+      {
+        "seccionId": 195,
+        "parentSeccionId": 31,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 195,
+        "activo": true
+      },
+      {
+        "seccionId": 196,
+        "parentSeccionId": 32,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 196,
+        "activo": true
+      },
+      {
+        "seccionId": 197,
+        "parentSeccionId": 32,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 197,
+        "activo": true
+      },
+      {
+        "seccionId": 198,
+        "parentSeccionId": 32,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 198,
+        "activo": true
+      },
+      {
+        "seccionId": 199,
+        "parentSeccionId": 32,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 199,
+        "activo": true
+      },
+      {
+        "seccionId": 200,
+        "parentSeccionId": 32,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 200,
+        "activo": true
+      },
+      {
+        "seccionId": 201,
+        "parentSeccionId": 32,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 201,
+        "activo": true
+      },
+      {
+        "seccionId": 202,
+        "parentSeccionId": 32,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 202,
+        "activo": true
+      },
+      {
+        "seccionId": 203,
+        "parentSeccionId": 32,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 203,
+        "activo": true
+      },
+      {
+        "seccionId": 204,
+        "parentSeccionId": 33,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 204,
+        "activo": true
+      },
+      {
+        "seccionId": 205,
+        "parentSeccionId": 33,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 205,
+        "activo": true
+      },
+      {
+        "seccionId": 206,
+        "parentSeccionId": 33,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 206,
+        "activo": true
+      },
+      {
+        "seccionId": 207,
+        "parentSeccionId": 33,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 207,
+        "activo": true
+      },
+      {
+        "seccionId": 208,
+        "parentSeccionId": 33,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 208,
+        "activo": true
+      },
+      {
+        "seccionId": 209,
+        "parentSeccionId": 33,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 209,
+        "activo": true
+      },
+      {
+        "seccionId": 210,
+        "parentSeccionId": 33,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 210,
+        "activo": true
+      },
+      {
+        "seccionId": 211,
+        "parentSeccionId": 33,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 211,
+        "activo": true
+      },
+      {
+        "seccionId": 212,
+        "parentSeccionId": 34,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 212,
+        "activo": true
+      },
+      {
+        "seccionId": 213,
+        "parentSeccionId": 34,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 213,
+        "activo": true
+      },
+      {
+        "seccionId": 214,
+        "parentSeccionId": 34,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 214,
+        "activo": true
+      },
+      {
+        "seccionId": 215,
+        "parentSeccionId": 34,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 215,
+        "activo": true
+      },
+      {
+        "seccionId": 216,
+        "parentSeccionId": 34,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 216,
+        "activo": true
+      },
+      {
+        "seccionId": 217,
+        "parentSeccionId": 34,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 217,
+        "activo": true
+      },
+      {
+        "seccionId": 218,
+        "parentSeccionId": 34,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 218,
+        "activo": true
+      },
+      {
+        "seccionId": 219,
+        "parentSeccionId": 34,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 219,
+        "activo": true
+      },
+      {
+        "seccionId": 220,
+        "parentSeccionId": 35,
+        "desSeccion": "Informe de admisibilidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 220,
+        "activo": true
+      },
+      {
+        "seccionId": 221,
+        "parentSeccionId": 35,
+        "desSeccion": "Pedidos de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 221,
+        "activo": true
+      },
+      {
+        "seccionId": 222,
+        "parentSeccionId": 35,
+        "desSeccion": "Respuestas de opinión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 222,
+        "activo": true
+      },
+      {
+        "seccionId": 223,
+        "parentSeccionId": 35,
+        "desSeccion": "Opiniones y pedidos ciudadanos sobre la propuesta legislativa",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 223,
+        "activo": true
+      },
+      {
+        "seccionId": 224,
+        "parentSeccionId": 35,
+        "desSeccion": "Informes adicionales",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 224,
+        "activo": true
+      },
+      {
+        "seccionId": 225,
+        "parentSeccionId": 35,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 225,
+        "activo": true
+      },
+      {
+        "seccionId": 253,
+        "parentSeccionId": 3,
+        "desSeccion": "Dictamen en Mayoría",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 225,
+        "activo": true
+      },
+      {
+        "seccionId": 254,
+        "parentSeccionId": 3,
+        "desSeccion": "Dictamen en Minoría",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 226,
+        "activo": true
+      },
+      {
+        "seccionId": 226,
+        "parentSeccionId": 35,
+        "desSeccion": "Predictamen",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 226,
+        "activo": true
+      },
+      {
+        "seccionId": 255,
+        "parentSeccionId": 3,
+        "desSeccion": "Dictamen por Unanimidad",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 227,
+        "activo": true
+      },
+      {
+        "seccionId": 227,
+        "parentSeccionId": 35,
+        "desSeccion": "Acta de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 227,
+        "activo": true
+      },
+      {
+        "seccionId": 228,
+        "parentSeccionId": 3,
+        "desSeccion": "Dictamen no aprobación de la ley",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 228,
+        "activo": true
+      },
+      {
+        "seccionId": 229,
+        "parentSeccionId": 3,
+        "desSeccion": "Decreto de archivo",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 229,
+        "activo": true
+      },
+      {
+        "seccionId": 230,
+        "parentSeccionId": 3,
+        "desSeccion": "Transcripción de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 230,
+        "activo": true
+      },
+      {
+        "seccionId": 231,
+        "parentSeccionId": 3,
+        "desSeccion": "Audio y Video de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 231,
+        "activo": true
+      },
+      {
+        "seccionId": 232,
+        "parentSeccionId": 4,
+        "desSeccion": "Dictamen de la comisión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 232,
+        "activo": true
+      },
+      {
+        "seccionId": 233,
+        "parentSeccionId": 4,
+        "desSeccion": "Orden del Día",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 233,
+        "activo": true
+      },
+      {
+        "seccionId": 234,
+        "parentSeccionId": 4,
+        "desSeccion": "Agenda de Pleno",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 234,
+        "activo": true
+      },
+      {
+        "seccionId": 235,
+        "parentSeccionId": 4,
+        "desSeccion": "Agenda de Comisión permanente",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 235,
+        "activo": true
+      },
+      {
+        "seccionId": 236,
+        "parentSeccionId": 4,
+        "desSeccion": "Acta virtual",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 236,
+        "activo": true
+      },
+      {
+        "seccionId": 237,
+        "parentSeccionId": 4,
+        "desSeccion": "Texto sustitutorio",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 237,
+        "activo": true
+      },
+      {
+        "seccionId": 238,
+        "parentSeccionId": 4,
+        "desSeccion": "Asistencia y votación",
+        "flagComision": false,
+        "flagEstado": true,
+        "comisionId": null,
+        "orden": 238,
+        "activo": true
+      },
+      {
+        "seccionId": 239,
+        "parentSeccionId": 4,
+        "desSeccion": "Acta de Pleno",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 239,
+        "activo": true
+      },
+      {
+        "seccionId": 240,
+        "parentSeccionId": 4,
+        "desSeccion": "Agenda de Comisión permanente",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 240,
+        "activo": true
+      },
+      {
+        "seccionId": 241,
+        "parentSeccionId": 4,
+        "desSeccion": "Transcripciones",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 241,
+        "activo": true
+      },
+      {
+        "seccionId": 242,
+        "parentSeccionId": 4,
+        "desSeccion": "Diario de los Debates",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 242,
+        "activo": true
+      },
+      {
+        "seccionId": 243,
+        "parentSeccionId": 4,
+        "desSeccion": "Audio y Video de la sesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 243,
+        "activo": true
+      },
+      {
+        "seccionId": 244,
+        "parentSeccionId": 5,
+        "desSeccion": "Autógrafa de Ley",
+        "flagComision": false,
+        "flagEstado": true,
+        "comisionId": null,
+        "orden": 244,
+        "activo": true
+      },
+      {
+        "seccionId": 245,
+        "parentSeccionId": 6,
+        "desSeccion": "Publicación de la Ley o la Resolución Legislativa en el diario oficial El Peruano",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 245,
+        "activo": true
+      },
+      {
+        "seccionId": 251,
+        "parentSeccionId": 6,
+        "desSeccion": "Promulgado por el Presidente de la República",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 246,
+        "activo": true
+      },
+      {
+        "seccionId": 246,
+        "parentSeccionId": 7,
+        "desSeccion": "Oficios de priorización",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 246,
+        "activo": true
+      },
+      {
+        "seccionId": 247,
+        "parentSeccionId": 7,
+        "desSeccion": "Oficios de adhesión",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 247,
+        "activo": true
+      },
+      {
+        "seccionId": 252,
+        "parentSeccionId": 6,
+        "desSeccion": "Promulgado por el Presidente del Congreso",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 247,
+        "activo": true
+      },
+      {
+        "seccionId": 248,
+        "parentSeccionId": 7,
+        "desSeccion": "Oficios de acumulación",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 248,
+        "activo": true
+      },
+      {
+        "seccionId": 249,
+        "parentSeccionId": 7,
+        "desSeccion": "Otros documentos",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 249,
+        "activo": true
+      },
+      {
+        "seccionId": 250,
+        "parentSeccionId": 7,
+        "desSeccion": "Pedido verbal de acumulación (# de proyectos acumulados)",
+        "flagComision": false,
+        "flagEstado": false,
+        "comisionId": null,
+        "orden": 250,
+        "activo": true
+      }
+    ],
+    "archivos": [
+      {
+        "proyectoArchivoId": 283657,
+        "seguimientoPleyId": 74000,
+        "seccionId": 244,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-04-30T00:00:00.000-0500",
+        "nombreArchivo": "AU6093.pdf",
+        "descripcion": "AU6093",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261089,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1083-2024-CJDDHH - MINJUS - PL 10305[R]",
+        "descripcion": "OFICIO 1083-2024-CJDDHH - MINJUS - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261093,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1087-2024-CJDDHH - MIN PÚBLICO - PL 10305[R]",
+        "descripcion": "OFICIO 1087-2024-CJDDHH - MIN PÚBLICO - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261097,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1091-2024-CJDDHH - ABOG LIMA - PL 10305[R]",
+        "descripcion": "OFICIO 1091-2024-CJDDHH - ABOG LIMA - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 276923,
+        "seguimientoPleyId": 72093,
+        "seccionId": 233,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-04-09T00:00:00.000-0500",
+        "nombreArchivo": "PL 6093 Y OTROS.pdf",
+        "descripcion": "PL 6093 Y OTROS",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 285838,
+        "seguimientoPleyId": 73338,
+        "seccionId": 238,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-04-16T00:00:00.000-0500",
+        "nombreArchivo": "PL 6093 TS.pdf",
+        "descripcion": "PL 6093 TS",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261090,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1084-2024-CJDDHH - MININTER - PL 10305[R]",
+        "descripcion": "OFICIO 1084-2024-CJDDHH - MININTER - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261094,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1088-2024-CJDDHH - DEFENSORÍA - PL 10305[R]",
+        "descripcion": "OFICIO 1088-2024-CJDDHH - DEFENSORÍA - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 268343,
+        "seguimientoPleyId": null,
+        "seccionId": 150,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-03-20T00:00:00.000-0500",
+        "nombreArchivo": "1842985-OFICIO-1139-MINJUS-20-03-2025 PL 10305",
+        "descripcion": "1842985-OFICIO-1139-MINJUS-20-03-2025 PL 10305",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 282521,
+        "seguimientoPleyId": 69933,
+        "seccionId": 238,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-03-18T00:00:00.000-0500",
+        "nombreArchivo": "PL-6093 Y OTROS (MAY)-NUEVO TEXTO.pdf",
+        "descripcion": "PL-6093 Y OTROS (MAY)-NUEVO TEXTO",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 285850,
+        "seguimientoPleyId": 73350,
+        "seccionId": 238,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-04-16T00:00:00.000-0500",
+        "nombreArchivo": "PL 6093 EXO.pdf",
+        "descripcion": "PL 6093 EXO",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 259741,
+        "seguimientoPleyId": 68376,
+        "seccionId": 8,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-21T00:00:00.000-0500",
+        "nombreArchivo": "PL 10305- 24.pdf",
+        "descripcion": "PL 10305- 24",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 279004,
+        "seguimientoPleyId": 72956,
+        "seccionId": 233,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-04-15T00:00:00.000-0500",
+        "nombreArchivo": "PL 6093 Y OTROS (15.04.25).pdf",
+        "descripcion": "PL 6093 Y OTROS (15.04.25)",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261092,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1086-2024-CJDDHH - PODER JUDICIAL - PL 10305[R]",
+        "descripcion": "OFICIO 1086-2024-CJDDHH - PODER JUDICIAL - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261096,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1090-2024-CJDDHH - ABOG TACNA - PL 10305[R]",
+        "descripcion": "OFICIO 1090-2024-CJDDHH - ABOG TACNA - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 268345,
+        "seguimientoPleyId": null,
+        "seccionId": 150,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-03-20T00:00:00.000-0500",
+        "nombreArchivo": "1842985-OFICIO-1139-MINJUS-ANEXO 02-20-03-2025 PL 10305",
+        "descripcion": "1842985-OFICIO-1139-MINJUS-ANEXO 02-20-03-2025 PL 10305",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 292997,
+        "seguimientoPleyId": 76821,
+        "seccionId": 245,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-05-23T00:00:00.000-0500",
+        "nombreArchivo": "32348-LEY.pdf",
+        "descripcion": "32348-LEY",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261091,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1085-2024-CJDDHH - MEF - PL 10305[R]",
+        "descripcion": "OFICIO 1085-2024-CJDDHH - MEF - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 261095,
+        "seguimientoPleyId": null,
+        "seccionId": 149,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-28T00:00:00.000-0500",
+        "nombreArchivo": "OFICIO 1089-2024-CJDDHH - ABOG CALLAO - PL 10305[R]",
+        "descripcion": "OFICIO 1089-2024-CJDDHH - ABOG CALLAO - PL 10305[R]",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 268344,
+        "seguimientoPleyId": null,
+        "seccionId": 150,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-03-20T00:00:00.000-0500",
+        "nombreArchivo": "1842985-OFICIO-1139-MINJUS-ANEXO 01-20-03-2025 PL 10305",
+        "descripcion": "1842985-OFICIO-1139-MINJUS-ANEXO 01-20-03-2025 PL 10305",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 274900,
+        "seguimientoPleyId": null,
+        "seccionId": 153,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-04-04T00:00:00.000-0500",
+        "nombreArchivo": "1856394-OFICIO-0706-2024-2025-PSGT-CR-01-04-2025 PL 10305",
+        "descripcion": "1856394-OFICIO-0706-2024-2025-PSGT-CR-01-04-2025 PL 10305",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      },
+      {
+        "proyectoArchivoId": 259976,
+        "seguimientoPleyId": 68431,
+        "seccionId": 10,
+        "pleyId": 15248,
+        "uuid": null,
+        "fecha": "2025-02-24T00:00:00.000-0500",
+        "nombreArchivo": "PL_10305.pdf",
+        "descripcion": "PL_10305",
+        "enlace": null,
+        "publico": null,
+        "activo": null
+      }
+    ]
+  },
+  "timestamp": "2025-07-25T13:50:40.799-0500"
+}
