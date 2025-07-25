@@ -26,7 +26,7 @@ def test_create_organization(session):
         leg_year=LegislativeYear.YEAR_2022,
         org_id=1,
         org_name="Congreso del Perú",
-        org_type=TypeOrganization.BANCADA
+        org_type=TypeOrganization.COMMITTEE
     )
     session.add(org)
     session.commit()
