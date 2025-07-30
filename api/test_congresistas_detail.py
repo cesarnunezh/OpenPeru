@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from pydantic import ValidationError, BaseModel, HttpUrl, field_validator
+from pydantic import ValidationError, BaseModel, HttpUrl
 from main import app
 import pytest
 
@@ -16,18 +16,7 @@ class CongresistaDetail(BaseModel):
     dist_electoral: str
     condicion: str
     website: HttpUrl
-    image: str
-
-    @field_validator("image", mode="after")
-    @classmethod
-    def is_png(cls, value: str) -> str:
-        """
-        Validates that the attached image is formatted as a png file.
-        Idea from: https://github.com/pydantic/pydantic/discussions/10510
-        """
-        if not value.startswith("data:image/png;base64,"):
-            raise ValueError(f"{value} is not an even number")
-        return value
+    image: HttpUrl
 
 
 def test_active_endpoint():
