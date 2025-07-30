@@ -9,7 +9,7 @@ client = TestClient(app)
 
 
 # TODO: Modify to use shared response format
-class FullBill(BaseModel):
+class BillDetail(BaseModel):
     bill_id: str = Field(..., pattern=r"\d{4}_\d{5}")
     status: str
     title: str
@@ -45,14 +45,12 @@ def test_response_matches_model():
     data = response.json()
     assert data["data"]  # Check it's not an empty response object
     try:
-        FullBill(**data["data"])
+        BillDetail(**data["data"])
     except ValidationError:
         pytest.fail("Response does not match expected data model")
 
 
-@pytest.mark.parametrize(
-    "bill_id, response_code", [("9999_99999", 404), ("10_10", 422)]
-)
+@pytest.mark.parametrize("bill_id, response_code", [("9999_99999", 404), ("abc", 422)])
 def test_invalid_path(bill_id, response_code):
     """
     Check API returns appropriate response codes for path parameteres.

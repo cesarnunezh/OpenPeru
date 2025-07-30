@@ -1,0 +1,68 @@
+from fastapi.testclient import TestClient
+from pydantic import ValidationError, BaseModel, HttpUrl, field_validator
+from main import app
+import pytest
+
+client = TestClient(app)
+
+
+# TODO: Modify to use shared response format
+class CongresistaDetail(BaseModel):
+    id: int
+    nombre: str
+    leg_period: str
+    party_name: str
+    bancada_name: str
+    dist_electoral: str
+    condicion: str
+    website: HttpUrl
+    image: str
+
+    @field_validator("image", mode="after")
+    @classmethod
+    def is_png(cls, value: str) -> str:
+        """
+        Validates that the attached image is formatted as a png file.
+        Idea from: https://github.com/pydantic/pydantic/discussions/10510
+        """
+        if not value.startswith("data:image/png;base64,"):
+            raise ValueError(f"{value} is not an even number")
+        return value
+
+
+def test_active_endpoint():
+    """
+    Check that the endpoint returns a repsonse active when hit with a valid
+    request
+    """
+    response = client.get("/v1/congresistas/1109")
+    assert response.status_code == 200, "Endpoint does not return a valid response"
+    data = response.json()
+    assert data not in [{}, "", None, []], "Response body is empty"
+
+
+def test_response_matches_model():
+    """
+    Validate response using the declared Pydantic model
+    """
+    response = client.get("/v1/congresistas/1109")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["data"]  # Check it's not an empty response object
+    try:
+        CongresistaDetail(**data["data"])
+    except ValidationError:
+        pytest.fail("Response does not match expected data model")
+
+
+@pytest.mark.parametrize("congresista_id, response_code", [(1110, 404), ("abc", 422)])
+def test_invalid_path(congresista_id, response_code):
+    """
+    Check API returns appropriate response codes for path parameteres.
+
+    Note: FastAPI default behavior is to redirect /v1/congresistas/ to
+        /v1/congresista, so not test is needed for an empty response.
+    """
+    response = client.get(f"/v1/congresistas/{congresista_id}")
+    assert response.status_code == response_code, "Unexpected response code"
+    assert response.json()["detail"], "Missing error detail"

@@ -247,5 +247,6 @@ async def congresista_detail(congresista_id: Annotated[int, Path()]):
         "dist_electoral": "Lambayeque",
         "condicion": "en Ejercicio",
         "website": "https://www.congreso.gob.pe/congresistas2021/GrimanezaAcuna/",
+        "image": "data:image/png;base64,testing_str",
     }
     return {"data": data}
