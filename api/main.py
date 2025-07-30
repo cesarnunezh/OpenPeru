@@ -126,7 +126,7 @@ async def events(
                 "step_date": "2025-02-21",
                 "step_details": "LEY QUE DECLARA DE NECESIDAD PÚBLICA E INTERÉS NACIONAL LA CREACIÓN DE LA UNIVERSIDAD NACIONAL SOBERANA Y ETNOLINGÜÍSTICA DEL BAJO URUBAMBA - UNSELBU",
                 "vote_event_id": None,
-                "vote_sum": {},
+                "vote_sum": None,  # TODO: Figure out if this is the right convention for optionality
                 "votes": [],
             },
             {
@@ -135,7 +135,7 @@ async def events(
                 "step_date": "2025-02-24",
                 "step_details": "Entre Presupuesto y Cuenta General de la República; Educación, Juventud y Deporte",
                 "vote_event_id": None,
-                "vote_sum": {},
+                "vote_sum": None,
                 "votes": [],
             },
             {
@@ -144,7 +144,7 @@ async def events(
                 "step_date": "2025-02-21",
                 "step_details": "Vote in resupuesto y Cuenta General de la República; Educación, Juventud y Deporte",
                 "vote_event_id": "2021_10307_3",
-                "vote_sum": {"Yes": 1, "No": 1, "Absent": 1},
+                "vote_sum": {"yes": 1, "no": 1, "absent": 1},
                 "votes": [
                     {"congresista_id": 1109, "option": "Yes"},
                     {"congresista_id": 1099, "option": "No"},
