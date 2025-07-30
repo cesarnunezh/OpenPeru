@@ -7,6 +7,25 @@ app = FastAPI()
 
 
 #######################################
+# Set up CORS and Security
+#######################################
+# TODO: When relevant
+# from fastapi.middleware.cors import CORSMiddleware
+#
+# origins = [
+#     "http://localhost",
+#     "http://localhost:8080",
+# ]
+#
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=origins,
+#     allow_credentials=False, # No log-in anticipatd, manually specify
+#     allow_methods=["GET"], # Currently only allowing GET requests
+#     allow_headers=[], # Disallow headers, as only serving static pages
+# )
+
+#######################################
 # Request validation
 #######################################
 # TODO: Create Pydantic models for the request validation
