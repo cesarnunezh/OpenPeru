@@ -41,6 +41,7 @@ async def bills(
             "coauthors": [1039, 1062, 1129, 1126, 1032],
             "leg_period": "2021-2026",
             "last_action_date": "2025-02-21",
+            "presentation_date": "2024-02-21",
         },
         {
             "bill_id": "2021_10301",
@@ -51,6 +52,7 @@ async def bills(
             "coauthors": [1158, 1115],
             "leg_period": "2021-2026",
             "last_action_date": "2025-02-24",
+            "presentation_date": "2024-02-23",
         },
         {
             "bill_id": "2021_10307",
@@ -61,6 +63,7 @@ async def bills(
             "coauthors": [1099, 1115],
             "leg_period": "2021-2026",
             "last_action_date": "2024-09-24",
+            "presentation_date": "2024-02-24",
         },
     ]
     return {"data": data}
@@ -205,6 +208,7 @@ async def congresistas(
     return {"data": data}
 
 
+# TODO: Add picture + multiple years
 @app.get("/v1/congresistas/{congresista_id}", tags=["Congresistas"])
 async def congresista_detail(congresista_id: Annotated[int, Path()]):
     """

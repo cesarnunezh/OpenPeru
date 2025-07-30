@@ -19,6 +19,7 @@ class Bill(BaseModel):
     coauthors: List[int]
     leg_period: str = Field(..., pattern=r"([1-2]\d{3}\-[1-2]\d{3})")
     last_action_date: date
+    presentation_date: date
 
 
 def test_active_endpoint():
