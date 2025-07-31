@@ -7,6 +7,10 @@ import pytest
 
 client = TestClient(app)
 
+VERSION = "v1"
+ENDPOINT_NAME = "bills"
+TEST_OBS = "2021_10300"
+
 
 # TODO: Modify to use shared response format
 class BillDetail(BaseModel):
@@ -30,7 +34,7 @@ def test_active_endpoint():
     Check that the endpoint returns a repsonse active when hit with a valid
     request
     """
-    response = client.get("/v1/bills/2021_10300")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}/{TEST_OBS}")
     assert response.status_code == 200, "Endpoint does not return a valid response"
     data = response.json()
     assert data not in [{}, "", None, []], "Response body is empty"
@@ -40,7 +44,7 @@ def test_response_matches_model():
     """
     Validate response using the declared Pydantic model
     """
-    response = client.get("/v1/bills/2021_10300")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}/{TEST_OBS}")
     assert response.status_code == 200
     data = response.json()
     assert data["data"]  # Check it's not an empty response object
@@ -55,6 +59,6 @@ def test_invalid_path(bill_id, response_code):
     """
     Check API returns appropriate response codes for path parameteres.
     """
-    response = client.get(f"/v1/bills/{bill_id}")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}/{bill_id}")
     assert response.status_code == response_code, "Unexpected response code"
     assert response.json()["detail"], "Missing error detail"

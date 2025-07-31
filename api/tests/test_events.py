@@ -7,6 +7,10 @@ import pytest
 
 client = TestClient(app)
 
+VERSION = "v1"
+ENDPOINT_NAME = "events"
+TEST_QUERY = "bill_id=2021_10307"
+
 
 # SUggested approach from: https://stackoverflow.com/a/68726632
 # TODO: Modify to use shared response format
@@ -36,7 +40,7 @@ def test_active_endpoint():
     Check that the endpoint returns a repsonse active when hit with a valid
     request
     """
-    response = client.get("/v1/events?bill_id=2021_10300")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}?{TEST_QUERY}")
     assert response.status_code == 200, "Endpoint does not return a valid response"
     data = response.json()
     assert data not in [{}, "", None, []], "Response body is empty"
@@ -48,7 +52,7 @@ def test_response_matches_model():
 
     Assumes that any bill_id would have to at least on event.
     """
-    response = client.get("/v1/events?bill_id=2021_10307")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}?{TEST_QUERY}")
     assert response.status_code == 200
     data = response.json()
     assert data["data"]["bill_id"] == "2021_10307"
@@ -78,15 +82,5 @@ def test_query_params(query_str):
     """
     Validates the query parameters used
     """
-    response = client.get(f"/v1/events?{query_str}")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}?{query_str}")
     assert response.status_code == 200, f"Failed with {query_str}"
-
-
-# TODO: Set-up extra forbidden query params
-# def test_invalid_query_params():
-#    """
-#    Check API returns 422 if an unexpected query param is provided
-#    """
-#    response = client.get("/v1/bills?fakequery=fake")
-#    assert response.status_code == 422, "Unexpected response code"
-#    assert response.json()["detail"], "Missing error detail"

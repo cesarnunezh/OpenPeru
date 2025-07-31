@@ -5,6 +5,9 @@ import pytest
 
 client = TestClient(app)
 
+VERSION = "v1"
+ENDPOINT_NAME = "congresistas"
+
 
 # SUggested approach from: https://stackoverflow.com/a/68726632
 # TODO: Modify to use shared response format
@@ -23,7 +26,7 @@ def test_active_endpoint():
     Check that the endpoint returns a repsonse active when hit with a valid
     request
     """
-    response = client.get("/v1/congresistas")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}")
     assert response.status_code == 200, "Endpoint does not return a valid response"
     data = response.json()
     assert data not in [{}, "", None, []], "Response body is empty"
@@ -33,7 +36,7 @@ def test_response_matches_model():
     """
     Validate response using the declared Pydantic model
     """
-    response = client.get("/v1/congresistas")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}")
     assert response.status_code == 200
     data = response.json()
     assert len(data) > 0
@@ -55,15 +58,5 @@ def test_query_params(query_str):
     """
     Validates the query parameters used
     """
-    response = client.get(f"/v1/congresistas?{query_str}")
+    response = client.get(f"/{VERSION}/{ENDPOINT_NAME}?{query_str}")
     assert response.status_code == 200, f"Failed with {query_str}"
-
-
-# TODO: Set-up extra forbidden query params
-# def test_invalid_query_params():
-#    """
-#    Check API returns 422 if an unexpected query param is provided
-#    """
-#    response = client.get("/v1/bills?fakequery=fake")
-#    assert response.status_code == 422, "Unexpected response code"
-#    assert response.json()["detail"], "Missing error detail"
