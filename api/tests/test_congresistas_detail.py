@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 from pydantic import ValidationError, BaseModel, HttpUrl
-from main import app
+from ..main import app
 import pytest
 
 client = TestClient(app)

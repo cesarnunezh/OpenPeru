@@ -1,7 +1,7 @@
 from datetime import date
 from fastapi.testclient import TestClient
 from pydantic import ValidationError, BaseModel, Field
-from main import app
+from ..main import app
 from typing import List
 import pytest
 
