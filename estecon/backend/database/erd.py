@@ -12,4 +12,4 @@ engine = create_engine(
 Base.metadata.create_all(engine)
 
 
-render_er(Base, "estecon/backend/database/schema_graph.png")
+render_er(Base, 'estecon/backend/database/schema_graph.png')
