@@ -1,4 +1,4 @@
-name: Lint and format (ruff)
+name: Lint (ruff)
 
 on: [ push, pull_request ]
 
@@ -21,10 +21,7 @@ jobs:
             args: check --fix
         continue-on-error: true
 
-      - name: Format
-        run: ruff format
-
       - name: Commit Ruff fixes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-            commit_message: 'chore: apply ruff linting and formatting fixes'
+            commit_message: 'chore: apply ruff linting fixes'
