@@ -14,6 +14,19 @@ PARTIES = [" AP ", " AP-PIS ", " APP ", " BM ", " BDP ", " BOP ", " BS ", " BSS 
             " E "," FP ", " HYD ", " JP ", " IJPP-VP "," JPP-VP ", " NA ", " NP ", 
             " PL ", " PLG ", " PM ", " PP ", " SP ", " sP ", " RP ", " 8S ", " 8M "] 
 
+# Dictionary to avoid creation of duplicate parties objects
+PARTY_ALIASES = {
+    'Alianza para el Progreso': "Alianza para el Progreso del Perú",
+    "Somos Perú": "Partido Democrático Somos Perú",
+    'Frente Amplio' : 'Frente Amplio por Justicia, Vida y Libertad',
+    'Frente Popular Agrícola del Perú' : "Frente Popular Agrícola FIA del Perú",
+    'No Agrupado': "Ninguno",
+    'No ha acreditado': "Ninguno",
+    'No registrado' : "Ninguno",
+    'Alianza Solidaridad Nacional' : 'Solidaridad Nacional',
+    'Unión por el Perú' : 'Unión por el Perú - Social Democracia'
+}
+
 class VoteOption(str, Enum):
     SI = "si"
     NO = "no"
@@ -115,7 +128,6 @@ class RoleOrganization(str, Enum):
     
 
 class TypeOrganization(str, Enum):
-    BANCADA = "bancada"
     COMMITTEE = "committee"
     JUNTA_DE_PORTAVOCES = "junta de portavoces"
     MESA_DIRECTIVA = "mesa directiva"
