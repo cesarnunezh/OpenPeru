@@ -13,48 +13,57 @@ PARTY_COUNTER = 1
 semaphore = asyncio.Semaphore(10)
 timeout = httpx.Timeout(20.0, connect=10.0)
 
+
 def normalize_party_name(name: str) -> str:
     if name in PARTY_ALIASES.keys():
         canonical_name = PARTY_ALIASES[name]
         return canonical_name
     return name
 
+
 def get_or_create_party(party_name: str, leg_period: LegPeriod) -> Party:
     global PARTY_ID_MAP, PARTY_COUNTER
     if not party_name:
         party_name = "Ninguno"
-    
+
     norm_name = normalize_party_name(party_name)
     leg_key = leg_period.name
-    
+
     if norm_name not in PARTY_ID_MAP[leg_key].keys():
         party_id = PARTY_COUNTER
         PARTY_ID_MAP[leg_key][norm_name] = party_id
         PARTY_COUNTER += 1
         logger.info(f"New Party created: {norm_name} with ID {party_id}")
-        return Party(
-            leg_period=leg_period,
-            party_id=party_id,
-            party_name=norm_name
-        )
+        return Party(leg_period=leg_period, party_id=party_id, party_name=norm_name)
     return Party(
         leg_period=leg_period,
         party_id=PARTY_ID_MAP[leg_key][norm_name],
-        party_name=party_name
+        party_name=party_name,
     )
-    
-def get_dict_periodos(url: str) -> Dict[str,str]:
+
+
+def get_dict_periodos(url: str) -> Dict[str, str]:
     parse = parse_url(url)
     periodos = parse.xpath('//*[@name="idRegistroPadre"]/option')
-    return {elem.text: elem.get('value') for elem in periodos}
+    return {elem.text: elem.get("value") for elem in periodos}
 
-def get_links_congres(url: str, params:dict) -> List[str]:
+
+def get_links_congres(url: str, params: dict) -> List[str]:
     parse = parse_url(url, params)
-    links = parse.xpath('//*[@class="congresistas"]//tr//td//*[@class="conginfo"]/@href')
+    links = parse.xpath(
+        '//*[@class="congresistas"]//tr//td//*[@class="conginfo"]/@href'
+    )
     return [elem for elem in links]
 
+
 # Async version can be implemented later if needed
-async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_link: str, leg_period: LegPeriod, retries: int = 3) -> Tuple[Congresista, Party]:
+async def get_cong_party_info(
+    client: httpx.AsyncClient,
+    base_url: str,
+    cong_link: str,
+    leg_period: LegPeriod,
+    retries: int = 3,
+) -> Tuple[Congresista, Party]:
     url = base_url + cong_link
     for attempt in range(retries):
         try:
@@ -73,10 +82,15 @@ async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_lin
                     leg_period=leg_period,
                     nombre=xpath2('//*[@class="nombres"]/span[2]', tree),
                     party_id=party.party_id,
-                    votes_in_election=int(xpath2('//*[@class="votacion"]/span[2]', tree).replace(",", "").replace("'","")),
+                    votes_in_election=int(
+                        xpath2('//*[@class="votacion"]/span[2]', tree)
+                        .replace(",", "")
+                        .replace("'", "")
+                    ),
                     dist_electoral=xpath2('//*[@class="representa"]/span[2]', tree),
-                    condicion=xpath2('//*[@class="condicion"]/span[2]', tree) or "Desconocido",
-                    website=web_site[0] if web_site else None
+                    condicion=xpath2('//*[@class="condicion"]/span[2]', tree)
+                    or "Desconocido",
+                    website=web_site[0] if web_site else None,
                 )
                 return congresista, party
         except httpx.ReadTimeout:
@@ -90,23 +104,28 @@ async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_lin
             break
     return None, None
 
-async def get_cong_party_list(base_url: str = URL['congresistas']) -> Tuple[List[Congresista], List[Party]]:
+
+async def get_cong_party_list(
+    base_url: str = URL["congresistas"],
+) -> Tuple[List[Congresista], List[Party]]:
     congresistas = []
     partidos = []
 
     async with httpx.AsyncClient(verify=False) as client:
         periodos = get_dict_periodos(base_url)
         for periodo, valor in periodos.items():
-            links = get_links_congres(base_url, {'idRegistroPadre': valor})
+            links = get_links_congres(base_url, {"idRegistroPadre": valor})
             logger.info(f"Scraping {len(links)} congresistas for the period: {periodo}")
 
             leg_period_enum = LegPeriod(periodo)
-            tasks = [get_cong_party_info(client, base_url, link, leg_period_enum) for link in links]
+            tasks = [
+                get_cong_party_info(client, base_url, link, leg_period_enum)
+                for link in links
+            ]
             results = await asyncio.gather(*tasks, return_exceptions=True)
 
             filtered_results = [
-                r for r in results
-                if isinstance(r, tuple) and r[0] is not None
+                r for r in results if isinstance(r, tuple) and r[0] is not None
             ]
 
             congresistas.extend([r[0] for r in filtered_results])

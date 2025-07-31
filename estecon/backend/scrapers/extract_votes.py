@@ -11,21 +11,24 @@ from jellyfish import jaro_winkler_similarity as jws
 from backend import PARTIES, VOTE_RESULTS
 import re
 
-TESSERACT_PATH = os.environ.get('TESSERACT_PATH')
+TESSERACT_PATH = os.environ.get("TESSERACT_PATH")
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
+
 def extract_text_from_page(page):
-    '''
+    """
     Extract text from a single PDF page using Tesseract OCR.
     Args:
         page: A PyMuPDF page object.
-    '''
-    pix = page.get_pixmap(dpi = 300)
-    img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)
+    """
+    pix = page.get_pixmap(dpi=300)
+    img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(
+        pix.height, pix.width, pix.n
+    )
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     _, thresh = cv2.threshold(gray, 180, 255, cv2.TRHES_BINARY)
     pil_img = Image.fromarray(thresh)
-    text = pytesseract.image_to_string(pil_img, lang = 'spa', config='--psm 6')
+    text = pytesseract.image_to_string(pil_img, lang="spa", config="--psm 6")
     return text
 
 
@@ -46,13 +49,14 @@ def render_pdf(pdf_url: str) -> str:
 
             attendance_text = extract_text_from_page(attendance_page)
             votes_text = extract_text_from_page(votes_page)
-            
+
     return attendance_text, votes_text
 
+
 def extract_bancadas():
-    '''
-    '''
+    """ """
     pass
+
 
 def extract_text(text: str, initial: str = None, final: str = None) -> str:
     """
@@ -79,9 +83,10 @@ def extract_text(text: str, initial: str = None, final: str = None) -> str:
     else:
         return result.group(1)
 
+
 def find_bill(pdf_file: BytesIO, bill_desc: str) -> str:
     """
-    Extract the vote pages associated with a specific bill from the daily parliament 
+    Extract the vote pages associated with a specific bill from the daily parliament
     agenda.
     """
     bill_page = 0
@@ -106,7 +111,7 @@ def text_to_votes(vote_page: str, bill_id: int) -> list[Vote]:
     vote_page = vote_page.replace("\n", " ")
 
     sorted_parties = sorted(PARTIES, key=len, reverse=True)
-    pattern = r'(?=' + '|'.join(re.escape(party) for party in sorted_parties) + r')'
+    pattern = r"(?=" + "|".join(re.escape(party) for party in sorted_parties) + r")"
 
     politician_list = re.split(pattern, vote_page)
 
@@ -115,22 +120,22 @@ def text_to_votes(vote_page: str, bill_id: int) -> list[Vote]:
     for string in politician_list:
         if string[:4] or string[:5] in sorted_parties:
             string_list.append(string[1:])
-    
+
     string_list = string_list[1:131]
 
-    #string_list[129] = string_list[129].split("¿")[0].strip()
+    # string_list[129] = string_list[129].split("¿")[0].strip()
 
     vote_list = []
     for politician_vote in string_list:
         vote_as_list = re.split(", | ", politician_vote)
-        
+
         # Extracting the party
         party = vote_as_list[0]
 
         # Extracting politician name
         potential_name = vote_as_list[1:5]
 
-        # Condition to deal with politicians without middle name 
+        # Condition to deal with politicians without middle name
         if len(potential_name[3]) > 3:
             first = potential_name[:2]
             last = potential_name[2:]
@@ -147,7 +152,7 @@ def text_to_votes(vote_page: str, bill_id: int) -> list[Vote]:
             if entry in VOTE_RESULTS:
                 option = entry
                 break
-        
+
         # vote_list.append(Vote(
         #     vote_event_id,
         #     voter_id,
