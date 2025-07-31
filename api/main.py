@@ -33,8 +33,13 @@ app = FastAPI()
 
 
 #######################################
-# API endpoint
+# API endpoints
 #######################################
+@app.get("/")
+async def home():
+    return {"data": "Hello world"}
+
+
 @app.get("/v1/bills", tags=["Bills"])
 async def bills(
     status: Annotated[str | None, Query()] = None,
