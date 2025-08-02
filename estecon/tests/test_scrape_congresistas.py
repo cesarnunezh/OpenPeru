@@ -5,7 +5,7 @@ from estecon.backend import LegPeriod, PARTY_ALIASES
 from estecon.backend.scrapers import scrape_congresistas as sc
 from estecon.backend.scrapers.scrape_congresistas import (
     get_cong_party_info, normalize_party_name, get_or_create_party,
-    get_dict_periodos, get_links_congres
+    get_dict_periodos, get_links_congres, split_names
 )
 from estecon.backend.scrapers.schema import Congresista, Party
 
@@ -61,13 +61,58 @@ def test_get_links_congres():
     result = get_links_congres("https://fake.congreso.gob.pe", {"idRegistroPadre": "123"})
     assert result == ["/perfil?id=101", "/perfil?id=102"]
 
+def test_split_names_with_3_tokens():
+    lst_names = ['María Acuña Peralta',
+                 'Carlos Alva Rojas',
+                 'Jaime Castillo Mori']
+    
+    splitted_names = [split_names(name) for name in lst_names]
+    assert splitted_names[0] == ("María", "Acuña Peralta")
+    assert splitted_names[1] == ("Carlos", "Alva Rojas")
+    assert splitted_names[2] == ("Jaime", "Castillo Mori")
+
+def test_split_names_with_4_tokens():
+    lst_names = ['María Grimaneza Acuña Peralta',
+                 'Carlos Enrique Alva Rojas',
+                 'Jaime del Castillo Mori']
+    
+    splitted_names = [split_names(name) for name in lst_names]
+    assert splitted_names[0] == ("María Grimaneza", "Acuña Peralta")
+    assert splitted_names[1] == ("Carlos Enrique", "Alva Rojas")
+    assert splitted_names[2] == ("Jaime", "del Castillo Mori")
+
+def test_split_names_with_5_tokens():
+    lst_names = ['María del Carmen Alva Prieto',
+                'Diego Alonso Fernando Bazán Calderón',
+                'Luis Gustavo Cordero Jon Tay',
+                'Juan Carlos Martín Lizarzaburu Lizarzaburu',
+                'Susel Ana María Paredes Piqué']
+    
+    splitted_names = [split_names(name) for name in lst_names]
+    assert splitted_names[0] == ("María del Carmen", "Alva Prieto")
+    assert splitted_names[1] == ("Diego Alonso Fernando", "Bazán Calderón")
+    assert splitted_names[2] == ("Luis Gustavo", "Cordero Jon Tay")
+    assert splitted_names[3] == ("Juan Carlos Martín", "Lizarzaburu Lizarzaburu")
+    assert splitted_names[4] == ("Susel Ana María", "Paredes Piqué")
+
+def test_split_names_with_more_tokens():
+    lst_names = ['María del Pilar Cordero Jon Tay',
+                'Gladys Margot Echaíz Ramos vda de Núñez',
+                'María de los Milagros Jackeline Jáuregui Martínez de Aguayo']
+
+    splitted_names = [split_names(name) for name in lst_names]
+    assert splitted_names[0] == ("María del Pilar", "Cordero Jon Tay")
+    assert splitted_names[1] == ("Gladys Margot", "Echaíz Ramos vda de Núñez")
+    assert splitted_names[2] == ("María de los Milagros Jackeline", "Jáuregui Martínez de Aguayo")
+
+
 @pytest.mark.asyncio
 async def test_get_cong_party_info_success(monkeypatch):
     html = """
     <html>
         <body>
             <div class="grupo"><span></span><span>Partido Prueba</span></div>
-            <div class="nombres"><span></span><span>Juan Pérez</span></div>
+            <div class="nombres"><span></span><span>Juan Alberto Pérez Palma</span></div>
             <div class="votacion"><span></span><span>12,345</span></div>
             <div class="representa"><span></span><span>Lima</span></div>
             <div class="condicion"><span></span><span>Titular</span></div>
@@ -86,7 +131,9 @@ async def test_get_cong_party_info_success(monkeypatch):
             result = await get_cong_party_info(client, "https://fake.congreso.gob.pe", "/perfil?id=123", leg_period)
 
         congresista, party = result
-        assert congresista.nombre == "Juan Pérez"
+        assert congresista.full_name == "Juan Alberto Pérez Palma"
+        assert congresista.first_name == "Juan Alberto"
+        assert congresista.last_name == "Pérez Palma"
         assert congresista.party_id == party.party_id
         assert congresista.votes_in_election == 12345
         assert party.party_name == "Partido Prueba"
@@ -135,7 +182,9 @@ async def test_get_cong_party_list(monkeypatch):
         return (
             Congresista(
                 id=cid,
-                nombre=f"Congresista {cid}",
+                full_name="Juan José Pérez Pérez",
+                first_name="Juan José",
+                last_name="Pérez Pérez",
                 leg_period=leg_period,
                 party_id=1,
                 votes_in_election=12345,

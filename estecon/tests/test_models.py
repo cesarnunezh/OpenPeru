@@ -36,7 +36,9 @@ def test_create_congresista(session):
     congresista = Congresista(
         id=1,
         leg_period=LegPeriod.PERIODO_2021_2026,
-        nombre="Ana Torres",
+        full_name="Ana María Torres Lara",
+        first_name="Ana María",
+        last_name="Torres Lara",
         party_id=100,
         votes_in_election=25000,
         dist_electoral="Lima",
@@ -45,7 +47,9 @@ def test_create_congresista(session):
     )
     session.add(congresista)
     session.commit()
-    assert congresista.nombre == "Ana Torres"
+    assert congresista.full_name == "Ana María Torres Lara"
+    assert congresista.first_name == "Ana María"
+    assert congresista.last_name == "Torres Lara"
 
 def test_create_bill(session):
     bill = Bill(

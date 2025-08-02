@@ -1,4 +1,4 @@
-from pydantic import BaseModel, field_validator, ConfigDict
+from pydantic import BaseModel, field_validator, ConfigDict, model_validator
 from estecon.backend import (VoteOption, AttendanceStatus, BillStepType, RoleTypeBill,
                      LegPeriod, Legislature, LegislativeYear, Proponents,
                      TypeOrganization, RoleOrganization)
@@ -241,7 +241,9 @@ class Congresista(PrintableModel):
 
     Attributes:
         id (str): Unique identifier for the person.
-        nombre (str): Name of the person.
+        full_name (str): Full name of the person (first_name + last_name)
+        first_name (str): First and Middle name of the person
+        last_name (str): Last names of the person
         leg_period (str): Legislative period.
         party_id (str): Unique identifier for the party.
         votes_in_election (int): Number of votes obtain in elections
@@ -252,7 +254,9 @@ class Congresista(PrintableModel):
     # Attributes that fit in Popolo structure
     id: int
     leg_period: LegPeriod
-    nombre: str
+    full_name: str
+    first_name: str
+    last_name: str
     party_id: int
     votes_in_election: int
     dist_electoral: Optional[str]
@@ -261,6 +265,16 @@ class Congresista(PrintableModel):
 
     model_config = ConfigDict(use_enum_values=False)
 
+    @model_validator(mode='after')
+    def check_full_name(cls, model):
+        expected = f"{model.first_name.strip()} {model.last_name.strip()}".strip()
+        if model.full_name.strip() != expected:
+            raise ValueError(
+                f'`full_name` ("{model.full_name}") does not match '
+                f'`first_name` + " " + `last_name` ("{expected}")'
+            )
+        return model
+    
     def __str__(self):
         return '\n'.join(f"{key}: {value}" for key, value in self.model_dump().items()) 
 

@@ -101,14 +101,18 @@ def test_congresista_creation():
     congresista = Congresista(
         id=1,
         leg_period=LegPeriod.PERIODO_2021_2026,
-        nombre="Juan Pérez",
+        full_name="Juan Jose Pérez Torres",
+        first_name="Juan Jose",
+        last_name="Pérez Torres",
         party_id=5,
         votes_in_election=25000,
         dist_electoral="Lima",
         condicion="Activo",
         website="http://congreso.gob.pe/juanperez"
     )
-    assert congresista.nombre == "Juan Pérez"
+    assert congresista.full_name == "Juan Jose Pérez Torres"
+    assert congresista.first_name == "Juan Jose"
+    assert congresista.last_name == "Pérez Torres"
 
 def test_organization_creation():
     org = Organization(
