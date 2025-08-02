@@ -5,7 +5,7 @@ from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta
 from estecon.backend.database.models import (
     Base, Vote, VoteEvent, VoteCounts, Attendance, Bill, BillCongresistas,
-    BillCommittees, BillStep, Committee, Congresista, Organization, Membership,
+    BillCommittees, BillStep, Congresista, Organization, Membership,
     VoteOption, AttendanceStatus, BillStepType, RoleTypeBill, Proponents,
     LegPeriod, Legislature, LegislativeYear, TypeOrganization, RoleOrganization
 )
@@ -146,12 +146,13 @@ def test_bill_congresistas(session):
     assert relation.role_type == RoleTypeBill.COAUTHOR
 
 def test_bill_committees(session):
-    committee = Committee(
+    committee = Organization(
         leg_period=LegPeriod.PERIODO_2021_2026,
         leg_year=LegislativeYear.YEAR_2022,
-        org_id=1,
-        id=100,
-        name="Comisión de Economía"
+        org_id=2,
+        org_name="Comisión de Economía",
+        org_type = TypeOrganization.COMMITTEE,
+        org_url = "www.organization.example"
     )
     session.add(committee)
     session.commit()
