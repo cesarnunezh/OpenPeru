@@ -181,6 +181,7 @@ data/bill_jsons/*.json
 data/ocr_cache/*.txt
 *.db
 *.csv
+*.ipynb
 
 # DS_Store
 .DS_Store

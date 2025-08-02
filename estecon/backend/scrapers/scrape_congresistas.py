@@ -53,6 +53,45 @@ def get_links_congres(url: str, params:dict) -> List[str]:
     links = parse.xpath('//*[@class="congresistas"]//tr//td//*[@class="conginfo"]/@href')
     return [elem for elem in links]
 
+def split_names(full_name: str) -> Tuple[str, str]:
+    """
+    Function that splits the full name into first_name and last_name. It assumes
+    that 
+    """
+    _PARTICLES = {"de", "del"}
+    tokens = re.sub(r"\s+", " ", full_name.strip()).split(" ")
+    n = len(tokens)
+    # 3 tokens: 1 first, 2 last
+    if n == 3:
+        return tokens[0], " ".join(tokens[1:])
+    # 4 tokens
+    if n == 4:
+        if tokens[1].lower() in _PARTICLES:
+            return tokens[0], " ".join(tokens[1:])
+        return " ".join(tokens[:2]), " ".join(tokens[2:])
+    # 5 tokens
+    if n == 5:
+        if tokens[1].lower() in _PARTICLES:
+            return " ".join(tokens[:3]), " ".join(tokens[3:])
+        # special case for Luis Gustavo
+        if tokens[0] == "Luis" and tokens[1] == "Gustavo":
+            return " ".join(tokens[:2]), " ".join(tokens[2:])
+        return " ".join(tokens[:3]), " ".join(tokens[3:])
+    # >5 tokens
+    if n > 5:
+        if tokens[1].lower() in _PARTICLES:
+            if tokens[2].lower() in {"la", "las", "los"}:
+                # include all given name tokens up until last 4 surname tokens
+                first_count = n - 4
+            else:
+                # standard particle-case: first three tokens
+                first_count = 3
+            return " ".join(tokens[:first_count]), " ".join(tokens[first_count:])
+        # default: first two tokens as given, rest as surname
+        return " ".join(tokens[:2]), " ".join(tokens[2:])
+    # fallback
+    return full_name, ""
+
 # Async version can be implemented later if needed
 async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_link: str, leg_period: LegPeriod, retries: int = 3) -> Tuple[Congresista, Party]:
     url = base_url + cong_link
@@ -68,10 +107,14 @@ async def get_cong_party_info(client: httpx.AsyncClient, base_url: str, cong_lin
                 party = get_or_create_party(party_name, leg_period)
                 web_site = tree.xpath('//*[@class="web"]/span[2]/a/@href')
 
+                full_name = xpath2('//*[@class="nombres"]/span[2]', tree)
+                first, last = split_names(full_name)
                 congresista = Congresista(
                     id=id,
                     leg_period=leg_period,
-                    nombre=xpath2('//*[@class="nombres"]/span[2]', tree),
+                    full_name=full_name,
+                    first_name=first,
+                    last_name=last,
                     party_id=party.party_id,
                     votes_in_election=int(xpath2('//*[@class="votacion"]/span[2]', tree).replace(",", "").replace("'","")),
                     dist_electoral=xpath2('//*[@class="representa"]/span[2]', tree),
