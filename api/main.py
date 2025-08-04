@@ -295,12 +295,12 @@ async def congresista_detail(congresista_id: Annotated[int, Path()]):
             status_code=404, detail="Test API requires congresista 1109"
         )
     data = {
-        "id": "1109",
+        "id": 1109,
         "nombre": "María Grimaneza Acuña Peralta",
-        "votation": "11,384",
+        "votes_in_election": 11384,
         "leg_period": "Parlamentario 2021 - 2026",
         "party_name": "Alianza para el Progreso",
-        "bancada_name": "ALIANZA PARA EL PROGRESO",
+        "party_id": 1,
         "dist_electoral": "Lambayeque",
         "condicion": "en Ejercicio",
         "website": "https://www.congreso.gob.pe/congresistas2021/GrimanezaAcuna/",
