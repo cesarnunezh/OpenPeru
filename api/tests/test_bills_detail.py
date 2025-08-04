@@ -1,8 +1,7 @@
-from datetime import date
 from fastapi.testclient import TestClient
-from pydantic import ValidationError, BaseModel, Field
-from ..main import app
-from typing import List
+from pydantic import ValidationError
+from api.main import app
+from estecon.backend.scrapers.schema import Bill
 import pytest
 
 client = TestClient(app)
@@ -10,23 +9,6 @@ client = TestClient(app)
 VERSION = "v1"
 ENDPOINT_NAME = "bills"
 TEST_OBS = "2021_10300"
-
-
-# TODO: Modify to use shared response format
-class BillDetail(BaseModel):
-    bill_id: str = Field(..., pattern=r"\d{4}_\d{5}")
-    status: str
-    title: str
-    summary: str
-    author_id: int
-    coauthors: List[int]
-    leg_period: str = Field(..., pattern=r"([1-2]\d{3}\-[1-2]\d{3})")
-    last_action_date: date
-    presentation_date: date
-    complete_text: str
-    bancada_id: int
-    bancada_name: str
-    bill_approved: bool
 
 
 def test_active_endpoint():
@@ -49,7 +31,7 @@ def test_response_matches_model():
     data = response.json()
     assert data["data"]  # Check it's not an empty response object
     try:
-        BillDetail(**data["data"])
+        Bill(**data["data"])
     except ValidationError:
         pytest.fail("Response does not match expected data model")
 

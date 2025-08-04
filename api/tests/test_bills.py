@@ -1,28 +1,13 @@
-from datetime import date
 from fastapi.testclient import TestClient
-from pydantic import ValidationError, BaseModel, Field
-from ..main import app
-from typing import List
+from pydantic import ValidationError
+from api.main import app
+from estecon.backend.scrapers.schema import Bill
 import pytest
 
 client = TestClient(app)
 
 VERSION = "v1"
 ENDPOINT_NAME = "bills"
-
-
-# SUggested approach from: https://stackoverflow.com/a/68726632
-# TODO: Modify to use shared response format
-class Bill(BaseModel):
-    bill_id: str = Field(..., pattern=r"\d{4}_\d{5}")
-    status: str
-    title: str
-    summary: str
-    author_id: int
-    coauthors: List[int]
-    leg_period: str = Field(..., pattern=r"([1-2]\d{3}\-[1-2]\d{3})")
-    last_action_date: date
-    presentation_date: date
 
 
 def test_active_endpoint():
