@@ -2,6 +2,7 @@ from datetime import date
 from fastapi.testclient import TestClient
 from pydantic import ValidationError, BaseModel, Field
 from ..main import app
+from estecon.backend.scrapers.schema import Vote, VoteCount
 from typing import List, Optional
 import pytest
 
@@ -12,26 +13,17 @@ ENDPOINT_NAME = "events"
 TEST_QUERY = "bill_id=2021_10307"
 
 
-# SUggested approach from: https://stackoverflow.com/a/68726632
-# TODO: Modify to use shared response format
-class VoteSum(BaseModel):
-    yes: int
-    no: int
-    absent: int
-
-
-class Vote(BaseModel):
-    congresista_id: int
-    option: str
-
-
+# Suggested approach from: https://stackoverflow.com/a/68726632
+# This would combine a step and voteveents as those are stored
+# separately in the data model. To revolve id name conflicts, this
+# specifies the
 class Events(BaseModel):
     step_id: int
     step_type: str
     step_date: date
-    step_details: str
+    step_detail: str
     vote_event_id: Optional[int] = None
-    vote_sum: Optional[VoteSum] = None
+    vote_count: Optional[List[VoteCount]] = None
     votes: Optional[List[Vote]] = Field(default_factory=list)
 
 
@@ -62,8 +54,8 @@ def test_response_matches_model():
             if event[
                 "vote_event_id"
             ]:  # If there's vote event, it pulls in aggrgeations and votes
-                print(event["vote_sum"])
-                VoteSum(**event["vote_sum"])
+                for count in event["vote_count"]:
+                    VoteCount(**count)
                 for vote in event["votes"]:
                     Vote(**vote)
     except ValidationError as e:
