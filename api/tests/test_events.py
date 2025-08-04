@@ -47,7 +47,7 @@ def test_response_matches_model():
     response = client.get(f"/{VERSION}/{ENDPOINT_NAME}?{TEST_QUERY}")
     assert response.status_code == 200
     data = response.json()
-    assert data["data"]["bill_id"] == "2021_10307"
+    assert data["data"]["bill_id"] == "2021_10300"
     try:
         for event in data["data"]["steps"]:
             Events(**event)
