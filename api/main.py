@@ -118,7 +118,11 @@ async def bills_detail(
     ],
 ):
     """
-    Returns detailed information on each bill.
+    Returns detailed information on each bill. This primarily includes the
+    full text of the bill, leaving space for more detailed information on how
+    amendments and history would be included. To preserve the heavier format,
+    the API endpoint here is separate from /bills/ to allow for the different
+    usage.
 
     Requires bill_id parameter.
     """
