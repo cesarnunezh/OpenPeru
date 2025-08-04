@@ -1,24 +1,13 @@
 from fastapi.testclient import TestClient
-from pydantic import ValidationError, BaseModel
-from ..main import app
+from pydantic import ValidationError
+from api.main import app
+from estecon.backend.scrapers.schema import Congresista
 import pytest
 
 client = TestClient(app)
 
 VERSION = "v1"
 ENDPOINT_NAME = "congresistas"
-
-
-# SUggested approach from: https://stackoverflow.com/a/68726632
-# TODO: Modify to use shared response format
-class Congresista(BaseModel):
-    id: int
-    nombre: str
-    leg_period: str
-    party_name: str
-    bancada_name: str
-    dist_electoral: str
-    condicion: str
 
 
 def test_active_endpoint():

@@ -1,7 +1,7 @@
 from datetime import date
 from fastapi.testclient import TestClient
 from pydantic import ValidationError, BaseModel, Field
-from ..main import app
+from api.main import app
 from estecon.backend.scrapers.schema import Vote, VoteCount
 from typing import List, Optional
 import pytest
