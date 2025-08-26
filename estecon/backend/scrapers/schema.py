@@ -175,10 +175,10 @@ class RawBill(PrintableModel):
         steps (str) Information about bill steps
     '''
     id: str
-    general: str
-    congresistas: str
-    committees: str
-    steps: str
+    general: Optional[str] = None
+    committees: Optional[str] = None
+    congresistas: Optional[str] = None
+    steps: Optional[str] = None
     
     
 class Bill(PrintableModel):

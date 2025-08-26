@@ -7,7 +7,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
 import sys 
 import os
-from .schema import RawBill
 
 
 class RawBillScraper:
@@ -93,3 +92,4 @@ class RawBillScraper:
 if __name__ == "__main__":
     scraper = RawBillScraper()
     scraper.scrape_bill("2021", "103")
+    scraper.add_bill_to_db()

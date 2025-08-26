@@ -113,8 +113,6 @@ class RawBill(Base):
     congresistas = Column(String, nullable=True)
     steps = Column(String, nullable=True)
     
-    __table_args__ = (UniqueConstraint('id', name='id'),
-                     )
        
 
 class Bill(Base):
