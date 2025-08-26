@@ -5,9 +5,6 @@ DB_PATH = "sqlite:///./OpenPeru.db"
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
-import sys 
-import os
-from .schema import RawBill
 
 
 class RawBillScraper:
