@@ -1,11 +1,13 @@
 import httpx
-from estecon.backend.database.models import RawBill
-BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/" 
-DB_PATH = "sqlite:///./OpenPeru.db" 
+import json
+from datetime import datetime
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
-import json
+from estecon.backend.database.models import RawBill
+BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/" 
+DB_PATH = "sqlite:///./OpenPeru.db" 
+
 
 class RawBillScraper:
     '''
@@ -36,8 +38,10 @@ class RawBillScraper:
         if resp.status_code == 200:
             data = resp.json()["data"]
             
-            # Initialize raw bill to build 
-            raw_bill = RawBill(id = f"{year}_{bill_number}")
+            # Initialize raw bill with id and timestamp 
+            raw_bill = RawBill(id = f"{year}_{bill_number}",
+                               timestamp = datetime.now() 
+                               )
             
             # Add sections
             for raw_name, attribute_name in self.section_mapping.items():

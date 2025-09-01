@@ -175,6 +175,7 @@ class RawBill(PrintableModel):
         steps (str) Information about bill steps
     '''
     id: str
+    timestamp: datetime
     general: Optional[str] = None
     committees: Optional[str] = None
     congresistas: Optional[str] = None

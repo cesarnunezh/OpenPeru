@@ -108,6 +108,7 @@ class RawBill(Base):
     '''
     __tablename__ = 'raw_bills'
     id = Column(String, primary_key=True)
+    timestamp = Column(DateTime, primary_key=True)
     general = Column(String, nullable=True)
     committees = Column(String, nullable=True)
     congresistas = Column(String, nullable=True)
