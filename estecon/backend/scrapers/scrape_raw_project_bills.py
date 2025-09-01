@@ -1,12 +1,11 @@
 import httpx
-from .schema import RawBill
+from estecon.backend.database.models import RawBill
 BASE_URL = "https://wb2server.congreso.gob.pe/spley-portal-service/" 
 DB_PATH = "sqlite:///./OpenPeru.db" 
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
-import sys 
-import os
+import json
 
 
 class RawBillScraper:
@@ -49,7 +48,7 @@ class RawBillScraper:
                 if attribute_value == "Not Found":
                     return (False, f"{raw_bill.id} - Missing Attribute: {raw_name} ({attribute_name})")
                 else:
-                    setattr(raw_bill, attribute_name, attribute_value)
+                    setattr(raw_bill, attribute_name, json.dumps(attribute_value))
             
             # Successfully built the raw bill! 
             self.raw_bill = raw_bill        
@@ -83,10 +82,6 @@ class RawBillScraper:
         finally:
             # Close Session
             session.close() 
-            
-        
-
-    
         
         
 if __name__ == "__main__":
