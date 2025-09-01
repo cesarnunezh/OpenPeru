@@ -7,7 +7,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
 import json
 
-
 class RawBillScraper:
     '''
     Class to scrape and store raw bill information

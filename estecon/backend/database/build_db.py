@@ -3,9 +3,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 # Import all models from the models.py file
 from .models import (
-    Base, Vote, VoteEvent, VoteCounts, Attendance, RawBill, Bill, 
-    BillCongresistas, BillStep, BillCommittees, Committee, Congresista, 
-    Party, Bancada, Organization, Membership, BancadaMembership
+    Base
 )
 
 def create_database():
@@ -13,7 +11,7 @@ def create_database():
     Create SQLite database with all tables from the models.
     """
     
-    database_url = f"sqlite:///OpenPeru.db"
+    database_url = "sqlite:///OpenPeru.db"
     engine = create_engine(database_url)
     
     try:
