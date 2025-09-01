@@ -95,6 +95,27 @@ class Attendance(Base):
                       Index('ix_attendance_by_event', 'event_id'),
                       Index('ix_attendance_attendee_id', 'attendee_id'))
 
+class RawBill(Base):
+    '''
+    Represents a raw scraped bill in the peruvian parliament.
+
+    Attributes:
+        id (str): Unique identifier for the bill.
+        general (str) Main bill info
+        committees (str) Information about committees
+        congresistas (str) Information about authors and proponents
+        steps (str) Information about bill steps
+    '''
+    __tablename__ = 'raw_bills'
+    id = Column(String, primary_key=True)
+    timestamp = Column(DateTime, primary_key=True)
+    general = Column(String, nullable=True)
+    committees = Column(String, nullable=True)
+    congresistas = Column(String, nullable=True)
+    steps = Column(String, nullable=True)
+    
+       
+
 class Bill(Base):
     '''
     Represents a bill in the peruvian parliament.
