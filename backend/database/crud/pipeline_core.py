@@ -194,6 +194,11 @@ def upsert_congresista(
     existing = find_congresista(db, schema.full_name, schema.website)
     payload = schema.model_dump()
 
+    # Photo fields are managed by the photo sync step, not the scrape payload.
+    # Drop them so re-processing doesn't clobber an existing S3 reference.
+    payload.pop("photo_s3_key", None)
+    payload.pop("photo_fetched_at", None)
+
     return _upsert_model(
         db,
         existing=existing,

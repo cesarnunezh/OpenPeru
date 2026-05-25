@@ -198,7 +198,7 @@ class RawBillDocumentScraper:
         return "/".join(parts)
 
     @staticmethod
-    def _upload_file_to_s3(path: Path, key: str) -> None:
+    def _s3_client_and_bucket() -> tuple["boto3.client", str]:
         bucket = settings.AWS_S3_BUCKET_NAME
         if not bucket:
             raise RuntimeError("AWS_S3_BUCKET_NAME is not configured.")
@@ -212,8 +212,25 @@ class RawBillDocumentScraper:
             client = session.client("s3")
         else:
             client = boto3.client("s3", region_name=settings.AWS_REGION)
+        return client, bucket
 
-        client.upload_file(path.as_posix(), bucket, key)
+    @classmethod
+    def upload_file_to_s3(
+        cls, path: Path, key: str, *, content_type: str | None = None
+    ) -> None:
+        client, bucket = cls._s3_client_and_bucket()
+        extra_args = {"ContentType": content_type} if content_type else None
+        client.upload_file(path.as_posix(), bucket, key, ExtraArgs=extra_args)
+
+    @classmethod
+    def upload_bytes_to_s3(
+        cls, data: bytes, key: str, *, content_type: str | None = None
+    ) -> None:
+        from io import BytesIO
+
+        client, bucket = cls._s3_client_and_bucket()
+        extra_args = {"ContentType": content_type} if content_type else {}
+        client.upload_fileobj(BytesIO(data), bucket, key, ExtraArgs=extra_args)
 
     @staticmethod
     def _download_to_path(url: str, dest: Path) -> bool:

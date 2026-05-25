@@ -439,6 +439,8 @@ class Congresista(PrintableModel):
         dni (str): DNI (Documento Nacional de Identidad) of the person.
         gender (str): Male or Female.
         photo_url (str): Official photo url of the congressperson.
+        photo_s3_key (str | None): S3 key for the downloaded portrait image, when uploaded.
+        photo_fetched_at (datetime | None): Timestamp of the last successful photo download/upload.
         website (str): Official website of the congressperson.
     """
 
@@ -448,6 +450,8 @@ class Congresista(PrintableModel):
     dni: str | None = None
     gender: str | None = None
     photo_url: str
+    photo_s3_key: str | None = None
+    photo_fetched_at: datetime | None = None
     website: str
 
     @field_validator("gender", mode="before")
