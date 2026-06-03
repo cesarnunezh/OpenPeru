@@ -1,5 +1,4 @@
 from pathlib import Path
-from types import SimpleNamespace
 
 import pytest
 import httpx
@@ -304,7 +303,7 @@ def test_render_pdf_uses_extract_text_from_page(monkeypatch):
     def fake_fitz_open(stream=None, filetype=None):
         return FakeDoc()
 
-    monkeypatch.setattr(u, "fitz", SimpleNamespace(open=fake_fitz_open))
+    monkeypatch.setattr(u.fitz, "open", fake_fitz_open)
 
     # Make extract_text_from_page return deterministic text
     calls = []
@@ -315,10 +314,9 @@ def test_render_pdf_uses_extract_text_from_page(monkeypatch):
 
     monkeypatch.setattr(u, "extract_text_from_page", fake_extract)
 
-    text_dict = u.render_pdf("https://example.com/fake.pdf")
+    text = u.render_pdf("https://example.com/fake.pdf")
 
     # Should have been called twice (2 pages)
     assert len(calls) == 2
     # And the final text should contain both page texts
-    assert text_dict[0].strip() == "PAGE_TEXT"
-    assert text_dict[1].strip() == "PAGE_TEXT"
+    assert text.strip() == "PAGE_TEXT PAGE_TEXT"

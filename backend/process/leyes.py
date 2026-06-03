@@ -6,6 +6,7 @@ from backend.process.schema import Ley
 
 
 def process_leyes(raw_ley: RawLey) -> Ley | None:
+
     html = fromstring(raw_ley.data)
 
     try:

@@ -1,52 +1,18 @@
-from sqlalchemy import (
-    Index,
-    PrimaryKeyConstraint,
-    ForeignKeyConstraint,
-)
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, Index
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.sql import expression
 from sqlalchemy.inspection import inspect
-from datetime import datetime
-from backend.database.models import Base
+
+Base = declarative_base()
 
 
 class RawBase(Base):
     __abstract__ = True
 
-    # Common columns for all the tables
-    timestamp: Mapped[datetime] = mapped_column(nullable=False)
-    last_update: Mapped[bool] = mapped_column(
-        nullable=False, server_default=expression.false(), default=False
-    )
-    changed: Mapped[bool] = mapped_column(
-        nullable=False, server_default=expression.false(), default=False
-    )
-    processed: Mapped[bool] = mapped_column(
-        nullable=False, server_default=expression.false(), default=False
-    )
-
     # Columns to ignore in ALL raw models
-    _ignore_eq = {"id", "timestamp", "last_update", "changed", "processed"}
+    _ignore_eq = ["timestamp", "last_update", "changed", "processed"]
 
     def __eq__(self, other):
-        """
-        Compare two model instances for value-based equality.
-
-        In this case, we are considering two objects equal when they are instances
-        of the same class and all column values match, excluding any columns listed
-        in `_ignore_eq`.
-
-        This is useful when we want to determine whether two records represent
-        the same underlying data and flag the changes accordingly in the raw ingestion.
-
-        Args:
-            other: Another object to compare against.
-
-        Returns:
-            bool: True if both objects are the same model type and all
-            non-ignored column values are equal, otherwise False.
-        """
-
         if not isinstance(other, self.__class__):
             return False
 
@@ -64,63 +30,37 @@ class RawBase(Base):
     __hash__ = None
 
 
-class RawBancada(RawBase):
-    """
-    Represents a raw scraped of all bancadas in the peruvian parliament with its
-    congressmembers that belongs to them.
-
-    Attributes:
-        id (str): Unique identifier for the bancada.
-        leg_period (str): Legislative period
-        raw_html (str): Html text
-        timestamp (datetime): timestamp of the scraping task
-        last_update (bool): Column that indicates if this tuple is the last update for the bill_id
-        changed (bool): Column that indicates if the last update has any difference from the previous update
-        processed (bool): Column that indicates if the last update with changes have been updated
-    """
-
-    __tablename__ = "raw_bancadas"
-
-    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    legislative_period: Mapped[str] = mapped_column(nullable=False)
-    raw_html: Mapped[str] = mapped_column(nullable=False)
-
-
 class RawBill(RawBase):
     """
     Represents a raw scraped bill in the peruvian parliament.
 
     Attributes:
         id (str): Unique identifier for the bill.
+        timestamp (datetime): timestamp of the scraping task
         general (str): Main bill info
         committees (str) Information about committees
         congresistas (str) Information about authors and proponents
         steps (str) Information about bill steps
-        api_url (str): Congress internal API to fetch.
-        timestamp (datetime): timestamp of the scraping task
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
     """
 
     __tablename__ = "raw_bills"
-
-    id: Mapped[str] = mapped_column(nullable=False)
-    general: Mapped[str] = mapped_column(nullable=True)
-    committees: Mapped[str] = mapped_column(nullable=True)
-    congresistas: Mapped[str] = mapped_column(nullable=True)
-    steps: Mapped[str] = mapped_column(nullable=True)
-    api_url: Mapped[str | None] = mapped_column(nullable=True)
-
-    __table_args__ = (
-        PrimaryKeyConstraint("id", "timestamp", name="pk_raw_bills"),
-        Index(
-            "ix_raw_bills_pipeline",
-            "id",
-            "last_update",
-            "changed",
-            "processed",
-        ),
+    id = Column(String, primary_key=True)
+    timestamp = Column(DateTime, primary_key=True)
+    general = Column(String, nullable=True)
+    committees = Column(String, nullable=True)
+    congresistas = Column(String, nullable=True)
+    steps = Column(String, nullable=True)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
     )
 
 
@@ -129,14 +69,14 @@ class RawBillDocument(RawBase):
     Raw documents url and text content extracted by scrape_raw_bills_documents.py
 
     Attributes:
-        bill_id (str): Unique identifier for the bill.
-        step_id (str): Event to which the document is related to.
-        file_id (str): id related to the document
-        step_date (datetime): date of the event related to the document
-        url (str): complete document's url (congress website).
-        s3_key (str): s3_key that maps the location of the document on the AWS S3 Bucket
-        local_path (str): local path where the document is located.
+        id (str): Unique identifier for raw document.
         timestamp (datetime): timestamp of the scraping task
+        bill_id (str): Unique identifier for the bill.
+        step_date (datetime): date of the event related to the document
+        seguimiento_id (str): Event to which the document is related to.
+        archivo_id (str): id related to the document
+        url (str): complete document's url.
+        text (str): extracted text from the pdf
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
@@ -144,68 +84,35 @@ class RawBillDocument(RawBase):
 
     __tablename__ = "raw_bill_documents"
 
-    bill_id: Mapped[str] = mapped_column(nullable=False)
-    step_id: Mapped[str] = mapped_column(nullable=False)
-    file_id: Mapped[str] = mapped_column(nullable=False)
-    step_date: Mapped[datetime] = mapped_column(nullable=False)
-    url: Mapped[str] = mapped_column(nullable=False)
-    s3_key: Mapped[str] = mapped_column(nullable=True)
-    local_path: Mapped[str] = mapped_column(nullable=True)
-
     __table_args__ = (
         Index(
-            "ix_raw_bill_documents_pipeline",
+            "idx_raw_bill_documents_bill_last",
             "bill_id",
-            "step_id",
-            "file_id",
             "last_update",
-            "changed",
-            "processed",
         ),
-        PrimaryKeyConstraint(
-            "bill_id", "step_id", "file_id", name="pk_raw_bills_documents"
+        Index(
+            "idx_raw_bill_documents_bill_processed",
+            "bill_id",
+            "processed",
         ),
     )
 
-
-class RawBillPage(RawBase):
-    __tablename__ = "raw_bill_pages"
-
-    bill_id: Mapped[str] = mapped_column(nullable=False)
-    step_id: Mapped[str] = mapped_column(nullable=False)
-    file_id: Mapped[str] = mapped_column(nullable=False)
-    page_num: Mapped[int] = mapped_column(nullable=False)
-    text: Mapped[str] = mapped_column(nullable=False)
-    ocr_model: Mapped[str] = mapped_column(nullable=False)
-
-    __table_args__ = (
-        PrimaryKeyConstraint(
-            "bill_id",
-            "step_id",
-            "file_id",
-            "page_num",
-            "ocr_model",
-            name="pk_raw_bill_pages",
-        ),
-        ForeignKeyConstraint(
-            ["bill_id", "step_id", "file_id"],
-            [
-                "raw_bill_documents.bill_id",
-                "raw_bill_documents.step_id",
-                "raw_bill_documents.file_id",
-            ],
-            name="fk_raw_bill_pages_document",
-        ),
-        Index(
-            "ix_raw_bill_pages_pipeline",
-            "bill_id",
-            "step_id",
-            "file_id",
-            "page_num",
-            "last_update",
-            "changed",
-            "processed",
-        ),
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    bill_id = Column(String, nullable=False)
+    step_date = Column(DateTime, nullable=False)
+    seguimiento_id = Column(String, nullable=False)
+    archivo_id = Column(String, nullable=False)
+    url = Column(String, nullable=False)
+    text = Column(String, nullable=False)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
     )
 
 
@@ -215,10 +122,10 @@ class RawCommittee(RawBase):
 
     Attributes:
         id (str): Unique identifier for raw committee.
-        legislative_year (str): Legislative year
+        timestamp (datetime): timestamp of the scraping task
+        legislative_year (int): Legislative year
         committee_type (str): Type of committee in the parliament
         raw_html (str): Html text
-        timestamp (datetime): timestamp of the scraping task
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
@@ -226,10 +133,20 @@ class RawCommittee(RawBase):
 
     __tablename__ = "raw_committees"
 
-    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    legislative_year: Mapped[str] = mapped_column(nullable=False)
-    committee_type: Mapped[str] = mapped_column(nullable=False)
-    raw_html: Mapped[str] = mapped_column(nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    legislative_year = Column(Integer, nullable=False)
+    committee_type = Column(String, nullable=False)
+    raw_html = Column(String, nullable=False)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
 
 
 class RawCongresista(RawBase):
@@ -238,11 +155,11 @@ class RawCongresista(RawBase):
 
     Attributes:
         id (str): Unique identifier for raw congresista.
+        timestamp: Time stamp of the scrape process
         leg_period (str): Legislative period related to the congresista
-        website (str): Congresista's website url
+        url (str): Congresista's website url
         profile_content (str): Html text from the website's profile tab
         memberships_content (str): API response to memberships of the congresista in json format
-        timestamp: Time stamp of the scrape process
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
@@ -250,40 +167,21 @@ class RawCongresista(RawBase):
 
     __tablename__ = "raw_congresistas"
 
-    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    leg_period: Mapped[str] = mapped_column(nullable=False)
-    website: Mapped[str] = mapped_column(nullable=False)
-    profile_content: Mapped[str] = mapped_column(nullable=False)
-    memberships_content: Mapped[str] = mapped_column(nullable=True)
-
-    __table_args__ = (
-        Index(
-            "ix_raw_congresistas_pipeline",
-            "id",
-            "last_update",
-            "changed",
-            "processed",
-        ),
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    leg_period = Column(String, nullable=False)
+    url = Column(String, nullable=False)
+    profile_content = Column(String, nullable=False)
+    memberships_content = Column(String, nullable=True)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
     )
-
-
-class RawLey(RawBase):
-    """
-    Represents a raw law extracted from the Peruvian congress web page.
-
-    Attributes:
-        id (str): Unique identifier for the organization.
-        data (str): raw data xml information related to the law
-        timestamp (datetime): timestamp of the scraping task
-        last_update (bool): Column that indicates if this tuple is the last update for the bill_id
-        changed (bool): Column that indicates if the last update has any difference from the previous update
-        processed (bool): Column that indicates if the last update with changes have been updated
-    """
-
-    __tablename__ = "raw_leyes"
-
-    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    data: Mapped[str] = mapped_column(nullable=False)
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
 
 
 class RawMotion(RawBase):
@@ -292,10 +190,10 @@ class RawMotion(RawBase):
 
     Attributes:
         id (str): Unique identifier for the motion.
+        timestamp (datetime): timestamp of the scraping task
         general (str): Main motion info
         congresistas (str) Information about authors and proponents
         steps (str) Information about motion steps
-        timestamp (datetime): timestamp of the scraping task
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
@@ -303,20 +201,19 @@ class RawMotion(RawBase):
 
     __tablename__ = "raw_motions"
 
-    id: Mapped[str] = mapped_column(nullable=False)
-    general: Mapped[str] = mapped_column(nullable=True)
-    congresistas: Mapped[str] = mapped_column(nullable=True)
-    steps: Mapped[str] = mapped_column(nullable=True)
-
-    __table_args__ = (
-        PrimaryKeyConstraint("id", "timestamp", name="pk_raw_motions"),
-        Index(
-            "ix_raw_motions_pipeline",
-            "id",
-            "last_update",
-            "changed",
-            "processed",
-        ),
+    id = Column(String, primary_key=True)
+    timestamp = Column(DateTime, primary_key=True)
+    general = Column(String, nullable=True)
+    congresistas = Column(String, nullable=True)
+    steps = Column(String, nullable=True)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
     )
 
 
@@ -325,14 +222,14 @@ class RawMotionDocument(RawBase):
     Raw documents url and text content extracted by scrape_raw_motions_documents.py
 
     Attributes:
-        motion_id (str): Unique identifier for the motion.
-        step_id (str): Event to which the document is related to.
-        file_id (str): id related to the document
-        step_date (datetime): date of the event related to the document
-        url (str): complete document's url.
-        s3_key (str): s3_key that maps the location of the document on the AWS S3 Bucket
-        local_path (str): local path where the document is located.
+        id (str): Unique identifier for raw document.
         timestamp (datetime): timestamp of the scraping task
+        motion_id (str): Unique identifier for the motion.
+        step_date (datetime): date of the event related to the document
+        seguimiento_id (str): Event to which the document is related to.
+        archivo_id (str): id related to the document
+        url (str): complete document's url.
+        text (str): extracted text from the pdf
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
@@ -340,71 +237,53 @@ class RawMotionDocument(RawBase):
 
     __tablename__ = "raw_motion_documents"
 
-    motion_id: Mapped[str] = mapped_column(nullable=False)
-    step_id: Mapped[str] = mapped_column(nullable=False)
-    file_id: Mapped[str] = mapped_column(nullable=False)
-    step_date: Mapped[datetime] = mapped_column(nullable=False)
-    url: Mapped[str] = mapped_column(nullable=False)
-    s3_key: Mapped[str] = mapped_column(nullable=True)
-    local_path: Mapped[str] = mapped_column(nullable=True)
-
-    __table_args__ = (
-        PrimaryKeyConstraint(
-            "motion_id",
-            "step_id",
-            "file_id",
-            name="pk_raw_motion_documents",
-        ),
-        Index(
-            "ix_raw_motion_documents_pipeline",
-            "motion_id",
-            "step_id",
-            "file_id",
-            "last_update",
-            "changed",
-            "processed",
-        ),
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    motion_id = Column(String, nullable=False)
+    step_date = Column(DateTime, nullable=False)
+    seguimiento_id = Column(String, nullable=False)
+    archivo_id = Column(String, nullable=False)
+    url = Column(String, nullable=False)
+    text = Column(String, nullable=False)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
     )
 
 
-class RawMotionPage(RawBase):
-    __tablename__ = "raw_motion_pages"
+class RawBancada(RawBase):
+    """
+    Represents a raw scraped bancada in the peruvian parliament.
 
-    motion_id: Mapped[str] = mapped_column(nullable=False)
-    step_id: Mapped[str] = mapped_column(nullable=False)
-    file_id: Mapped[str] = mapped_column(nullable=False)
-    page_num: Mapped[int] = mapped_column(nullable=False)
-    text: Mapped[str] = mapped_column(nullable=False)
-    ocr_model: Mapped[str] = mapped_column(nullable=False)
+    Attributes:
+        id (str): Unique identifier for the bancada.
+        timestamp (datetime): timestamp of the scraping task
+        leg_period (str): Legislative period
+        raw_html (str): Html text
+        last_update (bool): Column that indicates if this tuple is the last update for the bill_id
+        changed (bool): Column that indicates if the last update has any difference from the previous update
+        processed (bool): Column that indicates if the last update with changes have been updated
+    """
 
-    __table_args__ = (
-        PrimaryKeyConstraint(
-            "motion_id",
-            "step_id",
-            "file_id",
-            "page_num",
-            "ocr_model",
-            name="pk_raw_motion_pages",
-        ),
-        ForeignKeyConstraint(
-            ["motion_id", "step_id", "file_id"],
-            [
-                "raw_motion_documents.motion_id",
-                "raw_motion_documents.step_id",
-                "raw_motion_documents.file_id",
-            ],
-            name="fk_raw_motion_pages_document",
-        ),
-        Index(
-            "ix_raw_motion_pages_pipeline",
-            "motion_id",
-            "step_id",
-            "file_id",
-            "page_num",
-            "last_update",
-            "changed",
-            "processed",
-        ),
+    __tablename__ = "raw_bancadas"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    legislative_period = Column(String, nullable=False)
+    raw_html = Column(String, nullable=False)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
     )
 
 
@@ -415,10 +294,10 @@ class RawOrganization(RawBase):
 
     Attributes:
         id (str): Unique identifier for the organization.
+        timestamp (datetime): timestamp of the scraping task
         legislative_year (str): Legislative year
         org_link (str): Organization's website
         raw_html (str): Html text
-        timestamp (datetime): timestamp of the scraping task
         last_update (bool): Column that indicates if this tuple is the last update for the bill_id
         changed (bool): Column that indicates if the last update has any difference from the previous update
         processed (bool): Column that indicates if the last update with changes have been updated
@@ -426,29 +305,47 @@ class RawOrganization(RawBase):
 
     __tablename__ = "raw_organizations"
 
-    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    legislative_year: Mapped[str] = mapped_column(nullable=False)
-    type_org: Mapped[str] = mapped_column(nullable=False)
-    org_link: Mapped[str] = mapped_column(nullable=True)
-    raw_html: Mapped[str] = mapped_column(nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    legislative_year = Column(Integer, nullable=False)
+    type_org = Column(String, nullable=False)
+    org_link = Column(String, nullable=False)
+    raw_html = Column(String, nullable=False)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
 
 
-class ScraperRun(Base):
+class RawLey(RawBase):
     """
-    Stores the metadata on the scrapers jobs for future analysis and future pipeline automations.
+    Represents a raw law extracted from the Peruvian congress web page.
 
     Attributes:
-        run_id (int): Unique identifier of the scraper run
-        scraper_name (str): Name of the scraper file that ran
-        start_time (datetime): Time when the scraper started running
-        end_time (datetime): Time when the scraper stop running
-        scraped_rows (int): Number of rows scraped within the run
+        id (str): Unique identifier for the organization.
+        timestamp (datetime): timestamp of the scraping task
+        data (str): raw data xml information related to the law
+        last_update (bool): Column that indicates if this tuple is the last update for the bill_id
+        changed (bool): Column that indicates if the last update has any difference from the previous update
+        processed (bool): Column that indicates if the last update with changes have been updated
     """
 
-    __tablename__ = "scraper_runs"
+    __tablename__ = "raw_leyes"
 
-    run_id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    scraper_name: Mapped[str] = mapped_column(nullable=False)
-    start_time: Mapped[datetime] = mapped_column(nullable=False)
-    end_time: Mapped[datetime] = mapped_column(nullable=False)
-    scraped_rows: Mapped[int] = mapped_column(nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime, nullable=False)
+    data = Column(String, nullable=False)
+    last_update = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    changed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )
+    processed = Column(
+        Boolean, nullable=False, server_default=expression.false(), default=False
+    )

@@ -1,27 +1,30 @@
 # OpenPeru Backend
 
-This directory contains the OpenPeru data pipeline. It scrapes official Peruvian
-Congress sources, stores raw snapshots, transforms them into normalized schemas,
-and loads them into a clean relational database for analysis and future API or
-dashboard layers.
+This directory contains the OpenPeru data pipeline. It scrapes official Peruvian Congress sources, stores raw snapshots, transforms them into normalized schemas, and loads them into a clean relational database for analysis and future API or dashboard layers.
 
 ## What lives here
 
-- `backend/__main__.py` and `backend/cli.py`: CLI entrypoint and pipeline control.
-- `backend/scrapers/`: raw extraction layer for HTML, API, and PDF sources.
-- `backend/process/`: transformation layer for schema normalization and validation.
-- `backend/database/`: raw and processed SQLAlchemy models, CRUD helpers, sessions, and orchestration.
+• `backend/__main__.py` and `backend/cli.py` (cli entrypoint and pipeline control)
 
-Supporting docs:
+• `backend/scrapers/` raw extraction layer (HTML and PDF sources)
 
-- [`backend/scrapers/README.md`](./scrapers/README.md)
-- [`backend/process/README.md`](./process/README.md)
-- [`backend/database/README.md`](./database/README.md)
+• `backend/process/` transformation layer (schema normalization and validation)
+
+• `backend/database/` raw and processed SQLAlchemy models, CRUD helpers, sessions, and DB orchestration
+
+Supporting docs
+
+• [`backend/scrapers/README.md`](./scrapers/README.md)
+
+• [`backend/process/README.md`](./process/README.md)
+
+• [`backend/database/README.md`](./database/README.md)
 
 ## Requirements
 
-- Python `>= 3.13`
-- `uv` for dependency management
+• Python `>= 3.13`
+
+• `uv` for dependency management
 
 ## Setup
 
@@ -37,155 +40,217 @@ Optional pre-commit hooks:
 uv run pre-commit install
 ```
 
-Runtime dependency extras are intentionally separated from the default install:
+## Create databases
 
-- `ocr`: GPU/LLM OCR tooling, including Chandra and Transformers.
-- `embeddings`: semantic embedding rebuild tooling.
-- `documents`: S3 document upload/download dependencies.
-- `analysis`: local analysis and notebook-oriented packages.
-
-The Docker cron image uses only the default runtime dependencies.
-
-## Create Databases
-
-The project is currently working with local SQLite databases. Either download
-them or create them from scratch:
+The project is currently working with a local SQLite database. Either download it or create them from scratch. Initialize or update the SQLite databases:
 
 ```bash
 uv run python -m backend.database.build_db
 ```
 
-By default this creates or updates:
+By default this creates or updates
 
-- Raw database: `data/raw/OpenPeruRaw.db`
-- Processed database: `data/processed/OpenPeru.db`
+• Raw database: `data/raw/OpenPeruRaw.db`
 
-## How To Run
+• Processed database: `data/processed/OpenPeru.db`
+
+## How to run
 
 The backend is executed through the module entrypoint.
 
-Show the CLI help:
+Show the CLI help
 
 ```bash
 uv run python -m backend --help
 ```
 
-Process pending raw records without scraping:
+### Common commands
+
+Process only pending raw records, without scraping (default behavior)
 
 ```bash
 uv run python -m backend
 ```
 
-Scrape then process all target groups:
+Scrape then process everything
 
 ```bash
 uv run python -m backend --scrape
 ```
 
-Scrape only and skip processing:
+Scrape only, skip processing
 
 ```bash
 uv run python -m backend --scrape --skip-processing
 ```
 
-Run a specific scraper target:
+### Run a specific target group to scrape
+
+Bills only
 
 ```bash
-uv run python -m backend --scrape --skip-processing --only-bills
-uv run python -m backend --scrape --skip-processing --only-motions
-uv run python -m backend --scrape --skip-processing --only-leyes
-uv run python -m backend --scrape --skip-processing --only-others --only-current
+uv run python -m backend --scrape --only-bills
 ```
 
-Scrape pending bill and motion documents:
+Motions only
+
+```bash
+uv run python -m backend --scrape --only-motions
+```
+
+Others only (congresistas, bancadas, committees, organizations)
+
+```bash
+uv run python -m backend --scrape --only-others
+```
+
+### Current period only
+
+Where supported, scrape only the current legislative period (only supported for congresistas, bancadas, committees and organizations)
+
+```bash
+uv run python -m backend --scrape --only-current
+```
+
+### Incremental refresh windows
+
+Refresh stale non approved bills and motions older than N days
+
+```bash
+uv run python -m backend --scrape --weekly-days 7
+```
+
+Skip scraping others (congresistas, bancadas, committees and organizations) if their latest raw scrape is within N days
+
+```bash
+uv run python -m backend --scrape --others-days 14
+```
+
+### Scrape numeric ranges
+
+Bills
+
+```bash
+uv run python -m backend --scrape --bill-year 2021 --bill-start 1 --bill-end 200
+```
+
+Motions
+
+```bash
+uv run python -m backend --scrape --motion-year 2021 --motion-start 1 --motion-end 200
+```
+
+Leyes
+
+```bash
+uv run python -m backend --scrape --ley-start 31222 --ley-end 31250
+```
+
+### Documents
+
+Scrape pending bill and motion documents
 
 ```bash
 uv run python -m backend --scrape --scrape-documents
 ```
 
-Skip loading documents during processing:
+Download PDFs from RawDB document links
 
 ```bash
-uv run python -m backend --no-documents
+uv run python -m backend --download-documents
 ```
 
-## Makefile Targets
-
-Scheduled jobs and local operational runs should use the Makefile targets:
+Limit downloads per type (bills/motions)
 
 ```bash
-make scrape-others
-make scrape-bills
-make scrape-motions
-make scrape-leyes
-make process
+uv run python -m backend --download-documents --download-documents-limit 100
 ```
 
-The targets map to the backend CLI:
-
-- `scrape-others`: scrapes congresistas, bancadas, committees, and organizations for the current period.
-- `scrape-bills`: scrapes bills only, without processing.
-- `scrape-motions`: scrapes motions only, without processing.
-- `scrape-leyes`: scrapes leyes only, without processing.
-- `process`: processes raw records into clean tables.
-
-## Docker Cron Service
-
-The Docker Compose `cron` service runs the Makefile targets on a daily
-`America/Lima` schedule. Job output is written to `/app/logs/cron.log`.
+Download PDFs and upload to AWS S3 (requires AWS_* env vars)
 
 ```bash
-docker compose up cron
+uv run python -m backend --download-documents --upload-documents-s3
 ```
 
-The current schedule is:
+Skip loading documents during processing
 
-- `00:00`: `scrape-others`
-- `01:00`: `scrape-bills`
-- `02:00`: `scrape-motions`
-- `03:00`: `scrape-leyes`
-- `07:00`: `process`
+```bash
+uv run python -m backend --scrape --no-documents
+```
 
-The cron image is intentionally light for ETL runtime usage. It excludes CUDA,
-LLM OCR, embedding, notebook, and test packages from the default install.
+### Processing limits
 
-## CLI Reference
+Limit the number of raw rows processed (useful for debugging)
 
-The orchestrator exposes these flags:
+```bash
+uv run python -m backend --process-bills-limit 200
+uv run python -m backend --process-motions-limit 200
+```
 
-- `--scrape`: run scrapers before processing.
-- `--skip-processing`: do not run raw-to-clean processing.
-- `--only-current`: scrape only the current period where supported.
-- `--scrape-documents`: scrape pending bill and motion documents.
-- `--no-documents`: skip loading documents in processing.
+## CLI reference
 
-Mutually exclusive target groups:
+The orchestrator exposes these flags.
 
-- `--only-bills`
-- `--only-motions`
-- `--only-leyes`
-- `--only-others`
+• `--scrape` run scrapers before processing
 
-## Scraper Refresh Semantics
+• `--skip-processing` do not run raw to clean processing
 
-Bills and motions scrape new IDs first, then refresh pending daily rows that are
-not approved and whose latest raw snapshot is older than one day. Leyes scrape
-new IDs. Reference scrapers skip work when their latest raw scrape is already
-recent.
+• `--only-current` scrape only the current period where supported
 
-## Tracking Semantics In Raw Tables
+• `--weekly-days N` refresh stale non approved bills and motions older than N days
 
-Raw tables track whether a scraped record is new, changed, or already processed.
-This enables fast incremental processing.
+• `--others-days N` skip congresistas, bancadas, committees, organizations scrape when the latest raw scrape is within N days
 
-For the latest raw snapshot per record key:
+Mutually exclusive target groups
 
-- First version of a record: `last_update = True`, `changed = True`, `processed = False`
-- Unchanged rescrape: `last_update = True`, `changed = False`, `processed = True`
-- Changed rescrape: `last_update = True`, `changed = True`, `processed = False`
+• `--only-bills`
 
-Processing should focus on raw rows where `last_update = True`,
-`changed = True`, and `processed = False`.
+• `--only-motions`
+
+• `--only-others`
+
+Optional range filters
+
+• `--bill-year YEAR`, `--bill-start A`, `--bill-end B`
+
+• `--motion-year YEAR`, `--motion-start A`, `--motion-end B`
+
+• `--ley-start A`, `--ley-end B`
+
+
+Documents
+
+• `--scrape-documents` scrape pending bill and motion documents
+
+• `--download-documents` download PDFs from RawDB document links
+
+• `--download-documents-limit` limit the number of documents downloaded per type (bills/motions)
+
+• `--update-documents` re-download PDFs even if they already exist locally
+
+• `--upload-documents-s3` upload downloaded PDFs to the configured AWS S3 bucket
+
+• `--no-documents` skip loading documents in processing stage
+
+Processing limits
+
+• `--process-bills-limit N`
+
+• `--process-motions-limit N`
+
+## Tracking semantics in raw tables
+
+Raw tables track whether a scraped record is new, changed, or already processed. This is what enables fast incremental runs.
+
+For the latest raw snapshot per record key
+
+• First version of a record: `last_update = True`, `changed = True`, `processed = False`
+
+• Unchanged re scrape: `last_update = True`, `changed = False`, `processed = True`
+
+• Changed re scrape: `last_update = True`, `changed = True`, `processed = False`
+
+Processing should focus on raw rows where `last_update = True`, `changed = True` and `processed = False`.
 
 ## Tests
 
@@ -205,9 +270,7 @@ uv run pytest -q tests/database
 
 ## Logging
 
-Scrapers and pipeline steps write logs to the `logs/` directory. If a run fails,
-the logs are usually the fastest way to understand which source or parsing rule
-changed.
+Scrapers and pipeline steps write logs to the `logs/` directory. If a run fails, the logs are usually the fastest way to understand which source or parsing rule changed.
 
 ## Contributing
 

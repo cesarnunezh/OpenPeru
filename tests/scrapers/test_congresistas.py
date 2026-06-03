@@ -39,25 +39,23 @@ def _setup_inmemory_db():
     ],
 )
 def test_is_cargos_label(txt, expected):
-    cong_scraper = RawCongresistasScraper()
-    assert cong_scraper._is_cargos_label(txt.lower()) is expected
+    s = RawCongresistasScraper()
+    assert s._is_cargos_label(txt.lower()) is expected
 
 
 def test_score_link_text():
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
 
     base = "cargos"
     with_congresista = "cargos del congresista"
     generic = "link cualquiera"
 
-    assert cong_scraper._score_link_text(generic) == 0
-    assert cong_scraper._score_link_text(base) < cong_scraper._score_link_text(
-        with_congresista
-    )
+    assert s._score_link_text(generic) == 0
+    assert s._score_link_text(base) < s._score_link_text(with_congresista)
 
 
 def test_get_best_cargos_link():
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
     html = """
     <html><body>
       <a href="/link1">Otros cargos</a>
@@ -68,12 +66,13 @@ def test_get_best_cargos_link():
     doc = fromstring(html)
     base_url = "https://www.congreso.gob.pe/perfil/"
 
-    best = cong_scraper.get_best_cargos_link(doc, base_url)
+    best = s.get_best_cargos_link(doc, base_url)
     # urljoin(base_url, "/link2") => "https://www.congreso.gob.pe/link2"
     assert best == "https://www.congreso.gob.pe/link2"
 
 
 def test_get_cong_website():
+    s = RawCongresistasScraper()
     profile_content = """
     <html><body>
       <div class="web">
@@ -90,7 +89,7 @@ def test_get_cong_website():
 
 
 def test_get_dict_periodos(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
 
     def fake_parse_url(url, *args, **kwargs):
         assert url == BASE_URL
@@ -106,15 +105,15 @@ def test_get_dict_periodos(monkeypatch):
 
     monkeypatch.setattr("backend.scrapers.congresistas.parse_url", fake_parse_url)
 
-    cong_scraper.get_dict_periodos()
-    assert cong_scraper.periods == {"Periodo A": "1", "Periodo B": "2"}
+    s.get_dict_periodos()
+    assert s.periods == {"Periodo A": "1", "Periodo B": "2"}
 
 
 # ---------- create_raw_congresista (old periods) ----------
 
 
 def test_create_raw_congresista_old_period(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
 
     monkeypatch.setattr(
         "backend.scrapers.congresistas.get_cong_website",
@@ -122,7 +121,7 @@ def test_create_raw_congresista_old_period(monkeypatch):
     )
 
     monkeypatch.setattr(
-        cong_scraper,
+        s,
         "get_profile_content",
         lambda link: "PROFILE_HTML",
     )
@@ -130,11 +129,11 @@ def test_create_raw_congresista_old_period(monkeypatch):
     period = "Parlamentario 2001 - 2006"
     cong_link = "/perfil/1"
 
-    raw = cong_scraper.create_raw_congresista(period, cong_link)
+    raw = s.create_raw_congresista(period, cong_link)
 
     assert isinstance(raw, RawCongresista)
     assert raw.leg_period == period
-    assert raw.website == "https://example.com/perfil/old"
+    assert raw.url == "https://example.com/perfil/old"
     assert raw.profile_content == "PROFILE_HTML"
     assert raw.memberships_content is None
 
@@ -143,12 +142,10 @@ def test_create_raw_congresista_old_period(monkeypatch):
 
 
 def test_create_raw_congresista_modern_success(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
 
     # Avoid network: stub profile content
-    monkeypatch.setattr(
-        cong_scraper, "get_profile_content", lambda link: "<html>PROFILE</html>"
-    )
+    monkeypatch.setattr(s, "get_profile_content", lambda link: "<html>PROFILE</html>")
 
     # IMPORTANT: get_cong_website is now a module-level imported function
     monkeypatch.setattr(
@@ -186,9 +183,9 @@ def test_create_raw_congresista_modern_success(monkeypatch):
 
     monkeypatch.setattr("backend.scrapers.congresistas.get_url_text", fake_get_url_text)
 
-    raw = cong_scraper.create_raw_congresista("Congresistas 2021-2026", "/perfil/123")
+    raw = s.create_raw_congresista("Congresistas 2021-2026", "/perfil/123")
 
-    assert raw.website == "https://example.com/perfil/123"
+    assert raw.url == "https://example.com/perfil/123"
     assert raw.profile_content == "<html>PROFILE</html>"
     assert raw.memberships_content == '{"ok": true}'
 
@@ -197,9 +194,9 @@ def test_create_raw_congresista_modern_success(monkeypatch):
 
 
 def test_create_raw_congresista_partial_failure(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
 
-    monkeypatch.setattr(cong_scraper, "get_profile_content", lambda link: "PROFILE")
+    monkeypatch.setattr(s, "get_profile_content", lambda link: "PROFILE")
 
     # get_cong_website is module-level now
     monkeypatch.setattr(
@@ -216,16 +213,16 @@ def test_create_raw_congresista_partial_failure(monkeypatch):
 
     # If get_best_cargos_link is still an instance method, this is fine:
     monkeypatch.setattr(
-        cong_scraper,
+        s,
         "get_best_cargos_link",
         lambda doc, base_url: "https://example.com/cargos-no-iframe",
     )
 
-    raw = cong_scraper.create_raw_congresista("Congresistas 2016-2021", "/perfil/abc")
+    raw = s.create_raw_congresista("Congresistas 2016-2021", "/perfil/abc")
 
     assert isinstance(raw, RawCongresista)
     assert raw.leg_period == "Congresistas 2016-2021"
-    assert raw.website == "https://example.com/perfil/abc"
+    assert raw.url == "https://example.com/perfil/abc"
     assert raw.profile_content == "PROFILE"
     # and because it fails to find the iframe / membership:
     assert raw.memberships_content is None
@@ -235,21 +232,19 @@ def test_create_raw_congresista_partial_failure(monkeypatch):
 
 
 def test_extract_cong_from_period_uses_links_and_creator(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
+    s = RawCongresistasScraper()
 
     monkeypatch.setattr(
-        cong_scraper, "get_urls_from_table", lambda value: ["/perfil/1", "/perfil/2"]
+        s, "get_urls_from_table", lambda value: ["/perfil/1", "/perfil/2"]
     )
     monkeypatch.setattr(
-        cong_scraper,
-        "create_raw_congresista",
-        lambda period, link: f"raw-{period}-{link}",
+        s, "create_raw_congresista", lambda period, link: f"raw-{period}-{link}"
     )
 
     # avoid DB + object-shape requirements
-    monkeypatch.setattr(cong_scraper, "update_tracking", lambda x: x)
+    monkeypatch.setattr(s, "update_tracking", lambda x: x)
 
-    res = cong_scraper.extract_cong_from_period("Periodo X", "1")
+    res = s.extract_cong_from_period("Periodo X", "1")
 
     assert res == ["raw-Periodo X-/perfil/1", "raw-Periodo X-/perfil/2"]
 
@@ -258,15 +253,15 @@ def test_extract_cong_from_period_uses_links_and_creator(monkeypatch):
 
 
 def test_extract_and_load_all_requires_periods():
-    cong_scraper = RawCongresistasScraper()
-    cong_scraper.periods = {}
+    s = RawCongresistasScraper()
+    s.periods = {}
     with pytest.raises(AssertionError):
-        cong_scraper.extract_and_load_all()
+        s.extract_and_load_all()
 
 
 def test_extract_and_load_all_calls_add(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
-    cong_scraper.periods = {"Periodo X": "1", "Periodo Y": "2"}
+    s = RawCongresistasScraper()
+    s.periods = {"Periodo X": "1", "Periodo Y": "2"}
 
     calls = []
 
@@ -278,10 +273,10 @@ def test_extract_and_load_all_calls_add(monkeypatch):
         calls.append("add_called")
         return True
 
-    cong_scraper.extract_cong_from_period = fake_extract
-    cong_scraper.add_congresistas_to_db = fake_add
+    s.extract_cong_from_period = fake_extract
+    s.add_congresistas_to_db = fake_add
 
-    result = cong_scraper.extract_and_load_all()
+    result = s.extract_and_load_all()
 
     # last iteration's raw_congresistas should be returned
     assert result == ["raw-Periodo Y"]
@@ -297,44 +292,44 @@ def test_extract_and_load_all_calls_add(monkeypatch):
 def test_add_congresistas_to_db_persists(monkeypatch):
     engine, SessionLocal = _setup_inmemory_db()
 
-    cong_scraper = RawCongresistasScraper()
-    cong_scraper.engine = engine
-    cong_scraper.Session = SessionLocal
+    s = RawCongresistasScraper()
+    s.engine = engine
+    s.Session = SessionLocal
 
     cong = RawCongresista(
         timestamp=datetime(2021, 1, 1),
         leg_period="Periodo Test",
-        website="https://example.com",
+        url="https://example.com",
         profile_content="<html></html>",
         memberships_content="{}",
     )
-    cong_scraper.raw_congresistas = [cong]
+    s.raw_congresistas = [cong]
 
-    assert cong_scraper.add_congresistas_to_db() is True
+    assert s.add_congresistas_to_db() is True
 
     with SessionLocal() as session:
         count = session.query(RawCongresista).count()
         assert count == 1
         db_cong = session.query(RawCongresista).first()
         assert db_cong.leg_period == "Periodo Test"
-        assert db_cong.website == "https://example.com"
+        assert db_cong.url == "https://example.com"
 
 
 def test_add_congresistas_to_db_asserts_when_empty():
-    cong_scraper = RawCongresistasScraper()
-    cong_scraper.raw_congresistas = []
+    s = RawCongresistasScraper()
+    s.raw_congresistas = []
 
     with pytest.raises(AssertionError):
-        cong_scraper.add_congresistas_to_db()
+        s.add_congresistas_to_db()
 
 
 def test_add_congresistas_to_db_handles_sqlalchemy_error(monkeypatch):
-    cong_scraper = RawCongresistasScraper()
-    cong_scraper.raw_congresistas = [
+    s = RawCongresistasScraper()
+    s.raw_congresistas = [
         RawCongresista(
             timestamp=datetime.now(),
             leg_period="Periodo",
-            website="https://example.com",
+            url="https://example.com",
             profile_content="HTML",
             memberships_content=None,
         )
@@ -363,8 +358,8 @@ def test_add_congresistas_to_db_handles_sqlalchemy_error(monkeypatch):
     def fake_sessionmaker():
         return dummy_session
 
-    cong_scraper.Session = fake_sessionmaker
+    s.Session = fake_sessionmaker
 
-    ok = cong_scraper.add_congresistas_to_db()
+    ok = s.add_congresistas_to_db()
     assert ok is False
     assert dummy_session.rolled_back is True

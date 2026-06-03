@@ -1,21 +1,29 @@
 import json
 import base64
-import boto3
+import time
 from loguru import logger
 from datetime import datetime
-from pathlib import Path
 
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine, select, Integer, cast, exists
+from sqlalchemy import create_engine, select
 from sqlalchemy.exc import SQLAlchemyError
 
-from backend.config import settings, directories
-from backend.scrapers.utils import get_url
+
+from backend.config import settings, directories, stop_logging_to_console
+from backend.scrapers.utils import render_pdf
 from backend.database.raw_models import RawMotionDocument, RawMotion
-from backend.database.models import MotionStep
 
 BASE_URL = "https://api.congreso.gob.pe/smociones-portal-service"
-DB_PATH = settings.DB_URL
+RAW_DB_PATH = settings.RAW_DB_URL
+PRIORITIES = set(
+    [
+        "Aprobada",
+        "Aprobada la Moción",
+        "Aprobado Proyecto de Resolución",
+        "Publicado Diario Oficial El Peruano",
+        "Rechazada",
+    ]
+)
 
 
 class RawMotionDocumentScraper:
@@ -25,43 +33,22 @@ class RawMotionDocumentScraper:
 
     def __init__(self):
         # Engine and session maker for DB
-        self.engine = create_engine(DB_PATH, pool_pre_ping=True)
+        self.engine = create_engine(RAW_DB_PATH, pool_pre_ping=True)
         self.Session = sessionmaker(bind=self.engine)
 
-        self.documents: list[RawMotionDocument] = []
+        self.documents = []
 
     def get_motions_pending_documents(self) -> list[str]:
-        """
-        Return motion IDs that have at least one step without a scraped document.
-
-        A motion is considered pending when it has a record in `motion_steps` for a
-        given step, but there is no matching record in `raw_motion_documents` for the
-        same `motion_id` and `step_id`.
-
-        Returns:
-            list[str]: Distinct motion IDs with one or more missing raw documents.
-        """
         with self.Session() as session:
             stmt = (
                 select(RawMotion.id)
-                .distinct()
-                .where(
-                    exists(
-                        select(1).where(
-                            MotionStep.motion_id == RawMotion.id,
-                            ~exists(
-                                select(1).where(
-                                    RawMotionDocument.motion_id == MotionStep.motion_id,
-                                    cast(RawMotionDocument.step_id, Integer)
-                                    == MotionStep.step_id,
-                                )
-                            ),
-                        )
-                    )
+                .outerjoin(
+                    RawMotionDocument, RawMotion.id == RawMotionDocument.motion_id
                 )
+                .where(RawMotionDocument.motion_id.is_(None))
             )
 
-            return list(session.scalars(stmt).all())
+            return session.scalars(stmt).all()
 
     def filter_steps(self, extracted_steps: list[dict], motion_id: str):
         """
@@ -74,22 +61,20 @@ class RawMotionDocumentScraper:
                 .all()
             )
 
-            steps_id = {int(step.step_id) for step in n_steps_in_db}
+            seguimiento_ids = {int(step.seguimiento_id) for step in n_steps_in_db}
 
-        return [
-            step for step in extracted_steps if step["seguimientoId"] not in steps_id
+        filtered_steps = [
+            step
+            for step in extracted_steps
+            if step["seguimientoId"] not in seguimiento_ids
         ]
+        return filtered_steps
 
     def get_motion_documents(
-        self,
-        motion_id: str,
-        *,
-        update: bool = False,
-        download_local: bool = False,
-        upload_s3: bool = False,
-    ) -> None:
+        self, motion_id: str, update: bool = False, prioritize: bool = True
+    ) -> list[RawMotionDocument]:
         """
-        Extract the documents from a RawMotion's files and extract the text from each of its pages
+        Extract the documents from a RawMotion's files and extract the text from each of them
         """
 
         with self.Session() as session:
@@ -109,13 +94,19 @@ class RawMotionDocumentScraper:
         if not update:
             steps = self.filter_steps(steps, motion_id)
 
+        if prioritize:
+            logger.info(f"Total number of steps: {len(steps)}")
+            steps = [
+                step for step in steps if step.get("desEstadoMocion") in PRIORITIES
+            ]
+
         if len(steps) == 0:
             logger.info(f"No steps found for motion {motion_id}")
             return None
 
         logger.info(f"Extracting files from {len(steps)} steps of motion {motion_id}")
 
-        for _, step in enumerate(steps):
+        for ix, step in enumerate(steps):
             files = step.get("adjuntos")
             step_date = step.get("fecSeguimiento")
 
@@ -124,35 +115,59 @@ class RawMotionDocumentScraper:
 
             for file in files:
                 file_id = file["seguimientoAdjuntoId"]
-                step_id = file["seguimientoId"]
-
+                seguimiento_id = file["seguimientoId"]
                 b64_id = base64.b64encode(str(file_id).encode()).decode()
                 url = f"{BASE_URL}/seguimiento-adjunto/{b64_id}/pdf"
 
-                file_name = self._build_filename(motion_id, step_id, file_id)
-                dest_path = directories.MOTION_DOCUMENTS / file_name
-
-                if download_local:
-                    self._download_to_path(url, dest_path)
-
-                s3_key = None
-                if upload_s3:
-                    s3_key = self._build_s3_key("motions", file_name)
+                logger.info(f"Extracting document {ix + 1}/{len(steps)} at url: {url}")
+                extracted_text = render_pdf(url)
+                logger.success(f"Successfully extracted text from {url}")
 
                 new_doc = RawMotionDocument(
-                    motion_id=motion_id,
-                    step_id=str(step_id),
-                    file_id=str(file_id),
-                    step_date=datetime.strptime(step_date, "%Y-%m-%dT%H:%M:%S.%f%z"),
-                    url=url,
-                    s3_key=s3_key,
-                    local_path=str(dest_path) if dest_path is not None else None,
                     timestamp=datetime.now(),
+                    motion_id=motion_id,
+                    step_date=datetime.strptime(step_date, "%Y-%m-%dT%H:%M:%S.%f%z"),
+                    seguimiento_id=seguimiento_id,
+                    archivo_id=file_id,
+                    url=url,
+                    text=extracted_text,
                     processed=False,
                     last_update=True,
                 )
+                self.documents.append(self.update_tracking(new_doc))
 
-                self.documents.append(new_doc)
+    def update_tracking(self, document: RawMotionDocument) -> RawMotionDocument:
+        """Update the tracking columns of a RawMotionDocument object"""
+
+        with self.Session() as session:
+            last_document = (
+                session.query(RawMotionDocument)
+                .filter(
+                    RawMotionDocument.motion_id == document.motion_id,
+                    RawMotionDocument.seguimiento_id == document.seguimiento_id,
+                    RawMotionDocument.archivo_id == document.archivo_id,
+                )
+                .order_by(RawMotionDocument.timestamp.desc())
+                .first()
+            )
+
+            # First ever version of this document
+            if last_document is None:
+                document.changed = True
+                document.last_update = True
+                document.processed = False
+            else:
+                # Compare last vs new
+                document.changed = document != last_document
+                document.last_update = True
+                document.processed = not document.changed
+
+                # Update the old version AFTER comparison
+                last_document.last_update = False
+                session.add(last_document)
+                session.commit()
+
+            return document
 
     def add_documents_to_db(self) -> bool:
         """
@@ -188,49 +203,26 @@ class RawMotionDocumentScraper:
         else:
             return None
 
-    @staticmethod
-    def _build_filename(motion_id: str, step_id: str, file_id: str) -> str:
-        return f"{motion_id}-{step_id}-{file_id}.pdf"
 
-    @staticmethod
-    def _build_s3_key(kind: str, filename: str) -> str:
-        parts = []
-        if settings.AWS_S3_PREFIX:
-            parts.append(settings.AWS_S3_PREFIX.strip("/"))
-        parts.extend(["documents", kind, filename])
-        return "/".join(parts)
+if __name__ == "__main__":
+    logger.info("Starting Scraper")
+    scraper = RawMotionDocumentScraper()
 
-    @staticmethod
-    def _upload_file_to_s3(path: Path, key: str) -> None:
-        bucket = settings.AWS_S3_BUCKET_NAME
-        if not bucket:
-            raise RuntimeError("AWS_S3_BUCKET_NAME is not configured.")
+    pending_motions = scraper.get_motions_pending_documents()
 
-        if settings.AWS_ACCESS_KEY_ID and settings.AWS_SECRET_ACCESS_KEY:
-            session = boto3.session.Session(
-                aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
-                aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
-                region_name=settings.AWS_REGION,
-            )
-            client = session.client("s3")
-        else:
-            client = boto3.client("s3", region_name=settings.AWS_REGION)
+    stop_logging_to_console(filename=directories.LOGS / "scrape_motions_documents.log")
 
-        client.upload_file(path.as_posix(), bucket, key)
-
-    @staticmethod
-    def _download_to_path(url: str, dest: Path) -> bool:
-        response = get_url(url)
-        if response is None:
-            logger.warning(f"Failed to fetch document: {url}")
-            return False
-
+    for motion in pending_motions:
         try:
-            response.raise_for_status()
-        except Exception as exc:
-            logger.warning(f"Non-200 response fetching {url}: {exc}")
-            return False
-
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes(response.content)
-        return True
+            scraper.get_motion_documents(
+                motion_id=motion, update=False, prioritize=True
+            )
+            scraper.load_raw_documents()
+        except TypeError as e:
+            print(e)
+            break
+        except AttributeError as e:
+            print(e)
+            time.sleep(3)
+            continue
+        time.sleep(3)

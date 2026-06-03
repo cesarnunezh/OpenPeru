@@ -12,111 +12,13 @@ OpenPeru helps solve this problem by turning complex and fragmented congressiona
 
 At its current stage, OpenPeru focuses on the legislative core of Congress and integrates data across multiple dimensions:
 
-- **Bills and motions**: proposals, authorship, legislative status, procedural steps, and bill PDF text trimmed to the main body when standard headings are found
+- **Bills and motions**: proposals, authorship, legislative status, and procedural steps
 - **Voting records and attendance**: individual‑level and aggregate vote outcomes
 - **Congress members (congresistas)**: identities, party affiliations, and memberships over time
 - **Political organizations**: parties, parliamentary groups, and committees
 - **Legislative processes**: structured representations of how initiatives evolve
-- **Bill text differences**: a per-step structural + line + word diff between consecutive bill versions, rendered as HTML at `/bills/<bill_id>/difference/<step_id>` (see `docs/bill_difference_contract.md`)
 
 All information is stored in relational databases designed for analysis, reuse, and future API access.
-
-## Development Setup
-
-1. **Install UV**  
-   Follow instructions from the official docs:  
-   https://docs.astral.sh/uv/getting-started/installation/
-
-2. **Clone the repository**  
-   ```bash
-   git clone https://github.com/openperu2026/dev-opencongress.git
-    cd dev-opencongress
-    ```
-
-3. **Synchronize the virtual environment.**
-    ```bash
-    uv sync
-    ```
-4. **Activate the environment**
-    ```bash
-    source .venv/bin/activate
-    ```
-
-5. **Install Git hooks (IMPORTANT)**
-    We use pre-commit to enforce code quality and workflow rules.
-    ```bash
-    pre-commit install
-    pre-commit install --hook-type pre-push
-    ```
-
-## Scheduled ETL Jobs
-
-The repository includes a Docker Compose `cron` service for unattended ETL runs.
-The service uses the project Makefile targets as its public interface and writes
-job output to `/app/logs/cron.log` inside the container.
-
-```bash
-docker compose up cron
-```
-
-The cron schedule runs on `America/Lima` time:
-
-- `scrape-others`
-- `scrape-bills`
-- `scrape-motions`
-- `scrape-leyes`
-- `process`
-
-For local one-off runs, use the same Makefile targets directly:
-
-```bash
-make scrape-others
-make scrape-bills
-make scrape-motions
-make scrape-leyes
-make process
-```
-
-## GitFlow Workflow
-We follow a GitFlow branching model. For detailed rules, go [here](https://github.com/openperu2026/dev-opencongress/blob/feature/repo-config/docs/git-flow.md).
-
-*Our branches*
-- `main`: Production-ready code only. This branch always reflects the current stable release.
-- `dev`: Integration branch for ongoing development. All completed features are merged here before a `release`.
-- `feature/*`: New feature development. Branch from `dev` and merge back into `dev` when complete.
-- `release/*`: Release preparation and stabilization (e.g., bug fixes, final testing). Branch from `dev`, then merge into both `main` and `dev`.
-- `hotfix/*`: Emergency fixes for production issues. Branch from `main`, then merge into both `main` and `dev`.
-
-## Repository Structure (High Level)
-
-The repository is organized into modular components for data collection, processing, and testing:
-
-```
-openperu/
-├── backend/
-│   ├── api/            # Future API layer
-│   ├── cli/            # Command line interface for pipelines
-│   ├── core/           # Shared configuration, utilities, logging
-│   ├── database/       # Raw and processed database models
-│   ├── documents/      # Downloaded congressional documents
-│   ├── process/        # Data cleaning and standardization
-│   └── scrapers/       # Data collection from Congress websites
-│
-├── data/
-│   ├── raw/            # Raw scraped data - Not available in GitHub
-│   └── processed/      # Clean structured datasets - Not available in GitHub
-│
-├── draft_notebooks/    # Exploration and experimentation
-├── logs/               # Pipeline and scraper logs
-└── tests/
-    ├── database/       # Tests for database models
-    ├── process/        # Data processing tests
-    └── scrapers/       # Scraper tests
-```
-
-Each major submodule includes its own README with more detailed documentation.
-
----
 
 ## Architecture Overview
 
@@ -176,7 +78,8 @@ E1 --> F3
 
 ### 1. Data Acquisition (Scrapers)
 
-Custom scrapers collect legislative data directly from Congress websites. They handle HTML pages, PDFs, and historical archives while remaining resilient to format changes.
+Custom scrapers collect legislative data directly from Congress websites.
+They handle HTML pages, PDFs, and historical archives while remaining resilient to format changes.
 
 ### 2. Raw Data Layer
 
@@ -209,6 +112,39 @@ Automated tests cover scrapers, database models, and processing logic to detect 
 
 The architecture is intentionally modular to support future extensions such as APIs, dashboards, and machine‑learning pipelines.
 
+---
+
+## Repository Structure (High Level)
+
+The repository is organized into modular components for data collection, processing, and testing:
+
+```
+openperu/
+├── backend/
+│   ├── api/            # Future API layer
+│   ├── cli/            # Command line interface for pipelines
+│   ├── core/           # Shared configuration, utilities, logging
+│   ├── database/       # Raw and processed database models
+│   ├── documents/      # Downloaded congressional documents
+│   ├── process/        # Data cleaning and standardization
+│   └── scrapers/       # Data collection from Congress websites
+│
+├── data/
+│   ├── raw/            # Raw scraped data - Not available in GitHub
+│   └── processed/      # Clean structured datasets - Not available in GitHub
+│
+├── draft_notebooks/    # Exploration and experimentation
+├── logs/               # Pipeline and scraper logs
+└── tests/
+    ├── database/       # Tests for database models
+    ├── process/        # Data processing tests
+    └── scrapers/       # Scraper tests
+```
+
+Each major submodule includes its own README with more detailed documentation.
+
+---
+
 ## Project Status and Roadmap
 
 OpenPeru is under active development. Current priorities include:
@@ -225,3 +161,4 @@ Contributions and feedback are welcome.
 ## License
 
 This project is released under an open-source license. See the `LICENSE` file for details.
+

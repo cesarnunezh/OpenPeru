@@ -1,42 +1,39 @@
 from __future__ import annotations
 
-from enum import Enum
-from collections import defaultdict
+from typing import Iterable
 
-from sqlalchemy import select, desc
 from sqlalchemy.orm import Session
 
-from backend import OcrModel
+from backend import classify_des_estado
 from backend.database import models as db_models
-from backend.process import schema
-from backend.database.crud.pipeline_core import (
-    find_congresista,
-    _enum_value,
-)
-from backend.database.raw_models import RawBillDocument, RawBillPage
+from backend.database.crud.pipeline_core import find_congresista
+from backend.database.raw_models import RawBillDocument
 
 
-def upsert_bill(db: Session, schema: schema.Bill) -> db_models.Bill:
+def upsert_bill(db: Session, schema) -> db_models.Bill:
     author = None
     if schema.author_name:
         author = find_congresista(
             db,
             name=schema.author_name,
+            leg_period=schema.leg_period,
             website=schema.author_web,
         )
 
     payload = {
         "id": schema.id,
+        "leg_period": schema.leg_period,
+        "legislature": schema.legislature,
+        "presentation_date": schema.presentation_date,
         "title": schema.title,
-        "summary_congreso": schema.summary_congreso,
+        "summary": schema.summary,
         "observations": schema.observations or "",
+        "complete_text": schema.complete_text or "",
         "status": schema.status,
-        "proponent": schema.proponent.value
-        if hasattr(schema.proponent, "value")
-        else schema.proponent,
+        "proponent": schema.proponent,
         "author_id": author.id if author else None,
+        "bancada_id": None,
         "bill_approved": schema.bill_approved,
-        "summary_oc": schema.summary_oc,
     }
 
     existing = db.get(db_models.Bill, schema.id)
@@ -53,19 +50,12 @@ def upsert_bill(db: Session, schema: schema.Bill) -> db_models.Bill:
 
 
 def upsert_bill_congresista(
-    db: Session,
-    bill_id: str,
-    person_id: int,
-    role_type: Enum | str,
+    db: Session, bill_id: str, person_id: int, role_type
 ) -> db_models.BillCongresistas:
     existing = db.get(db_models.BillCongresistas, (bill_id, person_id))
-    role_type = _enum_value(role_type)
-
     if existing is None:
         obj = db_models.BillCongresistas(
-            bill_id=bill_id,
-            person_id=person_id,
-            role_type=role_type,
+            bill_id=bill_id, person_id=person_id, role_type=role_type
         )
         db.add(obj)
         db.flush()
@@ -76,34 +66,21 @@ def upsert_bill_congresista(
     return existing
 
 
-def upsert_bill_organization(
-    db: Session, bill_id: str, org_id: int, schema: schema.BillOrganization
-) -> db_models.BillOrganization:
+def upsert_bill_committee(
+    db: Session, bill_id: str, committee_id: int
+) -> db_models.BillCommittees:
     existing = (
-        db.query(db_models.BillOrganization)
+        db.query(db_models.BillCommittees)
         .filter(
-            db_models.BillOrganization.bill_id == bill_id,
-            db_models.BillOrganization.org_id == org_id,
+            db_models.BillCommittees.bill_id == bill_id,
+            db_models.BillCommittees.committee_id == committee_id,
         )
         .first()
     )
-    payload = {
-        "bill_id": bill_id,
-        "org_id": org_id,
-        "org_type": schema.org_type.value
-        if hasattr(schema.org_type, "value")
-        else schema.org_type,
-        "presentation_date": schema.presentation_date,
-        "decision_date": schema.decision_date,
-    }
-
     if existing is not None:
-        for key, value in payload.items():
-            setattr(existing, key, value)
-        db.flush()
         return existing
 
-    obj = db_models.BillOrganization(**payload)
+    obj = db_models.BillCommittees(bill_id=bill_id, committee_id=committee_id)
     db.add(obj)
     db.flush()
     return obj
@@ -111,36 +88,35 @@ def upsert_bill_organization(
 
 def upsert_bill_step(
     db: Session,
-    schema: schema.BillStep,
+    step_id: int,
+    bill_id: str,
+    step_date,
+    step_detail: str,
+    step_status: str | None = None,
 ) -> db_models.BillStep:
-    existing = db.get(db_models.BillStep, (schema.bill_id, schema.step_id))
-    step_type = (
-        schema.step_type.value
-        if hasattr(schema.step_type, "value")
-        else schema.step_type
-    )
-    payload = {
-        "bill_id": schema.bill_id,
-        "step_id": schema.step_id,
-        "vote_step": schema.vote_step,
-        "vote_event_id": schema.vote_event_id,
-        "step_type": step_type,
-        "step_date": schema.step_date,
-        "step_detail": schema.step_detail,
-    }
+    step_type = classify_des_estado(step_status or step_detail)
+    existing = db.get(db_models.BillStep, step_id)
     if existing is None:
-        obj = db_models.BillStep(**payload)
+        obj = db_models.BillStep(
+            id=step_id,
+            bill_id=bill_id,
+            step_type=step_type,
+            step_date=step_date,
+            step_detail=step_detail,
+        )
         db.add(obj)
         db.flush()
         return obj
 
-    for key, value in payload.items():
-        setattr(existing, key, value)
+    existing.bill_id = bill_id
+    existing.step_type = step_type
+    existing.step_date = step_date
+    existing.step_detail = step_detail
     db.flush()
     return existing
 
 
-def find_raw_bill_documents(raw_db: Session, bill_id: str) -> list[RawBillDocument]:
+def find_raw_bill_documents(raw_db: Session, bill_id: str) -> Iterable[RawBillDocument]:
     return (
         raw_db.query(RawBillDocument)
         .filter(
@@ -148,170 +124,37 @@ def find_raw_bill_documents(raw_db: Session, bill_id: str) -> list[RawBillDocume
             RawBillDocument.last_update.is_(True),
             RawBillDocument.processed.is_(False),
         )
-        .order_by(RawBillDocument.step_date)
         .all()
     )
 
 
-def find_bills_with_pending_pages(
+def upsert_bill_document(
     db: Session,
-    ocr_model: str = OcrModel.CHANDRA.value,
-) -> dict[tuple[str, str, str], list[RawBillPage]]:
-    """
-    Return pending bills grouped with their pending pages.
-    """
-    stmt = (
-        select(RawBillPage)
-        .where(
-            RawBillPage.ocr_model == ocr_model,
-            RawBillPage.processed.is_(False),
-        )
-        .order_by(
-            RawBillPage.bill_id,
-            RawBillPage.step_id,
-            RawBillPage.file_id,
-            RawBillPage.page_num,
-        )
-    )
-
-    pages = db.scalars(stmt).all()
-
-    pending_by_bill: dict[tuple[str, str, str], list[RawBillPage]] = defaultdict(list)
-
-    for page in pages:
-        pending_by_bill[(page.bill_id, page.step_id, page.file_id)].append(page)
-
-    return dict(pending_by_bill)
-
-
-def get_bill_text_last_version(
-    db: Session,
-    bill_id: str,
-) -> int | None:
-    stmt = (
-        select(db_models.BillText.version_id)
-        .where(db_models.BillText.bill_id == bill_id)
-        .order_by(desc(db_models.BillText.version_id))
-        .limit(1)
-    )
-
-    return db.scalar(stmt)
-
-
-def get_next_bill_text_version(
-    db: Session,
-    bill_id: str,
-) -> int:
-    last_version = get_bill_text_last_version(db, bill_id)
-
-    if last_version is None:
-        return 1
-
-    return last_version + 1
-
-
-def find_pending_pages(
-    db: Session,
-    bill_id: str,
-    ocr_model: str = OcrModel.CHANDRA.value,
-) -> list[RawBillPage]:
-    """
-    Return the pending documents for a specific OCR model.
-    """
-    stmt = (
-        select(RawBillPage)
-        .where(
-            RawBillPage.bill_id == bill_id,
-            RawBillPage.ocr_model == ocr_model,
-            RawBillPage.processed.is_(False),
-        )
-        .order_by(
-            RawBillPage.bill_id,
-            RawBillPage.step_id,
-            RawBillPage.file_id,
-            RawBillPage.page_num,
-        )
-    )
-
-    return db.execute(stmt).scalars().all()
-
-
-def upsert_bill_text(
-    db: Session,
-    *,
     bill_id: str,
     step_id: int,
-    file_id: int,
-    version_id: int,
+    archivo_id: int,
+    url: str,
     text: str,
-) -> db_models.BillText:
-    existing = db.get(db_models.BillText, (bill_id, step_id, file_id, version_id))
-    payload = {
-        "bill_id": bill_id,
-        "step_id": step_id,
-        "file_id": file_id,
-        "version_id": version_id,
-        "text": text,
-    }
+    vote_doc: bool,
+) -> db_models.BillDocument:
+    existing = db.get(db_models.BillDocument, archivo_id)
     if existing is None:
-        row = db_models.BillText(**payload)
-        db.add(row)
-        db.flush()
-        return row
-    for key, value in payload.items():
-        setattr(existing, key, value)
-    db.flush()
-    return existing
-
-
-def get_billtext_for_step(
-    db: Session, bill_id: str, step_id: int
-) -> db_models.BillText | None:
-    """
-    Return the canonical BillText for a step.
-
-    A step may have multiple rows in ``bill_texts`` (different file_id /
-    version_id). The diff feature treats one step as one logical text;
-    pick the highest ``version_id`` for the lowest ``file_id`` so the
-    selection is stable across pipeline runs.
-    """
-    stmt = (
-        select(db_models.BillText)
-        .where(
-            db_models.BillText.bill_id == bill_id,
-            db_models.BillText.step_id == step_id,
-        )
-        .order_by(
-            db_models.BillText.file_id.asc(),
-            db_models.BillText.version_id.desc(),
-        )
-    )
-    return db.execute(stmt).scalars().first()
-
-
-def upsert_bill_difference(
-    db: Session,
-    *,
-    bill_id: str,
-    step_id: int,
-    prev_step_id: int | None,
-    difference_type: str,
-    difference_content: str | None,
-) -> db_models.BillDifference:
-    existing = db.get(db_models.BillDifference, (bill_id, step_id))
-    if existing is None:
-        row = db_models.BillDifference(
+        obj = db_models.BillDocument(
             bill_id=bill_id,
             step_id=step_id,
-            prev_step_id=prev_step_id,
-            difference_type=difference_type,
-            difference_content=difference_content,
+            archivo_id=archivo_id,
+            url=url,
+            text=text,
+            vote_doc=vote_doc,
         )
-        db.add(row)
+        db.add(obj)
         db.flush()
-        return row
-    existing.prev_step_id = prev_step_id
-    existing.difference_type = difference_type
-    existing.difference_content = difference_content
+        return obj
+
+    existing.bill_id = bill_id
+    existing.step_id = step_id
+    existing.url = url
+    existing.text = text
+    existing.vote_doc = vote_doc
     db.flush()
     return existing
