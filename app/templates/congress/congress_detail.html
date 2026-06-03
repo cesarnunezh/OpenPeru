@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="congress-detail-page">
+    <section class="congress-profile">
+        <header class="congress-profile-header">
+            <h1>{{ congresista.full_name }}</h1>
+            <p>
+                {{ congresista.party_name }} &middot; 
+                {{ congresista.dist_electoral or _('Not available') }} &middot; 
+                {{ congresista.condicion }} &middot;
+                {{ _('%(count)s votes obtained', count="{:,}".format(congresista.votes_in_election)) }}
+ 
+            </p>
+        </header>
+
+        <div class="congress-profile-summary">
+            <div class="congress-photo-wrap">
+                <img
+                    class="congress-photo"
+                    src="{{ congresista.photo_url.replace('https://www.congreso.gob.pe', 'https://www3.congreso.gob.pe') }}"
+                    alt="{{ _('Photo of %(name)s', name=congresista.full_name) }}"
+                >
+            </div>
+
+            <section class="congress-section congress-committee-panel">
+                <h2>{{_('Committee Membership')}}</h2>
+                {% if memberships %}
+                    <ul class="committee-membership-list">
+                        {% for membership in memberships %}
+                            <li>
+                                <span>{{ membership.org_name }}</span>
+                                <strong>{{ membership.role }}</strong>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>{{_('No committee membership records found.')}}</p>
+                {% endif %}
+             </section>
+        </div>
+
+        <div class="congress-stats">
+            <article>
+                <h2>{{_('Attendance Rate')}}</h2>
+                <strong>{{ profile_stats.assistance_rate }}</strong>
+            </article>
+            <article>
+                <h2>{{_('Bills Authored')}}</h2>
+                <strong>{{ profile_stats.bills_authored }}</strong>
+            </article>
+            <article>
+                <h2>{{_('Approval bill rate')}}</h2>
+                <strong>{{ profile_stats.success_rate }}</strong>
+            </article>
+        </div>
+
+
+
+        <section class="congress-section congress-bills-preview">
+            <h2>{{_('Recent Bills Authored (Last 5)')}}</h2>
+            {% if bills_authored %}
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>{{ _('ID') }}</th>
+                            <th>{{_('Title')}}</th>
+                            <th>{{_('Detail')}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for bill in bills_authored %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ bill.id }}</td>
+                            <td>{{ bill.title }}</td>
+                            <td>
+                                <a href="{{ url_for('bills.bill_detail', bill_id=bill.id) }}" class="btn btn-primary btn-sm">
+                                    {{_('View details')}}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>{{_('No authored bills found.')}}</p>
+            {% endif %}
+        </section>
+        <br>
+        <p class="congress-action">
+            <a href="{{ url_for('bills.index', author_q=congresista.full_name) }}">
+                {{_('View all bills authored')}}
+            </a>
+        </p>
+
+
+        <p class="congress-source">
+            <a href="{{ congresista.website }}" target="_blank" rel="noopener noreferrer">
+                {{_('Official congress profile')}}
+            </a>
+        </p>
+    </section>
+</div>
+{% endblock %}

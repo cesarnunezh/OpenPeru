@@ -1,126 +1,196 @@
-from sqlalchemy import create_engine, text, inspect
-from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy.sql.schema import Column
 from sqlalchemy import (
     Boolean,
+    Column,
+    DateTime,
+    Enum as SAEnum,
     Integer,
     Numeric,
     String,
     Text,
-    DateTime,
-    Enum as SAEnum,
+    create_engine,
+    inspect,
+    text,
 )
+from sqlalchemy.exc import SQLAlchemyError
+
 from ..config import settings
-
-# Import all models from the models.py file
 from .models import Base
-from .raw_models import Base as RawBase
-
-import os
 
 
-def _default_for_non_nullable(col: Column):
-    """Return a safe SQLite default for NOT NULL columns with no explicit default."""
-    if isinstance(col.type, (Boolean, Integer, Numeric)):
+def _enable_extensions(engine) -> None:
+    """
+    Enable PostgreSQL extensions used by the database.
+
+    Required:
+        vector: needed by pgvector.sqlalchemy.Vector.
+
+    Used by search / text normalization:
+        pg_similarity
+        unaccent
+    """
+    if engine.dialect.name != "postgresql":
+        return
+
+    with engine.begin() as conn:
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector;"))
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS pg_similarity;"))
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS unaccent;"))
+
+
+def _default_for_non_nullable(col: Column) -> str:
+    """
+    Return a safe PostgreSQL default for a new NOT NULL column.
+
+    This is used only when adding a missing NOT NULL column through
+    ALTER TABLE. PostgreSQL needs a value for existing rows.
+    """
+    if isinstance(col.type, Boolean):
+        return "FALSE"
+
+    if isinstance(col.type, (Integer, Numeric)):
         return "0"
-    if isinstance(col.type, (String, Text, SAEnum)):
+
+    if isinstance(col.type, (String, Text)):
         return "''"
+
     if isinstance(col.type, DateTime):
         return "'1970-01-01 00:00:00'"
+
+    if isinstance(col.type, SAEnum):
+        raise ValueError(
+            f"Cannot safely add non-nullable enum column '{col.name}' "
+            "without an explicit valid default."
+        )
+
     return "''"
 
 
-def _ensure_columns(base, engine, cols: list[str] | None = None):
+def _ensure_columns_postgres(
+    base,
+    engine,
+    cols: list[str] | None = None,
+) -> None:
     """
-    For each table in `base`, if a model column does not exist in the actual DB
-    table yet, add it via ALTER TABLE.
+    For each table in `base`, if a model column does not exist in the actual
+    PostgreSQL table yet, add it via ALTER TABLE.
 
-    This is written for SQLite; adjust the ALTER TABLE statement if you move
-    to Postgres/MySQL.
+    This only handles simple column additions. It does not add indexes,
+    foreign keys, unique constraints, check constraints, or enum migrations.
+    For those, use Alembic.
     """
+    if engine.dialect.name != "postgresql":
+        return
+
     inspector = inspect(engine)
+    preparer = engine.dialect.identifier_preparer
 
     with engine.begin() as conn:
         for table in base.metadata.sorted_tables:
             table_name = table.name
+            schema_name = table.schema
+
+            existing_cols = {
+                col["name"]
+                for col in inspector.get_columns(table_name, schema=schema_name)
+            }
+
+            if schema_name:
+                full_table_name = (
+                    f"{preparer.quote_schema(schema_name)}.{preparer.quote(table_name)}"
+                )
+            else:
+                full_table_name = preparer.quote(table_name)
 
             target_cols = cols or [c.name for c in table.c]
 
             for col_name in target_cols:
-                # Only act if the model defines the column
                 if col_name not in table.c:
                     continue
 
-                existing_cols = {
-                    col["name"] for col in inspector.get_columns(table_name)
-                }
-
                 if col_name in existing_cols:
-                    # Already present in DB
                     continue
 
-                print(f"[MIGRATION] Adding '{col_name}' column to table '{table_name}'")
-
                 model_col: Column = table.c[col_name]
+
+                quoted_col_name = preparer.quote(col_name)
                 col_type = model_col.type.compile(dialect=engine.dialect)
 
                 nullable_sql = "" if model_col.nullable else " NOT NULL"
                 default_sql = ""
 
-                # If NOT NULL column has no DB/model default, SQLite requires one in ALTER TABLE.
                 if not model_col.nullable:
                     default_sql = f" DEFAULT {_default_for_non_nullable(model_col)}"
 
+                print(
+                    f"[MIGRATION] Adding column '{col_name}' "
+                    f"to table '{full_table_name}'"
+                )
+
                 conn.execute(
                     text(
-                        f"ALTER TABLE {table_name} "
-                        f"ADD COLUMN '{col_name}' {col_type}{nullable_sql}{default_sql}"
+                        f"ALTER TABLE {full_table_name} "
+                        f"ADD COLUMN {quoted_col_name} "
+                        f"{col_type}{nullable_sql}{default_sql};"
                     )
                 )
 
+                existing_cols.add(col_name)
 
-def create_database(base, db_url: str):
+
+def drop_step_vote_event_fks(engine) -> None:
+    if engine.dialect.name != "postgresql":
+        return
+
+    with engine.begin() as conn:
+        conn.execute(
+            text(
+                "ALTER TABLE bill_steps "
+                "DROP CONSTRAINT IF EXISTS bill_steps_vote_event_id_fkey;"
+            )
+        )
+        conn.execute(
+            text(
+                "ALTER TABLE motion_steps "
+                "DROP CONSTRAINT IF EXISTS motion_steps_vote_event_id_fkey;"
+            )
+        )
+
+
+def create_database(db_url: str = settings.DB_URL) -> bool:
     """
-    Create a SQLite database (Raw or Clean) with all tables from the models,
-    only if the database file does not already exist.
+    Create all database tables in PostgreSQL using SQLAlchemy metadata.
+
+    This creates missing tables and adds simple missing columns to existing
+    tables. For real schema changes, use Alembic migrations.
     """
-    # Extract path from the URL (assuming format sqlite:///path/to/dbfile.db)
-    if not db_url.startswith("sqlite:///"):
-        raise ValueError("This function only supports SQLite databases.")
-
-    db_path = db_url.replace("sqlite:///", "")
-
     engine = create_engine(db_url)
 
-    # If DB exists, just ensure all tables are present
-    if os.path.exists(db_path):
-        print(f"Database already exists: {db_path}, ensuring all tables are present...")
-        try:
-            base.metadata.create_all(engine)
-            _ensure_columns(base, engine)
-        except SQLAlchemyError as e:
-            print(f"Error updating existing database schema: {e}")
-            return False
-        return False
-
-    # If DB does not exist, create it and all tables
     try:
-        base.metadata.create_all(engine)
+        _enable_extensions(engine)
 
-        with engine.connect() as conn:
-            result = conn.execute(
-                text("SELECT name FROM sqlite_master WHERE type='table';")
-            )
-            tables = [row[0] for row in result.fetchall()]
+        # Creates missing tables only.
+        Base.metadata.create_all(bind=engine)
 
-        print(f"Database created successfully at {db_path} with {len(tables)} tables.")
+        # Adds simple missing columns to existing tables.
+        _ensure_columns_postgres(Base, engine)
+
+        # Drops specific FK constraints you do not want in the physical schema.
+        drop_step_vote_event_fks(engine)
+
+        inspector = inspect(engine)
+        tables = inspector.get_table_names()
+
+        print(f"Database initialized successfully with {len(tables)} tables.")
         return True
 
-    except SQLAlchemyError as e:
-        print(f"Error creating database: {e}")
+    except SQLAlchemyError as error:
+        print(f"Error creating database schema: {error}")
+        return False
+
+    except ValueError as error:
+        print(f"Error applying lightweight schema migration: {error}")
         return False
 
 
 if __name__ == "__main__":
-    create_database(RawBase, settings.RAW_DB_URL)
-    create_database(Base, settings.DB_URL)
+    create_database()

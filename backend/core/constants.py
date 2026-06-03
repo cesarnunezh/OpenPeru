@@ -1,14 +1,3 @@
-URL = {
-    "congresistas": "https://www.congreso.gob.pe/pleno/congresistas/",
-    "proyectos_ley": "https://wb2server.congreso.gob.pe/spley-portal/#/expediente/search",
-    "dictamenes": "https://wb2server.congreso.gob.pe/spley-portal/#/dictamenes/periodos",
-    "leyes": "https://www.leyes.congreso.gob.pe/",
-    "asistencia_pleno": "https://www.congreso.gob.pe/AsistenciasVotacionesPleno/asistencia-votacion-pleno",
-    "asistencia_comision_permanente": "https://www.congreso.gob.pe/AsistenciasVotacionesPleno/asistencia-comisionpermanente",
-    "actas_comisiones": "https://www.congreso.gob.pe/actascomisiones/",
-    "conformacion_comisiones": "https://www.congreso.gob.pe/CuadrodeComisiones/",
-}
-
 # Might need to review and make sure everyone is here
 PARTIES = [
     " AP ",
@@ -123,3 +112,13 @@ LEGISLATURE_ALIASES = {
 
 
 BILL_ROLE_MAPS = {1: "author", 2: "coauthor", 3: "adherente"}
+
+LEGAL_TERMS = {
+    r"\bdecreto\s+legislativo\b": "Decreto Legislativo",
+    r"\bdecreto\s+supremo\b": "Decreto Supremo",
+    r"\bdecreto\s+de\s+urgencia\b": "Decreto de Urgencia",
+    r"\bresoluci[oó]n\s+ministerial\b": "Resolución Ministerial",
+    r"\bresoluci[oó]n\s+legislativa\b": "Resolución Legislativa",
+    r"\bley\b": "Ley",
+    r"\bproyecto\s+de\s+ley\b": "Proyecto de Ley",
+}

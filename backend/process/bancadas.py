@@ -1,97 +1,80 @@
 from lxml.html import fromstring
-from urllib.parse import urljoin
-
-from backend import LegislativeYear, find_leg_period
+from backend import RoleOrganization, find_leg_period
 from backend.database.raw_models import RawBancada
-from backend.process.schema import Bancada, BancadaMembership
-
-from backend.process.utils import get_current_leg_year
+from backend.process.schema import Organization, Membership
+from backend.process.utils import split_and_sort_name
 
 CONGRESO_BASE_URL = "https://www.congreso.gob.pe"
 LEGACY_CONGRESO_BASE_URL = "https://www3.congreso.gob.pe"
 
 
-def get_url_text(url: str, data: str | None = None) -> str | None:
-    from backend.scrapers.utils import get_url_text as _get_url_text
-
-    return _get_url_text(url, data)
-
-
-def get_cong_website(profile_content: str) -> str | None:
-    from backend.scrapers.utils import get_cong_website as _get_cong_website
-
-    return _get_cong_website(profile_content)
-
-
-def _build_profile_url(web_profile: str) -> str:
-    """
-    Normalize congresista profile links from both current path-style and legacy
-    query-string style hrefs.
-    """
-    if web_profile.startswith(("http://", "https://")):
-        return web_profile
-
-    if web_profile.startswith(("/pagina/?", "pagina/?")):
-        return urljoin(f"{LEGACY_CONGRESO_BASE_URL}/", web_profile.lstrip("/"))
-
-    if "?" in web_profile:
-        query = web_profile.split("?", 1)[1]
-        return f"{LEGACY_CONGRESO_BASE_URL}/pagina/?{query}"
-
-    return urljoin(CONGRESO_BASE_URL, web_profile)
-
-
 def process_bancada(
     raw_bancada: RawBancada,
-) -> tuple[list[Bancada], list[BancadaMembership]]:
+) -> tuple[list[Organization], list[Membership]]:
     """
-    Process a RawBancada instance into a Bancada instance and a list of BancadaMemberships
-    that maps all the congresistas who belongs to the Bancada at a specific legislative year
+    Process a RawBancada instance into a Organization instance and a list of Memberships
+    that maps all the congresistas who belongs to the Organization at a specific legislative year
 
     Args:
         raw_bancada (RawBancada): RawBancada instance that contains all the bancadas and membership for a specific period
 
     Returns:
-        tuple[Bancada, list[BancadaMembership]]: Bancada instance and the list of BancadaMemberships
+        tuple[Organization, list[Membership]]: Organization instance and the list of Memberships
     """
 
     html = fromstring(raw_bancada.raw_html)
 
     rows = html.xpath('//*[@class="table-cng"]/tbody/tr')
+    current_leg_period = find_leg_period(raw_bancada.timestamp)
 
-    membership_list = []
-    bancadas_lst = []
+    bancadas: list[Organization] = []
+    memberships: list[Membership] = []
+
+    current_bancada: str | None = None
+
     for row in rows:
         childs = row.getchildren()
+
         if len(childs) == 1:
             # Bancada
-            bancada = childs[0].xpath(".//h2")[0].text_content().title()
-            leg_year = get_current_leg_year(str(raw_bancada.timestamp))
-            current_leg_period = find_leg_period(leg_year)
+            bancada_nodes = childs[0].xpath(".//h2")
+            if not bancada_nodes:
+                continue
 
-            if raw_bancada.legislative_period != current_leg_period:
-                # On past periods -> Use the last year from LegPeriod
-                leg_year = LegislativeYear(
-                    str(int(raw_bancada.legislative_period[-4:]) - 1)
-                )
-
-            bancadas_lst.append(Bancada(leg_year=leg_year, bancada_name=bancada))
-
-        else:
-            # Congresista
-            name = row.xpath('.//*[@class="conginfo"]')[0].text
-            web_profile = row.xpath('.//*[@class="conginfo"]/@href')[0]
-
-            parsed_website = get_url_text(_build_profile_url(web_profile))
-            website = get_cong_website(parsed_website)
-
-            membership_list.append(
-                BancadaMembership(
-                    leg_year=leg_year,
-                    cong_name=name,
-                    website=website,
-                    bancada_name=bancada,
+            current_bancada = bancada_nodes[0].text_content().strip().title()
+            bancadas.append(
+                Organization(
+                    org_name=current_bancada,
+                    org_type="Bancada",
+                    # TODO: Update this when the new congress website address
+                    # for different routes for committees in camara
+                    parent_org_name="Cámara de Diputados",
+                    parent_org_type="Cámara",
                 )
             )
 
-    return bancadas_lst, membership_list
+            continue
+
+        if current_bancada is None:
+            raise ValueError("Found membership row before any bancada row.")
+
+        conginfo_nodes = row.xpath('.//*[@class="conginfo"]')
+        if not conginfo_nodes:
+            continue
+
+        # Congresista
+        name = conginfo_nodes[0].text_content().strip()
+        full_name, _, _ = split_and_sort_name(name)
+
+        memberships.append(
+            Membership(
+                cong_name=full_name,
+                org_name=current_bancada,
+                org_type="Bancada",
+                leg_period=current_leg_period,
+                role=RoleOrganization.MIEMBRO,
+                time_stamp=raw_bancada.timestamp,
+            )
+        )
+
+    return bancadas, memberships

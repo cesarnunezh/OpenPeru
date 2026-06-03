@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bill-header">
+  <section class="bill-hero">
+    <div class="bill-content">
+      <div class="bill-topline">
+        <span class="bill-code">{{ _('Bill') }} Nº {{ bill.id }}</span>
+      </div>
+
+      <h1 class="bill-heading">
+        {{ bill.title }}
+      </h1>
+
+      <div class="bill-heading-meta">
+        <span><strong>{{_('Step')}}:</strong> {{ step.step_type.value }}</span>
+      </div>
+    </div>
+  </section>
+  <a class="diff-back-link" href="{{ url_for('bills.bill_detail', bill_id=bill.id) }}">← {{_('Back to bill')}}</a>
+</div>
+
+
+<div class="diff-differences">
+  <h2>{{_('Differences')}}</h2>
+
+  {% if difference_type == 'no_change' %}
+    <p class="diff-status diff-status-equal">{{_('No changes between versions.')}}</p>
+
+  {% elif difference_type == 'first_version' %}
+    <p class="diff-status diff-status-info">{{_('This is the first version — no previous text to compare.')}}</p>
+
+  {% elif difference_type == 'incomparable' %}
+    <p class="diff-status diff-status-warning">
+      {{_('Versions differ in length by more than 10× — probably mismatched document types.')}}
+    </p>
+
+  {% elif difference_type == 'unavailable' %}
+    <p class="diff-status diff-status-warning">{{_('Text could not be extracted for comparison.')}}</p>
+
+  {% elif text_html %}
+    {{ text_html | safe }}
+
+  {% else %}
+    <p class="diff-status diff-status-warning">{{_('No difference data available.')}}</p>
+  {% endif %}
+</div>
+
+<div class="diff-versions">
+  <div class="diff-column">
+    <h2>{{_('Version 1')}}</h2>
+    <p class="diff-step-name">{{ prev_step.step_type.value if prev_step else '—' }}</p>
+    {% if old_version_text %}
+      <pre class="diff-text">{{ old_version_text }}</pre>
+    {% else %}
+      <p class="diff-unavailable">{{ _('No text available') }}</p>
+    {% endif %}
+  </div>
+  <div class="diff-column">
+    <h2>{{_('Version 2')}}</h2>
+    <p class="diff-step-name">{{ step.step_type.value }}</p>
+    {% if new_version_text %}
+      <pre class="diff-text">{{ new_version_text }}</pre>
+    {% else %}
+      <p class="diff-unavailable">{{ _('No text available') }}</p>
+    {% endif %}
+  </div>
+</div>
+
+
+{% endblock %}

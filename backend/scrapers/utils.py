@@ -13,6 +13,33 @@ import cv2
 import os
 import shutil
 
+URLS = {
+    "Bills": {
+        "method": "POST",
+        "url": "https://api.congreso.gob.pe/spley-portal-service/proyecto-ley/lista-con-filtro",
+        "referer": "https://wb2server.congreso.gob.pe/spley-portal/",
+        "data_var": "proyectos",
+        "id_var": "pleyNum",
+    },
+    "Motions": {
+        "method": "POST",
+        "url": "https://api.congreso.gob.pe/smociones-portal-service/mocion/lista-con-filtros",
+        "referer": "https://wb2server.congreso.gob.pe/smociones-portal/",
+        "data_var": "mociones",
+        "id_var": "mocionNum",
+    },
+    "Leyes": {
+        "method": "GET",
+        "url": "https://api.congreso.gob.pe/adlp-visor-service/ley/leyes",
+        "referer": "https://wb2server.congreso.gob.pe/adlp-visor/",
+        "data_var": "leyes",
+        "id_var": "numLey",
+    },
+}
+
+
+_TESSERACT_CONFIGURED = False
+
 
 def _configure_tesseract() -> None:
     """
@@ -23,14 +50,20 @@ def _configure_tesseract() -> None:
     2. `tesseract` found in PATH
     3. Raise a clear error if not found
     """
+    global _TESSERACT_CONFIGURED
+    if _TESSERACT_CONFIGURED:
+        return
+
     cmd_from_env = os.getenv("TESSERACT_CMD")
     if cmd_from_env:
         pytesseract.pytesseract.tesseract_cmd = cmd_from_env
+        _TESSERACT_CONFIGURED = True
         return
 
     cmd_from_path = shutil.which("tesseract")
     if cmd_from_path:
         pytesseract.pytesseract.tesseract_cmd = cmd_from_path
+        _TESSERACT_CONFIGURED = True
         return
 
     raise RuntimeError(
@@ -38,9 +71,6 @@ def _configure_tesseract() -> None:
         "or set the TESSERACT_CMD environment variable to its full path."
     )
 
-
-# Run once on import
-_configure_tesseract()
 
 DEFAULT_TIMEOUT = httpx.Timeout(connect=10.0, read=60.0, write=30.0, pool=10.0)
 
@@ -76,6 +106,7 @@ def extract_text_from_page(page):
     Args:
         page: A PyMuPDF page object.
     """
+    _configure_tesseract()
     pix = page.get_pixmap(dpi=300)
     img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(
         pix.height, pix.width, pix.n
@@ -87,18 +118,15 @@ def extract_text_from_page(page):
     return text
 
 
-def render_pdf(pdf_url: str) -> str:
+def render_pdf(pdf_url: str) -> dict[int, str]:
     """
     Extract text from a PDF file using PyMuPDF and Tesseract OCR.
     """
     response = get_url(pdf_url)
     response.raise_for_status()  # Ensure we raise an error for bad responses
     pdf_file = BytesIO(response.content)
-    pdf_text = ""
     with fitz.open(stream=pdf_file, filetype="pdf") as pdf:
-        for page in pdf:
-            pdf_text += " " + extract_text_from_page(page)
-    return pdf_text
+        return {idx: extract_text_from_page(page) for idx, page in enumerate(pdf)}
 
 
 def url_to_cache_file(url: str, cache_dir: Path) -> Path:
@@ -222,3 +250,43 @@ async def fetch_multiple_urls_async(
 
         html_responses = await asyncio.gather(*tasks)
         return [fromstring(html) for html in html_responses if html]
+
+
+def get_last_id(entity: str) -> int:
+    config = URLS[entity]
+
+    headers = {
+        "Accept": "application/json, text/plain, */*",
+        "User-Agent": "Mozilla/5.0",
+        "Referer": config["referer"],
+    }
+
+    with httpx.Client(headers=headers, timeout=30) as client:
+        if config["method"] == "POST":
+            payload = {
+                "perParId": 2021,
+                "pageSize": 10,
+                "rowStart": 0,
+            }
+            r = client.post(config["url"], json=payload)
+
+        else:
+            params = {
+                "pagina": 1,
+                "tam_pagina": 25,
+                "tiponorma": 0,
+                "nroley1": 0,
+                "nroley2": 0,
+                "fecha1": "",
+                "fecha2": "",
+                "titulo": "",
+            }
+            r = client.get(config["url"], params=params)
+
+        r.raise_for_status()
+        data = r.json()
+
+    if entity == "Leyes":
+        return int(data["data"][0][config["id_var"]])
+
+    return data["data"][config["data_var"]][0][config["id_var"]]

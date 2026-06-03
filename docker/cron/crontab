@@ -1,0 +1,11 @@
+SHELL=/bin/sh
+PATH=/usr/local/bin:/usr/bin:/bin
+CRON_TZ=America/Lima
+
+0 0 * * * /app/docker/cron/run-job.sh scrape-others >> /app/logs/cron.log 2>&1
+0 1 * * * /app/docker/cron/run-job.sh scrape-bills >> /app/logs/cron.log 2>&1
+0 2 * * * /app/docker/cron/run-job.sh scrape-motions >> /app/logs/cron.log 2>&1
+0 4 * * * /app/docker/cron/run-job.sh scrape-leyes >> /app/logs/cron.log 2>&1
+0 4 * * * /app/docker/cron/run-job.sh scrape-documents >> /app/logs/cron.log 2>&1
+0 7 * * * /app/docker/cron/run-job.sh process >> /app/logs/cron.log 2>&1
+50 17 * * * /app/docker/cron/run-job.sh process-bill-documents >> /app/logs/cron.log 2>&1

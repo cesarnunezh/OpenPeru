@@ -9,6 +9,28 @@ This module extracts raw data from Congress endpoints/web pages and stores it in
 - `congresistas.py`, `bancadas.py`, `committees.py`, `organizations.py`: scrape reference entities.
 - `utils.py`: HTTP helpers, parsing helpers, OCR/PDF support.
 
+## Browser automation
+
+Dynamic Congress pages should be scraped with Playwright. This is the project
+standard for pages that require JavaScript rendering, hidden select controls, or
+browser network behavior before HTML can be captured. Static HTML, XML, and JSON
+endpoints should continue to use `httpx`/`lxml` helpers from `utils.py` instead
+of launching a browser.
+
+Playwright requires a browser binary in addition to the Python package. After
+`uv sync`, install Chromium with:
+
+```bash
+uv run playwright install chromium
+```
+
+The reference scrapers use browser-rendered selections where needed:
+
+- `bancadas.py`: captures parliamentary group pages for active `en Ejercicio`
+  memberships.
+- `committees.py`: renders the committee page, selects legislative years and
+  committee types, then stores the resulting HTML snapshot.
+
 ## Output
 
 Scrapers write to raw SQLAlchemy models in `backend/database/raw_models.py`.
@@ -29,11 +51,29 @@ uv run python -m backend --scrape
 
 Useful options (from orchestrator):
 
-- `--weekly-days N`: refresh stale non-approved bills/motions older than `N` days.
-- `--only-bills`, `--only-motions`, `--only-others`.
+- `--only-bills`, `--only-motions`, `--only-leyes`, `--only-others`.
+- `--only-current`: scrape only the current period/year where supported by the
+  reference scraper.
 - `--scrape-documents`.
+
+## Refresh behavior
+
+The orchestrator handles incremental scraping:
+
+- Bills and motions scrape new IDs first.
+- Bills and motions then refresh pending daily rows whose latest raw snapshot is older than one day and not approved.
+- Leyes scrape new IDs.
+- Reference scrapers skip work when their latest raw scrape is already recent.
 
 ## Logging
 
-Some scripts route logs to files via `stop_logging_to_console(...)` from `backend/config.py`.
-By default, logs are stored under `logs/`.
+The orchestrator writes tqdm-safe console summaries and per-stage files under `logs/`.
+
+## Troubleshooting
+
+- If a Playwright scraper fails because Chromium is missing, run
+  `uv run playwright install chromium`.
+- If a scraper times out waiting for a selector, inspect the current Congress
+  page because the source markup may have changed.
+- Use per-stage logs under `logs/scrapers/` to diagnose selector failures,
+  skipped stages, and empty snapshots.

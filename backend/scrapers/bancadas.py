@@ -1,17 +1,8 @@
-import os
 from loguru import logger
 from typing import Literal
-from itertools import product
 from datetime import datetime
 
-from lxml.html import HtmlElement
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -23,7 +14,7 @@ from backend.scrapers.utils import parse_url
 
 
 BASE_URL = "https://www3.congreso.gob.pe/pagina/grupos-parlamentarios"
-RAW_DB_PATH = settings.RAW_DB_URL
+DB_PATH = settings.DB_URL
 
 
 class RawBancadaScraper:
@@ -33,7 +24,7 @@ class RawBancadaScraper:
 
     def __init__(self):
         # Engine and session maker for DB
-        self.engine = create_engine(RAW_DB_PATH)
+        self.engine = create_engine(DB_PATH)
         self.url = BASE_URL
         self.Session = sessionmaker(bind=self.engine)
 
@@ -50,6 +41,10 @@ class RawBancadaScraper:
             - select_name (str): the name of the dropdown element
         """
         parse = parse_url(url)
+
+        if parse is None:
+            return {}
+
         options = parse.xpath(f'//*[@name="{select_name}"]/option')
         return {
             elem.text: elem.get("value") for elem in options if elem.text is not None
@@ -57,102 +52,112 @@ class RawBancadaScraper:
 
     def get_html_with_selections(
         self, url: str, period_value: str, condition_value: str = ""
-    ) -> HtmlElement | None:
-        options = Options()
-        options.add_argument("--headless=new")
-        options.add_argument("--log-level=3")
-        options.add_experimental_option("excludeSwitches", ["enable-logging"])
-
-        service = Service(log_path=os.devnull)
-
-        driver = webdriver.Chrome(service=service, options=options)
-        driver.get(url)
-
-        wait = WebDriverWait(driver, 15)
+    ) -> str | None:
+        browser = None
+        page = None
 
         try:
-            # Esperar a que existan los <select> ocultos
-            wait.until(
-                EC.presence_of_element_located(
-                    (By.CSS_SELECTOR, 'select[name="idPeriodo[]"]')
-                )
-            )
-            wait.until(
-                EC.presence_of_element_located(
-                    (By.CSS_SELECTOR, 'select[name="keyCondicion[]"]')
-                )
-            )
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
 
-            # Helper JS para seleccionar opción en un <select multiple hidden>
-            js_set_select = """
-            const selector = arguments[0];
-            const value = arguments[1];
-            const sel = document.querySelector(selector);
-            if (!sel) { return false; }
+                try:
+                    page = browser.new_page()
+                    page.goto(url, wait_until="domcontentloaded")
 
-            for (const opt of sel.options) {
-                opt.selected = (opt.value === value);
-            }
+                    page.wait_for_selector(
+                        'select[name="idPeriodo[]"]', state="attached"
+                    )
+                    page.wait_for_selector(
+                        'select[name="keyCondicion[]"]', state="attached"
+                    )
 
-            // Disparar change para que el plugin/servidor reaccionen
-            const event = new Event('change', { bubbles: true });
-            sel.dispatchEvent(event);
-            return true;
-            """
+                    js_set_select = """
+                    ({ selector, value }) => {
+                        const sel = document.querySelector(selector);
+                        if (!sel) {
+                            return false;
+                        }
 
-            # 1) Seleccionar periodo (idPeriodo[])
-            driver.execute_script(
-                js_set_select, 'select[name="idPeriodo[]"]', period_value
-            )
+                        for (const opt of sel.options) {
+                            opt.selected = (opt.value === value);
+                        }
 
-            # Pequeña espera para que se actualice el filtro, por si hace algo server-side
-            wait.until(
-                EC.presence_of_element_located(
-                    (By.CSS_SELECTOR, "button.ui-multiselect")
-                )
-            )
+                        sel.dispatchEvent(new Event("change", { bubbles: true }));
+                        return Array.from(sel.selectedOptions).map(opt => opt.value);
+                    }
+                    """
 
-            # 2) Seleccionar condición (keyCondicion[])
-            #   Para "Todas", condition_value debe ser "" (value="")
-            driver.execute_script(
-                js_set_select, 'select[name="keyCondicion[]"]', condition_value
-            )
+                    page.evaluate(
+                        js_set_select,
+                        {
+                            "selector": 'select[name="idPeriodo[]"]',
+                            "value": period_value,
+                        },
+                    )
+                    page.wait_for_function(
+                        """
+                        ({ selector, value }) => {
+                            const sel = document.querySelector(selector);
+                            return !!sel && Array.from(sel.selectedOptions).some(
+                                opt => opt.value === value
+                            );
+                        }
+                        """,
+                        arg={
+                            "selector": 'select[name="idPeriodo[]"]',
+                            "value": period_value,
+                        },
+                    )
 
-            # 3) Esperar a que la tabla de resultados esté presente
-            #   (ajusta el selector si hace falta)
-            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".table-cng")))
+                    page.evaluate(
+                        js_set_select,
+                        {
+                            "selector": 'select[name="keyCondicion[]"]',
+                            "value": condition_value,
+                        },
+                    )
+                    page.wait_for_function(
+                        """
+                        ({ selector, value }) => {
+                            const sel = document.querySelector(selector);
+                            return !!sel && Array.from(sel.selectedOptions).some(
+                                opt => opt.value === value
+                            );
+                        }
+                        """,
+                        arg={
+                            "selector": 'select[name="keyCondicion[]"]',
+                            "value": condition_value,
+                        },
+                    )
 
-            html = driver.page_source
-            return html
+                    page.wait_for_selector(".table-cng", state="visible")
+                    page.wait_for_timeout(1000)
 
-        except NoSuchElementException as e:
+                    return page.content()
+
+                finally:
+                    browser.close()
+
+        except PlaywrightTimeoutError as e:
             logger.error(f"Error found: {e}")
-            driver.quit()
             return None
 
     def get_raw_bancadas(self, only_current: bool = True) -> None:
         dict_periods = self.get_options(url=self.url, select_name="idPeriodo[]")
+        dict_condicion = {"en Ejercicio": "eej"}
 
         if only_current:
-            dict_condicion = {"en Ejercicio": "eej"}
-            
             # Only scrape current period
             key, val = list(dict_periods.items())[0]
             dict_periods = {key: val}
-        else:
-            dict_periods = self.get_options(url=self.url, select_name="idPeriodo[]")
-            dict_condicion = self.get_options(
-                url=self.url, select_name="keyCondicion[]"
-            )
 
         final_lst = []
-        for period_key, cond_key in product(dict_periods.keys(), dict_condicion.keys()):
+        for period_key, period in dict_periods.items():
+            cond_key, cond = next(iter(dict_condicion.items()))
             logger.info(
                 f"Scraping bancada for period {period_key} and condition {cond_key}"
             )
-
-            period = dict_periods.get(period_key)
-            cond = dict_condicion.get(cond_key)
 
             html = self.get_html_with_selections(self.url, period, cond)
 
@@ -178,7 +183,10 @@ class RawBancadaScraper:
         with self.Session() as session:
             last_bancada = (
                 session.query(RawBancada)
-                .filter(RawBancada.id == bancada.id)
+                .filter(
+                    RawBancada.legislative_period == bancada.legislative_period,
+                    RawBancada.last_update.is_(True),
+                )
                 .order_by(RawBancada.timestamp.desc())
                 .first()
             )
@@ -190,7 +198,7 @@ class RawBancadaScraper:
                 bancada.processed = False
             else:
                 # Compare last vs new
-                bancada.changed = bancada != last_bancada
+                bancada.changed = self._snapshot_changed(bancada, last_bancada)
                 bancada.last_update = True
                 bancada.processed = not bancada.changed
 
@@ -200,6 +208,13 @@ class RawBancadaScraper:
                 session.commit()
 
             return bancada
+
+    @staticmethod
+    def _snapshot_changed(current: RawBancada, previous: RawBancada) -> bool:
+        return (
+            current.legislative_period != previous.legislative_period
+            or current.raw_html != previous.raw_html
+        )
 
     def add_bancadas_to_db(self) -> bool:
         """

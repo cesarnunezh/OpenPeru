@@ -5,6 +5,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+.coverage
+coverage.xml
 
 # C extensions
 *.so
@@ -48,6 +51,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
+coverage.lcov
 *.cover
 *.py,cover
 .hypothesis/
@@ -55,7 +59,7 @@ coverage.xml
 cover/
 
 # Translations
-*.mo
+# *.mo
 *.pot
 
 # Django stuff:
@@ -186,6 +190,9 @@ logs/**
 data/bill_jsons/*.json
 data/ocr_cache/*.txt
 *.db
+*.sqlite
+*.sqlite3
+*.sqlite3-query
 *.csv
 
 # Big notebooks outputs (optional)

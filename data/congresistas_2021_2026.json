@@ -1,0 +1,3120 @@
+[
+  {
+    "id": "1112",
+    "nombre": "María Grimaneza",
+    "apellido": "Acuña Peralta",
+    "votation": "11,384",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }],
+    "dist_electoral": "Lambayeque",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/GrimanezaAcuna/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false
+  },
+  {
+    "id": "1160",
+    "nombre": "Segundo Héctor",
+    "apellido": "Acuña Peralta",
+    "votation": "19,729",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SegundoAcuna/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [
+        {"name": "ALIANZA PARA EL PROGRESO",
+        "periodo": {
+          "inicio": "27/07/2021",
+          "fin": "15/07/2022"
+        }},
+        {"name": "NO AGRUPADO",
+        "periodo": {
+          "inicio": "15/07/2022",
+          "fin": "20/07/2022"
+        }},
+        {"name": "CAMBIO DEMOCRATICO - JUNTOS POR EL PERU",
+        "periodo": {
+          "inicio": "20/07/2022",
+          "fin": "30/07/2022"
+        }},
+        {"name": "INTEGRIDAD Y DESARROLLO",
+        "periodo": {
+          "inicio": "01/08/2022",
+          "fin": "10/05/2023"
+        }},  
+
+           {"name": "NO AGRUPADO",
+        "periodo": {
+          "inicio": "11/05/2023",
+          "fin": "20/07/2023"
+        }},
+        
+
+         {"name": "UNIDAD Y DIALOGO",
+        "periodo": {
+          "inicio": "21/07/2023",
+          "fin": "10/03/2024"
+        }},
+        
+
+        {"name": "NO AGRUPADO",
+        "periodo": {
+          "inicio": "11/03/2024",
+          "fin": "26/05/2024"
+        }},
+      
+        {
+        "name": "HONOR Y DEMOCRACIA",
+        "periodo": {
+          "inicio": "27/05/2024",
+          "fin": "27/07/2026"
+        }
+        }
+    ]
+  },
+  {
+    "id": "1096",
+    "nombre": "María Antonieta",
+    "apellido": "Agüero Gutiérrez",
+    "votation": "29,293",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Arequipa",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MariaAguero/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1037",
+    "nombre": "Alejandro Aurelio",
+    "apellido": "Aguinaga Recuenco",
+    "votation": "10,715",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Lambayeque",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlejandroAguinaga/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1142",
+    "nombre": "Yorel Kira",
+    "apellido": "Alcarraz Aguero",
+    "votation": "28,404",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Democrático Somos Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/YorelAlcarraz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [ 
+      {
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "10/08/2022"
+      }
+      },
+      {
+      "name": "INTEGRIDAD Y DESAROLLO",
+      "periodo": {
+        "inicio": "11/08/2022",
+        "fin": "29/12/2022"
+      }
+      },
+      {
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "30/12/2021",
+        "fin": "07/11/2025"
+      }
+      },
+      {
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "07/11/2025",
+        "fin": "27/07/2026"
+      }
+      }
+  ]
+  },
+  {
+    "id": "1079",
+    "nombre": "Arturo",
+    "apellido": "Alegría García",
+    "votation": "2,443",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "San martin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LuisAlegria/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1029",
+    "nombre": "María del Carmen",
+    "apellido": "Alva Prieto",
+    "votation": "25,219",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MariaAlva/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCION POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "07/08/2023"
+      }
+    },
+    {
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "08/08/2023",
+        "fin": "07/10/2025"
+      }
+    },
+    {
+      "name": "ACCION POPULAR",
+      "periodo": {
+        "inicio": "08/10/2025",
+        "fin": "27/07/2026"
+      }
+    }
+  
+    ]
+  },
+  {
+    "id": "1054",
+    "nombre": "Carlos Enrique",
+    "apellido": "Alva Rojas",
+    "votation": "8,061",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CarlosAlva/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1143",
+    "nombre": "Yessica Rosselli",
+    "apellido": "Amuruz Dulanto",
+    "votation": "21,855",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/YessicaAmuruz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1053",
+    "nombre": "Carlos Antonio",
+    "apellido": "Anderson Ramírez",
+    "votation": "14,052",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Podemos Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CarlosAnderson/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "26/12/2025"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1077",
+    "nombre": "Luis Ángel",
+    "apellido": "Aragón Carreño",
+    "votation": "12,291",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Cusco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LuisAragon/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1041",
+    "nombre": "José Alberto",
+    "apellido": "Arriola Tueros",
+    "votation": "34,982",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseArriola/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1045",
+    "nombre": "Alfredo",
+    "apellido": "Azurín Loayza",
+    "votation": "23,624",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Democrático Somos Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlfredoAzurin/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1060",
+    "nombre": "José María",
+    "apellido": "Balcázar Zelada",
+    "votation": "6,641",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Lambayeque",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseBalcazar/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1152",
+    "nombre": "Rosangella Andrea",
+    "apellido": "Barbarán Reyes",
+    "votation": "22,572",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RosangellaBarbaran/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1069",
+    "nombre": "Diego Alonso Fernando",
+    "apellido": "Bazán Calderón",
+    "votation": "22,200",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/DiegoBazan/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1158",
+    "nombre": "Sigrid Tesoro",
+    "apellido": "Bazán Narro",
+    "votation": "44,359",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Juntos por el Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SigridBazan/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE DEMOCRÁTICO POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1101",
+    "nombre": "Guido",
+    "apellido": "Bellido Ugarte",
+    "votation": "20,164",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Cusco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/GuidoBellido/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1103",
+    "nombre": "Guillermo",
+    "apellido": "Bermejo Rojas",
+    "votation": "8,254",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/GuillermoBermejo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "24/10/2025"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1063",
+    "nombre": "Juan Bartolomé",
+    "apellido": "Burgos Oliveros",
+    "votation": "10,060",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JuanBurgos/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1056",
+    "nombre": "Carlos Ernesto",
+    "apellido": "Bustamante Donayre",
+    "votation": "24,075",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/ErnestoBustamante/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1071",
+    "nombre": "Digna",
+    "apellido": "Calle Lobatón",
+    "votation": "54,282",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Podemos Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/DignaCalle/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1030",
+    "nombre": "Lady Mercedes",
+    "apellido": "Camones Soriano",
+    "votation": "6,203",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso del Perú",
+    "dist_electoral": "Ancash",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LadyCamones/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1075",
+    "nombre": "Eduardo Enrique",
+    "apellido": "Castillo Rivas",
+    "votation": "10,901",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/EduardoCastillo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1038",
+    "nombre": "Alejandro Enrique",
+    "apellido": "Cavero Alva",
+    "votation": "30,242",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlejandroCavero/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1148",
+    "nombre": "Waldemar José",
+    "apellido": "Cerrón Rojas",
+    "votation": "25,281",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Junin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/WaldemarCerron/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1131",
+    "nombre": "Nilza Merly",
+    "apellido": "Chacón Trujillo",
+    "votation": "3,950",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Ancash",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/NilzaChacon/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1051",
+    "nombre": "Betssy Betzabet",
+    "apellido": "Chávez Chino",
+    "votation": "8,472",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Tacna",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/BetssyChavez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "22/03/2023"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1121",
+    "nombre": "Roberto Enrique",
+    "apellido": "Chiabra León",
+    "votation": "19,222",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RobertoChiabra/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1032",
+    "nombre": "Patricia Rosa",
+    "apellido": "Chirinos Venegas",
+    "votation": "9,033",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "Callao",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/PatriciaChirinos/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1129",
+    "nombre": "Miguel Angel",
+    "apellido": "Ciccia Vásquez",
+    "votation": "9,269",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MiguelCiccia/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1130",
+    "nombre": "Jorge Samuel",
+    "apellido": "Coayla Juárez",
+    "votation": "4,846",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Moquegua",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JorgeCoayla/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1082",
+    "nombre": "Luis Gustavo",
+    "apellido": "Cordero Jon Tay",
+    "votation": "4,531",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Lima Provincias",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LuisCordero/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1102",
+    "nombre": "María del Pilar",
+    "apellido": "Cordero Jon Tay",
+    "votation": "2,194",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Tumbes",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MariaCordero/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "14/03/2024"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1116",
+    "nombre": "María Jessica",
+    "apellido": "Córdova Lobatón",
+    "votation": "12,552",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "Lambayeque",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MariaCordova/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1115",
+    "nombre": "Isabel",
+    "apellido": "Cortez Aguirre",
+    "votation": "34,888",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Juntos por el Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/IsabelCortez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1091",
+    "nombre": "Flavio",
+    "apellido": "Cruz Mamani",
+    "votation": "30,025",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Puno",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/FlavioCruz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1100",
+    "nombre": "José Ernesto",
+    "apellido": "Cueto Aservi",
+    "votation": "36,769",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseCueto/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "HONOR Y DEMOCRACIA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1150",
+    "nombre": "Víctor Raúl",
+    "apellido": "Cutipa Ccama",
+    "votation": "3,821",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Moquegua",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/VictorCutipa/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1136",
+    "nombre": "Pasión Neomias",
+    "apellido": "Dávila Atanacio",
+    "votation": "3,915",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Pasco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/PasionDavila/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BANCADA SOCIALISTA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1095",
+    "nombre": "Freddy Ronald",
+    "apellido": "Díaz Monago",
+    "votation": "4,195",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Pasco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/FreddyDiaz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "12/01/2023"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1139",
+    "nombre": "Raúl Felipe",
+    "apellido": "Doroteo Carbajo",
+    "votation": "8,482",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Ica",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RaulDoroteo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1073",
+    "nombre": "Gladys Margot",
+    "apellido": "Echaíz Ramos vda de Núñez",
+    "votation": "21,627",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/GladysEchaiz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "HONOR Y DEMOCRACIA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1104",
+    "nombre": "Hamlet",
+    "apellido": "Echeverría Rodríguez",
+    "votation": "3,647",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Cajamarca",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HamletEcheverria/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1146",
+    "nombre": "Wilmar Alberto",
+    "apellido": "Elera García",
+    "votation": "11,483",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Democrático Somos Perú",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/WilmarElera/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "12/01/2023"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1057",
+    "nombre": "José Luis",
+    "apellido": "Elías Ávalos",
+    "votation": "10,708",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Podemos Perú",
+    "dist_electoral": "Ica",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseElias/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1122",
+    "nombre": "Jhaec Darwin",
+    "apellido": "Espinoza Vargas",
+    "votation": "6,505",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Ancash",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/DarwinEspinoza/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1128",
+    "nombre": "Jorge Luis",
+    "apellido": "Flores Ancachi",
+    "votation": "23,539",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Puno",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JorgeFlores/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1044",
+    "nombre": "Alex Randu",
+    "apellido": "Flores Ramírez",
+    "votation": "21,993",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ayacucho",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlexFlores/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BANCADA SOCIALISTA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1149",
+    "nombre": "Víctor Seferino",
+    "apellido": "Flores Ruíz",
+    "votation": "12,256",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/VictorFlores/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1113",
+    "nombre": "Idelso Manuel",
+    "apellido": "García Correa",
+    "votation": "14,205",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/IdelsoGarcia/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1031",
+    "nombre": "Americo",
+    "apellido": "Gonza Castillo",
+    "votation": "10,394",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Cajamarca",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AmericoGonza/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1067",
+    "nombre": "Diana Carolina",
+    "apellido": "Gonzales Delgado",
+    "votation": "24,948",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "Arequipa",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/DianaGonzales/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1108",
+    "nombre": "Hernando",
+    "apellido": "Guerra García Campos",
+    "votation": "55,987",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HernandoGuerraGarcia/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "29/09/2023"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1137",
+    "nombre": "Paul Silvio",
+    "apellido": "Gutiérrez Ticona",
+    "votation": "11,124",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Apurimac",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/PaulGutierrez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1163",
+    "nombre": "Nelcy Lidia",
+    "apellido": "Heidinger Ballesteros",
+    "votation": "1,324",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Pasco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/NelcyHeindinger/",
+    "periodo": {
+      "inicio": "16/01/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1089",
+    "nombre": "Fernando Mario",
+    "apellido": "Herrera Mamani",
+    "votation": "6,105",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Tacna",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/FernandoHerrera/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "25/10/2021"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1133",
+    "nombre": "Noelia Rossvith",
+    "apellido": "Herrera Medina",
+    "votation": "8,619",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "Callao",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/NoeliaHerrera/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1140",
+    "nombre": "Raúl",
+    "apellido": "Huamán Coronado",
+    "votation": "9,588",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Ica",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RaulHuaman/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1052",
+    "nombre": "Mery Eliana",
+    "apellido": "Infantes Castañeda",
+    "votation": "2,575",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Amazonas",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MeryInfantes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1099",
+    "nombre": "María de los Milagros Jackeline",
+    "apellido": "Jáuregui Martínez de Aguayo",
+    "votation": "68,003",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MariaJauregui/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1049",
+    "nombre": "José Enrique",
+    "apellido": "Jeri Oré",
+    "votation": "11,654",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Democrático Somos Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseJeri/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1065",
+    "nombre": "David Julio",
+    "apellido": "Jiménez Heredia",
+    "votation": "7,278",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Junin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/DavidJimenez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1107",
+    "nombre": "Heidy Lisbeth",
+    "apellido": "Juárez Calle",
+    "votation": "19,153",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso del Perú",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HeydiJuarez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1059",
+    "nombre": "Carmen Patricia",
+    "apellido": "Juárez Gallegos",
+    "votation": "40,125",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CarmenJuarez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1083",
+    "nombre": "Elva Edhit",
+    "apellido": "Julón Irigoín",
+    "votation": "9,080",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso del Perú",
+    "dist_electoral": "Cajamarca",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/ElvaJulon/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1087",
+    "nombre": "Luis Roberto",
+    "apellido": "Kamiche Morante",
+    "votation": "6,035",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LuisKamiche/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1162",
+    "nombre": "Nieves Esmeralda",
+    "apellido": "Limachi Quispe",
+    "votation": "3,125",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Tacna",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/NievesLimachi/",
+    "periodo": {
+      "inicio": "11/11/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1066",
+    "nombre": "Juan Carlos Martín",
+    "apellido": "Lizarzaburu Lizarzaburu",
+    "votation": "1,773",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Peruanos Residentes en el Extranjero",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JuanLizarzaburu/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1120",
+    "nombre": "Jeny Luz",
+    "apellido": "López Morales",
+    "votation": "4,576",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Ucayali",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JenyLopez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1114",
+    "nombre": "Ilich Fredy",
+    "apellido": "López Ureña",
+    "votation": "17,727",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Junin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/IlichLopez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1055",
+    "nombre": "José León",
+    "apellido": "Luna Gálvez",
+    "votation": "91,055",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Podemos Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseLuna/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1157",
+    "nombre": "Ruth",
+    "apellido": "Luque Ibarra",
+    "votation": "12,049",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Juntos por el Perú",
+    "dist_electoral": "Cusco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RuthLuque/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE DEMOCRÁTICO POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1097",
+    "nombre": "George Edward",
+    "apellido": "Málaga Trillo",
+    "votation": "67,044",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Morado",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/GeorgeMalaga/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1125",
+    "nombre": "Jorge Alfonso",
+    "apellido": "Marticorena Mendoza",
+    "votation": "6,597",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ica",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JorgeMarticorena/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1138",
+    "nombre": "Pedro Edwin",
+    "apellido": "Martínez Talavera",
+    "votation": "16,372",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Arequipa",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/PedroMartinez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1081",
+    "nombre": "Elizabeth Sara",
+    "apellido": "Medina Hermosilla",
+    "votation": "11,300",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Huanuco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/ElizabethMedina/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1088",
+    "nombre": "Esdras Ricardo",
+    "apellido": "Medina Minaya",
+    "votation": "15,693",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "Arequipa",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/EsdrasMedina/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1165",
+    "nombre": "Isaac",
+    "apellido": "Mita Alanoca",
+    "votation": "2,869",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Tacna",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/IsaacMita/",
+    "periodo": {
+      "inicio": "29/03/2023",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1159",
+    "nombre": "Segundo Toribio",
+    "apellido": "Montalvo Cubas",
+    "votation": "5,268",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Amazonas",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SegundoMontalvo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1154",
+    "nombre": "Silvia María",
+    "apellido": "Monteza Facho",
+    "votation": "7,171",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Cajamarca",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SilviaMonteza/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1127",
+    "nombre": "Jorge Carlos",
+    "apellido": "Montoya Manrique",
+    "votation": "138,231",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JorgeMontoya/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "HONOR Y DEMOCRACIA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1124",
+    "nombre": "Jorge Alberto",
+    "apellido": "Morante Figari",
+    "votation": "5,548",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Loreto",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JorgeMorante/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1068",
+    "nombre": "Juan Carlos",
+    "apellido": "Mori Celis",
+    "votation": "8,815",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Loreto",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JuanMori/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1118",
+    "nombre": "Martha Lupe",
+    "apellido": "Moyano Delgado",
+    "votation": "23,260",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MarthaMoyano/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1039",
+    "nombre": "Alejandro",
+    "apellido": "Muñante Barrios",
+    "votation": "21,014",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlejandroMunante/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1048",
+    "nombre": "Auristela Ana",
+    "apellido": "Obando Morgan",
+    "votation": "8,914",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Callao",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AuristelaObando/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1074",
+    "nombre": "Vivian",
+    "apellido": "Olivos Martínez",
+    "votation": "7,785",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Lima Provincias",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LeslieOlivos/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1168",
+    "nombre": "Ariana Maybee",
+    "apellido": "Orué Medina",
+    "votation": "7,871",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Podemos Perú",
+    "dist_electoral": "Callao",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/ArianaOrue/",
+    "periodo": {
+      "inicio": "26/07/2024",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1092",
+    "nombre": "Flor Aidee",
+    "apellido": "Pablo Medina",
+    "votation": "53,899",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Morado",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/FlorPablo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1119",
+    "nombre": "Javier Rommel",
+    "apellido": "Padilla Romero",
+    "votation": "6,835",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "Lima Provincias",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JavierPadilla/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "HONOR Y DEMOCRACIA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1093",
+    "nombre": "Margot",
+    "apellido": "Palacios Huamán",
+    "votation": "11,781",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ayacucho",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MargotPalacios/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "NO AGRUPADO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1094",
+    "nombre": "Francis Jhasmina",
+    "apellido": "Paredes Castro",
+    "votation": "3,454",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ucayali",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/FrancisParedes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1070",
+    "nombre": "Karol Ivett",
+    "apellido": "Paredes Fonseca",
+    "votation": "4,995",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "San martin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/KarolParedes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1042",
+    "nombre": "Alex Antonio",
+    "apellido": "Paredes Gonzales",
+    "votation": "18,673",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Arequipa",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlexParedes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1153",
+    "nombre": "Susel Ana María",
+    "apellido": "Paredes Piqué",
+    "votation": "76,785",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Morado",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SuselParedes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE DEMOCRÁTICO POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1046",
+    "nombre": "Alfredo",
+    "apellido": "Pariona Sinche",
+    "votation": "9,849",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Huancavelica",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlfredoPariona/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BANCADA SOCIALISTA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1164",
+    "nombre": "José Bernardo",
+    "apellido": "Pazo Nunura",
+    "votation": "0",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Somos Perú",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/josepazo/",
+    "periodo": {
+      "inicio": "26/01/2023",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1085",
+    "nombre": "Luis Raúl",
+    "apellido": "Picón Quedo",
+    "votation": "10,812",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Huanuco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LuisPicon/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1072",
+    "nombre": "Kelly Roxana",
+    "apellido": "Portalatino Ávalos",
+    "votation": "8,286",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ancash",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/KellyPortalatino/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1110",
+    "nombre": "Hilda Marleny",
+    "apellido": "Portero López",
+    "votation": "8,568",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Lambayeque",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HildaPortero/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCION POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1141",
+    "nombre": "Segundo Teodomiro",
+    "apellido": "Quiroz Barboza",
+    "votation": "16,660",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Cajamarca",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SegundoQuiroz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1145",
+    "nombre": "Wilson Rusbel",
+    "apellido": "Quispe Mamani",
+    "votation": "28,343",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Puno",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/WilsonQuispe/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1050",
+    "nombre": "Bernardo Jaime",
+    "apellido": "Quito Sarmiento",
+    "votation": "41,430",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Arequipa",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/BernardoQuito/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BANCADA SOCIALISTA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1151",
+    "nombre": "Tania Estefany",
+    "apellido": "Ramírez García",
+    "votation": "3,240",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Cajamarca",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/TaniaRamirez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1061",
+    "nombre": "César Manuel",
+    "apellido": "Revilla Villanueva",
+    "votation": "6,420",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CesarRevilla/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1035",
+    "nombre": "Abel Augusto",
+    "apellido": "Reyes Cam",
+    "votation": "7,133",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Huanuco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AbelReyes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1047",
+    "nombre": "Edgard Cornelio",
+    "apellido": "Reymundo Mercado",
+    "votation": "7,912",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Juntos por el Perú",
+    "dist_electoral": "Junin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/EdgardReymundo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE DEMOCRÁTICO POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1117",
+    "nombre": "Janet Milagros",
+    "apellido": "Rivas Chacara",
+    "votation": "4,455",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Lima Provincias",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JanetRivas/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1156",
+    "nombre": "Silvana Emperatriz",
+    "apellido": "Robles Araujo",
+    "votation": "11,893",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Junin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/SilvanaRobles/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BANCADA SOCIALISTA",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1166",
+    "nombre": "Fernando Miguel",
+    "apellido": "Rospigliosi Capurro",
+    "votation": "14,705",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/FernandoRospigliosi",
+    "periodo": {
+      "inicio": "19/10/2023",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1090",
+    "nombre": "Magaly Rosmery",
+    "apellido": "Ruíz Rodríguez",
+    "votation": "16,689",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "La libertad",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MagalyRuiz/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1111",
+    "nombre": "Hitler",
+    "apellido": "Saavedra Casternoque",
+    "votation": "7,654",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Democrático Somos Perú",
+    "dist_electoral": "Loreto",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HitlerSaavedra/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "17/09/2024"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1078",
+    "nombre": "Eduardo",
+    "apellido": "Salhuana Cavides",
+    "votation": "3,013",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Madre de dios",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/EduardoSalhuana/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1147",
+    "nombre": "Roberto Helbert",
+    "apellido": "Sánchez Palomino",
+    "votation": "29,825",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Juntos por el Perú",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RobertoSanchez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1167",
+    "nombre": "Magally",
+    "apellido": "Santisteban Suclupe",
+    "votation": "1,597",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Tumbes",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MagallySantisteban/",
+    "periodo": {
+      "inicio": "25/03/2024",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1144",
+    "nombre": "Wilson",
+    "apellido": "Soto Palacios",
+    "votation": "7,145",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Huancavelica",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/WilsonSoto/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCION POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1040",
+    "nombre": "Alejandro",
+    "apellido": "Soto Reyes",
+    "votation": "29,073",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Cusco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AlejandroSotoReyes/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1098",
+    "nombre": "Germán Adolfo",
+    "apellido": "Tacuri Valdivia",
+    "votation": "11,547",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ayacucho",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/GermanTacuri/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1109",
+    "nombre": "María Elizabeth",
+    "apellido": "Taipe Coronado",
+    "votation": "8,643",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Apurimac",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/MariaTaipe/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PERÚ LIBRE",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1132",
+    "nombre": "Nivardo Edgar",
+    "apellido": "Tello Montes",
+    "votation": "5,133",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/NivardoTello/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1155",
+    "nombre": "Rosio",
+    "apellido": "Torres Salinas",
+    "votation": "5,179",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "Loreto",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/RosioTorres/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ALIANZA PARA EL PROGRESO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1062",
+    "nombre": "Cheryl",
+    "apellido": "Trigozo Reátegui",
+    "votation": "16,574",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Alianza para el Progreso",
+    "dist_electoral": "San martin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CherylTrigozo/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1036",
+    "nombre": "Adriana Josefina",
+    "apellido": "Tudela Gutiérrez",
+    "votation": "47,139",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AdrianaTudela/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1123",
+    "nombre": "Jhakeline Katy",
+    "apellido": "Ugarte Mamani",
+    "votation": "12,700",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Cusco",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JhakelineUgarte/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1106",
+    "nombre": "Héctor",
+    "apellido": "Valer Pinto",
+    "votation": "20,948",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HectorValer/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1080",
+    "nombre": "Elías Marcial",
+    "apellido": "Varas Meléndez",
+    "votation": "6,328",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Ancash",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/EliasVaras/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "JUNTOS POR EL PERÚ - VOCES DEL PUEBLO",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1076",
+    "nombre": "Lucinda",
+    "apellido": "Vásquez Vela",
+    "votation": "8,778",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "San martin",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/LucindaVasquez/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1105",
+    "nombre": "Héctor José",
+    "apellido": "Ventura Angel",
+    "votation": "3,361",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Tumbes",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/HectorVentura/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1084",
+    "nombre": "Elvis Hernán",
+    "apellido": "Vergara Mendoza",
+    "votation": "4,486",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Ucayali",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/ElvisVergara/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "ACCION POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1043",
+    "nombre": "José Daniel",
+    "apellido": "Williams Zapata",
+    "votation": "44,789",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Avanza País - Partido de Integración Social",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JoseWilliams/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1086",
+    "nombre": "Enrique",
+    "apellido": "Wong Pujada",
+    "votation": "11,384",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Podemos Perú",
+    "dist_electoral": "Callao",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/EnriqueWong/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "13/07/2024"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "PODEMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1134",
+    "nombre": "Norma Martina",
+    "apellido": "Yarrow Lumbreras",
+    "votation": "51,103",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "LIMA",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/NormaYarrow/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1135",
+    "nombre": "Oscar",
+    "apellido": "Zea Choquechambi",
+    "votation": "34,450",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Politico Nacional Perú Libre",
+    "dist_electoral": "Puno",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/OscarZea/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE MAGISTERIAL DE CONCERTACIÓN NACIONAL",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1126",
+    "nombre": "Jorge Arturo",
+    "apellido": "Zeballos Aponte",
+    "votation": "4,691",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Renovación Popular",
+    "dist_electoral": "Peruanos Residentes en el Extranjero",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/JorgeZeballos/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "RENOVACIÓN POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1058",
+    "nombre": "Carlos Javier",
+    "apellido": "Zeballos Madariaga",
+    "votation": "23,883",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Acción Popular",
+    "dist_electoral": "Puno",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CarlosZeballos/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "BLOQUE DEMOCRÁTICO POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1169",
+    "nombre": "Ana Zadith",
+    "apellido": "Zegarra Saboya",
+    "votation": "4,917",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Partido Democrático Somos Perú",
+    "dist_electoral": "Loreto",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/AnaZegarra/",
+    "periodo": {
+      "inicio": "02/10/2024",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "SOMOS PERÚ",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  },
+  {
+    "id": "1064",
+    "nombre": "Cruz María",
+    "apellido": "Zeta Chunga",
+    "votation": "10,079",
+    "leg_period": "Parlamentario 2021 - 2026",
+    "party_name": "Fuerza Popular",
+    "dist_electoral": "Piura",
+    "website": "https://www3.congreso.gob.pe/congresistas2021/CruzZeta/",
+    "periodo": {
+      "inicio": "27/07/2021",
+      "fin": "27/07/2026"
+    },
+    "en_ejercicio": false,
+    "bancada": [{
+      "name": "FUERZA POPULAR",
+      "periodo": {
+        "inicio": "27/07/2021",
+        "fin": "27/07/2026"
+      }
+    }]
+  }
+]

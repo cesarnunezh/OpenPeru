@@ -1,0 +1,541 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-05-28 10:49-0500\n"
+"PO-Revision-Date: 2026-05-17 15:22-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: routes/bills.py:220 templates/bills/votes.html:77
+msgid "In favor"
+msgstr "A favor"
+
+#: routes/bills.py:221 templates/bills/votes.html:78
+msgid "Against"
+msgstr "En contra"
+
+#: routes/bills.py:222 templates/bills/votes.html:79
+msgid "Abstain"
+msgstr "Abstención"
+
+#: routes/bills.py:224 templates/bills/votes.html:80
+msgid "Others"
+msgstr "Otros"
+
+#: routes/bills.py:775 routes/bills.py:861
+msgid "Not approved"
+msgstr "No aprobado"
+
+#: routes/bills.py:777 routes/bills.py:863
+msgid "Approved"
+msgstr "Aprobado"
+
+#: routes/landing.py:13 templates/base.html:28
+msgid "Bills"
+msgstr "Proyectos de ley"
+
+#: routes/landing.py:14
+msgid "Congressmen"
+msgstr "Congresistas"
+
+#: templates/base.html:6
+msgid "Open Congress"
+msgstr "Open Congress"
+
+#: templates/base.html:19
+msgid "Open navigation menu"
+msgstr ""
+
+#: templates/base.html:23
+msgid "Close navigation menu"
+msgstr ""
+
+#: templates/base.html:26
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/base.html:27 templates/base.html:47
+#: templates/landing/index.html:40
+msgid "About"
+msgstr "Acerca de"
+
+#: templates/base.html:29 templates/bills/votes.html:111
+msgid "Congressmember"
+msgstr "Congresista"
+
+#: templates/base.html:32
+msgid "Language"
+msgstr "Idioma"
+
+#: templates/base.html:33
+msgid "English"
+msgstr "Ingles"
+
+#: templates/base.html:34
+msgid "Spanish"
+msgstr "Espanol"
+
+#: templates/base.html:48
+msgid "Terms of Service"
+msgstr "Términos de servicio"
+
+#: templates/base.html:49
+msgid "Privacy"
+msgstr "Privacidad"
+
+#: templates/base.html:50
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates/bills/detail.html:29 templates/bills/search.html:61
+#: templates/bills/votes.html:28
+msgid "Presentation date"
+msgstr "Fecha de presentación"
+
+#: templates/bills/detail.html:31
+msgid "Time to approval"
+msgstr "Tiempo hasta la aprobacion"
+
+#: templates/bills/detail.html:31 templates/bills/detail.html:33
+msgid "days"
+msgstr "dias"
+
+#: templates/bills/detail.html:33
+msgid "Time since presentation"
+msgstr "Tiempo desde la presentacion"
+
+#: templates/bills/detail.html:40 templates/bills/search.html:43
+#: templates/bills/search.html:183
+msgid "Current Step"
+msgstr "Etapa actual"
+
+#: templates/bills/detail.html:42 templates/bills/search.html:13
+#: templates/bills/search.html:141 templates/bills/search.html:172
+#: templates/bills/search.html:174 templates/bills/search.html:211
+msgid "Author"
+msgstr "Autor"
+
+#: templates/bills/detail.html:43 templates/bills/votes.html:112
+#: templates/congress/search.html:20 templates/congress/search.html:60
+#: templates/congress/search.html:74
+msgid "Party"
+msgstr "Partido"
+
+#: templates/bills/detail.html:44
+msgid "Summary"
+msgstr "Resumen"
+
+#: templates/bills/detail.html:61 templates/bills/detail.html:62
+#: templates/bills/search.html:156 templates/bills/search.html:224
+#: templates/congress/congress_detail.html:80 templates/congress/search.html:87
+msgid "View details"
+msgstr "Ver detalles"
+
+#: templates/bills/detail.html:65
+msgid "View changes"
+msgstr "Ver cambios"
+
+#: templates/bills/difference.html:8
+msgid "Bill"
+msgstr "Proyecto de ley"
+
+#: templates/bills/difference.html:16
+msgid "Step"
+msgstr "Paso"
+
+#: templates/bills/difference.html:20
+msgid "Back to bill"
+msgstr "Volver al proyecto de ley"
+
+#: templates/bills/difference.html:25
+msgid "Differences"
+msgstr "Diferencias"
+
+#: templates/bills/difference.html:28
+msgid "No changes between versions."
+msgstr "No hay cambios entre las versiones."
+
+#: templates/bills/difference.html:31
+msgid "This is the first version — no previous text to compare."
+msgstr "Esta es la primera versión — no hay texto previo para comparar."
+
+#: templates/bills/difference.html:35
+msgid ""
+"Versions differ in length by more than 10× — probably mismatched document"
+" types."
+msgstr ""
+"Las versiones difieren en longitud en más de 10× — probablemente son "
+"tipos de documento distintos."
+
+#: templates/bills/difference.html:39
+msgid "Text could not be extracted for comparison."
+msgstr "No se pudo extraer el texto para comparar."
+
+#: templates/bills/difference.html:45
+msgid "No difference data available."
+msgstr "No hay datos de diferencias disponibles."
+
+#: templates/bills/difference.html:51
+msgid "Version 1"
+msgstr "Versión 1"
+
+#: templates/bills/difference.html:56 templates/bills/difference.html:65
+msgid "No text available"
+msgstr "No hay texto disponible"
+
+#: templates/bills/difference.html:60
+msgid "Version 2"
+msgstr "Versión 2"
+
+#: templates/bills/search.html:5
+msgid "Search the bill by:"
+msgstr "Busca el proyecto de ley por:"
+
+#: templates/bills/search.html:9 templates/bills/search.html:140
+#: templates/bills/search.html:169 templates/bills/search.html:210
+#: templates/congress/congress_detail.html:68
+msgid "Title"
+msgstr "Título"
+
+#: templates/bills/search.html:18
+msgid "Committee"
+msgstr "Comité"
+
+#: templates/bills/search.html:25 templates/congress/search.html:45
+msgid "Search"
+msgstr "Buscar"
+
+#: templates/bills/search.html:30
+msgid "Advanced Search Options:"
+msgstr "Opciones de búsqueda avanzada:"
+
+#: templates/bills/search.html:34 templates/bills/search.html:177
+msgid "Bill ID"
+msgstr "ID del proyecto de ley"
+
+#: templates/bills/search.html:38 templates/bills/search.html:180
+msgid "Law ID"
+msgstr "ID de la ley"
+
+#: templates/bills/search.html:52 templates/bills/search.html:186
+msgid "Author party"
+msgstr "Partido del autor"
+
+#: templates/bills/search.html:64
+msgid "From"
+msgstr "Desde"
+
+#: templates/bills/search.html:67 templates/bills/search.html:91
+msgid "Year"
+msgstr "Año"
+
+#: templates/bills/search.html:73 templates/bills/search.html:97
+msgid "Month"
+msgstr "Mes"
+
+#: templates/bills/search.html:79 templates/bills/search.html:103
+#: templates/bills/search.html:276
+msgid "Day"
+msgstr "Día"
+
+#: templates/bills/search.html:88
+msgid "To"
+msgstr "Hasta"
+
+#: templates/bills/search.html:115
+msgid "All bills"
+msgstr "Proyectos de ley"
+
+#: templates/bills/search.html:119 templates/bills/search.html:195
+msgid "Approved bills"
+msgstr "Proyectos de ley aprobados"
+
+#: templates/bills/search.html:123 templates/bills/search.html:195
+msgid "Not approved bills"
+msgstr "Proyectos de ley no aprobados"
+
+#: templates/bills/search.html:132
+msgid "Recent bills"
+msgstr "Proyectos de ley recientes"
+
+#: templates/bills/search.html:139 templates/bills/search.html:209
+#: templates/congress/congress_detail.html:67
+msgid "ID"
+msgstr "ID"
+
+#: templates/bills/search.html:142
+msgid "First presentation date"
+msgstr "Primera fecha de presentacion"
+
+#: templates/bills/search.html:143 templates/bills/search.html:212
+#: templates/congress/congress_detail.html:69 templates/congress/search.html:76
+msgid "Detail"
+msgstr "Detalle"
+
+#: templates/bills/search.html:167 templates/congress/search.html:55
+msgid "Search Criteria"
+msgstr "Criterios de búsqueda"
+
+#: templates/bills/search.html:189
+msgid "Presentation Date"
+msgstr "Fecha de presentación"
+
+#: templates/bills/search.html:192 templates/bills/votes.html:41
+msgid "Organization"
+msgstr "Organización"
+
+#: templates/bills/search.html:195
+msgid "Status"
+msgstr "Estado"
+
+#: templates/bills/search.html:201
+#, python-format
+msgid "Showing %(start)s-%(end)s of %(count)s bills"
+msgstr "Mostrando %(start)s-%(end)s de %(count)s proyectos de ley"
+
+#: templates/bills/search.html:233
+msgid "Search pages"
+msgstr "Páginas de búsqueda"
+
+#: templates/bills/search.html:234
+msgid "Page"
+msgstr "Pagina"
+
+#: templates/bills/search.html:247
+msgid "Previous"
+msgstr "Anterior"
+
+#: templates/bills/search.html:251
+msgid "Next"
+msgstr "Siguiente"
+
+#: templates/bills/search.html:257
+msgid "No matching bills found."
+msgstr "No se encontraron proyectos de ley."
+
+#: templates/bills/votes.html:32 templates/bills/votes.html:41
+#: templates/bills/votes.html:118 templates/bills/votes.html:124
+#: templates/congress/congress_detail.html:10 templates/congress/search.html:83
+#: templates/congress/search.html:84
+msgid "Not available"
+msgstr "No disponible"
+
+#: templates/bills/votes.html:40
+msgid "Vote date"
+msgstr "Fecha de votacion"
+
+#: templates/bills/votes.html:45
+msgid "Voting Results"
+msgstr "Resultados de votación"
+
+#: templates/bills/votes.html:51
+msgid "IN FAVOR"
+msgstr "A FAVOR"
+
+#: templates/bills/votes.html:52
+msgid "AGAINST"
+msgstr "EN CONTRA"
+
+#: templates/bills/votes.html:53
+msgid "ABSTAIN"
+msgstr "ABSTENCIÓN"
+
+#: templates/bills/votes.html:54
+msgid "OTHERS"
+msgstr "OTROS"
+
+#: templates/bills/votes.html:84
+msgid "Results by bancada"
+msgstr "Resultados por bancada"
+
+#: templates/bills/votes.html:113
+msgid "Vote"
+msgstr "Voto"
+
+#: templates/congress/congress_detail.html:12
+#, python-format
+msgid "%(count)s votes obtained"
+msgstr "%(count)s votos obtenidos"
+
+#: templates/congress/congress_detail.html:22
+#, python-format
+msgid "Photo of %(name)s"
+msgstr "Foto de %(name)s"
+
+#: templates/congress/congress_detail.html:27
+msgid "Committee Membership"
+msgstr "Membresía en comisiones"
+
+#: templates/congress/congress_detail.html:38
+msgid "No committee membership records found."
+msgstr "No se encontraron registros de membresía en comisiones."
+
+#: templates/congress/congress_detail.html:45
+msgid "Attendance Rate"
+msgstr "Tasa de asistencia"
+
+#: templates/congress/congress_detail.html:49
+msgid "Bills Authored"
+msgstr "Proyectos de ley presentados"
+
+#: templates/congress/congress_detail.html:53
+msgid "Approval bill rate"
+msgstr "Tasa de aprobacion de proyectos"
+
+#: templates/congress/congress_detail.html:61
+msgid "Recent Bills Authored (Last 5)"
+msgstr "Proyectos de ley recientes presentados (ultimos 5)"
+
+#: templates/congress/congress_detail.html:88
+msgid "No authored bills found."
+msgstr "No se encontraron proyectos de ley."
+
+#: templates/congress/congress_detail.html:94
+msgid "View all bills authored"
+msgstr "Ver todos los proyectos de ley presentados"
+
+#: templates/congress/congress_detail.html:101
+msgid "Official congress profile"
+msgstr "Perfil oficial del congresista"
+
+#: templates/congress/search.html:8
+msgid "Search a congressmember by:"
+msgstr "Busca al congresista por:"
+
+#: templates/congress/search.html:13 templates/congress/search.html:14
+#: templates/congress/search.html:57 templates/congress/search.html:73
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/congress/search.html:29 templates/congress/search.html:63
+#: templates/congress/search.html:75
+msgid "Region"
+msgstr "Región"
+
+#: templates/congress/search.html:38 templates/congress/search.html:66
+msgid "Commission"
+msgstr "Comision"
+
+#: templates/congress/search.html:95
+msgid "No matching congresspeople found."
+msgstr "No se encontraron congresistas."
+
+#: templates/landing/index.html:7
+msgid "Welcome to Open Congress"
+msgstr "Bienvenido a Open Congress"
+
+#: templates/landing/index.html:10
+msgid ""
+"Open Congress brings together public information from the Peruvian "
+"Congress in one place. Explore bills from the 2021-2026 congressional "
+"period, review who authored them, see how congress members voted, and "
+"compare changes between different versions of each bill."
+msgstr ""
+"Open Congress reune informacion publica del Congreso peruano en un solo "
+"lugar. Explora proyectos de ley del periodo congresal 2021-2026, revisa "
+"quienes los presentaron, observa como votaron los congresistas y compara "
+"cambios entre distintas versiones de cada proyecto."
+
+#: templates/landing/index.html:11
+msgid "Click below to start exploring:"
+msgstr "Haz clic abajo para empezar a explorar:"
+
+#: templates/landing/index.html:29
+msgid "Open Congress logo"
+msgstr "Logo de Open Congress"
+
+#: templates/landing/index.html:31
+msgid "Transparency and accountability for a stronger democracy"
+msgstr "Transparencia y rendicion de cuentas para una democracia mas fuerte"
+
+#: templates/landing/index.html:41
+msgid ""
+"Open Congress is built as a public data pipeline for legislative \n"
+"            information. It collects official public records from the "
+"Peruvian Congress, \n"
+"            processes them, and organizes them into a structured, \n"
+"            clean relational database."
+msgstr ""
+"Open Congress esta construido como un pipeline publico de datos para "
+"informacion legislativa. Recopila registros publicos oficiales del "
+"Congreso peruano, los procesa y los organiza en una base de datos "
+"relacional estructurada y limpia."
+
+#: templates/landing/index.html:45
+msgid ""
+"The platform began as part of the University of Chicago's \n"
+"            Master of Computational Analysis and Public Policy program "
+"and \n"
+"            is developed by a six-student team from the program."
+msgstr ""
+"La plataforma nacio como parte del programa Master of Computational "
+"Analysis and Public Policy de la Universidad de Chicago y es desarrollada"
+" por un equipo de seis estudiantes del programa."
+
+#: templates/landing/index.html:48
+msgid ""
+"It is mainly written in Python and uses SQLAlchemy, \n"
+"            PostgreSQL, OCR/document parsing, and automated tests to "
+"track \n"
+"            bills, votes, congressmembers, political groups, and text \n"
+"            changes across the legislative process."
+msgstr ""
+"Esta escrita principalmente en Python y usa SQLAlchemy, PostgreSQL, "
+"OCR/procesamiento de documentos y pruebas automatizadas para seguir "
+"proyectos de ley, votos, congresistas, grupos politicos y cambios de "
+"texto a lo largo del proceso legislativo."
+
+#: templates/landing/index.html:57
+msgid "Know the team"
+msgstr "Conoce al equipo"
+
+#~ msgid "Bill Status"
+#~ msgstr "Estado"
+
+#~ msgid "Election Votes"
+#~ msgstr "Votos obtenidos"
+
+#~ msgid "Rate of Successful"
+#~ msgstr "Tasa de éxito"
+
+#~ msgid "Clear"
+#~ msgstr "Limpiar"
+
+#~ msgid ""
+#~ "Select the information about the "
+#~ "peruvian congress that you want to "
+#~ "explore"
+#~ msgstr "Selecciona la información del Congreso peruano quieres explorar"
+
+#~ msgid ""
+#~ "Open Congress brings together public "
+#~ "information from the Peruvian Congress "
+#~ "so bills,\n"
+#~ "            congress members, political "
+#~ "groups, and legislative activity can be"
+#~ " explored in one place."
+#~ msgstr ""
+#~ "Open Congress reúne información pública "
+#~ "del Congreso peruano para que los "
+#~ "proyectos de ley, los congresistas, los"
+#~ " grupos políticos y la actividad "
+#~ "legislativa puedan explorarse en un solo"
+#~ " lugar."
+
+#~ msgid "Last Votings"
+#~ msgstr "Últimas votaciones"
+
+#~ msgid "Data"
+#~ msgstr "Datos"

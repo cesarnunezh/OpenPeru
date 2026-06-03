@@ -1,113 +1,100 @@
-import pytest
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from datetime import date
 
-from backend import LegPeriod, LegislativeYear
+import pytest
+
+from backend import LegPeriod, RoleOrganization, TypeOrganization
 from backend.database import models as db_models
 from backend.database.crud import pipeline_core as crud_core
+from backend.process import schema
 
 
 @pytest.fixture()
-def session():
-    engine = create_engine("sqlite:///:memory:")
-    db_models.Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    with Session() as db:
-        yield db
-
-
-def _create_congresista(
-    db, *, name: str, website: str, leg_period=LegPeriod.PERIODO_2021_2026
-):
-    cong = db_models.Congresista(
-        nombre=name,
-        leg_period=leg_period,
-        party_name="party",
-        current_bancada="bancada",
-        votes_in_election=1,
-        dist_electoral="Lima",
-        condicion="Activo",
-        website=website,
-        photo_url="https://example.com/photo.png",
-    )
-    db.add(cong)
-    db.flush()
-    return cong
-
-
-def test_upsert_bancadas_bulk_inserts_missing_and_reuses_existing(session):
-    session.add(
-        db_models.Bancada(
-            leg_year=LegislativeYear.YEAR_2025_2026,
-            bancada_name="Accion Popular",
+def create_congresista(session):
+    def _create_congresista(
+        full_name: str = "María Grimaneza Acuña Peralta",
+        first_name: str = "María Grimaneza",
+        last_name: str = "Acuña Peralta",
+        dni: str = "12345678",
+        gender: str = "F",
+        photo_url: str = "www.congreso.gob.pe/photo1",
+        website: str = "https://www.congreso.gob.pe/congresistas2021/GrimanezaAcuna/",
+    ) -> db_models.Congresista:
+        cong = db_models.Congresista(
+            full_name=full_name,
+            first_name=first_name,
+            last_name=last_name,
+            dni=dni,
+            gender=gender,
+            photo_url=photo_url,
+            website=website,
         )
-    )
-    session.flush()
+        session.add(cong)
+        session.flush()
+        return cong
 
-    index, inserted_count, existing_count = crud_core.upsert_bancadas_bulk(
+    return _create_congresista
+
+
+def test_upsert_bancada_uses_organization_rows(session):
+    existing = crud_core.upsert_organization(
         session,
-        [
-            ("2025", "ACCION POPULAR"),
-            ("2025", "Fuerza Popular"),
-            ("2025", "Fuerza Popular"),
-        ],
+        schema.Organization(
+            org_name="Accion Popular",
+            org_type=TypeOrganization.BANCADA,
+        ),
     )
 
-    assert inserted_count == 1
-    assert existing_count == 1
-    assert ("2025", "accion popular") in index
-    assert ("2025", "fuerza popular") in index
-
-    _, inserted_count_2, existing_count_2 = crud_core.upsert_bancadas_bulk(
+    same = crud_core.upsert_organization(
         session,
-        [("2025", "Accion Popular"), ("2025", "Fuerza Popular")],
+        schema.Organization(
+            org_name="Accion Popular",
+            org_type="Bancada",
+        ),
     )
-    assert inserted_count_2 == 0
-    assert existing_count_2 == 2
-
-
-def test_upsert_bancada_memberships_bulk_is_idempotent(session):
-    b1 = db_models.Bancada(
-        leg_year=LegislativeYear.YEAR_2025_2026,
-        bancada_name="Accion Popular",
-    )
-    b2 = db_models.Bancada(
-        leg_year=LegislativeYear.YEAR_2025_2026,
-        bancada_name="Fuerza Popular",
-    )
-    session.add_all([b1, b2])
-    session.flush()
-
-    c1 = _create_congresista(
-        session, name="Juan Perez", website="https://example.com/1"
-    )
-    c2 = _create_congresista(
-        session, name="Maria Lopez", website="https://example.com/2"
-    )
-
-    session.add(
-        db_models.BancadaMembership(
-            leg_year=LegislativeYear.YEAR_2025_2026,
-            person_id=c1.id,
-            bancada_id=b1.bancada_id,
-        )
-    )
-    session.flush()
-
-    inserted_count = crud_core.upsert_bancada_memberships_bulk(
+    inserted = crud_core.upsert_organization(
         session,
-        [
-            ("2025", c1.id, b1.bancada_id),
-            ("2025", c1.id, b1.bancada_id),
-            ("2025", c2.id, b2.bancada_id),
-        ],
+        schema.Organization(
+            org_name="Fuerza Popular",
+            org_type=TypeOrganization.BANCADA,
+        ),
     )
-    assert inserted_count == 1
-    assert session.query(db_models.BancadaMembership).count() == 2
 
-    inserted_count_2 = crud_core.upsert_bancada_memberships_bulk(
+    assert same.org_id == existing.org_id
+    assert inserted.org_id != existing.org_id
+    assert session.query(db_models.Organization).count() == 2
+
+
+def test_upsert_bancada_membership_is_idempotent(session, create_congresista):
+    congresista = create_congresista()
+    bancada = crud_core.upsert_organization(
         session,
-        [("2025", c1.id, b1.bancada_id), ("2025", c2.id, b2.bancada_id)],
+        schema.Organization(
+            org_name="Accion Popular",
+            org_type=TypeOrganization.BANCADA,
+        ),
     )
-    assert inserted_count_2 == 0
-    assert session.query(db_models.BancadaMembership).count() == 2
+
+    first = crud_core.upsert_membership(
+        session,
+        person_id=congresista.id,
+        org_id=bancada.org_id,
+        leg_period=LegPeriod.PERIODO_2021_2026,
+        org_type=TypeOrganization.BANCADA,
+        role=RoleOrganization.MIEMBRO,
+        start_date=date(2025, 7, 28),
+        end_date=date(2026, 7, 28),
+    )
+    second = crud_core.upsert_membership(
+        session,
+        person_id=congresista.id,
+        org_id=bancada.org_id,
+        leg_period="2021-2026",
+        org_type="Bancada",
+        role="Miembro",
+        start_date=date(2025, 7, 28),
+        end_date=date(2026, 7, 28),
+    )
+
+    assert second.id == first.id
+    assert session.query(db_models.BancadaMembership).count() == 1
+    assert session.query(db_models.Membership).count() == 1

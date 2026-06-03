@@ -1,6 +1,14 @@
 name: Lint (ruff)
 
-on: [ push, pull_request ]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - dev
+      - feature/**
+      - release/**
+      - hotfix/**
 
 # From ruff documentation: https://docs.astral.sh/ruff/integrations/#github-actions
 jobs:
@@ -15,13 +23,22 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v4
 
-      - name: Lint and fix issues
-        uses: astral-sh/ruff-action@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-            args: check --fix
-        continue-on-error: true
+          python-version-file: ".python-version"
 
-      - name: Commit Ruff fixes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
         with:
-            commit_message: 'chore: apply ruff linting fixes'
+          version: "0.7.19"
+          enable-cache: true
+
+      - name: Install project
+        run: uv sync --locked --all-extras --dev
+
+      - name: Run Ruff check
+        run: uv run ruff check .
+
+      - name: Run Ruff format check
+        run: uv run ruff format --check .

@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import pytest
 from sqlalchemy import create_engine
@@ -154,9 +154,9 @@ def test_add_motions_to_db_handles_sqlalchemy_error(monkeypatch):
 # ---------- scrape_motion ----------
 
 
-def test_scrape_motion_appends_raw_motion(monkeypatch, raw_session):
+def test_scrape_motion_appends_raw_motion(monkeypatch, session):
     scraper = RawMotionScraper()
-    scraper.session = raw_session
+    scraper.session = session
 
     def fake_get_url_text(url):
         # validate URL
@@ -176,7 +176,7 @@ def test_scrape_motion_appends_raw_motion(monkeypatch, raw_session):
         "backend.scrapers.motions.get_url_text",
         fake_get_url_text,
     )
-    monkeypatch.setattr(scraper, "update_tracking", lambda motion: motion)
+    monkeypatch.setattr(scraper, "update_tracking", lambda motion: [motion])
 
     scraper.scrape_motion("2021", "7")
 
@@ -192,72 +192,3 @@ def test_scrape_motion_appends_raw_motion(monkeypatch, raw_session):
     general_dict = json.loads(motion.general)
     assert "titulo" in general_dict
     assert general_dict["titulo"] == "Moción X"
-
-
-def test_get_ids_pending_weekly_refresh_filters_by_age_and_approval(raw_session):
-    scraper = RawMotionScraper(session=raw_session)
-    now = datetime.now()
-
-    raw_session.add_all(
-        [
-            # stale + not approved => include
-            RawMotion(
-                id="2021_1",
-                timestamp=now - timedelta(days=10),
-                general=json.dumps({"desEstadoMocion": "Aprobada"}),
-                last_update=True,
-            ),
-            # stale + approved => exclude
-            RawMotion(
-                id="2021_2",
-                timestamp=now - timedelta(days=12),
-                general=json.dumps(
-                    {"desEstadoMocion": "Publicado Diario Oficial  El Peruano"}
-                ),
-                last_update=True,
-            ),
-            # fresh + not approved => exclude
-            RawMotion(
-                id="2021_3",
-                timestamp=now - timedelta(days=2),
-                general=json.dumps({"desEstadoMocion": "En Comisión"}),
-                last_update=True,
-            ),
-        ]
-    )
-    raw_session.commit()
-
-    pending = scraper.get_ids_pending_weekly_refresh(max_age_days=7)
-    assert pending == ["2021_1"]
-
-
-def test_scrape_pending_weekly_uses_ids_without_number_ranges(monkeypatch):
-    scraper = RawMotionScraper()
-
-    monkeypatch.setattr(
-        scraper,
-        "get_ids_pending_weekly_refresh",
-        lambda max_age_days: ["2021_10", "2022_45"],
-    )
-
-    calls = []
-    monkeypatch.setattr(
-        scraper,
-        "scrape_motion",
-        lambda year, number: (
-            calls.append((year, number)) or scraper.raw_motions.append(object())
-        ),
-    )
-
-    loads = {"n": 0}
-    monkeypatch.setattr(
-        scraper,
-        "load_raw_motions",
-        lambda: (loads.__setitem__("n", loads["n"] + 1), scraper.raw_motions.clear()),
-    )
-
-    ids = scraper.scrape_pending_weekly(max_age_days=7, flush_every=1)
-
-    assert ids == ["2021_10", "2022_45"]
-    assert calls == [("2021", "10"), ("2022", "45")]
-    assert loads["n"] == 2

@@ -74,10 +74,9 @@ def test_raw_bill_documents_columns_and_nullable(engine):
         "timestamp",
         "bill_id",
         "step_date",
-        "seguimiento_id",
-        "archivo_id",
+        "step_id",
+        "file_id",
         "url",
-        "text",
     }
 
     for name in expected_not_null:
@@ -108,22 +107,19 @@ def test_can_create_raw_bill(session):
 
 def test_can_create_raw_bill_document(session):
     now = datetime.now(UTC)
-    step_date = now.date()
     doc = RawBillDocument(
         timestamp=now,
         bill_id="PL-1234",
         step_date=now,
-        seguimiento_id="SEG-1",
-        archivo_id="ARCH-1",
+        step_id=123,
+        file_id="ARCH-1",
         url="https://example.com/doc.pdf",
-        text="This is some extracted text",
     )
     session.add(doc)
     session.commit()
 
-    fetched = session.query(RawBillDocument).filter_by(archivo_id="ARCH-1").one()
+    fetched = session.query(RawBillDocument).filter_by(file_id="ARCH-1").one()
     assert fetched.url == "https://example.com/doc.pdf"
-    assert "extracted text" in fetched.text
 
 
 def test_can_create_raw_committee(session):
@@ -138,7 +134,7 @@ def test_can_create_raw_committee(session):
     session.commit()
 
     fetched = session.query(RawCommittee).filter_by(committee_type="Permanent").one()
-    assert fetched.legislative_year == 2024
+    assert fetched.legislative_year == "2024"
     assert "<html>" in fetched.raw_html
 
 
@@ -147,7 +143,7 @@ def test_can_create_raw_congresista(session):
     cong = RawCongresista(
         timestamp=now,
         leg_period="2021-2026",
-        url="https://example.com/congresista",
+        website="https://example.com/congresista",
         profile_content="<html>profile</html>",
         memberships_content='{"committees": []}',
     )

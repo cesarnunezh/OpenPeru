@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class = "page-votes">
+  <section class="bill-hero">
+    <div class="bill-content">
+      <div class="bill-topline">
+        <span class="bill-code">PL 07324/2023-CR</span>
+        {% if bill_is_approved %}
+          <span class="bill-status">{{ bill_status }}</span>
+        {% else %}
+          <span class="bill-status not-approved">{{ bill_status }}</span>
+        {% endif %}
+      </div>
+
+      <h1 class="bill-heading">
+        {{ bill.title }}
+      </h1>
+      
+      <div class="bill-topics">
+        {% for topic in topics %}
+          <span class="bill-topic">{{ topic }}</span>
+        {% endfor %}          
+      </div>
+
+      <div class="bill-heading-meta">
+        <span>
+          <strong>{{_('Presentation date')}}:</strong>
+          {% if presentation_date %}
+            {{ presentation_date.strftime('%d-%m-%Y') }}
+          {% else %}
+            {{ _('Not available') }}
+          {% endif %}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="bill-meta">
+    <p><strong>{{_('Vote date')}}:</strong> {{ vote_date.strftime('%d-%m-%Y') }}</p>
+    <p><strong>{{_('Organization')}}:</strong> {{ organization_name or _('Not available') }}</p>
+  </div>
+
+  <div class="vote-results">
+    <h2>{{_('Voting Results')}}</h2>
+    
+    <div class="vote-summary">
+      <table class="vote-table">
+        <thead>
+          <tr>
+            <th>{{_('IN FAVOR')}}</th>
+            <th>{{_('AGAINST')}}</th>
+            <th>{{_('ABSTAIN')}}</th>
+            <th>{{_('OTHERS')}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="vote-count in-favor">{{ vote_counts.get('yes', 0) }}</td>
+            <td class="vote-count against">{{ vote_counts.get('no', 0) }}</td>
+            <td class="vote-count abst">{{ vote_counts.get('abstain', 0) }}</td>
+            <td class="vote-count others">{{ vote_counts.get('others', 0) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="seats-wrapper">
+    <div class="seats-container">
+      <svg id="seatsSvg" width="800" height="300" viewBox="0 0 800 300"></svg>
+      <div id="seatTooltip" class="seat-tooltip" role="tooltip" ></div>
+    </div>
+  </div>
+
+  <div class="vote-legend">
+    <div class="legend-item"><span class="legend-swatch legend-swatch--yes"></span>{{_('In favor')}}</div>
+    <div class="legend-item"><span class="legend-swatch legend-swatch--no"></span>{{_('Against')}}</div>
+    <div class="legend-item"><span class="legend-swatch legend-swatch--abstain"></span>{{_('Abstain')}}</div>
+    <div class="legend-item"><span class="legend-swatch legend-swatch--others"></span>{{_('Others')}}</div>
+  </div>
+
+  <div class="bancada-chart">
+    <h3 class="bancada-chart-title">{{ _('Results by bancada') }}</h3>
+    {% if bancada_rows %}
+    <svg id="bancadaSvg" viewBox="0 0 760 {{ bancada_chart_height }}" preserveAspectRatio="xMidYMin meet">
+      {% for row in bancada_rows %}
+      <g class="bancada-row">
+        <text class="bancada-label" x="10" y="{{ row.bar_y }}">
+          {% for line in row.label_lines %}
+            <tspan x="6" dy="{{ 13 if not loop.first else 0 }}">{{ line }}</tspan>
+          {% endfor %}
+        </text>
+        {% for segment in row.segments %}
+        <rect x="{{ segment.x }}" y="{{ row.bar_y - 11 }}" width="{{ segment.width }}" height="22" fill="{{ {'yes': '#a6ece2', 'no': '#f2a1b1', 'abstain': '#ffe085'}[segment.key] }}" stroke="{{ {'yes': '#0f8f7c', 'no': '#c92545', 'abstain': '#d29b00'}[segment.key] }}" stroke-width="2">
+          <title>{{ segment.key }}: {{ row[segment.key] }}</title>
+        </rect>
+        {% endfor %}
+        <text class="bancada-total" x="{{ row.total_x }}" y="{{ row.bar_y + 6 }}">{{ row.total }}</text>
+      </g>
+      {% endfor %}
+    </svg>
+    {% endif %}
+  </div>
+
+  {% if vote_rows %}
+    <div class="table-responsive vote-members-table-wrap">
+      <table class="table table-striped table-bordered align-middle vote-members-table" id="voteMembersTable">
+        <thead>
+          <tr>
+            <th><button type="button" class="vote-sort-button" data-sort-key="member">{{ _('Congressmember') }}</button></th>
+            <th><button type="button" class="vote-sort-button" data-sort-key="party">{{ _('Party') }}</button></th>
+            <th><button type="button" class="vote-sort-button" data-sort-key="vote">{{ _('Vote') }}</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for vote_row in vote_rows %}
+            <tr data-member="{{ vote_row.full_name|lower }}" data-party="{{ (vote_row.party_name or _('Not available'))|lower }}" data-vote-order="{{ {'yes': 1, 'no': 2, 'abstain': 3, 'others': 4}[vote_row.vote_key] }}">
+              <td>
+                <a href="{{ url_for('congress.congress_detail', congresista_id=vote_row.id) }}">
+                  {{ vote_row.full_name }}
+                </a>
+              </td>
+              <td>{{ vote_row.party_name or _('Not available') }}</td>
+              <td>{{ vote_row.vote_label }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+(function(){
+  const seats = {{ seats | tojson}} || [];
+  if (seats.length === 0) return;
+  
+  const svg = document.getElementById('seatsSvg');
+  const tooltip = document.getElementById('seatTooltip');
+  const container = document.querySelector('.seats-container');
+  
+  svg.setAttribute('viewBox', '0 0 800 300');
+  svg.setAttribute('height', 300);
+  
+  // Draw circles
+  
+  svg.innerHTML = seats.map(s => {
+    return `<circle cx="${s.x}" cy="${s.y}" r="${s.r}" fill="${s.color}" data-label="${s.label || ''}"></circle>`;
+  }).join('');
+  
+  // Tooltip on hover
+  document.querySelectorAll('circle').forEach((circle) => {
+    circle.addEventListener('mousemove', function(e) {
+      if (!circle.dataset.label) return;
+      tooltip.style.display = 'block';
+      tooltip.setAttribute('aria-hidden', 'false');
+      tooltip.textContent = circle.dataset.label;
+      
+      const containerRect = container.getBoundingClientRect();
+      const tooltipWidth = tooltip.offsetWidth || 120;
+      const tooltipHeight = tooltip.offsetHeight || 28;
+      let tx = e.clientX - containerRect.left + 12;
+      let ty = e.clientY - containerRect.top - tooltipHeight - 10;
+      
+      if (tx + tooltipWidth > containerRect.width - 8) {
+        tx = e.clientX - containerRect.left - tooltipWidth - 12;
+      }
+      if (ty < 8) {
+        ty = e.clientY - containerRect.top + 14;
+      }
+      
+      tooltip.style.left = Math.max(8, tx) + 'px';
+      tooltip.style.top = Math.max(8, ty) + 'px';
+    });
+  
+    circle.addEventListener('mouseleave', function() {
+      tooltip.style.display = 'none';
+      tooltip.setAttribute('aria-hidden', 'true');
+    });
+
+  });
+})();
+
+(function(){
+  const table = document.getElementById('voteMembersTable');
+  if (!table) return;
+
+  const tbody = table.querySelector('tbody');
+  const buttons = table.querySelectorAll('.vote-sort-button');
+
+  const sortRows = (key, direction) => {
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    rows.sort((left, right) => {
+      const leftValue = key === 'vote' ? Number(left.dataset.voteOrder || 0) : (left.dataset[key] || '');
+      const rightValue = key === 'vote' ? Number(right.dataset.voteOrder || 0) : (right.dataset[key] || '');
+
+      if (leftValue < rightValue) return direction === 'asc' ? -1 : 1;
+      if (leftValue > rightValue) return direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+
+    rows.forEach((row) => tbody.appendChild(row));
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const key = button.dataset.sortKey;
+      const nextDirection = button.dataset.direction === 'asc' ? 'desc' : 'asc';
+
+      buttons.forEach((otherButton) => {
+        if (otherButton !== button) {
+          delete otherButton.dataset.direction;
+        }
+      });
+
+      button.dataset.direction = nextDirection;
+      sortRows(key, nextDirection);
+    });
+  });
+})();
+</script>
+
+{% endblock %}

@@ -20,6 +20,16 @@ jobs:
           is_feature=false
           is_release=false
           is_hotfix=false
+          is_dev=false
+          is_main=false
+
+          if [[ "$HEAD_REF" == "main" ]]; then
+            is_main=true
+          fi
+
+          if [[ "$HEAD_REF" == "dev" ]]; then
+            is_dev=true
+          fi
 
           if [[ "$HEAD_REF" =~ ^feature/[a-z0-9._-]+$ ]]; then
             is_feature=true
@@ -33,35 +43,33 @@ jobs:
             is_hotfix=true
           fi
 
-          if [[ "$is_feature" == false && "$is_release" == false && "$is_hotfix" == false ]]; then
+          if [[ "$is_feature" == false && "$is_release" == false && "$is_hotfix" == false && "$is_dev" == false && "$is_main" == false ]]; then
             echo "Invalid source branch: $HEAD_REF"
             echo "Allowed source branches:"
+            echo "  main"
+            echo "  dev"
             echo "  feature/<short-name>"
             echo "  release/<major>.<minor>.<patch>"
             echo "  hotfix/<short-name>"
             exit 1
           fi
 
+          if [[ "$is_main" == true ]]; then
+            [[ "$BASE_REF" == "dev" ]] || { echo "main branch may only target dev."; exit 1; }
+          fi
+
+          if [[ "$is_dev" == true ]]; then
+            [[ "$BASE_REF" == "main" ]] || { echo "dev branch may only target main."; exit 1; }
+          fi
+
           if [[ "$is_feature" == true ]]; then
-            if [[ "$BASE_REF" != "dev" ]]; then
-              echo "feature/* branches must target dev."
-              exit 1
-            fi
-            exit 0
+            [[ "$BASE_REF" == "dev" ]] || { echo "feature/* branches must target dev."; exit 1; }
           fi
 
           if [[ "$is_release" == true ]]; then
-            if [[ "$BASE_REF" != "main" && "$BASE_REF" != "dev" ]]; then
-              echo "release/* branches may only target main or dev."
-              exit 1
-            fi
-            exit 0
+            [[ "$BASE_REF" == "main" || "$BASE_REF" == "dev" ]] || { echo "release/* branches may only target main or dev."; exit 1; }
           fi
 
           if [[ "$is_hotfix" == true ]]; then
-            if [[ "$BASE_REF" != "main" && "$BASE_REF" != "dev" ]]; then
-              echo "hotfix/* branches may only target main or dev."
-              exit 1
-            fi
-            exit 0
+            [[ "$BASE_REF" == "main"  ]] || { echo "hotfix/* branches may only target main."; exit 1; }
           fi

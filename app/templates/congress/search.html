@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form class="congress-search-form" method="get" action="{{ url_for('congress.index') }}">
+   
+    <h1 class="search-title">{{_('Search a congressmember by:')}}</h1>
+    <div class="bar-search">
+
+        <div class="searching-container">
+
+            <input type="text" name="name_q" value="{{ name_q or '' }}" placeholder="{{_('Name')}}">
+                
+        </div>
+
+            <div class="searching-container">
+                <select name="party_q">
+                    <option value="">{{ _('Party') }}</option>
+                    {% for party_option in party_options or [] %}
+                        <option value="{{ party_option }}" {% if party_q == party_option %}selected{% endif %}>{{ party_option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+        <div class="searching-container">
+            <select name="region_q">
+                <option value="">{{ _('Region') }}</option>
+                {% for region_option in region_options or [] %}
+                    <option value="{{ region_option }}" {% if region_q == region_option %}selected{% endif %}>{{ region_option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="searching-container">
+            <select name="commission_q">
+                <option value="">{{ _('Commission') }}</option>
+                {% for committee_option in committee_options or [] %}
+                    <option value="{{ committee_option }}" {% if commission_q == committee_option %}selected{% endif %}>{{ committee_option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" class="search-icon-button" aria-label="{{ _('Search') }}">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</form>
+
+ {% if congresistas %}
+        <div class="search-criteria">
+            <h3>{{_('Search Criteria')}}</h3>
+            {% if name_q %}
+                <span>{{_('Name')}}: {{name_q}}</span>
+            {% endif %}
+            {% if party_q %}
+                <span>{{_('Party')}}: {{party_q}}</span>
+            {% endif %}
+            {% if region_q %}
+                <span>{{_('Region')}}: {{region_q}}</span>
+            {% endif %}
+            {% if commission_q %}
+                <span>{{_('Commission')}}: {{commission_q}}</span>
+            {% endif %}
+        </div>
+
+        <table class="table table-striped search-results-table">
+            <thead>
+                <tr>
+                    <th>{{_('Name')}}</th>
+                    <th>{{_('Party')}}</th>
+                    <th>{{_('Region')}}</th>
+                    <th>{{_('Detail')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for congresista in congresistas %}
+                <tr>
+                    <td>{{ congresista.full_name }}</td>
+                    <td>{{ congresista.party_name or _('Not available') }}</td>
+                    <td>{{ congresista.dist_electoral or _('Not available') }}</td>
+                    <td>
+                        <a href="{{ url_for('congress.congress_detail', congresista_id=congresista.id) }}" class="btn btn-primary btn-sm">
+                            {{_('View details')}}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% elif name_q or party_q or region_q or commission_q %}
+        <p>{{_('No matching congresspeople found.')}}</p>
+    {% endif %}
+
+{% endblock %}
+

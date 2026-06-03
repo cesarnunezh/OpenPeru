@@ -40,22 +40,24 @@ def test_filter_steps_filters_existing(monkeypatch):
         session.add_all(
             [
                 RawBillDocument(
-                    timestamp=datetime.now(timezone.utc),
                     bill_id="2021_1",
+                    step_id=1,
+                    file_id=111,
                     step_date=datetime.now(timezone.utc),
-                    seguimiento_id=1,
-                    archivo_id=111,
                     url="http://example.com/a",
-                    text="A",
+                    s3_key="some_aws_s3_key",
+                    local_path="~/some/local/path",
+                    timestamp=datetime.now(timezone.utc),
                 ),
                 RawBillDocument(
-                    timestamp=datetime.now(timezone.utc),
                     bill_id="2021_1",
+                    step_id=3,
+                    file_id=333,
                     step_date=datetime.now(timezone.utc),
-                    seguimiento_id=3,
-                    archivo_id=333,
                     url="http://example.com/c",
-                    text="C",
+                    s3_key="some_aws_s3_key",
+                    local_path="~/some/local/path",
+                    timestamp=datetime.now(timezone.utc),
                 ),
             ]
         )
@@ -87,7 +89,7 @@ def test_get_bill_documents_raises_if_bill_not_found():
         scraper.get_bill_documents(bill_id="2021_999")
 
 
-def test_get_bill_documents_populates_documents_and_calls_render_pdf(monkeypatch):
+def test_get_bill_documents_populates_documents(monkeypatch):
     engine, SessionLocal = _setup_inmemory_db()
 
     scraper = RawBillDocumentScraper()
@@ -124,31 +126,18 @@ def test_get_bill_documents_populates_documents_and_calls_render_pdf(monkeypatch
         )
         session.commit()
 
-    # Patch render_pdf so we don't hit network/PDF
-    calls = []
-
-    def fake_render_pdf(url):
-        calls.append(url)
-        return f"TEXT_FROM_{url}"
-
-    monkeypatch.setattr("backend.scrapers.bills_documents.render_pdf", fake_render_pdf)
-
     scraper.get_bill_documents(bill_id=bill_id)
-    # Should have called render_pdf once
-    assert len(calls) == 1
-    # b64 of "111"
+
     expected_b64 = base64.b64encode(b"111").decode()
     expected_url = f"{BASE_URL}/archivo/{expected_b64}/pdf"
-    assert calls[0] == expected_url
 
     # Scraper should have one RawBillDocument object
     assert len(scraper.documents) == 1
     doc = scraper.documents[0]
     assert doc.bill_id == bill_id
-    assert doc.archivo_id == 111
-    assert doc.seguimiento_id == 10
+    assert doc.file_id == "111"
+    assert doc.step_id == "10"
     assert doc.url == expected_url
-    assert doc.text == f"TEXT_FROM_{expected_url}"
     # step_date parsed correctly
     assert isinstance(doc.step_date, datetime)
 
@@ -186,12 +175,6 @@ def test_get_bill_documents_respects_update_flag(monkeypatch):
         )
         session.commit()
 
-    # Patch render_pdf to avoid network
-    monkeypatch.setattr(
-        "backend.scrapers.bills_documents.render_pdf",
-        lambda url: "OK",
-    )
-
     # Case 1: update=False and filter_steps returns empty -> no URLs
     def fake_filter_steps(_steps, _bill_id):
         return []
@@ -221,13 +204,14 @@ def test_add_documents_to_db_persists(monkeypatch):
 
     bill_id = "2021_3"
     doc = RawBillDocument(
-        timestamp=datetime.now(timezone.utc),
-        bill_id=bill_id,
+        bill_id="2021_3",
+        step_id="1",
+        file_id="111",
         step_date=datetime.now(timezone.utc),
-        seguimiento_id=1,
-        archivo_id=123,
-        url="http://example.com/doc.pdf",
-        text="SOME TEXT",
+        url="http://example.com/a",
+        s3_key="some_aws_s3_key",
+        local_path="~/some/local/path",
+        timestamp=datetime.now(timezone.utc),
     )
     scraper.documents = [doc]
 
@@ -238,8 +222,7 @@ def test_add_documents_to_db_persists(monkeypatch):
         assert count == 1
         db_doc = session.query(RawBillDocument).first()
         assert db_doc.bill_id == bill_id
-        assert db_doc.archivo_id == "123"
-        assert db_doc.text == "SOME TEXT"
+        assert db_doc.file_id == "111"
 
 
 def test_add_documents_to_db_asserts_when_empty():
@@ -254,13 +237,14 @@ def test_add_documents_to_db_handles_sqlalchemy_error():
     scraper = RawBillDocumentScraper()
     scraper.documents = [
         RawBillDocument(
-            timestamp=datetime.now(timezone.utc),
-            bill_id="2021_4",
+            bill_id="2021_1",
+            step_id=1,
+            file_id=111,
             step_date=datetime.now(timezone.utc),
-            seguimiento_id=1,
-            archivo_id=1,
-            url="http://example.com",
-            text="TEXT",
+            url="http://example.com/a",
+            s3_key="some_aws_s3_key",
+            local_path="~/some/local/path",
+            timestamp=datetime.now(timezone.utc),
         )
     ]
 

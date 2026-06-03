@@ -1,53 +1,67 @@
-import re
 import json
+from datetime import date, datetime
 
-from backend.database.raw_models import RawMotion, RawMotionDocument
+from backend.core.enums import TypeMotionStep
+from backend.core.parsers import classify_motion_des_estado
+from backend.database.raw_models import RawMotion, RawMotionPage
 from backend.process.schema import (
     Motion,
     MotionCongresistas,
+    MotionOrganization,
     MotionStep,
-    MotionDocument,
+    MotionText,
 )
-
-VOTE_PATTERN = re.compile(
-    r"\bSI\s*\+{2,}.*?\bNO\s*-{2,}|\bNO\s*-{2,}.*?\bSI\s*\+{2,}",
-    re.IGNORECASE | re.DOTALL,
-)
+from backend.process.utils import create_vote_ids, as_date
 
 
-def process_motion(raw_motion: RawMotion) -> tuple[Motion, list[MotionCongresistas]]:
-    """
-    Process a RawMotion instance into a Motion instance and a list of MotionCongresistas
-    that maps all the congresistas that have a role in the Motion process
+def _parse_datetime(value: str | None) -> date | None:
+    if value:
+        return datetime.fromisoformat(value).date()
+    return None
 
-    Args:
-        raw_motion (RawMotion): RawMotion instance that contains the scraped information from a motion
 
-    Returns:
-        Motion: instance that contains general information of the motion
-        list[MotionCongresistas]: list of instances that relates congresistas to a Motion
-    """
-    # Obtaining dictionaries from the raw_motion columns
-    general = json.loads(raw_motion.general)
-    firmantes = json.loads(raw_motion.congresistas)
+def summarize_motion(
+    motion_id: str, presentation_date: date, steps: list[MotionStep]
+) -> str:
+    # TODO: Connect in another PR with summarization.
+    return f"{motion_id}: PENDING SUMMARY with {len(steps)} steps presented on {presentation_date}"
 
-    # Extracting information from general dictionary
-    id = raw_motion.id
-    leg_period = general.get("desPerParAbrev")
-    legislature = general.get("desLegis")
-    presentation_date = general.get("fecPresentacion")
-    motion_type = general.get("desTipoMocion")
-    summary = general.get("sumilla")
-    observations = general.get("observacion")
-    complete_text = None  # TODO: Extract Motion Full Text
-    status = general.get("desEstadoMocion")
-    motion_approved = (
-        general.get("desEstadoMocion") == "Publicado Diario Oficial  El Peruano"
+
+def process_motion_text(motion_pages: list[RawMotionPage]) -> MotionText:
+    ordered_pages = sorted(motion_pages, key=lambda page: page.page_num)
+    if not ordered_pages:
+        raise ValueError("Motion pages are required to build MotionText")
+
+    first_page = ordered_pages[0]
+    text = "\n".join((page.text or "").strip() for page in ordered_pages).strip()
+    if not text:
+        raise ValueError("Motion text could not be extracted from raw pages")
+
+    return MotionText(
+        motion_id=first_page.motion_id,
+        step_id=int(first_page.step_id),
+        file_id=int(first_page.file_id),
+        version_id=1,
+        text=text,
     )
 
-    # Extracting information from firmantes dictionary
-    cong_list = []
 
+def process_motion(
+    raw_motion: RawMotion,
+) -> tuple[Motion, list[MotionCongresistas], list[MotionStep]]:
+    """
+    Process a RawMotion instance into a Motion, signer relations, and steps.
+    """
+    general = json.loads(raw_motion.general or "{}")
+    firmantes = json.loads(raw_motion.congresistas or "[]")
+
+    motion_id = raw_motion.id
+    motion_type = general.get("desTipoMocion")
+    summary_congreso = general.get("sumilla")
+    observations = general.get("observacion")
+    status = classify_motion_des_estado(general.get("desEstadoMocion"))
+
+    cong_list: list[MotionCongresistas] = []
     if firmantes:
         author_info = firmantes[0]
         author_name = author_info.get("nombre")
@@ -56,107 +70,119 @@ def process_motion(raw_motion: RawMotion) -> tuple[Motion, list[MotionCongresist
         for cong in firmantes:
             cong_list.append(
                 MotionCongresistas(
-                    motion_id=id,
+                    motion_id=motion_id,
                     nombre=cong.get("nombre"),
-                    leg_period=leg_period,
                     role_type=cong.get("tipoFirmanteId"),
                     web_page=cong.get("pagWeb"),
                 )
             )
+    else:
+        author_name = None
+        author_web = None
 
-    # Creating Motion instance
+    motion_steps = process_motion_steps(raw_motion)
+    motion_approved = is_motion_approved(motion_steps, status)
+    presentation_date = _parse_datetime(general.get("fecPresentacion"))
+    summary_opencongress = summarize_motion(motion_id, presentation_date, motion_steps)
+
     motion = Motion(
-        id=id,
-        leg_period=leg_period,
-        legislature=legislature,
-        presentation_date=presentation_date,
+        id=motion_id,
         motion_type=motion_type,
-        summary=summary,
+        summary_congreso=summary_congreso,
         observations=observations,
-        complete_text=complete_text,
         status=status,
         author_name=author_name,
         author_web=author_web,
         motion_approved=motion_approved,
+        summary_opencongress=summary_opencongress,
     )
 
-    return motion, cong_list
+    return motion, cong_list, motion_steps
 
 
-def process_motion_steps(raw_motion: RawMotion) -> list[MotionStep] | None:
-    """
-    Process a RawMotion instance into a list of MotionStep
-    that maps all the steps that have happended during the motion processess
-
-    Args:
-        raw_motion (RawMotion): RawMotion instance that contains the scraped information from a motion
-
-    Returns:
-        list[MotionStep]: list of instances that contains all the steps related to a Motion
-    """
-    # Obtaining dictionaries from the raw_motion columns
-    steps = json.loads(raw_motion.steps)
-
+def is_motion_approved(steps: list[MotionStep], status: str | None = None) -> bool:
     if steps:
-        final_steps = []
-        vote_step_counter = 0
+        return any([step.step_type == TypeMotionStep.PUBLICADO for step in steps])
+    return status == TypeMotionStep.PUBLICADO
 
-        for step in steps:
-            # Extracting information from each step
-            id = step.get("seguimientoId")
-            date = step.get("fecSeguimiento")
-            status = step.get("desEstadoMocion")
-            details = step.get("detalle") or ""
-            files = step.get("adjuntos") or []
-            vote_step = any(
-                vote_word in details.lower() for vote_word in ["votacion", "votación"]
-            )
-            vote_id = None
 
-            file_ids = [
-                file.get("seguimientoAdjuntoId")
-                for file in files
-                if file and file.get("seguimientoAdjuntoId") is not None
-            ]
+def process_motion_steps(raw_motion: RawMotion) -> list[MotionStep]:
+    """
+    Process a RawMotion instance into a sorted list of MotionStep records.
+    """
+    steps = json.loads(raw_motion.steps or "[]")
+    if not steps:
+        return []
 
-            if vote_step:
-                vote_step_counter += 1
-                vote_id = f"{raw_motion.id}_{vote_step_counter}"
+    final_steps: list[MotionStep] = []
+    for step in steps:
+        step_id = step.get("seguimientoId")
+        date = _parse_datetime(step.get("fecSeguimiento"))
+        details = step.get("detalle") or ""
+        step_type = classify_motion_des_estado(step.get("desEstadoMocion"), details)
+        vote_step = step_type == TypeMotionStep.VOTACION_O_DECISION
 
-            motion_step = MotionStep(
-                id=id,
+        final_steps.append(
+            MotionStep(
                 motion_id=raw_motion.id,
+                step_id=step_id,
+                step_type=step_type,
                 vote_step=vote_step,
-                vote_id=vote_id,
+                vote_event_id=None,
                 step_date=date,
-                step_status=status,
                 step_detail=details,
-                step_files=file_ids,
             )
+        )
 
-            final_steps.append(motion_step)
-
-        return final_steps
-
-    else:
-        return None
+    return create_vote_ids(final_steps)
 
 
-def process_motion_document(raw_motion_document: RawMotionDocument) -> MotionDocument:
-    """
-    Process a RawMotionDocument into a MotionDocument
+def _get_motion_dates(
+    raw_motion: RawMotion,
+    motion_steps: list[MotionStep],
+) -> dict[str, datetime | None]:
+    dates: dict[str, datetime | None] = {
+        "presentation_date": None,
+        "final_chamber_decision_date": None,
+    }
 
-    Args:
-        raw_motion_document (RawMotionDocument): RawMotionDocument instance
+    for step in sorted(motion_steps, key=lambda item: item.step_date):
+        if (
+            step.step_type == TypeMotionStep.PRESENTADO
+            and dates["presentation_date"] is None
+        ):
+            dates["presentation_date"] = step.step_date
 
-    Returns:
-        MotionDocument: clean MotionDocument instance
-    """
-    return MotionDocument(
-        motion_id=raw_motion_document.motion_id,
-        step_id=raw_motion_document.seguimiento_id,
-        archivo_id=raw_motion_document.archivo_id,
-        url=raw_motion_document.url,
-        text=raw_motion_document.text,
-        vote_doc=bool(VOTE_PATTERN.search(raw_motion_document.text)),
-    )
+        if step.step_type in {
+            TypeMotionStep.VOTACION_O_DECISION,
+            TypeMotionStep.PUBLICADO,
+        }:
+            dates["final_chamber_decision_date"] = step.step_date
+
+    if dates["presentation_date"] is None:
+        general = json.loads(raw_motion.general or "{}")
+        raw_presentation_date = general.get("fecPresentacion")
+        if raw_presentation_date:
+            dates["presentation_date"] = _parse_datetime(raw_presentation_date)
+
+    return dates
+
+
+def process_motion_organizations(
+    raw_motion: RawMotion,
+    motion_steps: list[MotionStep],
+) -> list[MotionOrganization]:
+    dates = _get_motion_dates(raw_motion, motion_steps)
+
+    presentation_date = dates.get("presentation_date", None)
+    decision_date = dates.get("final_chamber_decision_date", None)
+
+    return [
+        MotionOrganization(
+            motion_id=raw_motion.id,
+            org_name="Cámara de Diputados",
+            org_type="Cámara",
+            presentation_date=as_date(presentation_date),
+            decision_date=as_date(decision_date),
+        )
+    ]

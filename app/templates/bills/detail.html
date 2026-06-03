@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-details">
+  <div class="bill-details">
+    <section class="bill-hero">
+      <div class="bill-content">
+        <div class="bill-topline">
+          <span class="bill-code">PL 07324/2023-CR</span>
+          {% if bill_is_approved %}
+            <span class="bill-status">{{ bill_status }}</span>
+          {% else %}
+            <span class="bill-status not-approved">{{ bill_status }}</span>
+          {% endif %}
+        </div>
+
+        <h1 class="bill-heading">
+          {{ bill.title }}
+        </h1>
+        
+        <div class="bill-topics">
+          {% for topic in topics %}
+            <span class="bill-topic">{{ topic }}</span>
+          {% endfor %}          
+        </div>
+
+        <div class="bill-heading-meta">
+          <span> <strong>{{_('Presentation date')}}:</strong> {{ presentation_date.strftime('%d-%m-%Y') }}</span>
+          {% if bill_status == 'Approved' %}
+            <span class="time-approval"> <strong>{{_('Time to approval')}}:</strong> {{ days_since_presentation }} {{_('days')}}</span>
+          {% else %}
+            <span class="time-presented"><strong>{{_('Time since presentation')}}:</strong> {{ days_since_presentation }} {{_('days')}}</span>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+    <div class="bill-meta">
+      {% if latest_step %}
+          <p><strong>{{_('Current Step')}}:</strong> {{ latest_step.step_type.value }}</p>
+      {% endif %}
+      <p><strong>{{_('Author')}}:</strong> <a href=" /congress/{{author.id}} ">{{ author.full_name }}</a></p>
+      <p><strong>{{_('Party')}}:</strong> {{ party_name }}</p>
+      <p class="summary-label"><strong>{{_('Summary')}}:</strong></p>
+      <p class="summary-text">{{ bill.summary_oc }}</p>
+
+    </div>
+  </div>
+  <div class="timeline-shell">
+    <div class="timeline-container">
+      <div class="timeline">
+        {% if all_steps %}
+          {% for step in all_steps %}
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                  <div class="timeline-type">{{ step.step_date.strftime('%Y-%m-%d') }} - {{ step.step_type.value }}</div>
+                  <p class="step-detail"> {{ step.step_detail }}</p>
+                {% if step.vote_step and step.vote_event_id %}
+                  <!-- mock data -->
+                  <!-- <a href = "/bills/{{bill.id}}/mock_votes">{{_('View details')}}</a> -->
+                  <a href="/bills/{{ bill.id }}/votes/{{ step.vote_event_id }}">{{ _('View details') }}</a>
+                {% endif %}
+                {% if diff_types.get(step.step_id) in ('modified', 'incomparable') %}
+                  <a href="{{ url_for('bills.bill_difference', bill_id=bill.id, step_id=step.step_id) }}">{{_('View changes')}}</a>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

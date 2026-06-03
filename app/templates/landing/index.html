@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="hero-container hero-text">
+        <h1 class="hero-title">{{ _('Welcome to Open Congress') }}</h1>
+
+        <p class="hero-description">
+            {{ _('Open Congress brings together public information from the Peruvian Congress in one place. Explore bills from the 2021-2026 congressional period, review who authored them, see how congress members voted, and compare changes between different versions of each bill.') }}
+            {{ _('Click below to start exploring:') }}
+            <br><br>
+
+        </p>
+
+        <div class="menu-landing">
+            {% for item in menu_items %}
+                <div class="menu-card">
+                    <a href="{{ item.url }}">
+                        {{ item.name }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+      
+    </div>
+
+    <div class="hero-container">
+        <img class="landing-logo" src="{{ url_for('static', filename='images/Imagotipo.svg') }}" alt="{{ _('Open Congress logo') }}">
+         <p class="page-subtitle">
+            {{_('Transparency and accountability for a stronger democracy')}}
+        </p>
+
+    </div>
+
+</div>
+
+<section id="about" class="about-section">
+    <div class="about-content">
+        <h2>{{_('About')}}</h2>
+        <p>{{ _('Open Congress is built as a public data pipeline for legislative 
+            information. It collects official public records from the Peruvian Congress, 
+            processes them, and organizes them into a structured, 
+            clean relational database.') }}</p>
+        <p>{{ _('The platform began as part of the University of Chicago\'s 
+            Master of Computational Analysis and Public Policy program and 
+            is developed by a six-student team from the program.') }}</p>
+        <p>{{ _('It is mainly written in Python and uses SQLAlchemy, 
+            PostgreSQL, OCR/document parsing, and automated tests to track 
+            bills, votes, congressmembers, political groups, and text 
+            changes across the legislative process.') }}</p>
+    </div>
+</section>
+
+<section id="team" class="team-section">
+    <div class="team-content">
+        <h2>{{_('Know the team')}}</h2>
+        <div class="team-grid">
+            {% for member in [
+                {'name': 'Alex', 'image': 'alex.jpg'},
+                {'name': 'Cesar', 'image': 'cesar.jpg'},
+                {'name': 'Jose', 'image': 'jose.jpg'},
+                {'name': 'Mauro', 'image': 'mauro.jpg'},
+                {'name': 'Pablo', 'image': 'pablo.jpg'},
+                {'name': 'Ryota', 'image': 'ryota.jpg'}
+            ] %}
+                <div class="team-member">
+                    <img
+                        class="team-photo"
+                        src="{{ url_for('static', filename='images/' ~ member.image) }}"
+                        alt="{{ member.name }}"
+                    >
+                    <p>{{ member.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

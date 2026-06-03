@@ -1,38 +1,41 @@
 from enum import Enum
 
 
-class MajorityType(str, Enum):
-    SIMPLE = "simple"
-    ABSOLUTE = "absolute"
-    QUALIFIED = "qualified"
+def enum_values(enum_cls: type[Enum]) -> list[str]:
+    return [member.value for member in enum_cls]
+
+
+def sql_value_list(enum_cls: type[Enum]) -> str:
+    return ", ".join(f"'{str(member.value)}'" for member in enum_cls)
+
+
+class TypeMajority(str, Enum):
+    SIMPLE = "Simple"
+    ABSOLUTA = "Absoluta"
+    CALIFICADA = "Calificada"
 
 
 class VoteResult(str, Enum):
-    APPROVED = "approved"
-    REJECTED = "rejected"
-    TIED = "tied"
-    NO_QUORUM = "no_quorum"
-    SUSPENDED = "suspended"  # cuarto intermedio
-    RETURNED_TO_COMMITTEE = "returned_to_committee"
-    FILED = "filed"
-    WITHDRAWN = "withdrawn"
+    APROBADO = "Aprobado"
+    RECHAZADO = "Rechazado"
+    NO_QUORUM = "No hay quorum"
 
 
 class VoteOption(str, Enum):
-    SI = "si"
-    NO = "no"
-    ABSTENCION = "abstencion"
-    SIN_RESPUESTA = "sin respuesta"
+    SI = "Sí"
+    NO = "No"
+    ABSTENCION = "Abstención"
+    SIN_RESPUESTA = "Sin respuesta"
 
 
 class AttendanceStatus(str, Enum):
-    PRESENTE = "presente"
-    AUSENTE = "ausente"
-    LICENCIA = "con licencia"
-    SUSPENDIDO = "suspendido"
+    PRESENTE = "Presente"
+    AUSENTE = "Ausente"
+    LICENCIA = "Con licencia"
+    SUSPENDIDO = "Suspendido"
 
 
-class MotionType(str, Enum):
+class TypeMotion(str, Enum):
     SALUDO = "Saludo"
     CENSURA_MESA = "Censura Mesa Directiva del Congreso"
     CENSURA_MINISTRO = "Censura al Consejo de Ministros"
@@ -40,77 +43,68 @@ class MotionType(str, Enum):
     INTERPELACION = "Interpelación"
     INFORME_MINISTROS = "Invitación a Ministros para Informar"
     VACANCIA = "Vacancia"
-    COMISION_INVESTIGADORA = [
-        "Otorgar Facultades de Comisión Investigadora",
-        "Comisiones Investigadoras",
-    ]
+    COMISION_INVESTIGADORA = "Comisiones Investigadoras"
     COMISION_ESPECIAL = "Comisiones Especiales"
     PESAR = "Pesar"
     OTRAS = "Otras"
 
 
-class MotionStepType(str, Enum):
-    UNKNOWN = "unknown"
-
-    # Intake / start
-    PRESENTED = "presented"
-    ADMITTED = "admitted to debate"
-
-    # Routing / admin handling
-    ASSIGNED = "assigned"
-    INTERNAL_ROUTE = "internal routing"
-    AGENDA = "agenda"
-
-    # Deliberation
-    DEBATE = "debate"
-    VOTE = "vote"
-    APPROVED = "approved"
-    REJECTED = "rejected"
-
-    # Reconsideration
-    RECONSIDERATION = "reconsideration"
-
-    # Text / documents
-    TEXT_UPDATE = "text update"
-    OFFICIAL_COMMUNICATION = "official communication"
-
-    # Attendance / appearances (minister, etc.)
-    APPEARANCE = "appearance"
-
-    # Other outcomes
-    WITHDRAWN = "withdrawn"
-    ARCHIVED = "archived"
-    PUBLISHED = "published"
-    RESIGNATION = "resignation"
-    DISCIPLINE_OR_ORDER = "question of order"
-    REQUIREMENTS_BLOCK = "requirements not met"
+class TypeMotionStep(str, Enum):
+    PRESENTADO = "Presentado"
+    ADMISION = "Admisión a debate"
+    ETAPA_EN_COMISION = "En Comisión"
+    ACUERDO_CD = "Acuerdo de Consejo Directivo"
+    ACUERDO_JP = "Acuerdo de la Junta de Portavocez"
+    AGENDA_CD = "En Agenda del Consejo Directivo"
+    AGENDA_DEL_PLENO = "En Agenda del Pleno"
+    ANUNCIO_O_DACION_DE_CUENTA = "Anunciado en el Pleno"
+    FUNDAMENTACION = "Fundamentada la Moción"
+    DEBATE = "En Debate"
+    VOTACION_O_DECISION = "Votación"
+    REVISION_DE_TEXTO = "Revisión o cambio de texto"
+    COMUNICACION_OFICIAL = "Comunicación Oficial"
+    ASISTENCIA_O_COMPARECENCIA = "Asistencia de Ministro"
+    RECONSIDERACION = "Reconsideración"
+    RETIRADO = "Retirado"
+    ARCHIVADO = "Archivado"
+    PUBLICADO = "Publicado"
+    RENUNCIA = "Renuncia"
+    CUESTION_DE_ORDEN = "Cuestión de orden"
+    BLOQUEO_POR_REQUISITOS = "Incumplimiento de requisitos"
+    CUARTO_INTERMEDIO = "Cuarto intermedio"
+    FE_DE_ERRATAS_O_CORRECCION = "Fe de Erratas"
+    SIN_CATEGORIA = "Sin categoría"
 
 
-class BillStepType(str, Enum):
-    UNKNOWN = "unknown"
-    PRESENTED = "presented"
-    ASSIGNED = "assigned to committee"
-    COMMITTEE_STAGE = "committee stage"
-    AGENDA = "agenda"
-    DEBATE = "debate"
-    VOTE = "vote"
-    RECONSIDERATION = "reconsideration"
-    APPROVED = "approved"
-    REJECTED = "rejected"
-    TEXT_UPDATE = "text update"
-    WITHDRAWN = "withdrawn"
-    ARCHIVED = "archived"
-    PROMULGATED = "promulgated"
-    PUBLISHED = "published"
-    CLARIFICATION = "clarification"
-    INTERNAL_ROUTE = "internal routing"
-    EXEMPTION = "exemption"
+class TypeBillStep(str, Enum):
+    PRESENTADO = "Presentado"
+    EN_COMISION = "En Comisión"
+    DICTAMEN_O_ACUERDO_DE_COMISION = "Dictamen o Acuerdo de Comisión"
+    EXONERACION_DE_DICTAMEN = "Exoneración de Dictamen"
+    AGENDA_DEL_CONSEJO_DIRECTIVO = "En Agenda del Consejo Directivo"
+    AGENDA_DEL_PLENO = "En Agenda del Pleno"
+    AGENDA_DE_LA_COMISION_PERMANENTE = "En Agenda de la Comisión Permanente"
+    DEBATE_EN_EL_PLENO = "Debate en el Pleno"
+    DEBATE_EN_LA_COMISION_PERMANENTE = "Debate en la Comisión Permanente"
+    VOTACION = "Votación"
+    TEXTO_SUSTITUTORIO_O_REVISION = "Revisión o cambio de texto"
+    AUTOGRAFA = "Autógrafa"
+    RECONSIDERACION = "Reconsideración"
+    RETIRADO = "Retirado"
+    ARCHIVADO = "Al Archivo"
+    PROMULGADO = "Promulgado"
+    PUBLICADO = "Publicado"
+    CUARTO_INTERMEDIO = "Cuarto Intermedio"
+    ACUMULADO = "Acumulado en Sala"
+    ACLARACION = "Aclaración"
+    RECHAZADO = "Rechazado"
+    SIN_CATEGORIA = "Sin categoría"
 
 
-class RoleTypeBill(str, Enum):
-    AUTHOR = "author"
-    COAUTHOR = "coauthor"
-    ADHERENTE = "adherente"
+class TypeRoleBill(str, Enum):
+    AUTHOR = "Autor"
+    COAUTHOR = "Coautor"
+    ADHERENTE = "Adherente"
 
 
 class Proponents(str, Enum):
@@ -166,45 +160,42 @@ class Legislature(str, Enum):
     LEGISLATURA_2016_2 = "2016-II"
 
 
-class LegislativeYear(str, Enum):
-    YEAR_2026_2027 = "2026"
-    YEAR_2025_2026 = "2025"
-    YEAR_2024_2025 = "2024"
-    YEAR_2023_2024 = "2023"
-    YEAR_2022_2023 = "2022"
-    YEAR_2021_2022 = "2021"
-    YEAR_2020_2021 = "2020"
-    YEAR_2019_2020 = "2019"
-    YEAR_2018_2019 = "2018"
-    YEAR_2017_2018 = "2017"
-    YEAR_2016_2017 = "2016"
-
-
 class RoleOrganization(str, Enum):
     # For Bancadas | Partidos
-    VOCERO = "vocero"
-    MIEMBRO = "miembro"
+    VOCERO = "Vocero"
+    MIEMBRO = "Miembro"
+
+    # For Cámaras
+    DIPUTADO = "Diputado"
+    SENADOR = "Senador"
 
     # For Comisiones, Mesa Directiva, Junta de Portavoces
-    PRESIDENTE = "presidente"
-    VICEPRESIDENTE = "vicepresidente"
-    SECRETARIO = "secretario"
-    TITULAR = "titular"
-    SUPLENTE = "suplente"
-    ACCESITARIO = "accesitario"
+    PRESIDENTE = "Presidente"
+    VICEPRESIDENTE = "Vicepresidente"
+    SECRETARIO = "Secretario"
+    TITULAR = "Titular"
+    SUPLENTE = "Suplente"
+    ACCESITARIO = "Accesitario"
+    SEGUNDO_VICE = "Segundo Vicepresidente"
+    TERCER_VICE = "Tercer Vicepresidente"
 
 
 class TypeOrganization(str, Enum):
-    COMISON = "Comisión"
+    COMMITTEE = "Comisión"
+    CHAMBER = "Cámara"
+    BANCADA = "Bancada"
+    PARTY = "Partido"
+    ADMINISTRATIVE = "Administrativo"
+
+
+class TypeAdmin(str, Enum):
     JUNTA_DE_PORTAVOCES = "Junta de Portavoces"
     MESA_DIRECTIVA = "Mesa Directiva"
     COMISION_PERMANENTE = "Comisión Permanente"
     CONSEJO_DIRECTIVO = "Consejo Directivo"
-    SUBCOM_ACUSACIONES = "Subcomisión de Acusaciones Constitucionales"
 
 
 class TypeCommittee(str, Enum):
-    # For Committees
     COM_INVESTIGADORA = "Comisiones Investigadoras"
     GRUPO_TRABAJO = "Grupo de Trabajo"
     SUBCOM_AC = "Subcomisión de Acusaciones Constitucionales"
@@ -214,3 +205,17 @@ class TypeCommittee(str, Enum):
     SUBCOM_TLC = "Sub Comisión de Seguimiento del TLC"
     COM_ESP = "Comisiones Especiales"
     COM_ETICA = "Comisión de Ética Parlamentaria"
+
+
+class EmbeddingModel(str, Enum):
+    MULTILINGUAL_E5_BASE = "intfloat/multilingual-e5-base"
+
+
+class OcrModel(str, Enum):
+    """OCR engine used to extract text from a scanned document page.
+
+    Bills are OCR'd with chandra2; attendance and votes with Tesseract.
+    """
+
+    CHANDRA = "chandra2"
+    TESSERACT = "Tesseract"

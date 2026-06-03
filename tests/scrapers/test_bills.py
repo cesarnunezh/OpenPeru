@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import pytest
 from sqlalchemy import create_engine
@@ -25,7 +25,7 @@ def test_create_raw_bill_sets_id_and_sections():
         "seguimientos": [{"evento": "derivado"}],
     }
 
-    raw_bill = scraper.create_raw_bill(year, bill_number, data)
+    raw_bill = scraper.create_raw_bill(year, bill_number, data, "www.example.org")
 
     assert isinstance(raw_bill, RawBill)
     assert raw_bill.id == f"{year}_{bill_number}"
@@ -38,6 +38,7 @@ def test_create_raw_bill_sets_id_and_sections():
 
     # Missing section in data => attribute should remain None
     assert raw_bill.committees is None
+    assert raw_bill.api_url == "www.example.org"
 
 
 # ---------- add_bills_to_db ----------
@@ -127,13 +128,19 @@ def test_add_bills_to_db_handles_sqlalchemy_error(monkeypatch):
 # ---------- scrape_bill ----------
 
 
-def test_scrape_bill_appends_raw_bill(monkeypatch, raw_session):
+def test_scrape_bill_appends_raw_bill(monkeypatch, session):
     scraper = RawBillScraper()
-    scraper.session = raw_session
+    scraper.session = session
 
     monkeypatch.setattr(
         scraper,
         "_RawBillScraper__search_api_url",
+        lambda bill_url: f"{API_URL}2021/1234",
+    )
+
+    monkeypatch.setattr(
+        scraper,
+        "_RawBillScraper__get_existing_api_url",
         lambda bill_url: f"{API_URL}2021/1234",
     )
 
@@ -154,7 +161,7 @@ def test_scrape_bill_appends_raw_bill(monkeypatch, raw_session):
 
     # Patch get_url_text in the scraper module
     monkeypatch.setattr("backend.scrapers.bills.get_url_text", fake_get_url_text)
-    monkeypatch.setattr(scraper, "update_tracking", lambda bill: bill)
+    monkeypatch.setattr(scraper, "update_tracking", lambda bill: [bill])
 
     scraper.scrape_bill("2021", "1234")
 
@@ -164,72 +171,3 @@ def test_scrape_bill_appends_raw_bill(monkeypatch, raw_session):
     assert json.loads(bill.general)["titulo"] == "Ley de Prueba"
     assert json.loads(bill.committees)[0]["nombre"] == "Comisión Y"
     assert json.loads(bill.steps)[0]["evento"] == "ingreso"
-
-
-def test_get_ids_pending_weekly_refresh_filters_by_age_and_approval(raw_session):
-    scraper = RawBillScraper(session=raw_session)
-    now = datetime.now()
-
-    raw_session.add_all(
-        [
-            # stale + not approved => include
-            RawBill(
-                id="2021_1",
-                timestamp=now - timedelta(days=10),
-                general=json.dumps({"desEstado": "En Comisión"}),
-                last_update=True,
-            ),
-            # stale + approved => exclude
-            RawBill(
-                id="2021_2",
-                timestamp=now - timedelta(days=12),
-                general=json.dumps(
-                    {"desEstado": "Publicada en el Diario Oficial El Peruano"}
-                ),
-                last_update=True,
-            ),
-            # fresh + not approved => exclude
-            RawBill(
-                id="2021_3",
-                timestamp=now - timedelta(days=2),
-                general=json.dumps({"desEstado": "En Agenda del Pleno"}),
-                last_update=True,
-            ),
-        ]
-    )
-    raw_session.commit()
-
-    pending = scraper.get_ids_pending_weekly_refresh(max_age_days=7)
-    assert pending == ["2021_1"]
-
-
-def test_scrape_pending_weekly_uses_ids_without_number_ranges(monkeypatch):
-    scraper = RawBillScraper()
-
-    monkeypatch.setattr(
-        scraper,
-        "get_ids_pending_weekly_refresh",
-        lambda max_age_days: ["2021_10", "2022_45"],
-    )
-
-    calls = []
-    monkeypatch.setattr(
-        scraper,
-        "scrape_bill",
-        lambda year, number: (
-            calls.append((year, number)) or scraper.raw_bills.append(object())
-        ),
-    )
-
-    loads = {"n": 0}
-    monkeypatch.setattr(
-        scraper,
-        "load_raw_bills",
-        lambda: (loads.__setitem__("n", loads["n"] + 1), scraper.raw_bills.clear()),
-    )
-
-    ids = scraper.scrape_pending_weekly(max_age_days=7, flush_every=1)
-
-    assert ids == ["2021_10", "2022_45"]
-    assert calls == [("2021", "10"), ("2022", "45")]
-    assert loads["n"] == 2

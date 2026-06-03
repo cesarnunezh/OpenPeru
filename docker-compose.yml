@@ -1,0 +1,47 @@
+services:
+  initial-migration:
+    image: ${RAW_MIGRATION_IMAGE}
+    build:
+      context: .
+      dockerfile: docker/database/migration.Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    env_file:
+      - .env
+    environment:
+      DB_URL: ${DB_URL}
+      SQLITE_PATH: ${SQLITE_PATH}
+    volumes:
+      - migration_logs:/app/logs
+    profiles:
+      - migration
+
+  cron:
+    build:
+      context: .
+      dockerfile: docker/cron/cron.Dockerfile
+    env_file:
+      - .env
+    environment:
+      TZ: America/Lima
+    volumes:
+      - cron_logs:/app/logs
+    restart: unless-stopped
+
+  open-congress-frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "${FRONTEND_EXTERNAL_PORT:-8040}:8040"
+    volumes:
+      - frontend_logs:/app/logs
+    restart: unless-stopped
+
+volumes:
+  migration_logs:
+  cron_logs:
+  frontend_logs:

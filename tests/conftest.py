@@ -1,27 +1,53 @@
-import sys
-from pathlib import Path
+import unicodedata
 import pytest
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 
-from backend.database.raw_models import RawBase
-
-# repo root: .../OpenPeru
-ROOT = Path(__file__).resolve().parents[1]
-
-# Ensure root is on sys.path so `import backend` works
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+from backend.database import models as db_models
 
 
-@pytest.fixture()
-def raw_session(tmp_path):
-    db_path = tmp_path / "raw_test.db"
-    engine = create_engine(f"sqlite:///{db_path}")
+def sqlite_unaccent(value):
+    if value is None:
+        return None
 
-    RawBase.metadata.create_all(engine)  # <-- this prevents "no such table"
+    return "".join(
+        char
+        for char in unicodedata.normalize("NFD", value)
+        if unicodedata.category(char) != "Mn"
+    )
 
-    Session = sessionmaker(bind=engine)
-    with Session() as session:
-        yield session
-        session.rollback()
+
+def sqlite_jarowinkler(left, right):
+    if left is None or right is None:
+        return 0.0
+
+    return 1.0 if left == right else 0.0
+
+
+@pytest.fixture(scope="function")
+def engine():
+    engine = create_engine("sqlite+pysqlite:///:memory:")
+
+    @event.listens_for(engine, "connect")
+    def register_sqlite_functions(dbapi_connection, connection_record):
+        dbapi_connection.create_function("unaccent", 1, sqlite_unaccent)
+        dbapi_connection.create_function("jarowinkler", 2, sqlite_jarowinkler)
+
+    db_models.Base.metadata.create_all(engine)
+
+    yield engine
+
+    db_models.Base.metadata.drop_all(engine)
+    engine.dispose()
+
+
+@pytest.fixture(scope="function")
+def session(engine):
+    SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+    db = SessionLocal()
+
+    try:
+        yield db
+    finally:
+        db.rollback()
+        db.close()

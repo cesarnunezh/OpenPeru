@@ -3,35 +3,110 @@ from datetime import datetime
 import pytest
 from lxml.html import fromstring
 from sqlalchemy import create_engine
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import sessionmaker
 
-from selenium.common.exceptions import TimeoutException
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
-from backend.scrapers.committees import (
-    RawCommitteeScraper,
-    BASE_URL,
-)
 from backend.database.raw_models import Base, RawCommittee
+from backend.scrapers.committees import (
+    BASE_URL,
+    COMMITTEE_SELECT,
+    LINKS_SELECTOR,
+    ROWS_SELECTOR,
+    TABLE_SELECTOR,
+    RawCommitteeScraper,
+)
 
 
-# ---------- helpers for DB tests ----------
+# ---------- helpers ----------
 
 
-def _setup_inmemory_db():
-    """Create in-memory SQLite engine and session factory for tests."""
+def make_scraper():
+    """
+    Avoid calling RawCommitteeScraper.__init__ because it creates
+    a real engine from settings.DB_URL.
+    """
+    scraper = RawCommitteeScraper.__new__(RawCommitteeScraper)
+    scraper.url = BASE_URL
+    return scraper
+
+
+def setup_inmemory_db():
     engine = create_engine("sqlite:///:memory:")
     Base.metadata.create_all(engine)
     SessionLocal = sessionmaker(bind=engine)
     return engine, SessionLocal
 
 
+class FakeLocator:
+    def __init__(self, count_value=1, html="<tbody>before</tbody>"):
+        self.count_value = count_value
+        self.html = html
+
+    def count(self):
+        return self.count_value
+
+    def inner_html(self):
+        return self.html
+
+
+class FakePage:
+    def __init__(
+        self,
+        rows_count=1,
+        links_count=1,
+        content="<html>OK</html>",
+        timeout_on_selector=False,
+        timeout_on_change=False,
+    ):
+        self.rows_count = rows_count
+        self.links_count = links_count
+        self._content = content
+        self.timeout_on_selector = timeout_on_selector
+        self.timeout_on_change = timeout_on_change
+        self.goto_calls = []
+
+    def wait_for_selector(self, selector, state=None):
+        if self.timeout_on_selector:
+            raise PlaywrightTimeoutError("selector timed out")
+        return True
+
+    def wait_for_function(self, script, arg=None, timeout=None):
+        if self.timeout_on_change and timeout == 5000:
+            raise PlaywrightTimeoutError("table did not change")
+        return True
+
+    def locator(self, selector):
+        if selector == TABLE_SELECTOR:
+            return FakeLocator(html="<tbody>before</tbody>")
+        if selector == ROWS_SELECTOR:
+            return FakeLocator(count_value=self.rows_count)
+        if selector == LINKS_SELECTOR:
+            return FakeLocator(count_value=self.links_count)
+        return FakeLocator()
+
+    def evaluate(self, script, arg):
+        return True
+
+    def eval_on_selector(self, selector, script):
+        assert selector == COMMITTEE_SELECT
+        return {"Ordinaria": "1", "Especial": "2"}
+
+    def content(self):
+        return self._content
+
+    def goto(self, url, wait_until=None):
+        self.goto_calls.append((url, wait_until))
+
+
 # ---------- get_options ----------
 
 
 def test_get_options_parses_select(monkeypatch):
-    scraper = RawCommitteeScraper()
+    scraper = make_scraper()
 
-    def fake_parse_url(url, *args, **kwargs):
+    def fake_parse_url(url):
         assert url == BASE_URL
         html = """
         <html><body>
@@ -48,272 +123,435 @@ def test_get_options_parses_select(monkeypatch):
 
     options = scraper.get_options(url=BASE_URL, select_name="idRegistroPadre")
 
-    # At least the real options should be present
-    assert options["2021"] == "2021"
-    assert options["2022"] == "2022"
-    # Placeholder may or may not be present; if it is, value can be None
-    if "--Seleccione--" in options:
-        assert options["--Seleccione--"] is None
+    assert options == {
+        "2021": "2021",
+        "2022": "2022",
+    }
+
+
+def test_get_options_returns_empty_when_parse_fails(monkeypatch):
+    scraper = make_scraper()
+
+    monkeypatch.setattr("backend.scrapers.committees.parse_url", lambda url: None)
+
+    assert scraper.get_options(BASE_URL) == {}
+
+
+# ---------- _get_committee_options_current_page ----------
+
+
+def test_get_committee_options_current_page():
+    page = FakePage()
+
+    options = RawCommitteeScraper._get_committee_options_current_page(page)
+
+    assert options == {
+        "Ordinaria": "1",
+        "Especial": "2",
+    }
 
 
 # ---------- get_html_with_selections ----------
 
 
 def test_get_html_with_selections_success(monkeypatch):
-    scraper = RawCommitteeScraper()
-
-    # We don't want to test _select_year here, only the committee selection flow
-    monkeypatch.setattr(scraper, "_select_year", lambda driver, wait, year_value: None)
-
-    class FakeElement:
-        def __init__(self, driver, name):
-            self.driver = driver
-            self.name = name
-
-    class FakeDriver:
-        def __init__(self):
-            self._page_source = "<html>BEFORE</html>"
-            self.selected = {}  # track selected values per element name
-
-        def find_element(self, by, value):
-            # value will be "fld_78_Comision"
-            return FakeElement(self, value)
-
-        @property
-        def page_source(self):
-            return self._page_source
-
-    class FakeSelectedOption:
-        def __init__(self, driver, element_name):
-            self.driver = driver
-            self.element_name = element_name
-
-        def get_attribute(self, attr):
-            assert attr == "value"
-            return self.driver.selected.get(self.element_name)
-
-    class FakeSelect:
-        def __init__(self, element):
-            self.element = element
-
-        def select_by_value(self, value):
-            # Persist the selection on the driver
-            self.element.driver.selected[self.element.name] = value
-            # Simulate page updating after selection
-            self.element.driver._page_source = "<html>OK</html>"
-
-        @property
-        def first_selected_option(self):
-            return FakeSelectedOption(self.element.driver, self.element.name)
-
-    class FakeWait:
-        def until(self, condition):
-            # condition can be:
-            # - a callable(driver) -> truthy
-            # - something returned by EC.presence_of_element_located (callable too)
-            ok = condition(self._driver)
-            if not ok:
-                raise TimeoutException("condition not met")
-            return ok
-
-        def __init__(self, driver):
-            self._driver = driver
-
-    # Patch Select used inside backend.scrapers.committees module
-    monkeypatch.setattr("backend.scrapers.committees.Select", FakeSelect)
-
-    # Patch EC.presence_of_element_located to a simple callable that returns True
-    monkeypatch.setattr(
-        "backend.scrapers.committees.EC.presence_of_element_located",
-        lambda locator: lambda d: True,
+    scraper = make_scraper()
+    page = FakePage(
+        rows_count=2,
+        links_count=2,
+        content="<html>committee data</html>",
     )
 
-    driver = FakeDriver()
-    wait = FakeWait(driver)
-
-    html = scraper.get_html_with_selections(driver, wait, "2021", "COM")
-    assert html == "<html>OK</html>"
-
-
-def test_get_html_with_selections_handles_no_such_element(monkeypatch):
-    scraper = RawCommitteeScraper()
-
-    class FakeElement:
-        def __init__(self, driver, name):
-            self.driver = driver
-            self.tag_name = name
-
-    class FakeDriver:
-        def __init__(self):
-            self._page_source = "<html>BEFORE</html>"
-            self.selected = {}  # track selected values per element name
-
-        def find_element(self, by, value):
-            # value will be "fld_78_Comision"
-            return FakeElement(self, value)
-
-        @property
-        def page_source(self):
-            return self._page_source
-
-    class FakeSelectedOption:
-        def __init__(self, driver, element_name):
-            self.driver = driver
-            self.element_name = element_name
-
-        def get_attribute(self, attr):
-            assert attr == "value"
-            return self.driver.selected.get(self.element_name)
-
-    class FakeSelect:
-        def __init__(self, element):
-            self.element = element
-
-        def select_by_value(self, value):
-            # Persist the selection on the driver
-            self.element.driver.selected[self.element.name] = value
-            # Simulate page updating after selection
-            self.element.driver._page_source = "<html>OK</html>"
-
-        @property
-        def first_selected_option(self):
-            return FakeSelectedOption(self.element.driver, self.element.name)
-
-    class FakeWait:
-        def until(self, condition):
-            # condition can be:
-            # - a callable(driver) -> truthy
-            # - something returned by EC.presence_of_element_located (callable too)
-            ok = condition(self._driver)
-            if not ok:
-                raise TimeoutException("condition not met")
-            return ok
-
-        def __init__(self, driver):
-            self._driver = driver
-
+    monkeypatch.setattr(scraper, "_select_year", lambda page, year_value: None)
     monkeypatch.setattr(
-        "backend.scrapers.committees.webdriver.Chrome",
-        lambda *a, **k: FakeDriver(),
+        RawCommitteeScraper,
+        "_set_select",
+        staticmethod(lambda page, selector, value: None),
     )
-    driver = FakeDriver()
-    wait = FakeWait(driver)
-    html = scraper.get_html_with_selections(driver, wait, "2021", "COM")
+
+    html = scraper.get_html_with_selections(
+        page=page,
+        year_value="2025",
+        committee_value="1",
+    )
+
+    assert html == "<html>committee data</html>"
+
+
+def test_get_html_with_selections_returns_none_when_table_empty(monkeypatch):
+    scraper = make_scraper()
+    page = FakePage(rows_count=0, links_count=0)
+
+    warnings = []
+
+    monkeypatch.setattr(scraper, "_select_year", lambda page, year_value: None)
+    monkeypatch.setattr(
+        RawCommitteeScraper,
+        "_set_select",
+        staticmethod(lambda page, selector, value: None),
+    )
+    monkeypatch.setattr(
+        "backend.scrapers.committees.logger.warning",
+        lambda message: warnings.append(message),
+    )
+
+    html = scraper.get_html_with_selections(
+        page=page,
+        year_value="2025",
+        committee_value="1",
+    )
+
+    assert html is None
+    assert any(
+        "No committees found for type=1 and year=2025" in msg for msg in warnings
+    )
+
+
+def test_get_html_with_selections_continues_when_table_does_not_change(monkeypatch):
+    scraper = make_scraper()
+    page = FakePage(
+        rows_count=1,
+        links_count=1,
+        timeout_on_change=True,
+        content="<html>still valid</html>",
+    )
+
+    warnings = []
+
+    monkeypatch.setattr(scraper, "_select_year", lambda page, year_value: None)
+    monkeypatch.setattr(
+        RawCommitteeScraper,
+        "_set_select",
+        staticmethod(lambda page, selector, value: None),
+    )
+    monkeypatch.setattr(
+        "backend.scrapers.committees.logger.warning",
+        lambda message: warnings.append(message),
+    )
+
+    html = scraper.get_html_with_selections(
+        page=page,
+        year_value="2025",
+        committee_value="1",
+    )
+
+    assert html == "<html>still valid</html>"
+    assert any("Table content did not visibly change" in msg for msg in warnings)
+
+
+def test_get_html_with_selections_returns_none_on_playwright_timeout(monkeypatch):
+    scraper = make_scraper()
+    page = FakePage(timeout_on_selector=True)
+
+    monkeypatch.setattr(scraper, "_select_year", lambda page, year_value: None)
+
+    html = scraper.get_html_with_selections(
+        page=page,
+        year_value="2025",
+        committee_value="1",
+    )
+
     assert html is None
 
 
 # ---------- get_raw_committees ----------
 
 
-def test_get_raw_committees_builds_committee_list(monkeypatch, raw_session):
-    scraper = RawCommitteeScraper()
-    scraper.session = raw_session
-
-    monkeypatch.setattr(scraper, "_select_year", lambda driver, wait, year_value: None)
-    monkeypatch.setattr(scraper, "update_tracking", lambda committee: committee)
-
-    def fake_get_options(self, url, select_name="idRegistroPadre"):
-        assert select_name == "idRegistroPadre"
-        return {"2021": "2021", "2022": "2022"}
-
-    monkeypatch.setattr(RawCommitteeScraper, "get_options", fake_get_options)
-
-    def fake_get_html_with_selections(driver, wait, year_value, committee_value):
-        if year_value == "2022" and committee_value == "2":
-            return None
-        return f"<html>Year={year_value},Type={committee_value}</html>"
+def test_get_raw_committees_builds_committee_list(monkeypatch):
+    scraper = make_scraper()
 
     monkeypatch.setattr(
-        scraper, "get_html_with_selections", fake_get_html_with_selections
+        scraper,
+        "get_options",
+        lambda url, select_name="idRegistroPadre": {
+            "2024-2025": "2025",
+            "2023-2024": "2024",
+        },
     )
-
-    # If your code constructs a driver/wait, just stub them to simple objects
-    class DummyWait:
-        def until(self, condition):
-            return True
-
-    class DummyDriver:
-        def get(self, url):
-            pass
-
-        def set_page_load_timeout(self, seconds):
-            pass
-
-        def set_script_timeout(self, seconds):
-            pass
-
-        def implicitly_wait(self, seconds):
-            pass
-
-        def quit(self):
-            pass
-
-    monkeypatch.setattr(
-        "backend.scrapers.committees.webdriver.Chrome", lambda *a, **k: DummyDriver()
-    )
-    monkeypatch.setattr(
-        "backend.scrapers.committees.WebDriverWait", lambda driver, t: DummyWait()
-    )
-
-    # bypass selenium-dependent helpers
-    monkeypatch.setattr(scraper, "_select_year", lambda driver, wait, year_value: None)
+    monkeypatch.setattr(scraper, "_select_year", lambda page, year_value: None)
     monkeypatch.setattr(
         scraper,
         "_get_committee_options_current_page",
-        lambda driver, wait: {"Permanente": "1", "Especial": "2"},
+        lambda page: {
+            "Ordinaria": "1",
+            "Especial": "2",
+        },
     )
-    scraper.get_raw_committees()
+
+    def fake_get_html_with_selections(page, year_value, committee_value):
+        if year_value == "2025" and committee_value == "2":
+            return None
+        return f"<html>year={year_value}, committee={committee_value}</html>"
+
+    monkeypatch.setattr(
+        scraper,
+        "get_html_with_selections",
+        fake_get_html_with_selections,
+    )
+    monkeypatch.setattr(scraper, "update_tracking", lambda committee: committee)
+
+    class FakeBrowser:
+        def __init__(self):
+            self.closed = False
+            self.page = FakePage()
+
+        def new_page(self):
+            return self.page
+
+        def close(self):
+            self.closed = True
+
+    class FakeChromium:
+        def __init__(self):
+            self.browser = FakeBrowser()
+
+        def launch(self, headless=True):
+            assert headless is True
+            return self.browser
+
+    class FakePlaywright:
+        def __init__(self):
+            self.chromium = FakeChromium()
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+    monkeypatch.setattr(
+        "backend.scrapers.committees.sync_playwright",
+        lambda: FakePlaywright(),
+    )
+
+    scraper.get_raw_committees(only_current=True)
 
     assert hasattr(scraper, "committee_list")
-    assert len(scraper.committee_list) == 3
+    assert len(scraper.committee_list) == 1
+
+    committee = scraper.committee_list[0]
+    assert committee.legislative_year == "2024-2025"
+    assert committee.committee_type == "Ordinaria"
+    assert committee.raw_html == "<html>year=2025, committee=1</html>"
+
+
+def test_get_raw_committees_all_years(monkeypatch):
+    scraper = make_scraper()
+
+    monkeypatch.setattr(
+        scraper,
+        "get_options",
+        lambda url, select_name="idRegistroPadre": {
+            "2024-2025": "2025",
+            "2023-2024": "2024",
+        },
+    )
+    monkeypatch.setattr(scraper, "_select_year", lambda page, year_value: None)
+    monkeypatch.setattr(
+        scraper,
+        "_get_committee_options_current_page",
+        lambda page: {"Ordinaria": "1"},
+    )
+    monkeypatch.setattr(
+        scraper,
+        "get_html_with_selections",
+        lambda page, year_value, committee_value: (
+            f"<html>year={year_value}, committee={committee_value}</html>"
+        ),
+    )
+    monkeypatch.setattr(scraper, "update_tracking", lambda committee: committee)
+
+    class FakeBrowser:
+        def new_page(self):
+            return FakePage()
+
+        def close(self):
+            pass
+
+    class FakePlaywright:
+        def __enter__(self):
+            self.chromium = self
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+        def launch(self, headless=True):
+            return FakeBrowser()
+
+    monkeypatch.setattr(
+        "backend.scrapers.committees.sync_playwright",
+        lambda: FakePlaywright(),
+    )
+
+    scraper.get_raw_committees(only_current=False)
+
+    assert len(scraper.committee_list) == 2
+    assert {c.legislative_year for c in scraper.committee_list} == {
+        "2024-2025",
+        "2023-2024",
+    }
+
+
+def test_get_raw_committees_aborts_when_no_years(monkeypatch):
+    scraper = make_scraper()
+
+    monkeypatch.setattr(scraper, "get_options", lambda url, select_name: {})
+
+    scraper.get_raw_committees()
+
+    assert scraper.committee_list == []
+
+
+# ---------- update_tracking ----------
+
+
+def test_update_tracking_first_version_marks_changed():
+    engine, SessionLocal = setup_inmemory_db()
+    scraper = make_scraper()
+    scraper.Session = SessionLocal
+
+    committee = RawCommittee(
+        timestamp=datetime(2026, 1, 1),
+        legislative_year="2025-2026",
+        committee_type="Ordinaria",
+        raw_html="<html>new</html>",
+        changed=False,
+        processed=True,
+        last_update=False,
+    )
+
+    result = scraper.update_tracking(committee)
+
+    assert result.changed is True
+    assert result.processed is False
+    assert result.last_update is True
+
+
+def test_update_tracking_existing_same_version_marks_not_changed():
+    engine, SessionLocal = setup_inmemory_db()
+    scraper = make_scraper()
+    scraper.Session = SessionLocal
+
+    old = RawCommittee(
+        timestamp=datetime(2026, 1, 1),
+        legislative_year="2025-2026",
+        committee_type="Ordinaria",
+        raw_html="<html>same</html>",
+        changed=True,
+        processed=False,
+        last_update=True,
+    )
+
+    with SessionLocal() as session:
+        session.add(old)
+        session.commit()
+
+    new = RawCommittee(
+        timestamp=datetime(2026, 1, 2),
+        legislative_year="2025-2026",
+        committee_type="Ordinaria",
+        raw_html="<html>same</html>",
+        changed=False,
+        processed=False,
+        last_update=True,
+    )
+
+    result = scraper.update_tracking(new)
+
+    assert result.changed is False
+    assert result.processed is True
+    assert result.last_update is True
+
+    with SessionLocal() as session:
+        old_from_db = session.query(RawCommittee).first()
+        assert old_from_db.last_update is False
+
+
+def test_update_tracking_existing_different_version_marks_changed():
+    engine, SessionLocal = setup_inmemory_db()
+    scraper = make_scraper()
+    scraper.Session = SessionLocal
+
+    old = RawCommittee(
+        timestamp=datetime(2026, 1, 1),
+        legislative_year="2025-2026",
+        committee_type="Ordinaria",
+        raw_html="<html>old</html>",
+        changed=True,
+        processed=False,
+        last_update=True,
+    )
+
+    with SessionLocal() as session:
+        session.add(old)
+        session.commit()
+
+    new = RawCommittee(
+        timestamp=datetime(2026, 1, 2),
+        legislative_year="2025-2026",
+        committee_type="Ordinaria",
+        raw_html="<html>new</html>",
+        changed=False,
+        processed=False,
+        last_update=True,
+    )
+
+    result = scraper.update_tracking(new)
+
+    assert result.changed is True
+    assert result.processed is False
+    assert result.last_update is True
 
 
 # ---------- add_committees_to_db ----------
 
 
-def test_add_committees_to_db_persists(monkeypatch):
-    engine, SessionLocal = _setup_inmemory_db()
+def test_add_committees_to_db_persists():
+    engine, SessionLocal = setup_inmemory_db()
 
-    scraper = RawCommitteeScraper()
-    scraper.engine = engine
+    scraper = make_scraper()
     scraper.Session = SessionLocal
 
-    committee = RawCommittee(
-        timestamp=datetime(2021, 1, 1),
-        legislative_year=2021,
-        committee_type="Permanente",
-        raw_html="<html>data</html>",
-    )
-    scraper.committee_list = [committee]
+    scraper.committee_list = [
+        RawCommittee(
+            timestamp=datetime(2026, 1, 1),
+            legislative_year="2025-2026",
+            committee_type="Ordinaria",
+            raw_html="<html>data</html>",
+            changed=True,
+            processed=False,
+            last_update=True,
+        )
+    ]
 
     assert scraper.add_committees_to_db() is True
 
     with SessionLocal() as session:
-        count = session.query(RawCommittee).count()
-        assert count == 1
-        db_obj = session.query(RawCommittee).first()
-        assert db_obj.legislative_year == 2021
-        assert db_obj.committee_type == "Permanente"
-        assert db_obj.raw_html == "<html>data</html>"
+        rows = session.query(RawCommittee).all()
+
+    assert len(rows) == 1
+    assert rows[0].legislative_year == "2025-2026"
+    assert rows[0].committee_type == "Ordinaria"
+    assert rows[0].raw_html == "<html>data</html>"
 
 
 def test_add_committees_to_db_asserts_when_empty():
-    scraper = RawCommitteeScraper()
+    scraper = make_scraper()
     scraper.committee_list = []
 
     with pytest.raises(AssertionError):
         scraper.add_committees_to_db()
 
 
-def test_add_committees_to_db_handles_sqlalchemy_error(monkeypatch):
-    from sqlalchemy.exc import SQLAlchemyError
+def test_add_committees_to_db_handles_sqlalchemy_error():
+    scraper = make_scraper()
 
-    scraper = RawCommitteeScraper()
     scraper.committee_list = [
         RawCommittee(
             timestamp=datetime.now(),
-            legislative_year=2021,
-            committee_type="Permanente",
+            legislative_year="2025-2026",
+            committee_type="Ordinaria",
             raw_html="<html></html>",
         )
     ]
@@ -321,6 +559,7 @@ def test_add_committees_to_db_handles_sqlalchemy_error(monkeypatch):
     class DummySession:
         def __init__(self):
             self.rolled_back = False
+            self.closed = False
 
         def bulk_save_objects(self, objs):
             raise SQLAlchemyError("boom")
@@ -332,15 +571,11 @@ def test_add_committees_to_db_handles_sqlalchemy_error(monkeypatch):
             self.rolled_back = True
 
         def close(self):
-            pass
+            self.closed = True
 
     dummy_session = DummySession()
+    scraper.Session = lambda: dummy_session
 
-    def fake_sessionmaker():
-        return dummy_session
-
-    scraper.Session = fake_sessionmaker
-
-    ok = scraper.add_committees_to_db()
-    assert ok is False
+    assert scraper.add_committees_to_db() is False
     assert dummy_session.rolled_back is True
+    assert dummy_session.closed is True
