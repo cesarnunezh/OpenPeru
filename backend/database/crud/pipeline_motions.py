@@ -3,32 +3,35 @@ from __future__ import annotations
 from typing import Iterable
 
 from sqlalchemy.orm import Session
-from enum import Enum
 
+from backend import classify_motion_des_estado
 from backend.database import models as db_models
-from backend.process import schema
-from backend.database.crud.pipeline_core import find_congresista, _enum_value
-from backend.database.raw_models import RawMotionDocument, RawMotionPage
+from backend.database.crud.pipeline_core import find_congresista
+from backend.database.raw_models import RawMotionDocument
 
 
-def upsert_motion(db: Session, schema: schema.Motion) -> db_models.Motion:
+def upsert_motion(db: Session, schema) -> db_models.Motion:
     author = None
     if schema.author_name:
         author = find_congresista(
             db,
             name=schema.author_name,
+            leg_period=schema.leg_period,
             website=schema.author_web,
         )
 
     payload = {
         "id": schema.id,
-        "motion_type": _enum_value(schema.motion_type),
-        "summary_congreso": schema.summary_congreso,
+        "leg_period": schema.leg_period,
+        "legislature": schema.legislature,
+        "presentation_date": schema.presentation_date,
+        "motion_type": schema.motion_type,
+        "summary": schema.summary,
         "observations": schema.observations or "",
+        "complete_text": schema.complete_text or "",
         "status": schema.status,
         "author_id": author.id if author else None,
         "motion_approved": schema.motion_approved,
-        "summary_oc": schema.summary_opencongress,
     }
 
     existing = db.get(db_models.Motion, schema.id)
@@ -45,13 +48,9 @@ def upsert_motion(db: Session, schema: schema.Motion) -> db_models.Motion:
 
 
 def upsert_motion_congresista(
-    db: Session,
-    motion_id: str,
-    person_id: int,
-    role_type: Enum | str,
+    db: Session, motion_id: str, person_id: int, role_type
 ) -> db_models.MotionCongresistas:
     existing = db.get(db_models.MotionCongresistas, (motion_id, person_id))
-    role_type = _enum_value(role_type)
     if existing is None:
         obj = db_models.MotionCongresistas(
             motion_id=motion_id,
@@ -67,54 +66,33 @@ def upsert_motion_congresista(
     return existing
 
 
-def upsert_motion_organization(
-    db: Session,
-    motion_id: str,
-    org_id: int,
-    schema: schema.MotionOrganization,
-) -> db_models.MotionOrganization:
-    existing = db.get(db_models.MotionOrganization, (motion_id, org_id))
-    payload = {
-        "motion_id": motion_id,
-        "org_id": org_id,
-        "org_type": _enum_value(schema.org_type),
-        "presentation_date": schema.presentation_date,
-        "decision_date": schema.decision_date,
-    }
-    if existing is None:
-        obj = db_models.MotionOrganization(**payload)
-        db.add(obj)
-        db.flush()
-        return obj
-
-    for key, value in payload.items():
-        setattr(existing, key, value)
-    db.flush()
-    return existing
-
-
 def upsert_motion_step(
     db: Session,
-    schema: schema.MotionStep,
+    *,
+    step_id: int,
+    motion_id: str,
+    step_date,
+    step_detail: str,
+    step_status: str | None = None,
 ) -> db_models.MotionStep:
-    existing = db.get(db_models.MotionStep, (schema.motion_id, schema.step_id))
-    payload = {
-        "motion_id": schema.motion_id,
-        "step_id": schema.step_id,
-        "vote_step": schema.vote_step,
-        "vote_event_id": schema.vote_event_id,
-        "step_type": _enum_value(schema.step_type),
-        "step_date": schema.step_date,
-        "step_detail": schema.step_detail,
-    }
+    step_type = classify_motion_des_estado(step_status or step_detail)
+    existing = db.get(db_models.MotionStep, step_id)
     if existing is None:
-        obj = db_models.MotionStep(**payload)
+        obj = db_models.MotionStep(
+            id=step_id,
+            motion_id=motion_id,
+            step_type=step_type,
+            step_date=step_date,
+            step_detail=step_detail,
+        )
         db.add(obj)
         db.flush()
         return obj
 
-    for key, value in payload.items():
-        setattr(existing, key, value)
+    existing.motion_id = motion_id
+    existing.step_type = step_type
+    existing.step_date = step_date
+    existing.step_detail = step_detail
     db.flush()
     return existing
 
@@ -133,46 +111,34 @@ def find_raw_motion_documents(
     )
 
 
-def find_raw_motion_pages(
-    raw_db: Session, motion_id: str, step_id: str | int, file_id: str | int
-) -> list[RawMotionPage]:
-    return (
-        raw_db.query(RawMotionPage)
-        .filter(
-            RawMotionPage.motion_id == motion_id,
-            RawMotionPage.step_id == str(step_id),
-            RawMotionPage.file_id == str(file_id),
-            RawMotionPage.last_update.is_(True),
-        )
-        .order_by(RawMotionPage.page_num)
-        .all()
-    )
-
-
-def upsert_motion_text(
+def upsert_motion_document(
     db: Session,
     *,
     motion_id: str,
     step_id: int,
-    file_id: int,
-    version_id: int,
+    archivo_id: int,
+    url: str,
     text: str,
-) -> db_models.MotionText:
-    existing = db.get(db_models.MotionText, (motion_id, step_id, file_id, version_id))
-    payload = {
-        "motion_id": motion_id,
-        "step_id": step_id,
-        "file_id": file_id,
-        "version_id": version_id,
-        "text": text,
-    }
+    vote_doc: bool,
+) -> db_models.MotionDocument:
+    existing = db.get(db_models.MotionDocument, archivo_id)
     if existing is None:
-        obj = db_models.MotionText(**payload)
+        obj = db_models.MotionDocument(
+            motion_id=motion_id,
+            step_id=step_id,
+            archivo_id=archivo_id,
+            url=url,
+            text=text,
+            vote_doc=vote_doc,
+        )
         db.add(obj)
         db.flush()
         return obj
 
-    for key, value in payload.items():
-        setattr(existing, key, value)
+    existing.motion_id = motion_id
+    existing.step_id = step_id
+    existing.url = url
+    existing.text = text
+    existing.vote_doc = vote_doc
     db.flush()
     return existing
